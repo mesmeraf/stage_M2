@@ -1,20 +1,45 @@
 \documentclass[12pt,a4paper]{report}
 
 \usepackage[utf8]{inputenc}
-%\usepackage[français]{babel}
+\usepackage[francais]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\RequirePackage[square,sort,comma,numbers]{natbib}
+\RequirePackage{hyperref}
+\usepackage[acronym]{glossaries}
 
 \author{Nicolas JEANNE}
 
 \title{Rapport de stage de M2}
+\date{11 mars 2015}
+
+\newacronym{rep}{REP}{Repeated Extragenic Palindrome}
+\newacronym{bime}{BIME}{Bacterial Interspesed Mosaic Element}
+\makeglossaries
 
 \begin{document}
-voici une ligne de texte \cite{Anders2012}
 
-\bibliographystyle{plain}
+\maketitle
+
+
+
+
+\section*{Introduction}
+
+En 1982, la découverte par Higgins et al. de nouveaux éléments génétiques communs dans les régions intercistroniques des opérons de Escherichia coli et Salmonella typhimurium a constitué le premier pas de la recherche sur les \gls{rep} \citep{Higgins1982}. En 1991, Gilson et al. ont mis en évidence l'organisation possible en clusters de ces REP \citep{Gilson1991}, ces clusters ont été caractérisés comme \gls{bime}.
+
+
+
+ 
+%Print the glossary
+%\printglossaries
+\printglossary[type=\acronymtype ,title=Abbreviations]
+
+\bibliographystyle{plainnat}
 \bibliography{biblio_rapport}
+
+
 
 \end{document}

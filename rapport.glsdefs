@@ -1,0 +1,60 @@
+\ifglsentryexists{rep}{}%
+{%
+\gls@defglossaryentry{rep}%
+{%
+name={REP},%
+sort={REP},%
+type={main},%
+first={Repeated Extragenic Palindrome (REP)},%
+firstplural={Repeated Extragenic Palindromes(REPs)},%
+text={REP},%
+plural={REPs},%
+description={Repeated Extragenic Palindrome},%
+descriptionplural={Repeated Extragenic Palindrome\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Repeated Extragenic Palindrome},%
+longplural={Repeated Extragenic Palindromes},%
+short={REP},%
+shortplural={REPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{bime}{}%
+{%
+\gls@defglossaryentry{bime}%
+{%
+name={BIME},%
+sort={BIME},%
+type={main},%
+first={Bacterial Interspesed Mosaic Element (BIME)},%
+firstplural={Bacterial Interspesed Mosaic Elements(BIMEs)},%
+text={BIME},%
+plural={BIMEs},%
+description={Bacterial Interspesed Mosaic Element},%
+descriptionplural={Bacterial Interspesed Mosaic Element\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Bacterial Interspesed Mosaic Element},%
+longplural={Bacterial Interspesed Mosaic Elements},%
+short={BIME},%
+shortplural={BIMEs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
