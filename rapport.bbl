@@ -23,16 +23,6 @@ E~Gilson, W~Saurin, D~Perrin, S~Bachellier, and M~Hofnung.
   1991.
 \newblock ISSN 03051048.
 
-\bibitem[Bachellier et~al.(1994)Bachellier, Saurin, Perrin, Hofnung, and
-  Gilson]{Bachellier1994}
-Sophie Bachellier, William Saurin, David Perrin, Maurice Hofnung, and Eric
-  Gilson.
-\newblock {Structural and functional diversity among bacterial interspersed
-  mosaic elements (BIMEs)}.
-\newblock \emph{Molecular Microbiology}, 12:\penalty0 61--70, 1994.
-\newblock ISSN 0950382X.
-\newblock \doi{10.1111/j.1365-2958.1994.tb00995.x}.
-
 \bibitem[Weyder(2013)]{Weyder2013}
 Mathias Weyder.
 \newblock {\'{E}tude de la dynamique de la prolif\'{e}ration des
@@ -46,5 +36,17 @@ Julie Bosc.
   r\'{e}p\'{e}t\'{e}es ( REP ) chez l ' esp\`{e}ce Escherichia coli par une
   m\'{e}thode de reconstruction des \'{e}tats anc\^{e}tres .}
 \newblock Technical report, 2014.
+
+\bibitem[Ton-Hoang et~al.(2012)Ton-Hoang, Siguier, Quentin, Onillon, Marty,
+  Fichant, and Chandler]{Ton-Hoang2012}
+Bao Ton-Hoang, Patricia Siguier, Yves Quentin, S\'{e}verine Onillon, Brigitte
+  Marty, Gwennaele Fichant, and Mick Chandler.
+\newblock {Structuring the bacterial genome: Y1-transposases associated with
+  REP-BIME sequences.}
+\newblock \emph{Nucleic acids research}, 40\penalty0 (8):\penalty0 3596--609,
+  April 2012.
+\newblock ISSN 1362-4962.
+\newblock \doi{10.1093/nar/gkr1198}.
+\newblock URL \url{http://nar.oxfordjournals.org/content/40/8/3596.long}.
 
 \end{thebibliography}

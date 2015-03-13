@@ -7,37 +7,37 @@ Warning--empty institution in Weyder2013
 Warning--empty institution in Bosc2014
 You've used 5 entries,
             2481 wiz_defined-function locations,
-            593 strings with 5621 characters,
-and the built_in function-call counts, 1964 in all, are:
-= -- 167
-> -- 113
+            594 strings with 5684 characters,
+and the built_in function-call counts, 2064 in all, are:
+= -- 173
+> -- 125
 < -- 2
-+ -- 44
-- -- 34
-* -- 167
-:= -- 343
-add.period$ -- 20
++ -- 48
+- -- 38
+* -- 185
+:= -- 361
+add.period$ -- 21
 call.type$ -- 5
 change.case$ -- 12
 chr.to.int$ -- 5
 cite$ -- 7
 duplicate$ -- 85
-empty$ -- 156
-format.name$ -- 39
-if$ -- 391
+empty$ -- 160
+format.name$ -- 43
+if$ -- 409
 int.to.chr$ -- 1
 int.to.str$ -- 6
 missing$ -- 3
-newline$ -- 38
+newline$ -- 39
 num.names$ -- 15
-pop$ -- 30
+pop$ -- 29
 preamble$ -- 1
 purify$ -- 5
 quote$ -- 0
-skip$ -- 48
+skip$ -- 47
 stack$ -- 0
-substring$ -- 85
-swap$ -- 9
+substring$ -- 94
+swap$ -- 10
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
@@ -45,5 +45,5 @@ type$ -- 35
 warning$ -- 2
 while$ -- 16
 width$ -- 0
-write$ -- 80
+write$ -- 82
 (There were 2 warnings)
