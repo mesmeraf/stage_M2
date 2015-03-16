@@ -5,45 +5,45 @@ The style file: plainnat.bst
 Database file #1: biblio_rapport.bib
 Warning--empty institution in Bosc2014
 Warning--empty institution in Weyder2013
-You've used 5 entries,
+You've used 15 entries,
             2773 wiz_defined-function locations,
-            635 strings with 6092 characters,
-and the built_in function-call counts, 2617 in all, are:
-= -- 235
-> -- 182
-< -- 2
-+ -- 62
-- -- 57
-* -- 242
-:= -- 432
-add.period$ -- 21
-call.type$ -- 5
-change.case$ -- 36
-chr.to.int$ -- 5
-cite$ -- 12
-duplicate$ -- 93
-empty$ -- 173
-format.name$ -- 62
-if$ -- 517
+            737 strings with 9290 characters,
+and the built_in function-call counts, 8231 in all, are:
+= -- 776
+> -- 536
+< -- 4
++ -- 180
+- -- 165
+* -- 774
+:= -- 1317
+add.period$ -- 72
+call.type$ -- 15
+change.case$ -- 102
+chr.to.int$ -- 15
+cite$ -- 32
+duplicate$ -- 301
+empty$ -- 575
+format.name$ -- 184
+if$ -- 1668
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 3
-newline$ -- 39
-num.names$ -- 20
-pop$ -- 54
+missing$ -- 13
+newline$ -- 110
+num.names$ -- 60
+pop$ -- 145
 preamble$ -- 1
-purify$ -- 29
+purify$ -- 85
 quote$ -- 0
-skip$ -- 74
+skip$ -- 230
 stack$ -- 0
-substring$ -- 94
-swap$ -- 5
+substring$ -- 358
+swap$ -- 19
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 55
+type$ -- 165
 warning$ -- 2
-while$ -- 21
+while$ -- 71
 width$ -- 0
-write$ -- 82
+write$ -- 254
 (There were 2 warnings)
