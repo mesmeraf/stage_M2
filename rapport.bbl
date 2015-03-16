@@ -5,14 +5,12 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Higgins et~al.(1982)Higgins, Ames, Barnes, Clement, and
-  Hofnung]{Higgins1982}
-Christopher~F. Higgins, Giovanna Ferro-Luzzi Ames, Wayne~M. Barnes, Jean~Marie
-  Clement, and Maurice Hofnung.
-\newblock {A novel intercistronic regulatory element of prokaryotic operons.}
-\newblock \emph{Nature}, 298\penalty0 (5876):\penalty0 760--762, August 1982.
-\newblock ISSN 0028-0836.
-\newblock \doi{10.1038/298760a0}.
+\bibitem[Bosc(2014)]{Bosc2014}
+Julie Bosc.
+\newblock {Etude de la dynamique des \'{e}l\'{e}ments palindromique
+  r\'{e}p\'{e}t\'{e}es ( REP ) chez l ' esp\`{e}ce Escherichia coli par une
+  m\'{e}thode de reconstruction des \'{e}tats anc\^{e}tres .}
+\newblock Technical report, 2014.
 
 \bibitem[Gilson et~al.(1991)Gilson, Saurin, Perrin, Bachellier, and
   Hofnung]{Gilson1991}
@@ -23,19 +21,14 @@ E~Gilson, W~Saurin, D~Perrin, S~Bachellier, and M~Hofnung.
   1991.
 \newblock ISSN 03051048.
 
-\bibitem[Weyder(2013)]{Weyder2013}
-Mathias Weyder.
-\newblock {\'{E}tude de la dynamique de la prolif\'{e}ration des
-  \'{e}l\'{e}ments REP chez Escherichia et Shigella par une approche
-  bioinformatique}.
-\newblock Technical report, 2013.
-
-\bibitem[Bosc(2014)]{Bosc2014}
-Julie Bosc.
-\newblock {Etude de la dynamique des \'{e}l\'{e}ments palindromique
-  r\'{e}p\'{e}t\'{e}es ( REP ) chez l ' esp\`{e}ce Escherichia coli par une
-  m\'{e}thode de reconstruction des \'{e}tats anc\^{e}tres .}
-\newblock Technical report, 2014.
+\bibitem[Higgins et~al.(1982)Higgins, Ames, Barnes, Clement, and
+  Hofnung]{Higgins1982}
+Christopher~F. Higgins, Giovanna Ferro-Luzzi Ames, Wayne~M. Barnes, Jean~Marie
+  Clement, and Maurice Hofnung.
+\newblock {A novel intercistronic regulatory element of prokaryotic operons.}
+\newblock \emph{Nature}, 298\penalty0 (5876):\penalty0 760--762, August 1982.
+\newblock ISSN 0028-0836.
+\newblock \doi{10.1038/298760a0}.
 
 \bibitem[Ton-Hoang et~al.(2012)Ton-Hoang, Siguier, Quentin, Onillon, Marty,
   Fichant, and Chandler]{Ton-Hoang2012}
@@ -48,5 +41,12 @@ Bao Ton-Hoang, Patricia Siguier, Yves Quentin, S\'{e}verine Onillon, Brigitte
 \newblock ISSN 1362-4962.
 \newblock \doi{10.1093/nar/gkr1198}.
 \newblock URL \url{http://nar.oxfordjournals.org/content/40/8/3596.long}.
+
+\bibitem[Weyder(2013)]{Weyder2013}
+Mathias Weyder.
+\newblock {\'{E}tude de la dynamique de la prolif\'{e}ration des
+  \'{e}l\'{e}ments REP chez Escherichia et Shigella par une approche
+  bioinformatique}.
+\newblock Technical report, 2013.
 
 \end{thebibliography}
