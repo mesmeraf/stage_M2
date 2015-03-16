@@ -1,4 +1,4 @@
-\begin{thebibliography}{15}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -6,54 +6,62 @@
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
 \bibitem[Aguena et~al.(2009)Aguena, Ferreira, and Spira]{Aguena2009}
-Meire Aguena, Gerson~Moura Ferreira, and Beny Spira.
+M.~Aguena, G.~M. Ferreira, and B.~Spira.
 \newblock {Stability of the pstS transcript of Escherichia coli}.
 \newblock \emph{Archives of Microbiology}, 191:\penalty0 105--112, 2009.
 \newblock ISSN 03028933.
 \newblock \doi{10.1007/s00203-008-0433-z}.
 
-\bibitem[Bachellier et~al.(1997)Bachellier, Cl\'{e}ment, Hofnung, and
-  Gilson]{Bachellier1997}
-S~Bachellier, J~M Cl\'{e}ment, M~Hofnung, and E~Gilson.
-\newblock {Bacterial interspersed mosaic elements (BIMEs) are a major source of
-  sequence polymorphism in Escherichia coli intergenic regions including
-  specific associations with a new insertion sequence.}
-\newblock \emph{Genetics}, 145\penalty0 (3):\penalty0 551--62, March 1997.
-\newblock ISSN 0016-6731.
-\newblock URL \url{/pmc/articles/PMC1207841/?report=abstract}.
-
 \bibitem[Bachellier et~al.(1994)Bachellier, Saurin, Perrin, Hofnung, and
   Gilson]{Bachellier1994}
-Sophie Bachellier, William Saurin, David Perrin, Maurice Hofnung, and Eric
-  Gilson.
+S.~Bachellier, W.~Saurin, D.~Perrin, M.~Hofnung, and E.~Gilson.
 \newblock {Structural and functional diversity among bacterial interspersed
   mosaic elements (BIMEs)}.
 \newblock \emph{Molecular Microbiology}, 12:\penalty0 61--70, 1994.
 \newblock ISSN 0950382X.
 \newblock \doi{10.1111/j.1365-2958.1994.tb00995.x}.
 
+\bibitem[Bachellier et~al.(1997)Bachellier, Cl\'{e}ment, Hofnung, and
+  Gilson]{Bachellier1997}
+S.~Bachellier, J.~M. Cl\'{e}ment, M.~Hofnung, and E.~Gilson.
+\newblock {Bacterial interspersed mosaic elements (BIMEs) are a major source of
+  sequence polymorphism in Escherichia coli intergenic regions including
+  specific associations with a new insertion sequence.}
+\newblock \emph{Genetics}, 145\penalty0 (3):\penalty0 551--62, Mar. 1997.
+\newblock ISSN 0016-6731.
+\newblock URL \url{/pmc/articles/PMC1207841/?report=abstract}.
+
+\bibitem[Boccard and Prentki(1993)]{Boccard1993}
+F.~Boccard and P.~Prentki.
+\newblock {Specific interaction of IHF with RIBs, a class of bacterial
+  repetitive DNA elements located at the 3' end of transcription units.}
+\newblock \emph{The EMBO journal}, 12\penalty0 (13):\penalty0 5019--27, Dec.
+  1993.
+\newblock ISSN 0261-4189.
+\newblock URL
+  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=413762\&tool=pmcentrez\&rendertype=abstract}.
+
 \bibitem[Bosc(2014)]{Bosc2014}
-Julie Bosc.
+J.~Bosc.
 \newblock {Etude de la dynamique des \'{e}l\'{e}ments palindromique
   r\'{e}p\'{e}t\'{e}es ( REP ) chez l ' esp\`{e}ce Escherichia coli par une
   m\'{e}thode de reconstruction des \'{e}tats anc\^{e}tres .}
 \newblock Technical report, 2014.
 
 \bibitem[Choi et~al.(2003)Choi, Ohta, and Ohtsubo]{Choi2003}
-Sunju Choi, Shinya Ohta, and Eiichi Ohtsubo.
+S.~Choi, S.~Ohta, and E.~Ohtsubo.
 \newblock {A novel IS element, IS621, of the IS110/IS492 family transposes to a
   specific site in repetitive extragenic palindromic sequences in Escherichia
   coli.}
 \newblock \emph{Journal of bacteriology}, 185\penalty0 (16):\penalty0
-  4891--900, August 2003.
+  4891--900, Aug. 2003.
 \newblock ISSN 0021-9193.
 \newblock URL
   \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=166490\&tool=pmcentrez\&rendertype=abstract}.
 
 \bibitem[Cl\'{e}ment et~al.(1999)Cl\'{e}ment, Wilde, Bachellier, Lambert, and
   Hofnung]{Clement1999}
-Jean~Marie Cl\'{e}ment, Caroline Wilde, Sophie Bachellier, Patricia Lambert,
-  and Maurice Hofnung.
+J.~M. Cl\'{e}ment, C.~Wilde, S.~Bachellier, P.~Lambert, and M.~Hofnung.
 \newblock {IS1397 is active for transposition into the chromosome of
   Escherichia coli K-12 and inserts specifically into palindromic units of
   bacterial interspersed mosaic elements}.
@@ -61,37 +69,74 @@ Jean~Marie Cl\'{e}ment, Caroline Wilde, Sophie Bachellier, Patricia Lambert,
   6929--6936, 1999.
 \newblock ISSN 00219193.
 
+\bibitem[Esp\'{e}li and Boccard(1997)]{Espeli1997}
+O.~Esp\'{e}li and F.~Boccard.
+\newblock {In vivo cleavage of Escherichia coli BIME-2 repeats by DNA gyrase:
+  genetic characterization of the target and identification of the cut site.}
+\newblock \emph{Molecular microbiology}, 26:\penalty0 767--777, 1997.
+\newblock ISSN 0950-382X.
+
 \bibitem[Esp\'{e}li et~al.(2001)Esp\'{e}li, Moulin, and Boccard]{Espeli2001}
-O~Esp\'{e}li, L~Moulin, and F~Boccard.
+O.~Esp\'{e}li, L.~Moulin, and F.~Boccard.
 \newblock {Transcription attenuation associated with bacterial repetitive
   extragenic BIME elements.}
 \newblock \emph{Journal of molecular biology}, 314\penalty0 (3):\penalty0
-  375--86, November 2001.
+  375--86, Nov. 2001.
 \newblock ISSN 0022-2836.
 \newblock \doi{10.1006/jmbi.2001.5150}.
 \newblock URL
   \url{http://www.sciencedirect.com/science/article/pii/S0022283601951502}.
 
+\bibitem[Gilson et~al.(1986)Gilson, Rousset, Cl\'{e}ment, and
+  Hofnung]{Gilson1986}
+E.~Gilson, J.~Rousset, J.~Cl\'{e}ment, and M.~Hofnung.
+\newblock {A subfamily of E. coli palindromic units implicated in transcription
+  termination?}
+\newblock \emph{Annales de l'Institut Pasteur / Microbiologie}, 137\penalty0
+  (1):\penalty0 259--270, July 1986.
+\newblock ISSN 07692609.
+\newblock \doi{10.1016/S0769-2609(86)80116-8}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0769260986801168}.
+
+\bibitem[Gilson et~al.(1990)Gilson, Perrin, and Hofnung]{Gilson1990}
+E.~Gilson, D.~Perrin, and M.~Hofnung.
+\newblock {DNA polymerase I and a protein complex bind specifically to E. coli
+  palindromic unit highly repetitive DNA: implications for bacterial chromosome
+  organization.}
+\newblock \emph{Nucleic acids research}, 18\penalty0 (13):\penalty0 3941--3952,
+  1990.
+\newblock ISSN 0305-1048.
+
 \bibitem[Gilson et~al.(1991)Gilson, Saurin, Perrin, Bachellier, and
   Hofnung]{Gilson1991}
-E~Gilson, W~Saurin, D~Perrin, S~Bachellier, and M~Hofnung.
+E.~Gilson, W.~Saurin, D.~Perrin, S.~Bachellier, and M.~Hofnung.
 \newblock {Palindromic units are part of a new bacterial interspersed mosaic
   element (BIME).}
 \newblock \emph{Nucleic acids research}, 19\penalty0 (7):\penalty0 1375--1383,
   1991.
 \newblock ISSN 03051048.
 
+\bibitem[Goosen et~al.(1995)Goosen, Putte, and {Van De Putte}]{Goosen1995}
+N.~Goosen, P.~V.~D. Putte, and P.~{Van De Putte}.
+\newblock {The regulation of transcription initiation by integration host
+  factor}.
+\newblock \emph{Molecular Microbiology}, 16:\penalty0 1--7, 1995.
+\newblock ISSN 00219258.
+\newblock \doi{10.1111/j.1365-2958.1995.tb02386.x}.
+\newblock URL
+  \url{http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve\&db=PubMed\&dopt=Citation\&list\_uids=7961996}.
+
 \bibitem[Higgins et~al.(1982)Higgins, Ames, Barnes, Clement, and
   Hofnung]{Higgins1982}
-Christopher~F. Higgins, Giovanna Ferro-Luzzi Ames, Wayne~M. Barnes, Jean~Marie
-  Clement, and Maurice Hofnung.
+C.~F. Higgins, G.~F.-L. Ames, W.~M. Barnes, J.~M. Clement, and M.~Hofnung.
 \newblock {A novel intercistronic regulatory element of prokaryotic operons.}
-\newblock \emph{Nature}, 298\penalty0 (5876):\penalty0 760--762, August 1982.
+\newblock \emph{Nature}, 298\penalty0 (5876):\penalty0 760--762, Aug. 1982.
 \newblock ISSN 0028-0836.
 \newblock \doi{10.1038/298760a0}.
 
 \bibitem[Khemici and Carpousis(2004)]{Khemici2004}
-Vanessa Khemici and Agamemnon~J. Carpousis.
+V.~Khemici and A.~J. Carpousis.
 \newblock {The RNA degradosome and poly(A) polymerase of Escherichia coli are
   required in vivo for the degradation of small mRNA decay intermediates
   containing REP-stabilizers}.
@@ -101,7 +146,7 @@ Vanessa Khemici and Agamemnon~J. Carpousis.
 
 \bibitem[Kofoid et~al.(2003)Kofoid, Bergthorsson, Slechta, and
   Roth]{Kofoid2003}
-Eric Kofoid, Ulfar Bergthorsson, E.~Susan Slechta, and John~R. Roth.
+E.~Kofoid, U.~Bergthorsson, E.~S. Slechta, and J.~R. Roth.
 \newblock {Formation of an F′ plasmid by recombination between imperfectly
   repeated chromosomal Rep sequences: A closer look at an old friend (F′128
   pro lac)}.
@@ -110,22 +155,43 @@ Eric Kofoid, Ulfar Bergthorsson, E.~Susan Slechta, and John~R. Roth.
 \newblock ISSN 00219193.
 \newblock \doi{10.1128/JB.185.2.660-663.2003}.
 
+\bibitem[LaCroix et~al.(2014)LaCroix, Sandberg, O'Brien, Utrilla, Ebrahim,
+  Guzman, Szubin, Palsson, and Feist]{Lacroix2014}
+R.~a. LaCroix, T.~E. Sandberg, E.~J. O'Brien, J.~Utrilla, a.~Ebrahim, G.~I.
+  Guzman, R.~Szubin, B.~O. Palsson, and a.~M. Feist.
+\newblock {Use of Adaptive Laboratory Evolution To Discover Key Mutations
+  Enabling Rapid Growth of Escherichia coli K-12 MG1655 on Glucose Minimal
+  Medium}.
+\newblock \emph{Applied and Environmental Microbiology}, 81\penalty0
+  (1):\penalty0 17--30, 2014.
+\newblock ISSN 0099-2240.
+\newblock \doi{10.1128/AEM.02246-14}.
+\newblock URL \url{http://aem.asm.org/cgi/doi/10.1128/AEM.02246-14}.
+
 \bibitem[Newbury et~al.(1987)Newbury, Smith, Robinson, Hiles, and
   Higgins]{Newbury1987}
-S~F Newbury, N~H Smith, E~C Robinson, I~D Hiles, and C~F Higgins.
+S.~F. Newbury, N.~H. Smith, E.~C. Robinson, I.~D. Hiles, and C.~F. Higgins.
 \newblock {Stabilization of translationally active mRNA by prokaryotic REP
   sequences.}
 \newblock \emph{Cell}, 48:\penalty0 297--310, 1987.
 \newblock ISSN 00928674.
 \newblock \doi{10.1016/0092-8674(87)90433-8}.
 
+\bibitem[Stern et~al.(1988)Stern, Prossnitz, and Ames]{Stern1988}
+M.~J. Stern, E.~Prossnitz, and G.~F. Ames.
+\newblock {Role of the intercistronic region in post-transcriptional control of
+  gene expression in the histidine transport operon of Salmonella typhimurium:
+  involvement of REP sequences.}
+\newblock \emph{Molecular microbiology}, 2:\penalty0 141--152, 1988.
+\newblock ISSN 0950382X.
+
 \bibitem[Tobes and Pareja(2005)]{Tobes2005}
-Raquel Tobes and Eduardo Pareja.
+R.~Tobes and E.~Pareja.
 \newblock {Repetitive extragenic palindromic sequences in the Pseudomonas
   syringae pv. tomato DC3000 genome: extragenic signals for genome
   reannotation.}
 \newblock \emph{Research in microbiology}, 156\penalty0 (3):\penalty0 424--33,
-  April 2005.
+  Apr. 2005.
 \newblock ISSN 0923-2508.
 \newblock \doi{10.1016/j.resmic.2004.10.014}.
 \newblock URL
@@ -133,19 +199,19 @@ Raquel Tobes and Eduardo Pareja.
 
 \bibitem[Ton-Hoang et~al.(2012)Ton-Hoang, Siguier, Quentin, Onillon, Marty,
   Fichant, and Chandler]{Ton-Hoang2012}
-Bao Ton-Hoang, Patricia Siguier, Yves Quentin, S\'{e}verine Onillon, Brigitte
-  Marty, Gwennaele Fichant, and Mick Chandler.
+B.~Ton-Hoang, P.~Siguier, Y.~Quentin, S.~Onillon, B.~Marty, G.~Fichant, and
+  M.~Chandler.
 \newblock {Structuring the bacterial genome: Y1-transposases associated with
   REP-BIME sequences.}
 \newblock \emph{Nucleic acids research}, 40\penalty0 (8):\penalty0 3596--609,
-  April 2012.
+  Apr. 2012.
 \newblock ISSN 1362-4962.
 \newblock \doi{10.1093/nar/gkr1198}.
 \newblock URL
   \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3333891\&tool=pmcentrez\&rendertype=abstract}.
 
 \bibitem[Weyder(2013)]{Weyder2013}
-Mathias Weyder.
+M.~Weyder.
 \newblock {\'{E}tude de la dynamique de la prolif\'{e}ration des
   \'{e}l\'{e}ments REP chez Escherichia et Shigella par une approche
   bioinformatique}.

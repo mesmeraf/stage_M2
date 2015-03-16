@@ -1,49 +1,49 @@
 This is BibTeX, Version 0.99d (TeX Live 2014/dev)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: rapport.aux
-The style file: plainnat.bst
+The style file: abbrvnat.bst
 Database file #1: biblio_rapport.bib
 Warning--empty institution in Bosc2014
 Warning--empty institution in Weyder2013
-You've used 15 entries,
+You've used 22 entries,
             2773 wiz_defined-function locations,
-            737 strings with 9290 characters,
-and the built_in function-call counts, 8231 in all, are:
-= -- 776
-> -- 536
-< -- 4
-+ -- 180
-- -- 165
-* -- 774
-:= -- 1317
-add.period$ -- 72
-call.type$ -- 15
-change.case$ -- 102
-chr.to.int$ -- 15
-cite$ -- 32
-duplicate$ -- 301
-empty$ -- 575
-format.name$ -- 184
-if$ -- 1668
+            801 strings with 11224 characters,
+and the built_in function-call counts, 12165 in all, are:
+= -- 1153
+> -- 791
+< -- 6
++ -- 265
+- -- 243
+* -- 1142
+:= -- 1939
+add.period$ -- 107
+call.type$ -- 22
+change.case$ -- 149
+chr.to.int$ -- 22
+cite$ -- 46
+duplicate$ -- 446
+empty$ -- 853
+format.name$ -- 273
+if$ -- 2474
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 13
-newline$ -- 110
-num.names$ -- 60
-pop$ -- 145
+missing$ -- 20
+newline$ -- 159
+num.names$ -- 88
+pop$ -- 211
 preamble$ -- 1
-purify$ -- 85
+purify$ -- 125
 quote$ -- 0
-skip$ -- 230
+skip$ -- 342
 stack$ -- 0
-substring$ -- 358
-swap$ -- 19
+substring$ -- 535
+swap$ -- 28
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 165
+type$ -- 242
 warning$ -- 2
-while$ -- 71
+while$ -- 106
 width$ -- 0
-write$ -- 254
+write$ -- 373
 (There were 2 warnings)
