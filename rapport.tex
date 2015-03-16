@@ -6,14 +6,15 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\RequirePackage[square,sort,comma,numbers]{natbib}
-\RequirePackage[colorlinks=true,linkcolor=blue]{hyperref}
-\usepackage[acronym]{glossaries}
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{glossaries}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage[skip=2pt,font=scriptsize]{caption}
+\usepackage{listings}
 
 
 \author{Nicolas JEANNE}
@@ -24,11 +25,17 @@
 \bibliographystyle{abbrvnat}
 \setcitestyle{authoryear,open={(},close={)},aysep={},citesep={;}}
 
+
 % formattage des entrées du glossaire
 \renewcommand*{\glstextformat}[1]{\textcolor{Black}{#1}}
-% création des éléments du glossaire
+% création des acronymes du glossaire
 \newacronym{rep}{REP}{Repeated Extragenic Palindrome}
 \newacronym{bime}{BIME}{Bacterial Interspesed Mosaic Element}
+\newacronym{sra}{SRA}{Sequence Read Archive}
+\newacronym{ngs}{NGS}{Next Generation Sequencing}
+% création des entrées du glossaire
+\newglossaryentry{PE}{name={Paired-end},description={Technique de séquençage haut débit consistant à réaliser les amplifications d'un fragment d'ADN en marquant l'extrémité 5' par un tag \no1 et l'extrémité 3' par un tag \no2. La distance entre les 2 tags est connue et fixe (négative ou jusqu'à 500 pb). Ceci permet lors de l'assemblage, de séquences de 35 pb par exemple, d'associer le read 1 et le read 2 grâce à la distance séparant les 2 et cela même si la séquence intermédiaire est inconnue. Si la distance est négative, il est possible d'obtenir des reads chevauchants de longueur plus importante que les 35 pb}}
+\newglossaryentry{reads}{name={reads},description={Séquence nucléotidique issue d'un séquençage NGS}}
 \makeglossaries
 
 % Encadrement des figures
@@ -68,8 +75,20 @@ La littérature décrit de nombreuses fonctions associées aux REP, mais certain
 
 \chapter*{Matériel \& Méthodes}
 
-\section*{Matériel}
-Les données que nous avons exploité sont issues des expériences d'évolution adaptatives en laboratoire visant à découvrir l'émergence de mutations clés permettant la croissance rapide d'E. coli K-12 MG1655 sur un medium pauvre en glucose \citep{Lacroix2014}. Ces données ont été choisies car elles proviennent d'expériences de RNA-Seq comportant un nombre non négligeable de réplicats (9) pour la condition de croissance en milieu pauvre en glucose. Il s'agit de données publiques, accessibles sur le base de données \href{http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE61327}{GEO} (Gene Expression Omnibus) du NCBI.
+\section*{Données}
+Les données que nous avons exploité sont issues des expériences d'évolution adaptatives en laboratoire visant à découvrir l'émergence de mutations clés permettant la croissance rapide d'E. coli K-12 MG1655 sur un medium pauvre en glucose \citep{Lacroix2014}. Ces données ont été choisies car elles proviennent d'expériences de RNA-Seq comportant un nombre non négligeable de réplicats (9) pour la condition de croissance en milieu pauvre en glucose (ALE) et 2 réplicats pour le Wild Type (WT) . Il s'agit de données \gls{ngs} publiques, accessibles sur le base de données \href{http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE61327}{GEO} (Gene Expression Omnibus) du NCBI au format \gls{sra}, séquencées sur Illumina MiSeq à partir d'ARN total extrait des cultures d'E. coli et rétro-transcrit en cDNA. La librairie a été conçue en \gls{PE} et brin spécifique. Grâce au \href{http://www.ncbi.nlm.nih.gov/books/NBK158900/#SRA_download.how_do_i_use_the_sra_toolki}{SRA toolkit} et à la commande \texttt{fastq-dump}, elles sont décompressées au format \texttt{fastq}. Un contrôle de qualité a été effectué afin d'inspecter les séquences grâce au logiciel \texttt{fastqc}. Les 2 WT et 8 ALE ont été validés puisque disposant d'une qualité de séquence par base supérieure à 30 pour des \gls{reads} de 62 pb. Seul le fichier \texttt{SRR1573441.fastq} a été rejeté car la longueur des reads allait de 35 à 502 pb avec des scores de qualités très variables.
+
+\section*{Alignement des reads}
+Les reads ont été alignés grâce au logiciel \href{http://bio-bwa.sourceforge.net/}{BWA} sur le génome d'E. coli \href{http://www.ncbi.nlm.nih.gov/nuccore/NC_000913.2}{NC\_000913.2} qui est le génome utilisé pour annoter les REP au laboratoire.  Le logiciel BWA propose 3 algorithmes distincts, BWA-backtrack, BWA-SW et BWA-MEM. Pour chacun de ces alignements, il est nécessaire de disposer d'une séquence de référence indexée, obtenue par la commande \texttt{bwa index NC\_000913.2.fasta}. 
+L'algorithme que nous avons sélectionné est le MEM (Maximal Exact Matches) car il s'agit du plus récemment développé. Il reprend les mêmes principes que BWA-SW (utilisation de la programmation dynamique pour trouver les seeds en autorisant les mismatchs et les gaps. Il n'étend les alignements des seeds que lorsque ceux-ci ont peu d'occurrences sur le génome de référence, cela permet de diminuer le temps d'alignement en éliminant les extensions des séquences très répétées) mais en utilisant le seeding avec des maximal exact matches, puis il réalise l'extension avec les autorisations de mismatchs et de gaps.
+\lstset{language=sh}  
+\begin{lstlisting}
+bwa mem ref.fasta file.fastq > aln.sam
+\end{lstlisting}
+
+
+
+
 
 \end{onehalfspace}
 
