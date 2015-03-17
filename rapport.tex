@@ -33,6 +33,8 @@
 \newacronym{bime}{BIME}{Bacterial Interspesed Mosaic Element}
 \newacronym{sra}{SRA}{Sequence Read Archive}
 \newacronym{ngs}{NGS}{Next Generation Sequencing}
+\newacronym{sam}{SAM}{\href{http://samtools.github.io/hts-specs/SAMv1.pdf}{Sequence Alignment Map format}}
+\newacronym{bam}{BAM}{Binary Alignment Map format}
 % création des entrées du glossaire
 \newglossaryentry{PE}{name={Paired-end},description={Technique de séquençage haut débit consistant à réaliser les amplifications d'un fragment d'ADN en marquant l'extrémité 5' par un tag \no1 et l'extrémité 3' par un tag \no2. La distance entre les 2 tags est connue et fixe (négative ou jusqu'à 500 pb). Ceci permet lors de l'assemblage, de séquences de 35 pb par exemple, d'associer le read 1 et le read 2 grâce à la distance séparant les 2 et cela même si la séquence intermédiaire est inconnue. Si la distance est négative, il est possible d'obtenir des reads chevauchants de longueur plus importante que les 35 pb}}
 \newglossaryentry{reads}{name={reads},description={Séquence nucléotidique issue d'un séquençage NGS}}
@@ -42,11 +44,15 @@
 \floatstyle{boxed}
 \restylefloat{figure}
 
+% Configuration des liens
 \hypersetup{
   colorlinks,
   citecolor=Violet,
   linkcolor=Black,
   urlcolor=Blue}
+
+% Configuration des parties de code pour accepter les caractères spéciaux
+\lstset{basicstyle=\ttfamily}
 
 \begin{document}
 
@@ -85,8 +91,43 @@ L'algorithme que nous avons sélectionné est le MEM (Maximal Exact Matches) car
 \begin{lstlisting}
 bwa mem ref.fasta file.fastq > aln.sam
 \end{lstlisting}
+Le fichier d'alignement généré est au format \texttt{\gls{sam}}, afin de poursuivre l'analyse il doit être convertit au format binaire \gls{bam}. Cette opération a aussi le mérite de compresser l'information et de gagner de l'espace de stockage. Les séquences vont ensuite être triées par position génomique, puis les duplicats de PCR vont être éliminés.
+Si nous déroulons les étapes d'un séquençage haut dédit, nous obtenons :
+\begin{enumerate}
+\item Fractionnement de l'ADN de l'échantillon.
+\item Ligation des adaptateurs aux 2 extrémités des fragments.
+\item PCR amplification des fragments avec les adaptateurs.
+\item Création d'une émulsion huile-eau avec les microbilles et les molécules d'ADN (technologies
+Roche ou Ion Torrent) ou expansion des molécules d'ADN sur une flowcell (technologie
+Illumina). Le but étant d'atteindre exactement une molécule par bille ou par parcelle sur la
+flowcell.
+\item Amplification du signal par PCR des séquences spécifiques à chaque bille ou parcelle.
+\item Séquençage par la technique propre à chaque technologie, pyroséquençage pour Roche,
+détection d'ions semi-conducteurs pour Ion Torrent ou par terminateurs de chaîne réversible
+pour Illumina.
+\end{enumerate}
 
+Les duplicats de PCR sont générés à la 3\ieme{} étape Lors de l'amplification, on cherche à augmenter le
+signal de chaque segment de l'ADN original, mais il arrive que 2 copies de la même portion d'ADN
+aille dans 2 billes ou parcelles différentes, c'est ce que l'on appelle les duplicats de PCR. Ces duplicats
+amènent un biais lors du séquençage.
+Finalement, le fichier BAM trié sans duplicats doit être indexé pour être visualisable sur un Genome Browser.
 
+Les outils utilisés sont compris dans la suite des \href{http://samtools.sourceforge.net/samtools.shtml}{samtools}.
+\lstset{language=sh}  
+\begin{lstlisting}
+# Conversion du SAM en BAM
+samtools view -Sb aln.sam > aln.bam
+
+# Tri en fonction des positions genomiques
+samtools sort aln.bam aln_sorted
+
+# Elimination des duplicats de PCR
+samtools rmdup -s aln_sorted.bam aln_sorted_noDup.bam
+
+# Indexation du fichier d'alignement
+samtools index aln_sorted_noDup.bam
+\end{lstlisting}
 
 
 

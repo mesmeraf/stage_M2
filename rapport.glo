@@ -4,3 +4,5 @@
 \glossaryentry{SRA?\glossentry{sra}|setentrycounter[]{page}\glsnumberformat}{5}
 \glossaryentry{Paired-end?\glossentry{PE}|setentrycounter[]{page}\glsnumberformat}{5}
 \glossaryentry{reads?\glossentry{reads}|setentrycounter[]{page}\glsnumberformat}{5}
+\glossaryentry{SAM?\glossentry{sam}|setentrycounter[]{page}\glsnumberformat}{6}
+\glossaryentry{BAM?\glossentry{bam}|setentrycounter[]{page}\glsnumberformat}{6}
