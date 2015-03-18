@@ -151,7 +151,7 @@ L'analyse statistique a été menée sur le logiciel R.
 
 \subsection*{Création de la table de comptages par gène}
 Afin d'obtenir des résultats de comptage par transcrit et ainsi estimer l'expression, nous avons utilisé le package Bioconductor easyRNASeq \citep{Delhomme2012}. Les annotations du génome d'E. coli touchant aux transcrits sont extraites à partir du fichier GFF et stockées sous forme d'une base de données. Cela a nécessité une manipulation du fichier GFF préalable, en effet les opérons récupérés sur RegulonDB sont composés à la fois de gènes dont les transcrits sont annotés ARNm, ARNt et ARNr. Seul les gènes dont le transcrit est annoté ARNm est pris en compte par le package easyRNASeq, donc pour ne pas avoir d'erreur dans l'analyse, nous avons transformé les annotations ARNt et ARNr en ARNm.
-La liste des transcrits par gènes est ensuite extraites pour un total de 4605 éléments. Le couverture par transcrit est ensuite calculée pour chaque fichier BAM, le résultat est obtenu en réalisant l'union des positions extraites de la liste des transcrits et des positions des reads extraites des fichiers BAM qui auront été préalablement transformées au format \gls{GRanges} (GRanges) (\autoref{fig:easyRNAseq}) \citep{Lawrence2013}. Une table de comptage est alors produite, les transcrits figurant en ligne et les fichiers BAM en colonnes .
+La liste des transcrits par gènes est ensuite extraites pour un total de 4605 éléments. La couverture par transcrit est ensuite calculée pour chaque fichier BAM, le résultat est obtenu en réalisant l'union des positions extraites de la liste des transcrits et des positions des reads extraites des fichiers BAM qui auront été préalablement transformées au format \gls{GRanges} (GRanges) (\autoref{fig:easyRNAseq}) \citep{Lawrence2013}. Une table de comptage est alors produite, les transcrits figurant en ligne et les fichiers BAM en colonnes .
 
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.3]{figures/easyRNASeq.png}}
@@ -165,7 +165,8 @@ La liste des transcrits par gènes est ensuite extraites pour un total de 4605 �
 
 
 \end{onehalfspace}
- 
+
+
 % affichage du glossaire
 \printglossary[type=\acronymtype ,title=Glossaire]
 
