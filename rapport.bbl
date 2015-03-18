@@ -1,4 +1,4 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -68,6 +68,14 @@ J.~M. Cl\'{e}ment, C.~Wilde, S.~Bachellier, P.~Lambert, and M.~Hofnung.
 \newblock \emph{Journal of Bacteriology}, 181\penalty0 (22):\penalty0
   6929--6936, 1999.
 \newblock ISSN 00219193.
+
+\bibitem[Delhomme et~al.(2012)Delhomme, Padioleau, Furlong, and
+  Steinmetz]{Delhomme2012}
+N.~Delhomme, I.~Padioleau, E.~E. Furlong, and L.~M. Steinmetz.
+\newblock {easyRNASeq: A bioconductor package for processing RNA-Seq data}.
+\newblock \emph{Bioinformatics}, 28\penalty0 (19):\penalty0 2532--2533, 2012.
+\newblock ISSN 13674803.
+\newblock \doi{10.1093/bioinformatics/bts477}.
 
 \bibitem[Esp\'{e}li and Boccard(1997)]{Espeli1997}
 O.~Esp\'{e}li and F.~Boccard.
@@ -167,6 +175,16 @@ R.~a. LaCroix, T.~E. Sandberg, E.~J. O'Brien, J.~Utrilla, a.~Ebrahim, G.~I.
 \newblock ISSN 0099-2240.
 \newblock \doi{10.1128/AEM.02246-14}.
 \newblock URL \url{http://aem.asm.org/cgi/doi/10.1128/AEM.02246-14}.
+
+\bibitem[Lawrence et~al.(2013)Lawrence, Huber, Pag\`{e}s, Aboyoun, Carlson,
+  Gentleman, Morgan, and Carey]{Lawrence2013}
+M.~Lawrence, W.~Huber, H.~Pag\`{e}s, P.~Aboyoun, M.~Carlson, R.~Gentleman,
+  M.~T. Morgan, and V.~J. Carey.
+\newblock {Software for Computing and Annotating Genomic Ranges}.
+\newblock \emph{PLoS Computational Biology}, 9\penalty0 (8):\penalty0 1--10,
+  2013.
+\newblock ISSN 1553734X.
+\newblock \doi{10.1371/journal.pcbi.1003118}.
 
 \bibitem[Levin et~al.(2010)Levin, Yassour, and Adiconis]{Levin2010}
 J.~Levin, M.~Yassour, and X.~Adiconis.

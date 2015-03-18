@@ -36,9 +36,13 @@
 \newacronym{ngs}{NGS}{Next Generation Sequencing}
 \newacronym{sam}{SAM}{\href{http://samtools.github.io/hts-specs/SAMv1.pdf}{Sequence Alignment Map format}}
 \newacronym{bam}{BAM}{Binary Alignment Map format}
+\newacronym{gff}{GFF}{General Feature Format}
+\newacronym{bed}{BED}{Browser Extensible Data}
+\newacronym{de}{DE}{Difference d'Expression}
 % création des entrées du glossaire
 \newglossaryentry{PE}{name={Paired-end},description={Technique de séquençage haut débit consistant à réaliser les amplifications d'un fragment d'ADN en marquant l'extrémité 5' par un tag \no1 et l'extrémité 3' par un tag \no2. La distance entre les 2 tags est connue et fixe (négative ou jusqu'à 500 pb). Ceci permet lors de l'assemblage, de séquences de 35 pb par exemple, d'associer le read 1 et le read 2 grâce à la distance séparant les 2 et cela même si la séquence intermédiaire est inconnue. Si la distance est négative, il est possible d'obtenir des reads chevauchants de longueur plus importante que les 35 pb}}
 \newglossaryentry{reads}{name={reads},description={Séquence nucléotidique issue d'un séquençage NGS}}
+\newglossaryentry{GRanges}{name={Genomic Ranges},description={Format de stockage d'informations pour les éléments génomiques sous R. L'information minimale requise est le chromosome, les positions de départ et de fin, le sens du brin. Ces champs peuvent être suivis de méta-datas où d'autres informations libres peuvent être enregistrées.}}
 \makeglossaries
 
 % Encadrement des figures
@@ -66,17 +70,17 @@ En 1982, la découverte par Higgins et al. de nouveaux éléments génétiques c
 Les REP constituent une part non négligeable du génome bactérien, chez E. coli K12 ou S. typhimurium elles représentent environ 1\% de celui-ci \citep{Gilson1991}. Nous les retrouvons chez de nombreux règnes bactériens, notamment chez les pathogènes humains tels que \textit{Escherichia coli, Salmonella enterica, Neisseria meningitidis, Mycobacterium tuberculosis et Pseudomonas aeruginosa} mais également chez des pathogènes des plantes comme \textit{Agrobacterium tumefaciens} ou chez des bactéries ubiquitaires, \textit{Deinococcus radiodurans} ou \textit{Pseudomonas putida} par exemple. Les travaux précédents de l'équipe ont permis l'annotation des REP au sein du génome d'E. coli et de mettre en évidence le lien existant entre la prolifération des REP et le gène $tnpA_{REP}$ \citep{Weyder2013,Bosc2014}, ainsi que la reconstruction des états ancêtres des REP \citep{Bosc2014}.  \textcolor{red}{Le rôle exact des REP n'est pas clairement défini, des hypothèses sont avancées sur leur implication dans la régulation de l'expression des gènes, que ce soit en tant que terminateur ou comme site de reconnaissance des enzymes impliquées dans les mécanismes de la transcription.}
 
 \section*{Caractéristiques des REP et organisations en BIME}
-La taille des REP varie de 20 à 40 nucléotides, la classification Y, Z\textsuperscript{1}, Z\textsuperscript{2} est basée à la fois sur la taille de la séquence consensus de la REP ainsi que sur sa structure secondaire. Par convention, une REP en orientation inversée est nommée iREP (inversed REP) \citep{Ton-Hoang2012}. Un tétra-nucléotide caractéristique de séquence GTAC est présent à l'extrémité 5' des REP, sa séquence complémentaire est CTAC en 3' pour les iREP. Les différentes classes de REP partagent des nucléotides conservés (\autoref{fig:fig1}A). La structure secondaire des REP est caractérisée par sa forme en tige-boucle, le caractère palindromique permet la formation de la tige malgré un mésappariement situé dans la partie centrale de celle-ci (\autoref{fig:fig1}B). Pour le génome d'E. coli K-12, 93 REP ont été répertoriées comme étant uniques sur les 605 annotées par le laboratoire, les autres sont organisées par paires sous forme de BIME. Une classification a été adoptée comportant 3 entrées, les BIME-1 composées de REP Z\textsuperscript{1} et Y apparaissant en paires uniques et dans lesquelles la REP et l'iREP sont séparées par un linker de séquence longue (L) pouvant lier l'IHF (Integration Host Factor). Les BIME-2 constituées de Z\textsuperscript{2} et de Y, apparaissant en copies multiples de cette paire dont la REP et l'iREP sont séparées par un linker court (S) et une des trois séquences flanquantes (s, l ou r). La troisième catégorie est constituée des BIME dites atypiques qui sont des chimères de BIME-1 et BIME-2, comportant différentes combinaisons de Y, Z\textsuperscript{1}, Z\textsuperscript{2}, S, L, s, l et r. Tout comme les BIME-2, nous les retrouvons sous forme de copies multiples (\autoref{fig:fig1}C). Les REP peuvent former des structures secondaires avec elles-même, mais également entre elles lorsqu'elles sont organisées sous forme de BIME (\autoref{fig:fig2}).
+La taille des REP varie de 20 à 40 nucléotides, la classification Y, Z\textsuperscript{1}, Z\textsuperscript{2} est basée à la fois sur la taille de la séquence consensus de la REP ainsi que sur sa structure secondaire. Par convention, une REP en orientation inversée est nommée iREP (inversed REP) \citep{Ton-Hoang2012}. Un tétra-nucléotide caractéristique de séquence GTAC est présent à l'extrémité 5' des REP, sa séquence complémentaire est CTAC en 3' pour les iREP. Les différentes classes de REP partagent des nucléotides conservés (\autoref{fig:rep_bime}A). La structure secondaire des REP est caractérisée par sa forme en tige-boucle, le caractère palindromique permet la formation de la tige malgré un mésappariement situé dans la partie centrale de celle-ci (\autoref{fig:rep_bime}B). Pour le génome d'E. coli K-12, 93 REP ont été répertoriées comme étant uniques sur les 605 annotées par le laboratoire, les autres sont organisées par paires sous forme de BIME. Une classification a été adoptée comportant 3 entrées, les BIME-1 composées de REP Z\textsuperscript{1} et Y apparaissant en paires uniques et dans lesquelles la REP et l'iREP sont séparées par un linker de séquence longue (L) pouvant lier l'IHF (Integration Host Factor). Les BIME-2 constituées de Z\textsuperscript{2} et de Y, apparaissant en copies multiples de cette paire dont la REP et l'iREP sont séparées par un linker court (S) et une des trois séquences flanquantes (s, l ou r). La troisième catégorie est constituée des BIME dites atypiques qui sont des chimères de BIME-1 et BIME-2, comportant différentes combinaisons de Y, Z\textsuperscript{1}, Z\textsuperscript{2}, S, L, s, l et r. Tout comme les BIME-2, nous les retrouvons sous forme de copies multiples (\autoref{fig:rep_bime}C). Les REP peuvent former des structures secondaires avec elles-même, mais également entre elles lorsqu'elles sont organisées sous forme de BIME (\autoref{fig:malEF_rep}).
 
 \begin{figure}[ht]
-\centerline{\includegraphics[scale=1.8]{figures/fig1.jpg}}
-\caption{\textbf{REP et BIME chez Escherichia coli. (A)} Séquences consensus Y, Z\textsuperscript{1} et Z\textsuperscript{2} des REP. Le tétra-nucléotide conservé GTAC est encadré en violet, le complémentaire conservé CTAC est encadré en vert, les flèches rouges situent les zones d'appariement de la tige et les positions encadrées en noir sont les zones de mésappariement. Les positions conservées parmi les classes de REP sont en rouge, les positions variables en bleu. \textbf{(B)} Structure secondaire des REP. Les rectangles violets et verts représentent respectivement les tétra-nucléotides conservés GTAC pour les REP et CTAC pour les iREP. Les flèches noires indiquent l'orientation des REP. \textbf{(C)} Structures des BIME-1 et BIME-2. Les BIME-1 sont composées de REP et de iREP Y et Z\textsuperscript{1} séparées par un linker de séquence longue (L), les BIME-2 sont composées de Y et Z\textsuperscript{2}, de linker courts (S) et de séquences séparatrices s, l ou r. H-H et T-T dénotent respectivement une organisation tête à tête et queue à queue des REP. \citep{Ton-Hoang2012}.}\label{fig:fig1} 
+\centerline{\includegraphics[scale=1.8]{figures/rep_bime.jpg}}
+\caption{\textbf{REP et BIME chez Escherichia coli. (A)} Séquences consensus Y, Z\textsuperscript{1} et Z\textsuperscript{2} des REP. Le tétra-nucléotide conservé GTAC est encadré en violet, le complémentaire conservé CTAC est encadré en vert, les flèches rouges situent les zones d'appariement de la tige et les positions encadrées en noir sont les zones de mésappariement. Les positions conservées parmi les classes de REP sont en rouge, les positions variables en bleu. \textbf{(B)} Structure secondaire des REP. Les rectangles violets et verts représentent respectivement les tétra-nucléotides conservés GTAC pour les REP et CTAC pour les iREP. Les flèches noires indiquent l'orientation des REP. \textbf{(C)} Structures des BIME-1 et BIME-2. Les BIME-1 sont composées de REP et de iREP Y et Z\textsuperscript{1} séparées par un linker de séquence longue (L), les BIME-2 sont composées de Y et Z\textsuperscript{2}, de linker courts (S) et de séquences séparatrices s, l ou r. H-H et T-T dénotent respectivement une organisation tête à tête et queue à queue des REP. \citep{Ton-Hoang2012}.}\label{fig:rep_bime} 
 \end{figure}
 
 
 \begin{figure}[ht]
-\centerline{\includegraphics[scale=0.5]{figures/fig2.png}}
-\caption{\textbf{Structure ARN des REP au sein de l'operon malEFG.} Y, Z\textsuperscript{2} et Y indiquent la séquence des REP dans l'espace intergénique de malE-malF. Bien que Y et Z\textsuperscript{2} puissent former des structures tige-boucles par elles mêmes, elles s'apparient ensemble pour former une région étendue en grande partie à double brin (70\% des nucléotides sont appariés). La séquence affichée provient du génome d'E. coli K12. La région REP-stabilized RNA (RSR) indique l'exttrémité 3′ du messager malE mature, qui s'étend de 3 à 9 nucléotides depuis la base de la tige-boucle formée par Y et Z\textsuperscript{2}. Les codons STOP de  malE et START de malF sont encadrés. SD représente la séquence Shine–Dalgarno nécessaire à l'initiation de la traduction de malF. \citep{Khemici2004}.}\label{fig:fig2} 
+\centerline{\includegraphics[scale=0.5]{figures/malEF_rep.png}}
+\caption{\textbf{Structure ARN des REP au sein de l'operon malEFG.} Y, Z\textsuperscript{2} et Y indiquent la séquence des REP dans l'espace intergénique de malE-malF. Bien que Y et Z\textsuperscript{2} puissent former des structures tige-boucles par elles mêmes, elles s'apparient ensemble pour former une région étendue en grande partie à double brin (70\% des nucléotides sont appariés). La séquence affichée provient du génome d'E. coli K12. La région REP-stabilized RNA (RSR) indique l'exttrémité 3′ du messager malE mature, qui s'étend de 3 à 9 nucléotides depuis la base de la tige-boucle formée par Y et Z\textsuperscript{2}. Les codons STOP de  malE et START de malF sont encadrés. SD représente la séquence Shine–Dalgarno nécessaire à l'initiation de la traduction de malF. \citep{Khemici2004}.}\label{fig:malEF_rep} 
 \end{figure}
 
 
@@ -121,9 +125,7 @@ signal de chaque segment de l'ADN original, mais il arrive que 2 copies de la m�
 aille dans 2 billes ou parcelles différentes, c'est ce que l'on appelle les duplicats de PCR. Ces duplicats
 amènent un biais lors du séquençage.
 
-Finalement, le fichier BAM trié sans duplicats PCR doit être indexé pour être visualisable sur un Genome Browser.
-
-Les outils utilisés sont compris dans la suite des \href{http://samtools.sourceforge.net/samtools.shtml}{samtools}.
+Finalement, le fichier BAM trié sans duplicats PCR doit être indexé pour être visualisable sur un Genome Browser. Les outils utilisés sont compris dans la suite des \href{http://samtools.sourceforge.net/samtools.shtml}{samtools}.
 \lstset{language=sh, commentstyle=\color{ForestGreen}}  
 \begin{lstlisting}[frame=single]
 # Conversion du SAM en BAM
@@ -139,9 +141,22 @@ samtools rmdup -s aln_sorted.bam aln_sorted_noDup.bam
 samtools index aln_sorted_noDup.bam
 \end{lstlisting}
 
-\textcolor{red}{parler du fait que nous ne recherchons pas une différence d'expression entre 2 conditions}
+\section*{Préparation des fichiers de référence}
+Le fichier \texttt{\gls{gff}} d'annotation du génome a été généré par un script Perl à partir du fichier \href{http://www.ncbi.nlm.nih.gov/nuccore/NC_000913.2}{GenBank}. Les fichiers répertoriant les opérons (source \href{http://regulondb.ccg.unam.mx/}{RegulonDB}), les REP et BIME (source laboratoire) ainsi que les terminateurs de transcription (source \href{http://csbl.bmb.uga.edu/DOOR/}{DOOR}) ont été transformés au format \texttt{\gls{bed}} grâce à des scripts Python.
+Ces changements de format permettent de travailler aisément avec la suite de logiciels \href{http://bedtools.readthedocs.org/en/latest/}{BEDtools} pour la recherche d'intersections, de positions proches ou de couverture de reads. Ces outils ont généré des fichiers BED nécessaire à la suite de l'analyse tel que celui des positions génomiques des opérons contenant des REP, celui des REP, celui des gènes contenus dans des opérons bordant une REP, celui des BIME et celui de la couverture sur les régions contenant des BIME.
 
+\section*{Analyse statistique}
+Pour réaliser nos analyses, nous nous sommes inspirés de la méthodologie employée en RNA-Seq pour l'étude de \gls{de}. Il est important de noter qu'une différence importante existe avec notre approche, car nous ne nous intéressons pas à une DE pour un m\^eme gène dans différentes conditions mais plut\^ot à la \emph{DE entre deux gènes pour lesquels ont pourrait supposer un profil d'expression similaire}, comme c'est le cas dans les opérons par exemple.
+L'analyse statistique a été menée sur le logiciel R.
 
+\subsection*{Création de la table de comptages par gène}
+Afin d'obtenir des résultats de comptage par transcrit et ainsi estimer l'expression, nous avons utilisé le package Bioconductor easyRNASeq \citep{Delhomme2012}. Les annotations du génome d'E. coli touchant aux transcrits sont extraites à partir du fichier GFF et stockées sous forme d'une base de données. Cela a nécessité une manipulation du fichier GFF préalable, en effet les opérons récupérés sur RegulonDB sont composés à la fois de gènes dont les transcrits sont annotés ARNm, ARNt et ARNr. Seul les gènes dont le transcrit est annoté ARNm est pris en compte par le package easyRNASeq, donc pour ne pas avoir d'erreur dans l'analyse, nous avons transformé les annotations ARNt et ARNr en ARNm.
+La liste des transcrits par gènes est ensuite extraites pour un total de 4605 éléments. Le couverture par transcrit est ensuite calculée pour chaque fichier BAM, le résultat est obtenu en réalisant l'union des positions extraites de la liste des transcrits et des positions des reads extraites des fichiers BAM qui auront été préalablement transformées au format \gls{GRanges} (GRanges) (\autoref{fig:easyRNAseq}) \citep{Lawrence2013}. Une table de comptage est alors produite, les transcrits figurant en ligne et les fichiers BAM en colonnes .
+
+\begin{figure}[ht]
+\centerline{\includegraphics[scale=0.3]{figures/easyRNASeq.png}}
+\caption{\textbf{easyRNASeq : création d'une table de comptage.} Processus de création de la table de comptage grâce à l'union des intervalles génomiques. Les formats d'entrées de notre analyse sont surlignés en rouge, le format de sortie en bleu. \citep{Delhomme2012}.}\label{fig:easyRNAseq} 
+\end{figure}
 
 
 
@@ -154,11 +169,7 @@ samtools index aln_sorted_noDup.bam
 % affichage du glossaire
 \printglossary[type=\acronymtype ,title=Glossaire]
 
-
 %\bibliographystyle{unsrtnat}
 \bibliography{biblio_rapport}
-
-
-
 
 \end{document}
