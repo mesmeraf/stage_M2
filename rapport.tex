@@ -15,6 +15,7 @@
 \usepackage{float}
 \usepackage[skip=2pt,font=scriptsize]{caption}
 \usepackage{listings}
+\usepackage{xcolor}
 
 
 \author{Nicolas JEANNE}
@@ -94,8 +95,9 @@ Les données que nous avons exploité sont issues des expériences d'évolution 
 \section*{Alignement des reads}
 Les reads ont été alignés grâce au logiciel \href{http://bio-bwa.sourceforge.net/}{BWA} sur le génome d'E. coli \href{http://www.ncbi.nlm.nih.gov/nuccore/NC_000913.2}{NC\_000913.2} qui est le génome utilisé pour annoter les REP au laboratoire.  Le logiciel BWA propose 3 algorithmes distincts, BWA-backtrack, BWA-SW et BWA-MEM. Pour chacun de ces alignements, il est nécessaire de disposer d'une séquence de référence indexée, obtenue par la commande \texttt{bwa index NC\_000913.2.fasta}. 
 L'algorithme que nous avons sélectionné est le MEM (Maximal Exact Matches) car il s'agit du plus récemment développé. Il reprend les mêmes principes que BWA-SW (utilisation de la programmation dynamique pour trouver les seeds en autorisant les mismatchs et les gaps. Il n'étend les alignements des seeds que lorsque ceux-ci ont peu d'occurrences sur le génome de référence, cela permet de diminuer le temps d'alignement en éliminant les extensions des séquences très répétées) mais en utilisant le seeding avec des MEM, puis il réalise l'extension avec les autorisations de mismatchs et de gaps.
-\lstset{language=sh}  
+\lstset{language=sh, commentstyle=\color{ForestGreen}} 
 \begin{lstlisting}[frame=single]
+# Alignement avec l'algorithme MEM de BWA
 bwa mem ref.fasta file.fastq > aln.sam
 \end{lstlisting}
 Le fichier d'alignement généré est au format \texttt{\gls{sam}}, afin de poursuivre l'analyse il doit être convertit au format binaire \texttt{\gls{bam}}. Cette opération a aussi le mérite de compresser l'information et de gagner de l'espace de stockage. Les séquences vont ensuite être triées par position génomique, puis les duplicats de PCR vont être éliminés.
@@ -119,10 +121,10 @@ signal de chaque segment de l'ADN original, mais il arrive que 2 copies de la m�
 aille dans 2 billes ou parcelles différentes, c'est ce que l'on appelle les duplicats de PCR. Ces duplicats
 amènent un biais lors du séquençage.
 
-Finalement, le fichier BAM trié sans duplicats doit être indexé pour être visualisable sur un Genome Browser.
+Finalement, le fichier BAM trié sans duplicats PCR doit être indexé pour être visualisable sur un Genome Browser.
 
 Les outils utilisés sont compris dans la suite des \href{http://samtools.sourceforge.net/samtools.shtml}{samtools}.
-\lstset{language=sh}  
+\lstset{language=sh, commentstyle=\color{ForestGreen}}  
 \begin{lstlisting}[frame=single]
 # Conversion du SAM en BAM
 samtools view -Sb aln.sam > aln.bam
@@ -139,9 +141,15 @@ samtools index aln_sorted_noDup.bam
 
 \textcolor{red}{parler du fait que nous ne recherchons pas une différence d'expression entre 2 conditions}
 
+
+
+
+
+
+
+
+
 \end{onehalfspace}
-
-
  
 % affichage du glossaire
 \printglossary[type=\acronymtype ,title=Glossaire]
