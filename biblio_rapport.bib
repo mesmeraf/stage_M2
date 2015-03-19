@@ -181,6 +181,21 @@ title = {{IS1397 is active for transposition into the chromosome of Escherichia 
 volume = {181},
 year = {1999}
 }
+@article{Delhomme2012,
+abstract = {MOTIVATION: RNA sequencing is becoming a standard for expression profiling experiments and many tools have been developed in the past few years to analyze RNA-Seq data. Numerous 'Bioconductor' packages are available for next-generation sequencing data loading in R, e.g. ShortRead and Rsamtools as well as to perform differential gene expression analyses, e.g. DESeq and edgeR. However, the processing tasks lying in between these require the precise interplay of many Bioconductor packages, e.g. Biostrings, IRanges or external solutions are to be sought.$\backslash$n$\backslash$nRESULTS: We developed 'easyRNASeq', an R package that simplifies the processing of RNA sequencing data, hiding the complex interplay of the required packages behind a single functionality.$\backslash$n$\backslash$nAVAILABILITY: The package is implemented in R (as of version 2.15) and is available from Bioconductor (as of version 2.10) at the URL: http://bioconductor.org/packages/release/bioc/html/easyRNASeq.html, where installation and usage instructions can be found.$\backslash$n$\backslash$nCONTACT: delhomme@embl.de.},
+author = {Delhomme, Nicolas and Padioleau, Isma\"{e}l and Furlong, Eileen E. and Steinmetz, Lars M.},
+doi = {10.1093/bioinformatics/bts477},
+file = {:home/jeanne/Downloads/Bioinformatics-2012-Delhomme-2532-3.pdf:pdf},
+isbn = {1367-4811 (Electronic)$\backslash$n1367-4803 (Linking)},
+issn = {13674803},
+journal = {Bioinformatics},
+number = {19},
+pages = {2532--2533},
+pmid = {22847932},
+title = {{easyRNASeq: A bioconductor package for processing RNA-Seq data}},
+volume = {28},
+year = {2012}
+}
 @article{DiNocera2013,
 abstract = {BACKGROUND: REPs (Repetitive Extragenic Palindromes) are small (20-40 bp) palindromic repeats found in high copies in some prokaryotic genomes, hypothesized to play a role in DNA supercoiling, transcription termination, mRNA stabilization.
 
@@ -259,6 +274,26 @@ pmid = {24243845},
 title = {{Dual role of transcription and transcript stability in the regulation of gene expression in Escherichia coli cells cultured on glucose at different growth rates.}},
 url = {http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3936743\&tool=pmcentrez\&rendertype=abstract},
 volume = {42},
+year = {2014}
+}
+@article{Fortino2014,
+abstract = {BACKGROUND: Inferring operon maps is crucial to understanding the regulatory networks of prokaryotic genomes. Recently, RNA-seq based transcriptome studies revealed that in many bacterial species the operon structure vary with the change of environmental conditions. Therefore, new computational solutions that use both static and dynamic data are necessary to create condition specific operon predictions.
+
+RESULTS: In this work, we propose a novel classification method that integrates RNA-seq based transcriptome profiles with genomic sequence features to accurately identify the operons that are expressed under a measured condition. The classifiers are trained on a small set of confirmed operons and then used to classify the remaining gene pairs of the organism studied. Finally, by linking consecutive gene pairs classified as operons, our computational approach produces condition-dependent operon maps. We evaluated our approach on various RNA-seq expression profiles of the bacteria Haemophilus somni, Porphyromonas gingivalis, Escherichia coli and Salmonella enterica. Our results demonstrate that, using features depending on both transcriptome dynamics and genome sequence characteristics, we can identify operon pairs with high accuracy. Moreover, the combination of DNA sequence and expression data results in more accurate predictions than each one alone.
+
+CONCLUSION: We present a computational strategy for the comprehensive analysis of condition-dependent operon maps in prokaryotes. Our method can be used to generate condition specific operon maps of many bacterial organisms for which high-resolution transcriptome data is available.},
+author = {Fortino, Vittorio and Smolander, Olli-Pekka and Auvinen, Petri and Tagliaferri, Roberto and Greco, Dario},
+doi = {10.1186/1471-2105-15-145},
+file = {:home/jeanne/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Fortino et al. - 2014 - Transcriptome dynamics-based operon prediction in prokaryotes.pdf:pdf},
+issn = {1471-2105},
+journal = {BMC bioinformatics},
+keywords = {Gene Expression Profiling,Gene Expression Profiling: methods,Genome, Bacterial,Genomics,Genomics: methods,Molecular Sequence Annotation,Operon,Sequence Analysis, DNA,Sequence Analysis, DNA: methods,Sequence Analysis, RNA,Sequence Analysis, RNA: methods},
+month = jan,
+pages = {145},
+pmid = {24884724},
+title = {{Transcriptome dynamics-based operon prediction in prokaryotes.}},
+url = {http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=4235196\&tool=pmcentrez\&rendertype=abstract},
+volume = {15},
 year = {2014}
 }
 @article{Gilson1990,
@@ -413,6 +448,21 @@ url = {http://dx.doi.org/10.1016/j.bbagrm.2013.02.013},
 volume = {1829},
 year = {2013}
 }
+@article{Lawrence2013,
+abstract = {We describe Bioconductor infrastructure for representing and computing on annotated genomic ranges and integrating genomic data with the statistical computing features of R and its extensions. At the core of the infrastructure are three packages: IRanges, GenomicRanges, and GenomicFeatures. These packages provide scalable data structures for representing annotated ranges on the genome, with special support for transcript structures, read alignments and coverage vectors. Computational facilities include efficient algorithms for overlap and nearest neighbor detection, coverage calculation and other range operations. This infrastructure directly supports more than 80 other Bioconductor packages, including those for sequence analysis, differential expression analysis and visualization.},
+author = {Lawrence, Michael and Huber, Wolfgang and Pag\`{e}s, Herv\'{e} and Aboyoun, Patrick and Carlson, Marc and Gentleman, Robert and Morgan, Martin T. and Carey, Vincent J.},
+doi = {10.1371/journal.pcbi.1003118},
+file = {:home/jeanne/Downloads/journal.pcbi.1003118.pdf:pdf},
+isbn = {1553-7358},
+issn = {1553734X},
+journal = {PLoS Computational Biology},
+number = {8},
+pages = {1--10},
+pmid = {23950696},
+title = {{Software for Computing and Annotating Genomic Ranges}},
+volume = {9},
+year = {2013}
+}
 @article{Levin2010,
 author = {Levin, Jz and Yassour, M and Adiconis, X},
 doi = {10.1038/nmeth.1491.Comprehensive},
@@ -547,52 +597,6 @@ file = {:home/jeanne/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded
 title = {{\'{E}tude de la dynamique de la prolif\'{e}ration des \'{e}l\'{e}ments REP chez Escherichia et Shigella par une approche bioinformatique}},
 year = {2013}
 }
-@article{Zuker2003a,
-abstract = {The abbreviated name, 'mfold web server', describes a number of closely related software applications available on the World Wide Web (WWW) for the prediction of the secondary structure of single stranded nucleic acids. The objective of this web server is to provide easy access to RNA and DNA folding and hybridization software to the scientific community at large. By making use of universally available web GUIs (Graphical User Interfaces), the server circumvents the problem of portability of this software. Detailed output, in the form of structure plots with or without reliability information, single strand frequency plots and 'energy dot plots', are available for the folding of single sequences. A variety of 'bulk' servers give less information, but in a shorter time and for up to hundreds of sequences at once. The portal for the mfold web server is http://www.bioinfo.rpi.edu/applications/mfold. This URL will be referred to as 'MFOLDROOT'.},
-author = {Zuker, Michael},
-file = {:home/jeanne/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Zuker - 2003 - Mfold web server for nucleic acid folding and hybridization prediction.pdf:pdf},
-issn = {1362-4962},
-journal = {Nucleic acids research},
-keywords = {Base Sequence,Computer Graphics,DNA,DNA, Single-Stranded,DNA, Single-Stranded: chemistry,DNA: chemistry,Databases, Nucleic Acid,Internet,Models, Molecular,Nucleic Acid Conformation,Nucleic Acid Denaturation,Nucleic Acid Hybridization,RNA,RNA: chemistry,Software,Thermodynamics,User-Computer Interface},
-month = jul,
-number = {13},
-pages = {3406--15},
-pmid = {12824337},
-title = {{Mfold web server for nucleic acid folding and hybridization prediction.}},
-url = {http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=169194\&tool=pmcentrez\&rendertype=abstract},
-volume = {31},
-year = {2003}
-}
-@article{Lawrence2013,
-abstract = {We describe Bioconductor infrastructure for representing and computing on annotated genomic ranges and integrating genomic data with the statistical computing features of R and its extensions. At the core of the infrastructure are three packages: IRanges, GenomicRanges, and GenomicFeatures. These packages provide scalable data structures for representing annotated ranges on the genome, with special support for transcript structures, read alignments and coverage vectors. Computational facilities include efficient algorithms for overlap and nearest neighbor detection, coverage calculation and other range operations. This infrastructure directly supports more than 80 other Bioconductor packages, including those for sequence analysis, differential expression analysis and visualization.},
-author = {Lawrence, Michael and Huber, Wolfgang and Pag\`{e}s, Herv\'{e} and Aboyoun, Patrick and Carlson, Marc and Gentleman, Robert and Morgan, Martin T. and Carey, Vincent J.},
-doi = {10.1371/journal.pcbi.1003118},
-file = {:home/jeanne/Downloads/journal.pcbi.1003118.pdf:pdf},
-isbn = {1553-7358},
-issn = {1553734X},
-journal = {PLoS Computational Biology},
-number = {8},
-pages = {1--10},
-pmid = {23950696},
-title = {{Software for Computing and Annotating Genomic Ranges}},
-volume = {9},
-year = {2013}
-}
-@article{Delhomme2012,
-abstract = {MOTIVATION: RNA sequencing is becoming a standard for expression profiling experiments and many tools have been developed in the past few years to analyze RNA-Seq data. Numerous 'Bioconductor' packages are available for next-generation sequencing data loading in R, e.g. ShortRead and Rsamtools as well as to perform differential gene expression analyses, e.g. DESeq and edgeR. However, the processing tasks lying in between these require the precise interplay of many Bioconductor packages, e.g. Biostrings, IRanges or external solutions are to be sought.$\backslash$n$\backslash$nRESULTS: We developed 'easyRNASeq', an R package that simplifies the processing of RNA sequencing data, hiding the complex interplay of the required packages behind a single functionality.$\backslash$n$\backslash$nAVAILABILITY: The package is implemented in R (as of version 2.15) and is available from Bioconductor (as of version 2.10) at the URL: http://bioconductor.org/packages/release/bioc/html/easyRNASeq.html, where installation and usage instructions can be found.$\backslash$n$\backslash$nCONTACT: delhomme@embl.de.},
-author = {Delhomme, Nicolas and Padioleau, Isma\"{e}l and Furlong, Eileen E. and Steinmetz, Lars M.},
-doi = {10.1093/bioinformatics/bts477},
-file = {:home/jeanne/Downloads/Bioinformatics-2012-Delhomme-2532-3.pdf:pdf},
-isbn = {1367-4811 (Electronic)$\backslash$n1367-4803 (Linking)},
-issn = {13674803},
-journal = {Bioinformatics},
-number = {19},
-pages = {2532--2533},
-pmid = {22847932},
-title = {{easyRNASeq: A bioconductor package for processing RNA-Seq data}},
-volume = {28},
-year = {2012}
-}
 @misc{Yin2012,
 abstract = {We introduce ggbio, a new methodology to visualize and explore genomics annotations and high-throughput data. The plots provide detailed views of genomic regions, summary views of sequence alignments and splicing patterns, and genome-wide overviews with karyogram, circular and grand linear layouts. The methods leverage the statistical functionality available in R, the grammar of graphics and the data handling capabilities of the Bioconductor project. The plots are specified within a modular framework that enables users to construct plots in a systematic way, and are generated directly from Bioconductor data structures. The ggbio R package is available at http://www.bioconductor.org/packages/2.11/bioc/html/ggbio.html.},
 author = {Yin, Tengfei and Cook, Dianne and Lawrence, Michael},
@@ -609,4 +613,20 @@ title = {{ggbio: an R package for extending the grammar of graphics for genomic 
 url = {http://genomebiology.com/content/13/8/R77},
 volume = {13},
 year = {2012}
+}
+@article{Zuker2003a,
+abstract = {The abbreviated name, 'mfold web server', describes a number of closely related software applications available on the World Wide Web (WWW) for the prediction of the secondary structure of single stranded nucleic acids. The objective of this web server is to provide easy access to RNA and DNA folding and hybridization software to the scientific community at large. By making use of universally available web GUIs (Graphical User Interfaces), the server circumvents the problem of portability of this software. Detailed output, in the form of structure plots with or without reliability information, single strand frequency plots and 'energy dot plots', are available for the folding of single sequences. A variety of 'bulk' servers give less information, but in a shorter time and for up to hundreds of sequences at once. The portal for the mfold web server is http://www.bioinfo.rpi.edu/applications/mfold. This URL will be referred to as 'MFOLDROOT'.},
+author = {Zuker, Michael},
+file = {:home/jeanne/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Zuker - 2003 - Mfold web server for nucleic acid folding and hybridization prediction.pdf:pdf},
+issn = {1362-4962},
+journal = {Nucleic acids research},
+keywords = {Base Sequence,Computer Graphics,DNA,DNA, Single-Stranded,DNA, Single-Stranded: chemistry,DNA: chemistry,Databases, Nucleic Acid,Internet,Models, Molecular,Nucleic Acid Conformation,Nucleic Acid Denaturation,Nucleic Acid Hybridization,RNA,RNA: chemistry,Software,Thermodynamics,User-Computer Interface},
+month = jul,
+number = {13},
+pages = {3406--15},
+pmid = {12824337},
+title = {{Mfold web server for nucleic acid folding and hybridization prediction.}},
+url = {http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=169194\&tool=pmcentrez\&rendertype=abstract},
+volume = {31},
+year = {2003}
 }
