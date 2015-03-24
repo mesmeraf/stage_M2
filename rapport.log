@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2014.6.27)  18 MAR 2015 16:57
+This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2014.6.27)  24 MAR 2015 17:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -560,34 +560,34 @@ Package: listings 2013/08/26 1.5b (Carsten Heinz)
 \glo@main@file=\write4
 \openout4 = `rapport.glo'.
 
-Package glossaries Info: Writing glossary file rapport.glo on input line 46.
+Package glossaries Info: Writing glossary file rapport.glo on input line 47.
 \@float@every@figure=\toks39
-Package hyperref Info: Option `colorlinks' set `true' on input line 57.
+Package hyperref Info: Option `colorlinks' set `true' on input line 58.
  (./rapport.aux)
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
  (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-LaTeX Info: Redefining \degres on input line 62.
-LaTeX Info: Redefining \dots on input line 62.
-LaTeX Info: Redefining \up on input line 62.
+LaTeX Info: Redefining \degres on input line 63.
+LaTeX Info: Redefining \dots on input line 63.
+LaTeX Info: Redefining \up on input line 63.
 \AtBeginShipoutBox=\box37
-Package hyperref Info: Link coloring ON on input line 62.
+Package hyperref Info: Link coloring ON on input line 63.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -597,9 +597,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count156
 )
-LaTeX Info: Redefining \ref on input line 62.
-LaTeX Info: Redefining \pageref on input line 62.
-LaTeX Info: Redefining \nameref on input line 62.
+LaTeX Info: Redefining \ref on input line 63.
+LaTeX Info: Redefining \pageref on input line 63.
+LaTeX Info: Redefining \nameref on input line 63.
 
 (./rapport.out) (./rapport.out)
 \@outlinefile=\write5
@@ -641,12 +641,12 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count163
-LaTeX Font Info:    Try loading font information for U+msa on input line 65.
+LaTeX Font Info:    Try loading font information for U+msa on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 65.
+LaTeX Font Info:    Try loading font information for U+msb on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -658,13 +658,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-Overfull \hbox (11.63239pt too wide) in paragraph at lines 70--71
+Overfull \hbox (11.63239pt too wide) in paragraph at lines 71--72
 \T1/cmr/m/n/12 comme \T1/cmr/m/it/12 Agrobac-terium tume-fa-ciens \T1/cmr/m/n/1
 2 ou chez des bac-téries ubiq-ui-taires, \T1/cmr/m/it/12 Deinococ-
  []
 
 
-Overfull \hbox (23.55383pt too wide) in paragraph at lines 72--72
+Overfull \hbox (23.55383pt too wide) in paragraph at lines 73--73
 [][]\T1/cmr/bx/n/17.28 Caractéristiques des REP et or-gan-i-sa-tions en BIME 
  []
 
@@ -672,33 +672,33 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 
+l.75 
       [1
 
 ] <figures/rep_bime.jpg, id=52, 120.9318pt x 165.9801pt>
 File: figures/rep_bime.jpg Graphic file (type jpg)
 
 <use figures/rep_bime.jpg>
-Package pdftex.def Info: figures/rep_bime.jpg used on input line 76.
+Package pdftex.def Info: figures/rep_bime.jpg used on input line 77.
 (pdftex.def)             Requested size: 217.67703pt x 298.76392pt.
 
 <figures/malEF_rep.png, id=57, 500.87125pt x 418.56375pt>
 File: figures/malEF_rep.png Graphic file (type png)
 
 <use figures/malEF_rep.png>
-Package pdftex.def Info: figures/malEF_rep.png used on input line 82.
+Package pdftex.def Info: figures/malEF_rep.png used on input line 83.
 (pdftex.def)             Requested size: 250.435pt x 209.28136pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-Overfull \hbox (2.84102pt too wide) in paragraph at lines 88--89
+Overfull \hbox (2.84102pt too wide) in paragraph at lines 89--90
 [][]\T1/cmr/m/n/12 1999[][]; [][]Tobes and Pareja[][] [][]2005[][]). Lorsqu'ell
 es sont tran-scrites, les REP joueraient
  []
 
 [2] [3 <./figures/rep_bime.jpg>] [4 <./figures/malEF_rep.png>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 97.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 98.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -708,39 +708,44 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) [5
 
 ]
-Overfull \hbox (10.16908pt too wide) in paragraph at lines 107--109
+Overfull \hbox (10.16908pt too wide) in paragraph at lines 108--109
 \T1/cmr/m/n/12 Le fichier d'aligne-ment généré est au for-mat [][][][][][]\T1/c
 mtt/m/n/12 Sequence Alignment Map format[][]
  []
 
 
-Overfull \hbox (3.45117pt too wide) in paragraph at lines 113--117
-\T1/cmr/m/n/12 d'ADN (tech-nolo-gies Roche ou Ion Tor-rent) ou ex-pan-sion des 
-molécules
- []
-
-[6]
-Overfull \hbox (13.71661pt too wide) in paragraph at lines 118--121
-[]\T1/cmr/m/n/12 Séquençage par la tech-nique pro-pre à chaque tech-nolo-gie, p
-y-roséquençage
+Overfull \hbox (5.52977pt too wide) in paragraph at lines 108--109
+[][][][]\T1/cmtt/m/n/12 Binary Alignment Map format (BAM)[][][]\T1/cmr/m/n/12 ,
+ des critères de qual-ité sont ap-pliqués.
  []
 
 
-Overfull \hbox (2.638pt too wide) in paragraph at lines 138--140
-[][][][][][][][][][][][][][][][][] 
+Overfull \hbox (2.638pt too wide) in paragraph at lines 113--114
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[7] [8] <figures/easyRNASeq.png, id=225, 601.24625pt x 798.985pt>
+[6] [7] <figures/easyRNASeq.png, id=213, 601.24625pt x 798.985pt>
 File: figures/easyRNASeq.png Graphic file (type png)
 
 <use figures/easyRNASeq.png>
-Package pdftex.def Info: figures/easyRNASeq.png used on input line 157.
+Package pdftex.def Info: figures/easyRNASeq.png used on input line 137.
 (pdftex.def)             Requested size: 180.37526pt x 239.69734pt.
- (./rapport.gls [9 <./figures/easyRNASeq.png>])
-(./rapport.bbl [10
+ (./rapport.gls [8] [9 <./figures/easyRNASeq.png>]
+Overfull \hbox (2.11404pt too wide) in paragraph at lines 5--5
+[]\T1/cmr/m/n/12 L'alignement d'un read ne peut pas être représenté
+ []
 
 
-]
+Overfull \hbox (4.32127pt too wide) in paragraph at lines 5--5
+\T1/cmr/m/n/12 comme un aligne-ment linéaire. Un aligne-ment chimérique est rep
+résenté
+ []
+
+[10
+
+
+]) (./rapport.bbl [11]
 Underfull \hbox (badness 2269) in paragraph at lines 52--61
 []\T1/cmr/m/n/12 S. Choi, S. Ohta, and E. Oht-subo.  A novel IS el-e-ment, IS62
 1,
@@ -770,9 +775,9 @@ Underfull \hbox (badness 4353) in paragraph at lines 52--61
  nih . gov / articlerender .
  []
 
-[11
+[12
 
-] [12] [13]
+] [13] [14]
 Underfull \hbox (badness 1424) in paragraph at lines 229--239
 \T1/cmr/m/n/12 as-so-ci-ated with REP-BIME se-quences.  \T1/cmr/m/it/12 Nu-clei
 c acids re-search\T1/cmr/m/n/12 , 40
@@ -785,24 +790,24 @@ nar /
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 176.
- [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 176.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
+ [15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
  (./rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 176.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 176.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 176.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 156.
  ) 
 Here is how much of TeX's memory you used:
- 15893 strings out of 495034
- 227555 string characters out of 6181677
- 399525 words of memory out of 5000000
- 18726 multiletter control sequences out of 15000+600000
+ 15917 strings out of 495034
+ 228145 string characters out of 6181677
+ 399468 words of memory out of 5000000
+ 18756 multiletter control sequences out of 15000+600000
  23128 words of font info for 62 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,9n,92p,2030b,1403s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,9n,92p,2030b,2151s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texliv
@@ -820,10 +825,10 @@ ive/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/cm-super/sftt1200.pfb>
-Output written on rapport.pdf (15 pages, 523671 bytes).
+Output written on rapport.pdf (16 pages, 524417 bytes).
 PDF statistics:
- 375 PDF objects out of 1000 (max. 8388607)
- 326 compressed objects within 4 object streams
- 90 named destinations out of 1000 (max. 500000)
+ 374 PDF objects out of 1000 (max. 8388607)
+ 324 compressed objects within 4 object streams
+ 84 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

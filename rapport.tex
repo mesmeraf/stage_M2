@@ -38,11 +38,12 @@
 \newacronym{bam}{BAM}{Binary Alignment Map format}
 \newacronym{gff}{GFF}{General Feature Format}
 \newacronym{bed}{BED}{Browser Extensible Data}
-\newacronym{de}{DE}{Difference d'Expression}
+\newacronym{de}{DE}{Diff\'erence d'Expression}
 % création des entrées du glossaire
 \newglossaryentry{PE}{name={Paired-end},description={Technique de séquençage haut débit consistant à réaliser les amplifications d'un fragment d'ADN en marquant l'extrémité 5' par un tag \no1 et l'extrémité 3' par un tag \no2. La distance entre les 2 tags est connue et fixe (négative ou jusqu'à 500 pb). Ceci permet lors de l'assemblage, de séquences de 35 pb par exemple, d'associer le read 1 et le read 2 grâce à la distance séparant les 2 et cela même si la séquence intermédiaire est inconnue. Si la distance est négative, il est possible d'obtenir des reads chevauchants de longueur plus importante que les 35 pb}}
 \newglossaryentry{reads}{name={reads},description={Séquence nucléotidique issue d'un séquençage NGS}}
-\newglossaryentry{GRanges}{name={Genomic Ranges},description={Format de stockage d'informations pour les éléments génomiques sous R. L'information minimale requise est le chromosome, les positions de départ et de fin, le sens du brin. Ces champs peuvent être suivis de méta-datas où d'autres informations libres peuvent être enregistrées.}}
+\newglossaryentry{GRanges}{name={Genomic Ranges},description={Format de stockage d'informations pour les éléments génomiques sous R. L'information minimale requise est le chromosome, les positions de départ et de fin, le sens du brin. Ces champs peuvent être suivis de méta-datas où d'autres informations libres peuvent être enregistrées}}
+\newglossaryentry{chimerique}{name={alignement chim\'erique},description={L'alignement d'un read ne peut pas être représenté comme un alignement linéaire. Un alignement chimérique est représenté comme un ensemble d'alignements, par exemple lorsqu'une partie d'un read est mappé à un locus du génome et la suite à un autre locus}}
 \makeglossaries
 
 % Encadrement des figures
@@ -94,7 +95,7 @@ La littérature décrit de nombreuses fonctions associées aux REP, mais certain
 \chapter*{Matériel \& Méthodes}
 
 \section*{Données}
-Les données que nous avons exploité sont issues des expériences d'évolution adaptatives en laboratoire visant à découvrir l'émergence de mutations clés permettant la croissance rapide d'E. coli K-12 MG1655 sur un medium pauvre en glucose \citep{Lacroix2014}. Ces données ont été choisies car elles proviennent d'expériences de RNA-Seq comportant un nombre non négligeable de réplicats (9) pour la condition de croissance en milieu pauvre en glucose (ALE) et 2 réplicats pour le Wild Type (WT) . Il s'agit de données \gls{ngs} publiques, accessibles sur le base de données \href{http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE61327}{GEO} (Gene Expression Omnibus) du NCBI au format \gls{sra}, séquencées sur Illumina MiSeq à partir d'ARN total extrait des cultures d'E. coli et rétro-transcrit en cDNA. La librairie a été conçue en \gls{PE} et brin spécifique \citep{Levin2010}. Grâce au \href{http://www.ncbi.nlm.nih.gov/books/NBK158900/#SRA_download.how_do_i_use_the_sra_toolki}{SRA toolkit} et à la commande \texttt{fastq-dump}, elles sont décompressées au format \texttt{fastq}. Un contrôle de qualité a été effectué afin d'inspecter les séquences grâce au logiciel \texttt{fastqc}. Les 2 WT et 8 ALE ont été validés puisque disposant d'une qualité de séquence par base supérieure à 30 pour des \gls{reads} de 62 pb. Seul le fichier \texttt{SRR1573441.fastq} a été rejeté car la longueur des reads allait de 35 à 502 pb avec des scores de qualités très variables.
+Les données que nous avons exploité sont issues des expériences d'évolution adaptatives en laboratoire visant à découvrir l'émergence de mutations clés permettant la croissance rapide d'E. coli K-12 MG1655 sur un medium pauvre en glucose \citep{Lacroix2014}. Ces données ont été choisies car elles proviennent d'expériences de RNA-Seq comportant un nombre non négligeable de réplicats (9) pour la condition de croissance en milieu pauvre en glucose (ALE) et 2 réplicats pour le Wild Type (WT) . Il s'agit de données \gls{ngs} publiques, accessibles sur le base de données \href{http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE61327}{GEO} (Gene Expression Omnibus) du NCBI au format \gls{sra}, séquencées sur Illumina MiSeq à partir d'ARN total extrait des cultures d'E. coli et rétro-transcrit en cDNA. La librairie a été conçue en \gls{PE} et brin spécifique en utilisant la méthode dUTP \citep{Levin2010}. Grâce au \href{http://www.ncbi.nlm.nih.gov/books/NBK158900/#SRA_download.how_do_i_use_the_sra_toolki}{SRA toolkit} et à la commande \texttt{fastq-dump}, elles sont décompressées au format \texttt{fastq}. Un contrôle de qualité a été effectué afin d'inspecter les séquences grâce au logiciel \texttt{fastqc}. Les 2 WT et 8 ALE ont été validés puisque disposant d'une qualité de séquence par base supérieure à 30 pour des \gls{reads} de 62 pb. Seul le fichier \texttt{SRR1573441.fastq} a été rejeté car la longueur des reads allait de 35 à 502 pb avec des scores de qualités très variables.
 
 \section*{Alignement des reads}
 Les reads ont été alignés grâce au logiciel \href{http://bio-bwa.sourceforge.net/}{BWA} sur le génome d'E. coli \href{http://www.ncbi.nlm.nih.gov/nuccore/NC_000913.2}{NC\_000913.2} qui est le génome utilisé pour annoter les REP au laboratoire.  Le logiciel BWA propose 3 algorithmes distincts, BWA-backtrack, BWA-SW et BWA-MEM. Pour chacun de ces alignements, il est nécessaire de disposer d'une séquence de référence indexée, obtenue par la commande \texttt{bwa index NC\_000913.2.fasta}. 
@@ -104,38 +105,17 @@ L'algorithme que nous avons sélectionné est le MEM (Maximal Exact Matches) car
 # Alignement avec l'algorithme MEM de BWA
 bwa mem ref.fasta file.fastq > aln.sam
 \end{lstlisting}
-Le fichier d'alignement généré est au format \texttt{\gls{sam}}, afin de poursuivre l'analyse il doit être convertit au format binaire \texttt{\gls{bam}}. Cette opération a aussi le mérite de compresser l'information et de gagner de l'espace de stockage. Les séquences vont ensuite être triées par position génomique, puis les duplicats de PCR vont être éliminés.
-Si nous déroulons les étapes d'un séquençage haut dédit, nous obtenons :
-\begin{enumerate}
-\item Fractionnement de l'ADN de l'échantillon.
-\item Ligation des adaptateurs aux 2 extrémités des fragments.
-\item amplification par PCR des fragments avec les adaptateurs.
-\item Création d'une émulsion huile-eau avec les microbilles et les molécules d'ADN (technologies
-Roche ou Ion Torrent) ou expansion des molécules d'ADN sur une flowcell (technologie
-Illumina). Le but étant d'atteindre exactement une molécule par bille ou par parcelle sur la
-flowcell.
-\item Amplification du signal par PCR des séquences spécifiques à chaque bille ou parcelle.
-\item Séquençage par la technique propre à chaque technologie, pyroséquençage pour Roche,
-détection d'ions semi-conducteurs pour Ion Torrent ou par terminateurs de chaîne réversible
-pour Illumina.
-\end{enumerate}
+Le fichier d'alignement généré est au format \texttt{\gls{sam}}, afin de poursuivre l'analyse il doit être convertit au format binaire \texttt{\gls{bam}}, des critères de qualité sont appliqués. Seules les séquences possédant une qualité de mapping > 30 et n'étant pas taggées comme \gls{chimerique} sont conservées. Cette opération a aussi le mérite de compresser l'information et de gagner de l'espace de stockage. Les séquences vont ensuite être triées par position génomique.
 
-Les duplicats de PCR sont générés à la 3\ieme{} étape lors de l'amplification, nous cherchons à augmenter le
-signal de chaque segment de l'ADN original, mais il arrive que 2 copies de la même portion d'ADN
-aille dans 2 billes ou parcelles différentes, c'est ce que l'on appelle les duplicats de PCR. Ces duplicats
-amènent un biais lors du séquençage.
-
-Finalement, le fichier BAM trié sans duplicats PCR doit être indexé pour être visualisable sur un Genome Browser. Les outils utilisés sont compris dans la suite des \href{http://samtools.sourceforge.net/samtools.shtml}{samtools}.
+Finalement, le fichier BAM trié doit être indexé pour être visualisable sur un Genome Browser. Les outils utilisés sont compris dans la suite des \href{http://samtools.sourceforge.net/samtools.shtml}{samtools}.
 \lstset{language=sh, commentstyle=\color{ForestGreen}}  
 \begin{lstlisting}[frame=single]
-# Conversion du SAM en BAM
-samtools view -Sb aln.sam > aln.bam
+# Conversion du SAM en BAM et application des filtres
+# de qualite.
+samtools view -Sbh -q 30 -F 2048 aln.sam > aln.bam
 
 # Tri en fonction des positions genomiques
 samtools sort aln.bam aln_sorted
-
-# Elimination des duplicats de PCR
-samtools rmdup -s aln_sorted.bam aln_sorted_noDup.bam
 
 # Indexation du fichier d'alignement
 samtools index aln_sorted_noDup.bam
@@ -150,7 +130,7 @@ Pour réaliser nos analyses, nous nous sommes inspirés de la méthodologie empl
 L'analyse statistique a été menée sur le logiciel R.
 
 \subsection*{Création de la table de comptages par gène}
-Afin d'obtenir des résultats de comptage par transcrit et ainsi estimer l'expression, nous avons utilisé le package Bioconductor easyRNASeq \citep{Delhomme2012}. Les annotations du génome d'E. coli touchant aux transcrits sont extraites à partir du fichier GFF et stockées sous forme d'une base de données. Cela a nécessité une manipulation du fichier GFF préalable, en effet les opérons récupérés sur RegulonDB sont composés à la fois de gènes dont les transcrits sont annotés ARNm, ARNt et ARNr. Seul les gènes dont le transcrit est annoté ARNm est pris en compte par le package easyRNASeq, donc pour ne pas avoir d'erreur dans l'analyse, nous avons transformé les annotations ARNt et ARNr en ARNm.
+Afin d'obtenir des résultats de comptage par transcrit et ainsi estimer l'expression, nous avons utilisé le package Bioconductor easyRNASeq \citep{Delhomme2012}. Les annotations du génome d'E. coli touchant aux transcrits sont extraites à partir du fichier GFF et stockées sous forme d'une base de données. Cela a nécessité une manipulation préalable du fichier GFF, en effet les opérons récupérés sur RegulonDB sont composés à la fois de gènes dont les transcrits sont annotés ARNm, ARNt et ARNr. Seul les gènes dont le transcrit est annoté ARNm est pris en compte par le package easyRNASeq, donc pour ne pas avoir d'erreur dans l'analyse, nous avons transformé les annotations ARNt et ARNr en ARNm.
 La liste des transcrits par gènes est ensuite extraites pour un total de 4605 éléments. La couverture par transcrit est ensuite calculée pour chaque fichier BAM, le résultat est obtenu en réalisant l'union des positions extraites de la liste des transcrits et des positions des reads extraites des fichiers BAM qui auront été préalablement transformées au format \gls{GRanges} (GRanges) (\autoref{fig:easyRNAseq}) \citep{Lawrence2013}. Une table de comptage est alors produite, les transcrits figurant en ligne et les fichiers BAM en colonnes .
 
 \begin{figure}[ht]
