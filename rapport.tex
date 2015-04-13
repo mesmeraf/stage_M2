@@ -16,6 +16,7 @@
 \usepackage[skip=2pt,font=scriptsize]{caption}
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{enumitem}
 
 
 \author{Nicolas JEANNE}
@@ -39,6 +40,7 @@
 \newacronym{gff}{GFF}{General Feature Format}
 \newacronym{bed}{BED}{Browser Extensible Data}
 \newacronym{de}{DE}{Diff\'erence d'Expression}
+\newacronym{rpkm}{RPKM}{Reads Per Kilobase per Million mapped reads}
 % création des entrées du glossaire
 \newglossaryentry{PE}{name={Paired-end},description={Technique de séquençage haut débit consistant à réaliser les amplifications d'un fragment d'ADN en marquant l'extrémité 5' par un tag \no1 et l'extrémité 3' par un tag \no2. La distance entre les 2 tags est connue et fixe (négative ou jusqu'à 500 pb). Ceci permet lors de l'assemblage, de séquences de 35 pb par exemple, d'associer le read 1 et le read 2 grâce à la distance séparant les 2 et cela même si la séquence intermédiaire est inconnue. Si la distance est négative, il est possible d'obtenir des reads chevauchants de longueur plus importante que les 35 pb}}
 \newglossaryentry{reads}{name={reads},description={Séquence nucléotidique issue d'un séquençage NGS}}
@@ -57,8 +59,8 @@
   linkcolor=Black,
   urlcolor=Blue}
 
-% Configuration des parties de code pour accepter les caractères spéciaux
-\lstset{basicstyle=\ttfamily}
+% Configuration des parties de code
+\lstset{basicstyle=\small}
 
 \begin{document}
 
@@ -75,13 +77,15 @@ La taille des REP varie de 20 à 40 nucléotides, la classification Y, Z\textsup
 
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=1.8]{figures/rep_bime.jpg}}
-\caption{\textbf{REP et BIME chez Escherichia coli. (A)} Séquences consensus Y, Z\textsuperscript{1} et Z\textsuperscript{2} des REP. Le tétra-nucléotide conservé GTAC est encadré en violet, le complémentaire conservé CTAC est encadré en vert, les flèches rouges situent les zones d'appariement de la tige et les positions encadrées en noir sont les zones de mésappariement. Les positions conservées parmi les classes de REP sont en rouge, les positions variables en bleu. \textbf{(B)} Structure secondaire des REP. Les rectangles violets et verts représentent respectivement les tétra-nucléotides conservés GTAC pour les REP et CTAC pour les iREP. Les flèches noires indiquent l'orientation des REP. \textbf{(C)} Structures des BIME-1 et BIME-2. Les BIME-1 sont composées de REP et de iREP Y et Z\textsuperscript{1} séparées par un linker de séquence longue (L), les BIME-2 sont composées de Y et Z\textsuperscript{2}, de linker courts (S) et de séquences séparatrices s, l ou r. H-H et T-T dénotent respectivement une organisation tête à tête et queue à queue des REP. \citep{Ton-Hoang2012}.}\label{fig:rep_bime} 
+\caption{\textbf{REP et BIME chez Escherichia coli. (A)} Séquences consensus Y, Z\textsuperscript{1} et Z\textsuperscript{2} des REP. Le tétra-nucléotide conservé GTAC est encadré en violet, le complémentaire conservé CTAC est encadré en vert, les flèches rouges situent les zones d'appariement de la tige et les positions encadrées en noir sont les zones de mésappariement. Les positions conservées parmi les classes de REP sont en rouge, les positions variables en bleu. \textbf{(B)} Structure secondaire des REP. Les rectangles violets et verts représentent respectivement les tétra-nucléotides conservés GTAC pour les REP et CTAC pour les iREP. Les flèches noires indiquent l'orientation des REP. \textbf{(C)} Structures des BIME-1 et BIME-2. Les BIME-1 sont composées de REP et de iREP Y et Z\textsuperscript{1} séparées par un linker de séquence longue (L), les BIME-2 sont composées de Y et Z\textsuperscript{2}, de linker courts (S) et de séquences séparatrices s, l ou r. H-H et T-T dénotent respectivement une organisation tête à tête et queue à queue des REP. \citep{Ton-Hoang2012}.}
+\label{fig:rep_bime} 
 \end{figure}
 
 
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.5]{figures/malEF_rep.png}}
-\caption{\textbf{Structure ARN des REP au sein de l'operon malEFG.} Y, Z\textsuperscript{2} et Y indiquent la séquence des REP dans l'espace intergénique de malE-malF. Bien que Y et Z\textsuperscript{2} puissent former des structures tige-boucles par elles mêmes, elles s'apparient ensemble pour former une région étendue en grande partie à double brin (70\% des nucléotides sont appariés). La séquence affichée provient du génome d'E. coli K12. La région REP-stabilized RNA (RSR) indique l'exttrémité 3′ du messager malE mature, qui s'étend de 3 à 9 nucléotides depuis la base de la tige-boucle formée par Y et Z\textsuperscript{2}. Les codons STOP de  malE et START de malF sont encadrés. SD représente la séquence Shine–Dalgarno nécessaire à l'initiation de la traduction de malF. \citep{Khemici2004}.}\label{fig:malEF_rep} 
+\caption{\textbf{Structure ARN des REP au sein de l’opéron malEFG.} Y, Z\textsuperscript{2} et Y indiquent la séquence des REP dans l'espace inter-génique de malE-malF. Bien que Y et Z\textsuperscript{2} puissent former des structures tige-boucles par elles mêmes, elles s'apparient ensemble pour former une région étendue en grande partie à double brin (70\% des nucléotides sont appariés). La séquence affichée provient du génome d'E. coli K12. La région REP-stabilized RNA (RSR) indique l'extrémité 3′ du messager malE mature, qui s'étend de 3 à 9 nucléotides depuis la base de la tige-boucle formée par Y et Z\textsuperscript{2}. Les codons STOP de  malE et START de malF sont encadrés. SD représente la séquence Shine–Dalgarno nécessaire à l'initiation de la traduction de malF. \citep{Khemici2004}.}
+\label{fig:malEF_rep} 
 \end{figure}
 
 
@@ -118,25 +122,91 @@ samtools view -Sbh -q 30 -F 2048 aln.sam > aln.bam
 samtools sort aln.bam aln_sorted
 
 # Indexation du fichier d'alignement
-samtools index aln_sorted_noDup.bam
+samtools index aln_sorted.bam
+\end{lstlisting}
+
+Pour les besoins ultérieurs de l'analyse, les réplicats d'une même condition sont fusionnés en un seul fichier.
+\lstset{language=sh, commentstyle=\color{ForestGreen}}  
+\begin{lstlisting}[frame=single]
+# Fusion des replicats.
+samtools merge merged.bam aln_sorted_1.bam \
+aln_sorted_2.bam aln_sorted_3.bam
 \end{lstlisting}
 
 \section*{Préparation des fichiers de référence}
-Le fichier \texttt{\gls{gff}} d'annotation du génome a été généré par un script Perl à partir du fichier \href{http://www.ncbi.nlm.nih.gov/nuccore/NC_000913.2}{GenBank}. Les fichiers répertoriant les opérons (source \href{http://regulondb.ccg.unam.mx/}{RegulonDB}), les REP et BIME (source laboratoire) ainsi que les terminateurs de transcription (source \href{http://csbl.bmb.uga.edu/DOOR/}{DOOR}) ont été transformés au format \texttt{\gls{bed}} grâce à des scripts Python.
-Ces changements de format permettent de travailler aisément avec la suite de logiciels \href{http://bedtools.readthedocs.org/en/latest/}{BEDtools} pour la recherche d'intersections, de positions proches ou de couverture de reads. Ces outils ont généré des fichiers BED nécessaire à la suite de l'analyse tel que celui des positions génomiques des opérons contenant des REP, celui des REP, celui des gènes contenus dans des opérons bordant une REP, celui des BIME et celui de la couverture sur les régions contenant des BIME.
+Le fichier \texttt{\gls{gff}} d'annotation du génome a été généré par un script Perl à partir du fichier \href{http://www.ncbi.nlm.nih.gov/nuccore/NC_000913.2}{GenBank}. Les fichiers répertoriant les opérons, les promoteurs, les terminateurs de transcription (source \href{http://regulondb.ccg.unam.mx/}{RegulonDB}) ainsi que les REP et BIME (source laboratoire) ont été transformés au format \texttt{\gls{bed}} grâce à des scripts Python.
+Ces changements de format permettent de travailler aisément avec la suite de logiciels \href{http://bedtools.readthedocs.org/en/latest/}{BEDtools} pour la recherche d'intersections, de positions proches ou de couverture de reads. Ces outils ont généré les fichiers BED nécessaires à la suite de l'analyse tel que celui des positions génomiques des opérons contenant des REP, celui des REP, celui des gènes contenus dans des opérons bordant une REP, celui des BIME et celui de la couverture sur les régions contenant des BIME.
+
+\section*{Visualisation du mapping}
+L'alignement des reads et le mapping sur le génome de référence de E. coli sont visualisés grâce au genome browser \href{https://www.broadinstitute.org/igv/}{IGV} (\autoref{fig:igv}).
+\begin{figure}[ht]
+\centerline{\includegraphics[scale=0.246]{figures/igv_snapshot.png}}
+\caption{\textbf{Visualisation du mapping de l'opéron malEFG sur IGV.} Les premières pistes représentent les positions et orientations des gènes, des opérons, la présence de promoteurs et de terminateurs, ainsi que la position des BIME et des REP qui composent les BIME. Les 2 pistes suivantes affichent la couverture des fichiers BAM fusionnés de la région visualisée (histogramme gris) et l'alignement des reads (flèches pleines rouges et bleues). La couleur bleue sur cette piste indique un alignement en anti-sens et la couleur rouge, un alignement en sens.}
+\label{fig:igv} 
+\end{figure}
+
+Il est important de noter que la couverture au long du génome n'est pas uniforme, ni même sur les gènes, car nous observons la présence de nombreuses vallées et pics. Ce phénomène s'explique par plusieurs raisons techniques \citep{Li2013}. Premièrement, les méthodes de fragmentation des protocoles de préparation des bibliothèques amenant un biais en cassant ou dégradant certaines séquences. Le second biais possible est amené par le Random Priming lors de l'étape de rétro-transcription pouvant préférentiellement transcrire certaines séquences. Troisième point, les ligases peuvent lier préférentiellement les adaptateurs à certaines séquences. Quatrième point, l'amplification de la PCR est bien connue pour introduire des biais dépendant de la proportion en GC des séquences. Le dernier point, étudié sur le séquençage Illumina, implique des interférences spécifiques aux séquences lors du processus d'élongation pendant le séquençage générés par des schémas particuliers du template produisant des repliements du brin d'ADN et altérant l'affinité des enzymes \citep{Nakamura2011}.
 
 \section*{Analyse statistique}
-Pour réaliser nos analyses, nous nous sommes inspirés de la méthodologie employée en RNA-Seq pour l'étude de \gls{de}. Il est important de noter qu'une différence importante existe avec notre approche, car nous ne nous intéressons pas à une DE pour un m\^eme gène dans différentes conditions mais plut\^ot à la \emph{DE entre deux gènes pour lesquels ont pourrait supposer un profil d'expression similaire}, comme c'est le cas dans les opérons par exemple.
+Pour réaliser nos analyses, nous nous sommes inspirés de la méthodologie employée en RNA-Seq pour l'étude de \gls{de}. Il est important de noter qu'une différence importante existe avec notre approche, car nous ne nous intéressons pas à une DE pour un m\^eme gène dans différentes conditions mais plut\^ot à la \emph{DE entre deux gènes pour lesquels ont pourrait supposer un profil d'expression similaire dans une même condition}, comme c'est le cas dans les opérons par exemple.
 L'analyse statistique a été menée sur le logiciel R.
 
-\subsection*{Création de la table de comptages par gène}
+\subsection*{Création de la table de comptages et normalisation}
 Afin d'obtenir des résultats de comptage par transcrit et ainsi estimer l'expression, nous avons utilisé le package Bioconductor easyRNASeq \citep{Delhomme2012}. Les annotations du génome d'E. coli touchant aux transcrits sont extraites à partir du fichier GFF et stockées sous forme d'une base de données. Cela a nécessité une manipulation préalable du fichier GFF, en effet les opérons récupérés sur RegulonDB sont composés à la fois de gènes dont les transcrits sont annotés ARNm, ARNt et ARNr. Seul les gènes dont le transcrit est annoté ARNm est pris en compte par le package easyRNASeq, donc pour ne pas avoir d'erreur dans l'analyse, nous avons transformé les annotations ARNt et ARNr en ARNm.
-La liste des transcrits par gènes est ensuite extraites pour un total de 4605 éléments. La couverture par transcrit est ensuite calculée pour chaque fichier BAM, le résultat est obtenu en réalisant l'union des positions extraites de la liste des transcrits et des positions des reads extraites des fichiers BAM qui auront été préalablement transformées au format \gls{GRanges} (GRanges) (\autoref{fig:easyRNAseq}) \citep{Lawrence2013}. Une table de comptage est alors produite, les transcrits figurant en ligne et les fichiers BAM en colonnes .
+La liste des transcrits par gènes est ensuite extraites pour un total de 4605 éléments. La couverture par transcrit est ensuite calculée pour chaque fichier BAM, le résultat est obtenu en réalisant l'union des positions extraites de la liste des transcrits et des positions des reads extraites des fichiers BAM qui auront été préalablement transformées au format \gls{GRanges} (GRanges)  \citep{Lawrence2013}. Une table de comptage est alors produite, les transcrits figurant en ligne et les fichiers BAM en colonnes (\autoref{fig:easyRNAseq}).
 
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.3]{figures/easyRNASeq.png}}
-\caption{\textbf{easyRNASeq : création d'une table de comptage.} Processus de création de la table de comptage grâce à l'union des intervalles génomiques. Les formats d'entrées de notre analyse sont surlignés en rouge, le format de sortie en bleu. \citep{Delhomme2012}.}\label{fig:easyRNAseq} 
+\caption{\textbf{easyRNASeq : création d'une table de comptage.} Processus de création de la table de comptage grâce à l'union des intervalles génomiques. Les formats d'entrées de notre analyse sont surlignés en rouge, le format de sortie en bleu \citep{Delhomme2012}.}
+\label{fig:easyRNAseq} 
 \end{figure}
+
+Les résultats de comptages doivent ensuite être normalisés afin de permettre la comparaison de l'expression des gènes et des régions génomiques d'intérêt. Notre choix s'est porté sur la méthode du \gls{rpkm} \citep{Mortazavi2008} :
+
+\[RPKM = Nb.~reads~transcrit~*~\frac{1000~bases~*~10^6}{Nb.~total~reads~*~Taille~du~transcrit}\]
+
+Le RPKM reflète la concentration molaire du transcrit en normalisant par la longueur du brin d'ARN et le nombre de reads de la bibliothèque. Cette normalisation est soumise à critique à juste titre \citep{Dillies2013} car elle induit un biais de lors d'une analyse de DE dans le cas de gènes fortement exprimés dans un condition par rapport aux autres. Comme nous ne nous situons pas dans le cadre d'une analyse différentielle sur plusieurs conditions, mais que nous comparons des réplicats d'une même condition, nous pouvons appliquer cette normalisation.
+
+Une analyse en composante principale est réalisée sur ces données normalisées afin de vérifier l'homogénéité des réplicats et les taux d'expressions moyens des gènes et des BIME sont visualisés sous forme de BoxPlot.
+
+\subsection*{Différence d'expression dans les opérons contenant des BIME}
+L'hypothèse privilégiée ici est que les gènes appartenant à un opéron vont être exprimés à un taux similaire, la question qui se pose est de savoir si la présence d'une BIME entre 2 gènes d'un opéron va avoir un impact sur la transcription d'un des gènes. Dans ce cadre, les opérons contenant des BIME sont sélectionnés et l'expression des 2 gènes de l'opéron entourant la BIME recueillie. Si l'expérience contient au moins 5 réplicats, un test non paramétrique de rangs de Wilcoxon est effectué dont l'hypothèse nulle est qu'il n'existe pas de différence d'expression entre les 2 gènes. La p-value significative étant fixée à 0.01. Dans le cas où le nombre de réplicats est inférieur à 5, un test de Student est réalisé avec la même p-value significative.
+
+Pour les gènes dont le test est significatif, deux représentations graphiques sont générées. La 1\up{ère} est un schéma décrivant les taux d'expression des gènes de l'opéron ainsi que la position de la BIME. La 2\up{nde} est une représentation de la couverture sur l'opéron par rapport à l'organisation génomique de celui ci ainsi que la catégorisation des REP formant la BIME. Deux fichiers au format CSV sont créés, l'un pour les gènes où nous observons un différence d'expression significative, le second pour les autres cas.
+
+\subsection*{Analyse par profile d'expression}
+Nous avons créé un outil analysant qui réalise un test de corrélation entre les profils d'expression des régions contenant des BIME et un profil modèle de changement d'expression en nous inspirant d'une technique mise au point pour la prédiction d'opérons dans les génomes bactériens \citep{Fortino2014}. Pour cela, il a d'abord été nécessaire de délimiter nos régions d'intérêt. Celles-ci se modélisent par la présence du 1\up{er} gène, de la 1\up{ère} région inter-génique, de la BIME, de la 2\up{nde} région inter-génique et du 2\up{nd} gène. Une fois ces régions extraites, le calcul de la couverture base par base a été réalisé à l'aide des BEDtools :
+\lstset{language=sh, commentstyle=\color{ForestGreen}}  
+\begin{lstlisting}[frame=single]
+# Couverture base par base.
+bedtools coverage -abam merged_ALE.bam -b bimeGeneIgr.bed \
+-d > unsorted_cov_perBase.bed
+
+# Tri en fonction de la position genomique 
+# puis de la position des bases dans chaque transcrit
+sort -k2 -k7 -n unsorted_cov_perBase.bed | uniq > \
+cov_perBase_strandToFix.bed
+
+# Remplacement des '.' par des '*' dans la colonne
+# des brins pour l'utilisation sous R
+awk 'BEGIN{OFS = "\t"} {gsub(/\./,"*",$6); print }' \
+cov_perBase_strandToFix.bed > cov_perBase.bed
+\end{lstlisting}
+Le cœur de cette méthode consiste déplacer une fenêtre glissante parcourant base à base la région d'intérêt définie ci-dessus en réalisant des test de corrélation entre le profil d'expression réel et un profil d'expression simulé par un vecteur contenant un nombre égal de 0 et de 1 (si l'on cherche une croissance d'expression en sens ou une décroissance d'expression en anti-sens), ou de 1 et de 0 (dans le cas d'une décroissance en sens et d'une croissance en anti-sens). Plusieurs critères ont été définis pour valider une corrélation :
+\begin{itemize}[label=$\bullet$]
+\item $log_2(\frac{\overline{couverture~droite}~+~1}{\overline{couverture~gauche}~+~1})~\geq~1$ pour un profil \_\_\_|\^{ }\^{ }\^{ }
+\item $log_2(\frac{\overline{couverture~gauche}~+~1}{\overline{couverture~droite}~+~1})~\geq~1$ pour un profil \^{ }\^{ }\^{ }|\_\_\_
+\item un résultat de corrélation > 0.7
+\item une p-valeur du test de corrélation $< 10^7$
+\end{itemize}
+
+
+\subsection*{Analyse par segmentation}
+
+
+
+
+
 
 
 
