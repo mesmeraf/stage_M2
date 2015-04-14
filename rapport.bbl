@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{32}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -68,6 +68,18 @@ J.~M. Cl\'{e}ment, C.~Wilde, S.~Bachellier, P.~Lambert, and M.~Hofnung.
 \newblock \emph{Journal of Bacteriology}, 181\penalty0 (22):\penalty0
   6929--6936, 1999.
 \newblock ISSN 00219193.
+
+\bibitem[Cleynen et~al.(2014)Cleynen, Koskas, Lebarbier, Rigaill, and
+  Robin]{Cleynen2014}
+A.~Cleynen, M.~Koskas, E.~Lebarbier, G.~Rigaill, and S.~Robin.
+\newblock {Segmentor3IsBack: an R package for the fast and exact segmentation
+  of Seq-data.}
+\newblock \emph{Algorithms for molecular biology : AMB}, 9\penalty0
+  (1):\penalty0 6, Jan. 2014.
+\newblock ISSN 1748-7188.
+\newblock \doi{10.1186/1748-7188-9-6}.
+\newblock URL \url{http://www.almob.org/content/9/1/6
+  http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3977952\&tool=pmcentrez\&rendertype=abstract}.
 
 \bibitem[Delhomme et~al.(2012)Delhomme, Padioleau, Furlong, and
   Steinmetz]{Delhomme2012}
@@ -259,6 +271,13 @@ S.~F. Newbury, N.~H. Smith, E.~C. Robinson, I.~D. Hiles, and C.~F. Higgins.
 \newblock \emph{Cell}, 48:\penalty0 297--310, 1987.
 \newblock ISSN 00928674.
 \newblock \doi{10.1016/0092-8674(87)90433-8}.
+
+\bibitem[Rigaill(2010)]{Rigaill2010}
+G.~Rigaill.
+\newblock {Pruned dynamic programming for optimal multiple change-point
+  detection}.
+\newblock \emph{eprint arXiv:1004.0887}, page~9, 2010.
+\newblock URL \url{http://arxiv.org/abs/1004.0887}.
 
 \bibitem[Stern et~al.(1988)Stern, Prossnitz, and Ames]{Stern1988}
 M.~J. Stern, E.~Prossnitz, and G.~F. Ames.
