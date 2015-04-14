@@ -1,5 +1,6 @@
 \documentclass[12pt,a4paper]{report}
 
+\usepackage{enumitem}
 \usepackage[utf8x]{inputenc}
 \usepackage[francais]{babel}
 \usepackage[T1]{fontenc}
@@ -16,7 +17,7 @@
 \usepackage[skip=2pt,font=scriptsize]{caption}
 \usepackage{listings}
 \usepackage{xcolor}
-\usepackage{enumitem}
+
 
 
 \author{Nicolas JEANNE}
@@ -172,14 +173,14 @@ Une analyse en composante principale est réalisée sur ces données normalisée
 \subsection*{Différence d'expression dans les opérons contenant des BIME}
 L'hypothèse privilégiée ici est que les gènes appartenant à un opéron vont être exprimés à un taux similaire, la question qui se pose est de savoir si la présence d'une BIME entre 2 gènes d'un opéron va avoir un impact sur la transcription d'un des gènes. Dans ce cadre, les opérons contenant des BIME sont sélectionnés et l'expression des 2 gènes de l'opéron entourant la BIME recueillie. Si l'expérience contient au moins 5 réplicats, un test non paramétrique de rangs de Wilcoxon est effectué dont l'hypothèse nulle est qu'il n'existe pas de différence d'expression entre les 2 gènes. La p-value significative étant fixée à 0.01. Dans le cas où le nombre de réplicats est inférieur à 5, un test de Student est réalisé avec la même p-value significative.
 
-Pour les gènes dont le test est significatif, deux représentations graphiques sont générées. La 1\up{ère} est un schéma décrivant les taux d'expression des gènes de l'opéron ainsi que la position de la BIME. La 2\up{nde} est une représentation de la couverture sur l'opéron par rapport à l'organisation génomique de celui ci ainsi que la catégorisation des REP formant la BIME. Deux fichiers au format CSV sont créés, l'un pour les gènes où nous observons un différence d'expression significative, le second pour les autres cas.
+Pour les gènes dont le test est significatif, deux représentations graphiques sont générées. La 1\up{ère} est un schéma décrivant les taux d'expression des gènes de l'opéron ainsi que la position de la BIME. La 2\up{nde} est une représentation de la couverture sur l'opéron par rapport à l'organisation génomique de celui ci ainsi que la catégorisation des REP formant la BIME. Deux fichiers au format \texttt{CSV} sont créés, l'un pour les gènes où nous observons un différence d'expression significative, le second pour les autres cas.
 
-\subsection*{Analyse par profile d'expression}
+\subsection*{Analyse par profil d'expression}
 Nous avons créé un outil analysant qui réalise un test de corrélation entre les profils d'expression des régions contenant des BIME et un profil modèle de changement d'expression en nous inspirant d'une technique mise au point pour la prédiction d'opérons dans les génomes bactériens \citep{Fortino2014}. Pour cela, il a d'abord été nécessaire de délimiter nos régions d'intérêt. Celles-ci se modélisent par la présence du 1\up{er} gène, de la 1\up{ère} région inter-génique, de la BIME, de la 2\up{nde} région inter-génique et du 2\up{nd} gène. Une fois ces régions extraites, le calcul de la couverture base par base a été réalisé à l'aide des BEDtools :
 \lstset{language=sh, commentstyle=\color{ForestGreen}}  
 \begin{lstlisting}[frame=single]
 # Couverture base par base.
-bedtools coverage -abam merged_ALE.bam -b bimeGeneIgr.bed \
+bedtools coverage -abam merged.bam -b regionOfInterest.bed \
 -d > unsorted_cov_perBase.bed
 
 # Tri en fonction de la position genomique 
@@ -192,14 +193,30 @@ cov_perBase_strandToFix.bed
 awk 'BEGIN{OFS = "\t"} {gsub(/\./,"*",$6); print }' \
 cov_perBase_strandToFix.bed > cov_perBase.bed
 \end{lstlisting}
-Le cœur de cette méthode consiste déplacer une fenêtre glissante parcourant base à base la région d'intérêt définie ci-dessus en réalisant des test de corrélation entre le profil d'expression réel et un profil d'expression simulé par un vecteur contenant un nombre égal de 0 et de 1 (si l'on cherche une croissance d'expression en sens ou une décroissance d'expression en anti-sens), ou de 1 et de 0 (dans le cas d'une décroissance en sens et d'une croissance en anti-sens). Plusieurs critères ont été définis pour valider une corrélation :
+Le cœur de cette méthode consiste déplacer une fenêtre glissante parcourant base à base la région d'intérêt définie ci-dessus en réalisant des tests de corrélation entre le profil d'expression réel et un profil d'expression simulé par un vecteur contenant un nombre égal de 0 et de 1 (si l'on cherche une croissance d'expression en sens ou une décroissance d'expression en anti-sens, e.g: 000111), ou de 1 et de 0 (dans le cas d'une décroissance en sens et d'une croissance en anti-sens, e.g: 111000). Les moyennes d'expression sont récupérées sur les parties gauche et droite de la fenêtre pour dans un premier temps filtrer les données. Le $Log_2$ du rapport de ces moyennes doit être supérieur à un seuil, si ce 1\up{er} filtre est passé, la corrélation entre le profil réel et celui simulé est calculée et doit être supérieure à un seuil avec une p-valeur significative (\autoref{fig:profil}). 
+
+\begin{figure}[ht]
+\centerline{\includegraphics[scale=0.6]{figures/profil.jpg}}
+\caption{\textbf{Recherche de corrélation sur des profils d'expression.} La fenêtre glissante (en vert) parcourt la région d'intérêt et pour chaque déplacement une corrélation est calculée entre le vecteur du profil d'expression obtenu par RNAseq (en bleu) et celui simulé par le vecteur de 0 et de 1 (en vert) \citep{Fortino2014}.}
+\label{fig:profil} 
+\end{figure}
+
+Les seuils que nous avons fixés sont les suivants : 
 \begin{itemize}[label=$\bullet$]
+\item fenêtre glissante de 300 bases
 \item $log_2(\frac{\overline{couverture~droite}~+~1}{\overline{couverture~gauche}~+~1})~\geq~1$ pour un profil \_\_\_|\^{ }\^{ }\^{ }
 \item $log_2(\frac{\overline{couverture~gauche}~+~1}{\overline{couverture~droite}~+~1})~\geq~1$ pour un profil \^{ }\^{ }\^{ }|\_\_\_
-\item un résultat de corrélation > 0.7
+\item une corrélation > 0.7
 \item une p-valeur du test de corrélation $< 10^7$
 \end{itemize}
 
+Sur un ensemble de positions consécutives dont les corrélations sont significatives et sont situées sur l'espace génomique de la BIME (étendu de 40 pb de chaque côté), celle dont la corrélation est la plus élevée sera définie comme position de changement d'expression. Deux types de fichiers sont générés au format \texttt{bedgraph} pour une visualisation sur un Genome Browser, le premier sous forme d'histogramme représentant les couvertures moyennes des deux parties de la fenêtre, le second représentant l'évolution de la corrélation sur la zone (\autoref{fig:igv_profil}). Une visualisation des niveaux d'expression des 2 gènes et de la BIME est également générée sous forme d'histogrammes avec les informations de sens et du type de la BIME. Finalement des fichiers au format \texttt{CSV} recueillent toutes les informations de l'analyse.
+
+\begin{figure}[ht]
+\centerline{\includegraphics[scale=0.246]{figures/igv_profil.png}}
+\caption{\textbf{Visualisation des changements d'expression obtenus par la méthode de corrélation des profils.} La position de la BIME est représentée en orange, l'histogramme à 2 colonnes en vert montre les profils d'expression moyens de chaque moitié de la fenêtre et la courbe en points verts indique l'évolution de la corrélation sur cette zone. Dans cet exemple, ce changement d'expression peut se traduire par une augmentation en sens ou une diminution en anti-sens}
+\label{fig:igv_profil} 
+\end{figure}
 
 \subsection*{Analyse par segmentation}
 
