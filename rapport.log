@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2015.4.13)  15 APR 2015 14:08
+This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2015.4.13)  15 APR 2015 18:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -821,37 +821,13 @@ e génome d'E. coli [][]NC_000913.2[][]
 
 [5
 
-]
-Overfull \hbox (15.76459pt too wide) in paragraph at lines 116--117
-\T1/cmr/m/n/12 Le fichier d'aligne-ment généré est au for-mat [][][]\T1/cmtt/m/
-it/12 Sequence Alignment Map format (SAM)[][]\T1/cmr/m/n/12 ,
- []
-
-
-Overfull \hbox (3.31891pt too wide) in paragraph at lines 116--117
-\T1/cmr/m/n/12 afin de pour-suivre l'-anal-yse il doit être con-ver-tit au for-
-mat bi-naire [][][]\T1/cmtt/m/it/12 Binary Alignment
- []
-
-
+] [6]
 Overfull \hbox (0.55037pt too wide) in paragraph at lines 141--143
 []\T1/cmr/m/n/12 Le fichier [][][]\T1/cmtt/m/it/12 General Feature Format (GFF)
 [][] \T1/cmr/m/n/12 d'an-no-ta-tion du génome a été généré
  []
 
-
-Overfull \hbox (0.76535pt too wide) in paragraph at lines 141--143
-\T1/cmr/m/n/12 per-me-t-tent de tra-vailler aisé-ment avec la suite de logi-cie
-ls [][]BED-tools[][] pour la recherche
- []
-
-
-Overfull \hbox (9.37856pt too wide) in paragraph at lines 141--143
-\T1/cmr/m/n/12 les fichiers BED néces-saires à la suite de l'-anal-yse tel que 
-celui des po-si-tions génomiques
- []
-
-[6] <figures/igv_snapshot.png, id=205, 1606.0pt x 1084.05pt>
+<figures/igv_snapshot.png, id=204, 1606.0pt x 1084.05pt>
 File: figures/igv_snapshot.png Graphic file (type png)
 
 <use figures/igv_snapshot.png>
@@ -1100,11 +1076,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 280.
 Here is how much of TeX's memory you used:
  17826 strings out of 495034
  254605 string characters out of 6181677
- 434676 words of memory out of 5000000
+ 433831 words of memory out of 5000000
  20577 multiletter control sequences out of 15000+600000
  27306 words of font info for 72 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,9n,92p,2030b,2200s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,9n,92p,2030b,2206s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texli
@@ -1130,7 +1106,7 @@ r/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1
 share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on rapport.pdf (25 pages, 1116015 bytes).
+Output written on rapport.pdf (25 pages, 1109547 bytes).
 PDF statistics:
  546 PDF objects out of 1000 (max. 8388607)
  469 compressed objects within 5 object streams
