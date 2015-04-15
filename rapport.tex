@@ -31,13 +31,13 @@
 
 
 % formattage des entrées du glossaire
-\renewcommand*{\glstextformat}[1]{\textcolor{Black}{#1}}
+\renewcommand*{\glstextformat}[1]{\textit{#1}}
 % création des acronymes du glossaire
 \newacronym{rep}{REP}{Repeated Extragenic Palindrome}
 \newacronym{bime}{BIME}{Bacterial Interspesed Mosaic Element}
 \newacronym{sra}{SRA}{Sequence Read Archive}
 \newacronym{ngs}{NGS}{Next Generation Sequencing}
-\newacronym{sam}{SAM}{\href{http://samtools.github.io/hts-specs/SAMv1.pdf}{Sequence Alignment Map format}}
+\newacronym{sam}{SAM}{Sequence Alignment Map format}
 \newacronym{bam}{BAM}{Binary Alignment Map format}
 \newacronym{gff}{GFF}{General Feature Format}
 \newacronym{bed}{BED}{Browser Extensible Data}
@@ -251,7 +251,7 @@ Pour chaque itération $k$, l'algorithme travaille sur une liste de candidats po
 
 \begin{SCfigure}[][t]
 \fbox{\includegraphics[scale=0.55]{figures/segmentation.png}
-\caption{\textbf{Résultat de segmentation pour $K_{max} \mathord{=} 4$.} Les gènes sont symbolisés par les zones bleues, leur sens de transcription par les flèches noires. La BIME est représentée par la zone orange et sa classe est précisée dans la légende (Feature type). Les promoteurs sont représentés par des points rouges et les terminateurs par des points verts, leur sens affichés par les symboles '+' ou '-' sur ces points. La courbe noire représente la couverture sur la région et les barres bleues horizontales indiquent les couvertures moyennes des éléments génomiques. Les points de cassure dans la couverture, déterminés par la segmentation, sont matérialisés par des lignes rouges verticales en pointillés.}
+\caption{\textbf{Résultat de segmentation pour $K_{max} \mathord{=} 4$.} Les gènes sont symbolisés par les zones bleues, leur sens de transcription par les flèches noires. La BIME est représentée par la zone orange et sa classe est précisée dans la légende (Feature type). Les promoteurs sont représentés par des points rouges et les terminateurs par des points verts, leur sens affichés par les symboles '+' ou '-' sur ces points. La courbe noire représente la couverture sur la région et les barres bleues horizontales indiquent les couvertures moyennes des éléments génomiques. Les points de cassure dans la couverture, déterminés par la segmentation, sont matérialisés par des lignes rouges verticales en pointillés. Ici, 2 segments sont représentés avec un point de cassure situé sur la BIME.}
 \label{fig:segmentation} }
 \end{SCfigure}
 
