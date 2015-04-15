@@ -19,10 +19,7 @@
 \usepackage[skip=2pt,font=scriptsize]{caption}
 \usepackage{listings}
 \usepackage{xcolor}
-
-
-
-
+\usepackage[top=3cm, bottom=4cm, left=3cm , right=3cm]{geometry}
 
 \author{Nicolas JEANNE}
 \title{Rapport de stage de M2}
@@ -81,12 +78,15 @@ En 1982, la découverte par Higgins et al. de nouveaux éléments génétiques c
 Les REP constituent une part non négligeable du génome bactérien, chez E. coli K12 ou S. typhimurium elles représentent environ 1\% de celui-ci \citep{Gilson1991}. Nous les retrouvons chez de nombreux règnes bactériens, notamment chez les pathogènes humains tels que \textit{Escherichia coli, Salmonella enterica, Neisseria meningitidis, Mycobacterium tuberculosis et Pseudomonas aeruginosa} mais également chez des pathogènes des plantes comme \textit{Agrobacterium tumefaciens} ou chez des bactéries ubiquitaires, \textit{Deinococcus radiodurans} ou \textit{Pseudomonas putida} par exemple. Les travaux précédents de l'équipe ont permis l'annotation des REP au sein du génome d'E. coli et de mettre en évidence le lien existant entre la prolifération des REP et le gène $tnpA_{REP}$ \citep{Weyder2013,Bosc2014}, ainsi que la reconstruction des états ancêtres des REP \citep{Bosc2014}.  \textcolor{red}{Le rôle exact des REP n'est pas clairement défini, des hypothèses sont avancées sur leur implication dans la régulation de l'expression des gènes, que ce soit en tant que terminateur ou comme site de reconnaissance des enzymes impliquées dans les mécanismes de la transcription.}
 
 \section*{Caractéristiques des REP et organisations en BIME}
-La taille des REP varie de 20 à 40 nucléotides, la classification Y, Z\textsuperscript{1}, Z\textsuperscript{2} est basée à la fois sur la taille de la séquence consensus de la REP ainsi que sur sa structure secondaire. Par convention, une REP en orientation inversée est nommée iREP (inversed REP) \citep{Ton-Hoang2012}. Un tétra-nucléotide caractéristique de séquence GTAC est présent à l'extrémité 5' des REP, sa séquence complémentaire est CTAC en 3' pour les iREP. Les différentes classes de REP partagent des nucléotides conservés (\autoref{fig:rep_bime}A). La structure secondaire des REP est caractérisée par sa forme en tige-boucle, le caractère palindromique permet la formation de la tige malgré un mésappariement situé dans la partie centrale de celle-ci (\autoref{fig:rep_bime}B). Pour le génome d'E. coli K-12, 93 REP ont été répertoriées comme étant uniques sur les 605 annotées par le laboratoire, les autres sont organisées par paires sous forme de BIME. Une classification a été adoptée comportant 3 entrées, les BIME-1 composées de REP Z\textsuperscript{1} et Y apparaissant en paires uniques et dans lesquelles la REP et l'iREP sont séparées par un linker de séquence longue (L) pouvant lier l'IHF (Integration Host Factor). Les BIME-2 constituées de Z\textsuperscript{2} et de Y, apparaissant en copies multiples de cette paire dont la REP et l'iREP sont séparées par un linker court (S) et une des trois séquences flanquantes (s, l ou r). La troisième catégorie est constituée des BIME dites atypiques qui sont des chimères de BIME-1 et BIME-2, comportant différentes combinaisons de Y, Z\textsuperscript{1}, Z\textsuperscript{2}, S, L, s, l et r. Tout comme les BIME-2, nous les retrouvons sous forme de copies multiples (\autoref{fig:rep_bime}C). Les REP peuvent former des structures secondaires avec elles-même, mais également entre elles lorsqu'elles sont organisées sous forme de BIME (\autoref{fig:malEF_rep}).
+
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=1.8]{figures/rep_bime.jpg}}
 \caption{\textbf{REP et BIME chez Escherichia coli. (A)} Séquences consensus Y, Z\textsuperscript{1} et Z\textsuperscript{2} des REP. Le tétra-nucléotide conservé GTAC est encadré en violet, le complémentaire conservé CTAC est encadré en vert, les flèches rouges situent les zones d'appariement de la tige et les positions encadrées en noir sont les zones de mésappariement. Les positions conservées parmi les classes de REP sont en rouge, les positions variables en bleu. \textbf{(B)} Structure secondaire des REP. Les rectangles violets et verts représentent respectivement les tétra-nucléotides conservés GTAC pour les REP et CTAC pour les iREP. Les flèches noires indiquent l'orientation des REP. \textbf{(C)} Structures des BIME-1 et BIME-2. Les BIME-1 sont composées de REP et de iREP Y et Z\textsuperscript{1} séparées par un linker de séquence longue (L), les BIME-2 sont composées de Y et Z\textsuperscript{2}, de linker courts (S) et de séquences séparatrices s, l ou r. H-H et T-T dénotent respectivement une organisation tête à tête et queue à queue des REP. \citep{Ton-Hoang2012}.}
 \label{fig:rep_bime} 
 \end{figure}
+
+La taille des REP varie de 20 à 40 nucléotides, la classification Y, Z\textsuperscript{1}, Z\textsuperscript{2} est basée à la fois sur la taille de la séquence consensus de la REP ainsi que sur sa structure secondaire. Par convention, une REP en orientation inversée est nommée iREP (inversed REP) \citep{Ton-Hoang2012}. Un tétra-nucléotide caractéristique de séquence GTAC est présent à l'extrémité 5' des REP, sa séquence complémentaire est CTAC en 3' pour les iREP. Les différentes classes de REP partagent des nucléotides conservés (\autoref{fig:rep_bime}A). La structure secondaire des REP est caractérisée par sa forme en tige-boucle, le caractère palindromique permet la formation de la tige malgré un mésappariement situé dans la partie centrale de celle-ci (\autoref{fig:rep_bime}B). Pour le génome d'E. coli K-12, 93 REP ont été répertoriées comme étant uniques sur les 605 annotées par le laboratoire, les autres sont organisées par paires sous forme de BIME. Une classification a été adoptée comportant 3 entrées, les BIME-1 composées de REP Z\textsuperscript{1} et Y apparaissant en paires uniques et dans lesquelles la REP et l'iREP sont séparées par un linker de séquence longue (L) pouvant lier l'IHF (Integration Host Factor). Les BIME-2 constituées de Z\textsuperscript{2} et de Y, apparaissant en copies multiples de cette paire dont la REP et l'iREP sont séparées par un linker court (S) et une des trois séquences flanquantes (s, l ou r). La troisième catégorie est constituée des BIME dites atypiques qui sont des chimères de BIME-1 et BIME-2, comportant différentes combinaisons de Y, Z\textsuperscript{1}, Z\textsuperscript{2}, S, L, s, l et r. Tout comme les BIME-2, nous les retrouvons sous forme de copies multiples (\autoref{fig:rep_bime}C). Les REP peuvent former des structures secondaires avec elles-même, mais également entre elles lorsqu'elles sont organisées sous forme de BIME (\autoref{fig:malEF_rep}).
+
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.5]{figures/malEF_rep.png}}
 \caption{\textbf{Structure ARN des REP au sein de l’opéron malEFG.} Y, Z\textsuperscript{2} et Y indiquent la séquence des REP dans l'espace inter-génique de malE-malF. Bien que Y et Z\textsuperscript{2} puissent former des structures tige-boucles par elles mêmes, elles s'apparient ensemble pour former une région étendue en grande partie à double brin (70\% des nucléotides sont appariés). La séquence affichée provient du génome d'E. coli K12. La région REP-stabilized RNA (RSR) indique l'extrémité 3′ du messager malE mature, qui s'étend de 3 à 9 nucléotides depuis la base de la tige-boucle formée par Y et Z\textsuperscript{2}. Les codons STOP de  malE et START de malF sont encadrés. SD représente la séquence Shine–Dalgarno nécessaire à l'initiation de la traduction de malF. \citep{Khemici2004}.}
@@ -145,14 +145,14 @@ Ces changements de format permettent de travailler aisément avec la suite de lo
 L'alignement des reads et le mapping sur le génome de référence de E. coli sont visualisés grâce au genome browser \href{https://www.broadinstitute.org/igv/}{IGV} (\autoref{fig:igv}).
 
 \begin{figure}[ht]
-\centerline{\includegraphics[scale=0.246]{figures/igv_snapshot.png}}
+\centerline{\includegraphics[scale=0.27]{figures/igv_snapshot.png}}
 \caption{\textbf{Visualisation du mapping de l'opéron malEFG sur IGV.} Les premières pistes représentent les positions et orientations des gènes, des opérons, la présence de promoteurs et de terminateurs, ainsi que la position des BIME et des REP qui composent les BIME. Les 2 pistes suivantes affichent la couverture des fichiers BAM fusionnés de la région visualisée (histogramme gris) et l'alignement des reads (flèches pleines rouges et bleues). La couleur bleue sur cette piste indique un alignement en anti-sens et la couleur rouge, un alignement en sens.}
 \label{fig:igv} 
 \end{figure}
 
 Il est important de noter que la couverture au long du génome n'est pas uniforme, ni même sur les gènes, car nous observons la présence de nombreuses vallées et pics. Ce phénomène s'explique par plusieurs raisons techniques \citep{Li2013}. Premièrement, les méthodes de fragmentation des protocoles de préparation des bibliothèques amenant un biais en cassant ou dégradant certaines séquences. Le second biais possible est amené par le Random Priming lors de l'étape de rétro-transcription pouvant préférentiellement transcrire certaines séquences. Troisième point, les ligases peuvent lier préférentiellement les adaptateurs à certaines séquences. Quatrième point, l'amplification de la PCR est bien connue pour introduire des biais dépendant de la proportion en GC des séquences. Le dernier point, étudié sur le séquençage Illumina, implique des interférences spécifiques aux séquences lors du processus d'élongation pendant le séquençage générés par des schémas particuliers du template produisant des repliements du brin d'ADN et altérant l'affinité des enzymes \citep{Nakamura2011}.
 
-\section*{Analyse statistique}
+\section*{Analyse statistique des données d'expression}
 Pour réaliser nos analyses, nous nous sommes inspirés de la méthodologie employée en RNA-Seq pour l'étude de \gls{de}. Il est important de noter qu'une différence importante existe avec notre approche, car nous ne nous intéressons pas à une DE pour un m\^eme gène dans différentes conditions mais plutôt à la \emph{DE entre deux gènes pour lesquels ont pourrait supposer un profil d'expression similaire dans une même condition}, comme c'est le cas dans les opérons par exemple. L'analyse statistique de recherche de changement d'expression liée à la présence de BIME a été menée sur le logiciel R avec 3 méthodes différentes.
 
 \subsection*{Création de la table de comptages et normalisation}
@@ -181,10 +181,10 @@ Pour les gènes dont le test est significatif, deux représentations graphiques 
 
 \begin{figure}[ht]
 \centering
-\subfigure[Position des REP et expression.]{\label{fig:expressionFigA} \includegraphics[scale=0.37]{figures/expression1.png}}
-\subfigure[Position et organisation de l'opéron, des REP et couverture.]{\label{fig:expressionFigB} \includegraphics[scale=0.37
+\subfigure[Position des REP et expression.]{\label{fig:expressionFigA} \includegraphics[scale=0.4]{figures/expression1.png}}
+\subfigure[Position et organisation de l'opéron, des REP et couverture.]{\label{fig:expressionFigB} \includegraphics[scale=0.4
 ]{figures/expression2.png}}
-\caption{\textbf{Résultats de l'étude de l'expression des gènes dans les opérons contenant des BIME.} a) Le taux d'expression de chaque gène de l'opéron est représenté en ordonné, l'organisation des gènes de l'opéron est schématisée sur l'axe des abscisse dans le sens 5' $\mapsto$ 3'. La position de la ou les REP composant la BIME est schématisée par la ligne blue verticale. b) La position de l'opéron sur le génome est indiquée par la barre rouge sur l'idéogramme de la partie supérieure. La partie médiane représente l'organisation des gènes de l'opéron dans le sens 5' $\mapsto$ 3' ainsi que le positionnement et la classe des REP composant la BIME. La partie inférieure montre la couverture par rapport à l'organisation de la partie médiane.}
+\caption{\textbf{Résultats de l'étude de l'expression des gènes dans les opérons contenant des BIME. (a)} Le taux d'expression de chaque gène de l'opéron est représenté en ordonné, l'organisation des gènes de l'opéron est schématisée sur l'axe des abscisse dans le sens 5' $\mapsto$ 3'. La position de la ou les REP composant la BIME est schématisée par la ligne blue verticale. \textbf{(b)} La position de l'opéron sur le génome est indiquée par la barre rouge sur l'idéogramme de la partie supérieure. La partie médiane représente l'organisation des gènes de l'opéron dans le sens 5' $\mapsto$ 3' ainsi que le positionnement et la classe des REP composant la BIME. La partie inférieure montre la couverture par rapport à l'organisation de la partie médiane.}
 \label{fig:expression} 
 \end{figure}
 
@@ -227,7 +227,7 @@ Les seuils que nous avons fixés sont les suivants :
 Sur un ensemble de positions consécutives dont les corrélations sont significatives et sont situées sur l'espace génomique de la BIME (étendu de 40 pb de chaque côté), celle dont la corrélation est la plus élevée sera définie comme position de changement d'expression. Deux types de fichiers sont générés au format \texttt{bedgraph} pour une visualisation sur un Genome Browser, le premier sous forme d'histogramme représentant les couvertures moyennes des deux parties de la fenêtre, le second représentant l'évolution de la corrélation sur la zone (\autoref{fig:igv_profil}). Une visualisation des niveaux d'expression des 2 gènes et de la BIME est également générée sous forme d'histogrammes avec les informations de sens et du type de la BIME. Finalement des fichiers au format \texttt{CSV} recueillent toutes les informations de l'analyse.
 
 \begin{figure}[ht]
-\centerline{\includegraphics[scale=0.246]{figures/igv_profil.png}}
+\centerline{\includegraphics[scale=0.27]{figures/igv_profil.png}}
 \caption{\textbf{Visualisation des changements d'expression obtenus par la méthode de corrélation des profils.} La position de la BIME est représentée en orange, l'histogramme à 2 colonnes en vert montre les profils d'expression moyens de chaque moitié de la fenêtre et la courbe en points verts indique l'évolution de la corrélation sur cette zone. Dans cet exemple, ce changement d'expression peut se traduire par une augmentation en sens ou une diminution en anti-sens.}
 \label{fig:igv_profil} 
 \end{figure}
@@ -239,7 +239,7 @@ où $m$ est une partition de $[1,n]$ en $r$ segments, le paramètre $\theta_r$ e
 \[ c(r,\theta) = \sum_{i \in r} \gamma(y_i,\theta) \]
 et dont le coût optimal sera :
 \[ c(r) = min_\theta\{c(r,\theta)\} \]
-cela permettant de récupérer la segmentation optimale $M_{K,n}$ et son coût $C_{K,n}$. L'algorithme itératif \gls{pdp} intervient ensuite et est basé sur la minimisation de la fonction de coût $C_{k,t}$ décomposée de la façon suivante :
+cela permettant de récupérer la segmentation optimale $M_{K,n}$ et son coût $C_{K,n}$. L'algorithme itératif PDP intervient ensuite et est basé sur la minimisation de la fonction de coût $C_{k,t}$ décomposée de la façon suivante :
 \begin{equation}
 \label{eq1}
 C_{k,t} = \underset{\{k-1<\tau<t\}}{min} \{C_{k-1,\tau} + \underset{\theta}{min}[c([\tau + 1,t],\theta)]\}
@@ -250,8 +250,8 @@ qui est le coût de la meilleur partition en $k$ régions jusqu'à $t$, le param
 Pour chaque itération $k$, l'algorithme travaille sur une liste de candidats pour les derniers points de cassure. Pour chaque élément $\tau$ et chaque valeur $t$, il met à jour un ensemble $S_{k,t}^\tau$ contenant les paramètres $\theta$ pour lequel ce candidat est optimal. Si cet ensemble $S_{k,t}^\tau$ est vide, le candidat est supprimé autorisant un élagage et une diminution de la complexité de l'algorithme.
 
 \begin{SCfigure}[][t]
-\fbox{\includegraphics[scale=0.5]{figures/segmentation.png}
-\caption{\textbf{Résultat de segmentation pour $K_{max}=4$.} Les gènes sont symbolisés par les zones bleues, leur sens de transcription par les flèches noires. La BIME est représentée par la zone orange et sa classe est précisée dans la légende (Feature type). Les promoteurs sont représentés par des points rouges et les terminateurs par des points verts, leur sens affichés par les symboles '+' ou '-' sur ces points. La courbe noire représente la couverture sur la région et les barres bleues horizontales indiquent les couvertures moyennes des éléments génomiques. Les points de changement de couverture déterminés par la segmentation sont matérialisés par la ligne rouge verticale en pointillés.}
+\fbox{\includegraphics[scale=0.55]{figures/segmentation.png}
+\caption{\textbf{Résultat de segmentation pour $K_{max} \mathord{=} 4$.} Les gènes sont symbolisés par les zones bleues, leur sens de transcription par les flèches noires. La BIME est représentée par la zone orange et sa classe est précisée dans la légende (Feature type). Les promoteurs sont représentés par des points rouges et les terminateurs par des points verts, leur sens affichés par les symboles '+' ou '-' sur ces points. La courbe noire représente la couverture sur la région et les barres bleues horizontales indiquent les couvertures moyennes des éléments génomiques. Les points de cassure dans la couverture, déterminés par la segmentation, sont matérialisés par des lignes rouges verticales en pointillés.}
 \label{fig:segmentation} }
 \end{SCfigure}
 
@@ -260,6 +260,7 @@ Dans notre étude, nous nous intéressons aux positions de ces points de cassure
 
 L'analyse renvoie une représentation graphique de la couverture de ces régions avec les positionnements des gènes et de la BIME, ainsi que des promoteurs et terminateurs éventuels. Une classification est faite en fonction du sens des gènes et de l'impact des régulateurs de transcription sur la couverture (\autoref{fig:segmentation}). Deux fichiers au format \texttt{CSV} sont générés pour recueillir les informations de la segmentation, le 1\up{er} pour les gènes sur le même brin, le 2\up{nd} pour les gènes sur des brins opposés.
 
+\section*{États ancêtres et structures secondaires}
 
 \chapter*{Résultats}
 
@@ -270,6 +271,7 @@ L'analyse renvoie une représentation graphique de la couverture de ces régions
 
 
 % affichage du glossaire
+\renewcommand{\thepage}{}
 \printglossary[type=\acronymtype ,title=Glossaire]
 
 %\bibliographystyle{unsrtnat}

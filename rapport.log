@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2015.4.13)  15 APR 2015 12:05
+This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2015.4.13)  15 APR 2015 13:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -597,59 +597,75 @@ File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
 Package: listings 2013/08/26 1.5b (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count162
+\Gm@cntv=\count163
+\c@Gm@tempcnt=\count164
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
+\Gm@dimlist=\toks41
+)
 \glo@main@file=\write4
 \openout4 = `rapport.glo'.
 
-Package glossaries Info: Writing glossary file rapport.glo on input line 57.
-\@float@every@figure=\toks41
-Package hyperref Info: Option `colorlinks' set `true' on input line 68.
+Package glossaries Info: Writing glossary file rapport.glo on input line 54.
+\@float@every@figure=\toks42
+Package hyperref Info: Option `colorlinks' set `true' on input line 65.
  (./rapport.aux)
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
- (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-LaTeX Info: Redefining \degres on input line 73.
-LaTeX Info: Redefining \dots on input line 73.
+LaTeX Info: Redefining \degres on input line 70.
+LaTeX Info: Redefining \dots on input line 70.
 
 
 Package frenchb.ldf Warning: Setting StandardItemizeEnv=true for
 (frenchb.ldf)                compatibility with enumitem package,
-(frenchb.ldf)                 on input line 73.
+(frenchb.ldf)                 on input line 70.
 
 
 Package frenchb.ldf Warning: Setting StandardEnumerateEnv=true for
 (frenchb.ldf)                compatibility with enumitem package,
-(frenchb.ldf)                 on input line 73.
+(frenchb.ldf)                 on input line 70.
 
-LaTeX Info: Redefining \up on input line 73.
+LaTeX Info: Redefining \up on input line 70.
 \AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring ON on input line 73.
+Package hyperref Info: Link coloring ON on input line 70.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count162
+\c@section@level=\count165
 )
-LaTeX Info: Redefining \ref on input line 73.
-LaTeX Info: Redefining \pageref on input line 73.
-LaTeX Info: Redefining \nameref on input line 73.
+LaTeX Info: Redefining \ref on input line 70.
+LaTeX Info: Redefining \pageref on input line 70.
+LaTeX Info: Redefining \nameref on input line 70.
 
 (./rapport.out) (./rapport.out)
 \@outlinefile=\write5
@@ -661,17 +677,17 @@ English.dict
 Dictionary: glossaries-dictionary, Language: English 
 ) (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count163
-\scratchdimen=\dimen151
+\scratchcounter=\count166
+\scratchdimen=\dimen159
 \scratchbox=\box40
-\nofMPsegments=\count164
-\nofMParguments=\count165
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count166
-\MPscratchDim=\dimen152
-\MPnumerator=\count167
-\makeMPintoPDFobject=\count168
-\everyMPtoPDFconversion=\toks43
+\nofMPsegments=\count167
+\nofMParguments=\count168
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count169
+\MPscratchDim=\dimen160
+\MPnumerator=\count170
+\makeMPintoPDFobject=\count171
+\everyMPtoPDFconversion=\toks44
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -714,13 +730,47 @@ LaTeX Info: Redefining \selectfont on input line 126.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count169
-LaTeX Font Info:    Try loading font information for U+msa on input line 76.
+\c@lstlisting=\count172
 
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 645.87756pt, 113.81102pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=645.87756pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 73.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 76.
+LaTeX Font Info:    Try loading font information for U+msb on input line 73.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -732,24 +782,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-Overfull \hbox (11.63239pt too wide) in paragraph at lines 81--82
-\T1/cmr/m/n/12 comme \T1/cmr/m/it/12 Agrobac-terium tume-fa-ciens \T1/cmr/m/n/1
-2 ou chez des bac-téries ubiq-ui-taires, \T1/cmr/m/it/12 Deinococ-
- []
-
-
-Overfull \hbox (23.55383pt too wide) in paragraph at lines 83--83
-[][]\T1/cmr/bx/n/17.28 Caractéristiques des REP et or-gan-i-sa-tions en BIME 
- []
-
-<figures/rep_bime.jpg, id=33, 120.9318pt x 165.9801pt>
+<figures/rep_bime.jpg, id=27, 120.9318pt x 165.9801pt>
 File: figures/rep_bime.jpg Graphic file (type jpg)
 
 <use figures/rep_bime.jpg>
-Package pdftex.def Info: figures/rep_bime.jpg used on input line 86.
+Package pdftex.def Info: figures/rep_bime.jpg used on input line 83.
 (pdftex.def)             Requested size: 217.67703pt x 298.76392pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.89 
+      [1
 
-<figures/malEF_rep.png, id=38, 500.87125pt x 418.56375pt>
+] [2 <./figures/rep_bime.jpg>]
+<figures/malEF_rep.png, id=67, 500.87125pt x 418.56375pt>
 File: figures/malEF_rep.png Graphic file (type png)
 
 <use figures/malEF_rep.png>
@@ -758,314 +805,300 @@ Package pdftex.def Info: figures/malEF_rep.png used on input line 91.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.95 
-      [1
-
-]
-Overfull \hbox (2.84102pt too wide) in paragraph at lines 97--98
-[][]\T1/cmr/m/n/12 1999[][]; [][]Tobes and Pareja[][] [][]2005[][]). Lorsqu'ell
-es sont tran-scrites, les REP joueraient
- []
-
-[2] [3 <./figures/rep_bime.jpg>] [4 <./figures/malEF_rep.png>]
+) [3 <./figures/malEF_rep.png>] [4]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 106.
 
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
-) [5
+)
+Overfull \hbox (12.17654pt too wide) in paragraph at lines 109--112
+[]\T1/cmr/m/n/12 Les reads ont été alignés grâce au logi-ciel [][]BWA[][] sur l
+e génome d'E. coli [][]NC_000913.2[][]
+ []
+
+[5
 
 ]
-Overfull \hbox (10.16908pt too wide) in paragraph at lines 116--117
+Overfull \hbox (13.68176pt too wide) in paragraph at lines 116--117
 \T1/cmr/m/n/12 Le fichier d'aligne-ment généré est au for-mat [][][][][][]\T1/c
-mtt/m/n/12 Sequence Alignment Map format[][]
+mtt/m/n/12 Sequence Alignment Map format[][] (SAM)[][][]\T1/cmr/m/n/12 ,
  []
 
 
-Overfull \hbox (5.52977pt too wide) in paragraph at lines 116--117
-[][][][]\T1/cmtt/m/n/12 Binary Alignment Map format (BAM)[][][]\T1/cmr/m/n/12 ,
- des critères de qual-ité sont ap-pliqués.
+Overfull \hbox (3.31891pt too wide) in paragraph at lines 116--117
+\T1/cmr/m/n/12 afin de pour-suivre l'-anal-yse il doit être con-ver-tit au for-
+mat bi-naire [][][][]\T1/cmtt/m/n/12 Binary Alignment
  []
 
-[6] <figures/igv_snapshot.png, id=199, 1606.0pt x 1084.05pt>
+
+Overfull \hbox (0.76535pt too wide) in paragraph at lines 141--143
+\T1/cmr/m/n/12 per-me-t-tent de tra-vailler aisé-ment avec la suite de logi-cie
+ls [][]BED-tools[][] pour la recherche
+ []
+
+
+Overfull \hbox (9.37856pt too wide) in paragraph at lines 141--143
+\T1/cmr/m/n/12 les fichiers BED néces-saires à la suite de l'-anal-yse tel que 
+celui des po-si-tions génomiques
+ []
+
+[6] <figures/igv_snapshot.png, id=205, 1606.0pt x 1084.05pt>
 File: figures/igv_snapshot.png Graphic file (type png)
 
 <use figures/igv_snapshot.png>
 Package pdftex.def Info: figures/igv_snapshot.png used on input line 148.
-(pdftex.def)             Requested size: 395.07857pt x 266.67802pt.
+(pdftex.def)             Requested size: 433.62581pt x 292.69742pt.
  [7] [8 <./figures/igv_snapshot.png (PNG copy)>]
-<figures/easyRNASeq.png, id=235, 601.24625pt x 798.985pt>
+<figures/easyRNASeq.png, id=238, 601.24625pt x 798.985pt>
 File: figures/easyRNASeq.png Graphic file (type png)
 
 <use figures/easyRNASeq.png>
 Package pdftex.def Info: figures/easyRNASeq.png used on input line 163.
 (pdftex.def)             Requested size: 180.37526pt x 239.69734pt.
- [9] [10 <./figures/easyRNASeq.png>]
+ [9 <./figures/easyRNASeq.png>]
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 180.
 
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 180.
 
-<figures/expression1.png, id=274, 505.89pt x 361.35pt>
+<figures/expression1.png, id=263, 505.89pt x 361.35pt>
 File: figures/expression1.png Graphic file (type png)
 
 <use figures/expression1.png>
 Package pdftex.def Info: figures/expression1.png used on input line 184.
-(pdftex.def)             Requested size: 187.17636pt x 133.6974pt.
+(pdftex.def)             Requested size: 202.3524pt x 144.53743pt.
 
-<figures/expression2.png, id=275, 505.89pt x 361.35pt>
+<figures/expression2.png, id=264, 505.89pt x 361.35pt>
 File: figures/expression2.png Graphic file (type png)
 
 <use figures/expression2.png>
 Package pdftex.def Info: figures/expression2.png used on input line 186.
-(pdftex.def)             Requested size: 187.17636pt x 133.6974pt.
- [11]
-Overfull \hbox (1.96747pt too wide) in paragraph at lines 196--197
-[][][][][][][][][][][][][][][][][][][][][][] 
- []
-
+(pdftex.def)             Requested size: 202.3524pt x 144.53743pt.
+ [10]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 204.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 204.
-
+ [11 <./figures/expression1.png (PNG copy)> <./figures/expression2.png (PNG cop
+y)>]
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
-) [12 <./figures/expression1.png (PNG copy)> <./figures/expression2.png (PNG co
-py)>]
-<figures/profil.jpg, id=312, 602.25pt x 202.7575pt>
+)
+<figures/profil.jpg, id=299, 602.25pt x 202.7575pt>
 File: figures/profil.jpg Graphic file (type jpg)
  <use figures/profil.jpg>
 Package pdftex.def Info: figures/profil.jpg used on input line 212.
 (pdftex.def)             Requested size: 361.35278pt x 121.65543pt.
 
-[13 <./figures/profil.jpg>]
-<figures/igv_profil.png, id=323, 1589.94pt x 625.33624pt>
+[12 <./figures/profil.jpg>]
+<figures/igv_profil.png, id=315, 1589.94pt x 625.33624pt>
 File: figures/igv_profil.png Graphic file (type png)
 
 <use figures/igv_profil.png>
 Package pdftex.def Info: figures/igv_profil.png used on input line 230.
-(pdftex.def)             Requested size: 391.12778pt x 153.83371pt.
- [14 <./figures/igv_profil.png>] [15]
-<figures/segmentation.png, id=351, 525.8847pt x 632.3625pt>
+(pdftex.def)             Requested size: 429.28954pt x 168.84303pt.
+ [13 <./figures/igv_profil.png>]
+<figures/segmentation.png, id=335, 525.8847pt x 632.3625pt>
 File: figures/segmentation.png Graphic file (type png)
 
 <use figures/segmentation.png>
 Package pdftex.def Info: figures/segmentation.png used on input line 255.
-(pdftex.def)             Requested size: 262.94171pt x 316.18048pt.
+(pdftex.def)             Requested size: 289.23747pt x 347.80045pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
-[][] \T1/cmr/m/n/8 ^^U |\T1/cmr/bx/n/8 Ré-sul-tat
+Underfull \hbox (badness 1742) in paragraph at lines 256--256
+\T1/cmr/m/n/8 tran-scrip-tion par les flèches
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 256--256
-\T1/cmr/bx/n/8 de seg-men-ta-tion pour
+Underfull \hbox (badness 2547) in paragraph at lines 256--256
+\T1/cmr/m/n/8 tée par la zone or-ange et
  []
 
 
-Underfull \hbox (badness 3058) in paragraph at lines 256--256
-\OML/cmm/m/it/8 K[] \OT1/cmr/m/n/8 = 4$\T1/cmr/bx/n/8 . \T1/cmr/m/n/8 Les gènes
-
+Underfull \hbox (badness 1902) in paragraph at lines 256--256
+\T1/cmr/m/n/8 lé-gende (Fea-ture type). Les
  []
 
 
-Underfull \hbox (badness 7186) in paragraph at lines 256--256
-\T1/cmr/m/n/8 sont sym-bol-isés par les
+Underfull \hbox (badness 3039) in paragraph at lines 256--256
+\T1/cmr/m/n/8 pro-mo-teurs sont représen-tés
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
-\T1/cmr/m/n/8 zones bleues, leur sens
+Underfull \hbox (badness 1424) in paragraph at lines 256--256
+\T1/cmr/m/n/8 ter-mi-na-teurs par des points
  []
 
 
-Underfull \hbox (badness 5245) in paragraph at lines 256--256
-\T1/cmr/m/n/8 de tran-scrip-tion par les
+Underfull \hbox (badness 1168) in paragraph at lines 256--256
+\T1/cmr/m/n/8 verts, leur sens af-fichés par
  []
 
 
-Underfull \hbox (badness 3333) in paragraph at lines 256--256
-\T1/cmr/m/n/8 flèches noires. La BIME
+Underfull \hbox (badness 1297) in paragraph at lines 256--256
+\T1/cmr/m/n/8 les sym-boles '+' ou '-' sur
  []
 
 
-Underfull \hbox (badness 4765) in paragraph at lines 256--256
-\T1/cmr/m/n/8 or-ange et sa classe est
+Underfull \hbox (badness 1158) in paragraph at lines 256--256
+\T1/cmr/m/n/8 ces points. La courbe noire
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 256--256
-\T1/cmr/m/n/8 pré-cisée dans la lé-gende
+Underfull \hbox (badness 2837) in paragraph at lines 256--256
+\T1/cmr/m/n/8 minés par la seg-men-ta-tion,
  []
 
+[14] [15 <./figures/segmentation.png (PNG copy)>] [16] [17
 
-Underfull \hbox (badness 2941) in paragraph at lines 256--256
-\T1/cmr/m/n/8 (Fea-ture type). Les pro-
- []
-
-
-Underfull \hbox (badness 5274) in paragraph at lines 256--256
-\T1/cmr/m/n/8 mo-teurs sont représen-tés
- []
-
-
-Underfull \hbox (badness 2368) in paragraph at lines 256--256
-\T1/cmr/m/n/8 hor-i-zon-tales in-diquent les
- []
-
-
-Underfull \hbox (badness 1303) in paragraph at lines 256--256
-\T1/cmr/m/n/8 cou-ver-tures moyennes des
- []
-
-
-Underfull \hbox (badness 1675) in paragraph at lines 256--256
-\T1/cmr/m/n/8 élé-ments génomiques. Les
- []
-
-
-Underfull \hbox (badness 1430) in paragraph at lines 256--256
-\T1/cmr/m/n/8 points de change-ment de
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--256
-\T1/cmr/m/n/8 cou-ver-ture déter-minés
- []
-
-
-Underfull \hbox (badness 1609) in paragraph at lines 256--256
-\T1/cmr/m/n/8 par la seg-men-ta-tion sont
- []
-
-
-Underfull \hbox (badness 3601) in paragraph at lines 256--256
-\T1/cmr/m/n/8 matéri-al-isés par la ligne
- []
-
-[16 <./figures/segmentation.png (PNG copy)>] [17] [18
-
-] (./rapport.gls [19
+] (./rapport.gls
+[18
 
 ]
-Overfull \hbox (2.11404pt too wide) in paragraph at lines 5--5
-[]\T1/cmr/m/n/12 L'alignement d'un read ne peut pas être représenté
+Overfull \hbox (3.8272pt too wide) in paragraph at lines 5--5
+[]\T1/cmr/m/n/12 L'alignement d'un read ne peut pas être représenté comme
  []
 
 
-Overfull \hbox (6.04631pt too wide) in paragraph at lines 15--15
-[]\T1/cmr/m/n/12 Appelé égale-ment pro-fondeur de séquençage, cor-re-spond au n
-om-
+Overfull \hbox (2.45929pt too wide) in paragraph at lines 21--23
+[]\T1/cmr/m/n/12 Format de stock-age d'in-for-ma-tions pour les élé-ments génom
+iques
  []
 
-[20
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.37 ...tentrycounter[]{page}\glsnumberformat{5}}}
+                                                  % [19
 
 
-]) (./rapport.bbl [21]
-Underfull \hbox (badness 2269) in paragraph at lines 52--61
-[]\T1/cmr/m/n/12 S. Choi, S. Ohta, and E. Oht-subo.  A novel IS el-e-ment, IS62
-1,
- []
-
-
-Underfull \hbox (badness 2119) in paragraph at lines 52--61
-\T1/cmr/m/n/12 of the IS110/IS492 fam-ily trans-poses to a spe-cific site in re
-pet-
- []
-
-
-Underfull \hbox (badness 2134) in paragraph at lines 52--61
-\T1/cmr/m/n/12 i-tive ex-tra-genic palin-dromic se-quences in Es-cherichia coli
-.  \T1/cmr/m/it/12 Jour-
- []
-
-
-Underfull \hbox (badness 3078) in paragraph at lines 52--61
-\T1/cmr/m/it/12 nal of bac-te-ri-ol-ogy\T1/cmr/m/n/12 , 185(16) :4891--900, Aug
-. 2003.  ISSN 0021-
+]) (./rapport.bblpdfTeX warning (ext4): destination with the same identifier (n
+ame{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \begin{thebibliography}{32}
+                                [20]
+Underfull \hbox (badness 2790) in paragraph at lines 35--43
+[]\T1/cmr/m/n/12 F. Boc-card and P. Pren-tki.  Spe-cific in-ter-ac-tion of IHF 
+with RIBs, a
  []
 
 
-Underfull \hbox (badness 4353) in paragraph at lines 52--61
-\T1/cmr/m/n/12 9193.  URL [][]$\T1/cmtt/m/n/12 http : / / www . pubmedcentral .
- nih . gov / articlerender .
+Underfull \hbox (badness 1881) in paragraph at lines 74--83
+\T1/cmr/m/n/12 10 . 1186 / 1748-[]7188-[]9-[]6$.  URL [][]$\T1/cmtt/m/n/12 http
+ : / / www . almob . org / content / 9 / 1 / 6http :
  []
 
-[22
 
-]
 Underfull \hbox (badness 10000) in paragraph at lines 74--83
-\T1/cmtt/m/n/12 content / 9 / 1 / 6http : / / www . pubmedcentral . nih . gov /
- articlerender .
+\T1/cmtt/m/n/12 / / www . pubmedcentral . nih . gov / articlerender . fcgi ? ar
+tid = 3977952&tool =
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.83 
+      [21
+
+]
+Underfull \hbox (badness 3128) in paragraph at lines 128--135
+[]\T1/cmr/m/n/12 V. Fortino, O.-P. Smolan-der, P. Au-vi-nen, R. Tagli-a-ferri, 
+and D. Greco.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--135
+Underfull \hbox (badness 3189) in paragraph at lines 128--135
 \T1/cmr/m/n/12 Tran-scrip-tome dynamics-based operon pre-dic-tion in prokary-ot
-es.
+es.  \T1/cmr/m/it/12 BMC
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--135
-\T1/cmtt/m/n/12 articlerender . fcgi ? artid = 4235196&tool = pmcentrez&rendert
-ype =
- []
-
-[23] [24]
-Underfull \hbox (badness 4660) in paragraph at lines 237--246
-\T1/cmr/m/n/12 plex condition-dependent tran-scrip-tomes in E. coli K12 through
-
+Underfull \hbox (badness 2376) in paragraph at lines 128--135
+\T1/cmr/m/it/12 bioin-for-mat-ics\T1/cmr/m/n/12 , 15 :145, Jan. 2014.  ISSN 147
+1-2105.  doi : $10 . 1186 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--246
-[][]$\T1/cmtt/m/n/12 http : / / www . pubmedcentral . nih . gov / articlerender
- . fcgi ? artid =
+Underfull \hbox (badness 1867) in paragraph at lines 167--175
+[]\T1/cmr/m/n/12 N. Goosen, P. V. D. Putte, and P. Van De Putte.  The reg-u-la-
+tion of
  []
 
-[25]
-Underfull \hbox (badness 1424) in paragraph at lines 304--314
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.175 
+       [22]pdfTeX warning (ext4): destination with the same identifier (name{pa
+ge.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.265 
+       [23]
+Underfull \hbox (badness 1694) in paragraph at lines 304--314
+[]\T1/cmr/m/n/12 B. Ton-Hoang, P. Sigu-ier, Y. Quentin, S. Onil-lon, B. Marty, 
+G. Fichant,
+ []
+
+
+Underfull \hbox (badness 2285) in paragraph at lines 304--314
+\T1/cmr/m/n/12 and M. Chan-dler.  Struc-tur-ing the bac-te-rial genome : Y1-tra
+nsposases
+ []
+
+
+Underfull \hbox (badness 2529) in paragraph at lines 304--314
 \T1/cmr/m/n/12 as-so-ci-ated with REP-BIME se-quences.  \T1/cmr/m/it/12 Nu-clei
-c acids re-search\T1/cmr/m/n/12 , 40
+c acids re-search\T1/cmr/m/n/12 , 40(8) :
  []
 
 
-Underfull \hbox (badness 1635) in paragraph at lines 304--314
-\T1/cmr/m/n/12 (8) :3596--609, Apr. 2012.  ISSN 1362-4962.  doi : $10 . 1093 / 
-nar /
+Underfull \hbox (badness 4266) in paragraph at lines 304--314
+\T1/cmr/m/n/12 3596--609, Apr. 2012.  ISSN 1362-4962.  doi : $10 . 1093 / nar /
+ gkr1198$.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--314
+\T1/cmr/m/n/12 URL [][]$\T1/cmtt/m/n/12 http : / / www . pubmedcentral . nih . 
+gov / articlerender . fcgi ? artid =
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 278.
- [26]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 280.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.280 \end{document}
+                     [24]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 280.
  (./rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 278.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 278.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 280.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 280.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 278.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 280.
  ) 
 Here is how much of TeX's memory you used:
- 17396 strings out of 495034
- 248340 string characters out of 6181677
- 421191 words of memory out of 5000000
- 20145 multiletter control sequences out of 15000+600000
+ 17824 strings out of 495034
+ 254582 string characters out of 6181677
+ 435083 words of memory out of 5000000
+ 20576 multiletter control sequences out of 15000+600000
  26991 words of font info for 71 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,10n,92p,2030b,2173s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,9n,92p,2030b,2200s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texli
@@ -1090,10 +1123,10 @@ r/sfrm1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1
 ></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on rapport.pdf (27 pages, 1090505 bytes).
+Output written on rapport.pdf (25 pages, 1094431 bytes).
 PDF statistics:
- 567 PDF objects out of 1000 (max. 8388607)
- 489 compressed objects within 5 object streams
- 138 named destinations out of 1000 (max. 500000)
+ 544 PDF objects out of 1000 (max. 8388607)
+ 468 compressed objects within 5 object streams
+ 131 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
