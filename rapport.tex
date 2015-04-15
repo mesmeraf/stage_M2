@@ -13,11 +13,13 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{setspace}
 \usepackage{graphicx}
+\usepackage[rightcaption]{sidecap}
+\usepackage{subfigure}
 \usepackage{float}
 \usepackage[skip=2pt,font=scriptsize]{caption}
 \usepackage{listings}
 \usepackage{xcolor}
-\usepackage[rightcaption]{sidecap}
+
 
 
 
@@ -179,7 +181,15 @@ Une analyse en composante principale est réalisée sur ces données normalisée
 \label{subsec:expression}
 L'hypothèse privilégiée ici est que les gènes appartenant à un opéron vont être exprimés à un taux similaire, la question qui se pose est de savoir si la présence d'une BIME entre 2 gènes d'un opéron va avoir un impact sur la transcription d'un des gènes. Dans ce cadre, les opérons contenant des BIME sont sélectionnés et l'expression des 2 gènes de l'opéron entourant la BIME recueillie si au moins un des deux gènes a une couverture > 10. Si l'expérience contient au moins 5 réplicats, un test non paramétrique de rangs de Wilcoxon est effectué dont l'hypothèse nulle est qu'il n'existe pas de différence d'expression entre les 2 gènes. La p-value significative étant fixée à 0.01. Dans le cas où le nombre de réplicats est inférieur à 5, un test de Student est réalisé avec la même p-value significative.
 
-Pour les gènes dont le test est significatif, deux représentations graphiques sont générées. La 1\up{ère} est un schéma décrivant les taux d'expression des gènes de l'opéron ainsi que la position de la BIME. La 2\up{nde} est une représentation de la couverture sur l'opéron par rapport à l'organisation génomique de celui ci ainsi que la catégorisation des REP formant la BIME. Deux fichiers au format \texttt{CSV} sont créés, l'un pour les gènes où nous observons un différence d'expression significative, le second pour les autres cas.
+Pour les gènes dont le test est significatif, deux représentations graphiques sont générées (\autoref{fig:expression}). La 1\up{ère} est un schéma décrivant les taux d'expression des gènes de l'opéron ainsi que la position des REP formant la BIME (\autoref{fig:expressionFigA}). La 2\up{nde} est une représentation de la couverture sur l'opéron par rapport à l'organisation génomique de celui ci ainsi que la catégorisation des REP composant la BIME (\autoref{fig:expressionFigB}). Deux fichiers au format \texttt{CSV} sont créés, l'un pour les gènes où nous observons un différence d'expression significative, le second pour les autres cas.
+\begin{figure}[ht]
+\centering
+\subfigure[Position des REP et expression.]{\label{fig:expressionFigA} \includegraphics[scale=0.37]{figures/expression1.png}}
+\subfigure[Position et organisation de l'opéron, des REP et couverture.]{\label{fig:expressionFigB} \includegraphics[scale=0.37
+]{figures/expression2.png}}
+\caption{\textbf{Résultats de l'étude de l'expression des gènes dans les opérons contenant des BIME.} a) Le taux d'expression de chaque gène de l'opéron est représenté en ordonné, l'organisation des gènes de l'opéron est schématisée sur l'axe des abscisse dans le sens 5' $\mapsto$ 3'. La position de la ou les REP composant la BIME est schématisée par la ligne blue verticale. b) La position de l'opéron sur le génome est indiquée par la barre rouge sur l'idéogramme de la partie supérieure. La partie médiane représente l'organisation des gènes de l'opéron dans le sens 5' $\mapsto$ 3' ainsi que le positionnement et la classe des REP composant la BIME. La partie inférieure montre la couverture par rapport à l'organisation de la partie médiane.}
+\label{fig:expression} 
+\end{figure}
 
 \subsection*{Analyse par corrélation de profils d'expression}
 Nous avons créé un outil analysant qui réalise un test de corrélation entre les profils d'expression des régions contenant des BIME et un profil modèle de changement d'expression en nous inspirant d'une technique mise au point pour la prédiction d'opérons dans les génomes bactériens \citep{Fortino2014}. Pour cela, il a d'abord été nécessaire de délimiter nos régions d'intérêt. Celles-ci se modélisent par la présence du 1\up{er} gène, de la 1\up{ère} région inter-génique, de la BIME, de la 2\up{nde} région inter-génique et du 2\up{nd} gène. Une fois ces régions extraites, le calcul de la couverture base par base a été réalisé à l'aide des BEDtools :
