@@ -119,7 +119,8 @@ Finalement, le fichier BAM trié doit être indexé pour être visualisable sur 
 \lstset{language=sh, commentstyle=\color{ForestGreen}}  
 \begin{lstlisting}[frame=single]
 # Conversion du SAM en BAM et application des filtres
-# de qualite.
+# (-q 30 : score de mapping minimal, -F 2048 : suppression des 
+# sequences chimeriques).
 samtools view -Sbh -q 30 -F 2048 aln.sam > aln.bam
 
 # Tri en fonction des positions genomiques
@@ -142,7 +143,7 @@ Le fichier \texttt{\gls{gff}} d'annotation du génome a été généré par un s
 Ces changements de format permettent de travailler aisément avec la suite de logiciels \href{http://bedtools.readthedocs.org/en/latest/}{BEDtools} pour la recherche d'intersections, de positions proches ou de \gls{couverture} de reads. Ces outils ont généré les fichiers BED nécessaires à la suite de l'analyse tel que celui des positions génomiques des opérons contenant des REP, celui des REP, celui des gènes contenus dans des opérons bordant une REP, celui des BIME et celui de la couverture sur les régions contenant des BIME.
 
 \section*{Visualisation du mapping}
-L'alignement des reads et le mapping sur le génome de référence de E. coli sont visualisés grâce au genome browser \href{https://www.broadinstitute.org/igv/}{IGV} (\autoref{fig:igv}).
+L'alignement des reads et le mapping sur le génome de référence de E. coli sont visualisés grâce au genome browser \href{https://www.broadinstitute.org/igv/}{IGV} \citep{Robinson2011,Thorvaldsdottir2013} (\autoref{fig:igv}).
 
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.27]{figures/igv_snapshot.png}}
@@ -189,7 +190,7 @@ Pour les gènes dont le test est significatif, deux représentations graphiques 
 \end{figure}
 
 \subsection*{Analyse par corrélation de profils d'expression}
-Nous avons créé un outil analysant qui réalise un test de corrélation entre les profils d'expression des régions contenant des BIME et un profil modèle de changement d'expression en nous inspirant d'une technique mise au point pour la prédiction d'opérons dans les génomes bactériens \citep{Fortino2014}. Pour cela, il a d'abord été nécessaire de délimiter nos régions d'intérêt. Celles-ci se modélisent par la présence du 1\up{er} gène, de la 1\up{ère} région inter-génique, de la BIME, de la 2\up{nde} région inter-génique et du 2\up{nd} gène. Une fois ces régions extraites, le calcul de la couverture base par base a été réalisé à l'aide des BEDtools :
+Nous avons créé un outil réalisant un test de corrélation entre les profils d'expression des régions contenant des BIME et un profil modèle de changement d'expression en nous inspirant d'une technique mise au point pour la prédiction d'opérons dans les génomes bactériens \citep{Fortino2014}. Pour cela, il a d'abord été nécessaire de délimiter nos régions d'intérêt. Celles-ci se modélisent par la présence du 1\up{er} gène, de la 1\up{ère} région inter-génique, de la BIME, de la 2\up{nde} région inter-génique et du 2\up{nd} gène. Une fois ces régions extraites, le calcul de la couverture base par base a été réalisé à l'aide des BEDtools :
 \lstset{language=sh, commentstyle=\color{ForestGreen}}  
 \begin{lstlisting}[frame=single]
 # Couverture base par base.
@@ -224,13 +225,19 @@ Les seuils que nous avons fixés sont les suivants :
 \item une p-valeur du test de corrélation $< 10^7$
 \end{itemize}
 
-Sur un ensemble de positions consécutives dont les corrélations sont significatives et sont situées sur l'espace génomique de la BIME (étendu de 40 pb de chaque côté), celle dont la corrélation est la plus élevée sera définie comme position de changement d'expression. Deux types de fichiers sont générés au format \texttt{bedgraph} pour une visualisation sur un Genome Browser, le premier sous forme d'histogramme représentant les couvertures moyennes des deux parties de la fenêtre, le second représentant l'évolution de la corrélation sur la zone (\autoref{fig:igv_profil}). Une visualisation des niveaux d'expression des 2 gènes et de la BIME est également générée sous forme d'histogrammes avec les informations de sens et du type de la BIME. Finalement des fichiers au format \texttt{CSV} recueillent toutes les informations de l'analyse.
-
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.27]{figures/igv_profil.png}}
 \caption{\textbf{Visualisation des changements d'expression obtenus par la méthode de corrélation des profils.} La position de la BIME est représentée en orange, l'histogramme à 2 colonnes en vert montre les profils d'expression moyens de chaque moitié de la fenêtre et la courbe en points verts indique l'évolution de la corrélation sur cette zone. Dans cet exemple, ce changement d'expression peut se traduire par une augmentation en sens ou une diminution en anti-sens.}
 \label{fig:igv_profil} 
 \end{figure}
+
+Sur un ensemble de positions consécutives dont les corrélations sont significatives et sont situées sur l'espace génomique de la BIME (étendu de 40 pb de chaque côté), celle dont la corrélation est la plus élevée sera définie comme position de changement d'expression. Deux types de fichiers sont générés au format \texttt{bedgraph} pour une visualisation sur un Genome Browser, le premier sous forme d'histogramme représentant les couvertures moyennes des deux parties de la fenêtre, le second représentant l'évolution de la corrélation sur la zone (\autoref{fig:igv_profil}). Une visualisation des niveaux d'expression des 2 gènes et de la BIME est également générée sous forme d'histogrammes avec les informations de sens et du type de la BIME (\autoref{fig:profil_plot}). Finalement, un fichier au format \texttt{CSV} recueille toutes les informations de l'analyse.
+
+\begin{SCfigure}[][t]
+\fbox{\includegraphics[scale=0.4]{figures/profil_plot.png}
+\caption{\textbf{Résultat de corrélation de profils.} Les niveaux d'expression des gènes encadrant la BIME et de cette dernière sont représentés par les histogrammes. La couleur de l'histogramme indique le sens de transcription de l'élément, bleu pour le brin sens, rouge pour l'anti-sens et noir lorsque aucun brin est défini. La présence d'éléments de régulation dans la région inter-génique est représentée par des ronds de couleur verte pour les promoteurs et rouge pour les terminateurs avec un symbole '+' ou '-' pour indiquer le brin de cet élément. La représentation est schématique et ne donne pas d'information sur la position exacte de ces éléments.}
+\label{fig:profil_plot} }
+\end{SCfigure}
 
 \subsection*{Analyse par segmentation}
 A la différence de la méthode précédente, la segmentation ne requière pas l'utilisation de profils. La méthode de segmentation que nous utilisons est issue du package R \href{http://cran.r-project.org/web/packages/Segmentor3IsBack/index.html}{Segmentor3IsBack} \citep{Cleynen2014}. Ce package a l'avantage d'avoir été développé pour s'adapter à la \gls{nb} (NB) qui est une loi statistique appropriée aux données d'expression de RNAseq pour lesquelles la variance n'est pas stabilisée par rapport à la moyenne, phénomène communément appelé overdispersion. Le but de cette méthode est de rechercher, sur une zone d'intérêt, des points de changements abrupts dans la couverture en utilisant l'algorithme \gls{pdp} \citep{Rigaill2010}. La segmentation se fonde sur le partitionnement d'un signal de $n$ points, la couverture de notre région d'intérêt, compris dans l'ensemble ${\{y_t\}_{t=1,\ldots,n}}$, suivant une distribution NB, en $K$ segments, tel que :

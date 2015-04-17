@@ -1,4 +1,4 @@
-\begin{thebibliography}{32}
+\begin{thebibliography}{34}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -279,6 +279,17 @@ G.~Rigaill.
 \newblock \emph{eprint arXiv:1004.0887}, page~9, 2010.
 \newblock URL \url{http://arxiv.org/abs/1004.0887}.
 
+\bibitem[Robinson et~al.(2011)Robinson, Thorvaldsd\'{o}ttir, Winckler, Guttman,
+  Lander, Getz, and Mesirov]{Robinson2011}
+J.~T. Robinson, H.~Thorvaldsd\'{o}ttir, W.~Winckler, M.~Guttman, E.~S. Lander,
+  G.~Getz, and J.~P. Mesirov.
+\newblock {Integrative genomics viewer.}
+\newblock \emph{Nature biotechnology}, 29\penalty0 (1):\penalty0 24--6, Jan.
+  2011.
+\newblock ISSN 1546-1696.
+\newblock \doi{10.1038/nbt.1754}.
+\newblock URL \url{http://dx.doi.org/10.1038/nbt.1754}.
+
 \bibitem[Stern et~al.(1988)Stern, Prossnitz, and Ames]{Stern1988}
 M.~J. Stern, E.~Prossnitz, and G.~F. Ames.
 \newblock {Role of the intercistronic region in post-transcriptional control of
@@ -286,6 +297,18 @@ M.~J. Stern, E.~Prossnitz, and G.~F. Ames.
   involvement of REP sequences.}
 \newblock \emph{Molecular microbiology}, 2:\penalty0 141--152, 1988.
 \newblock ISSN 0950382X.
+
+\bibitem[Thorvaldsd\'{o}ttir et~al.(2013)Thorvaldsd\'{o}ttir, Robinson, and
+  Mesirov]{Thorvaldsdottir2013}
+H.~Thorvaldsd\'{o}ttir, J.~T. Robinson, and J.~P. Mesirov.
+\newblock {Integrative Genomics Viewer (IGV): high-performance genomics data
+  visualization and exploration.}
+\newblock \emph{Briefings in bioinformatics}, 14\penalty0 (2):\penalty0
+  178--92, Mar. 2013.
+\newblock ISSN 1477-4054.
+\newblock \doi{10.1093/bib/bbs017}.
+\newblock URL
+  \url{http://bib.oxfordjournals.org/content/14/2/178.full?keytype=ref\&\%2520ijkey=qTgjFwbRBAzRZWC}.
 
 \bibitem[Tobes and Pareja(2005)]{Tobes2005}
 R.~Tobes and E.~Pareja.
