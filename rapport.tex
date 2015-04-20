@@ -225,6 +225,14 @@ Les seuils que nous avons fixés sont les suivants :
 \item une p-valeur du test de corrélation $< 10^7$
 \end{itemize}
 
+Le choix de la taille de la fenêtre glissante a été motivé par la taille des régions inter-géniques contenant des BIME dans les opérons . L'idée étant de rechercher le changement d'expression en ayant des informations sur la couverture moyenne des gènes entourant la BIME. La \autoref{fig:igr_distance} nous indique que les majorité des régions contenant des REP/BIME se situent entre 200 et 300 pb. Comme la BIME se situe dans la majorité des cas proche d'un des deux gènes nous avons opté pour une fenêtre de taille 300 pb. 
+
+\begin{SCfigure}[][t]
+\fbox{\includegraphics[scale=0.4]{figures/igr_distance.png}
+\caption{\textbf{Distances inter-géniques dans les opérons avec et sans BIME.} En bleu absence de BIME dans la région inter-génique, en rouge présence de BIME. Nous observons une croissance de 2 à 3 fois de la taille de cette région lors de la présence de BIME.}
+\label{fig:igr_distance} }
+\end{SCfigure}
+
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.27]{figures/igv_profil.png}}
 \caption{\textbf{Visualisation des changements d'expression obtenus par la méthode de corrélation des profils.} La position de la BIME est représentée en orange, l'histogramme à 2 colonnes en vert montre les profils d'expression moyens de chaque moitié de la fenêtre et la courbe en points verts indique l'évolution de la corrélation sur cette zone. Dans cet exemple, ce changement d'expression peut se traduire par une augmentation en sens ou une diminution en anti-sens.}
