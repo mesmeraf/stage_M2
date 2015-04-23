@@ -1,4 +1,4 @@
-\begin{thebibliography}{34}
+\begin{thebibliography}{39}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -31,6 +31,27 @@ S.~Bachellier, J.~M. Cl\'{e}ment, M.~Hofnung, and E.~Gilson.
 \newblock ISSN 0016-6731.
 \newblock URL \url{/pmc/articles/PMC1207841/?report=abstract}.
 
+\bibitem[Bandyra et~al.(2013)Bandyra, Bouvier, Carpousis, and
+  Luisi]{Bandyra2013}
+K.~J. Bandyra, M.~Bouvier, A.~J. Carpousis, and B.~F. Luisi.
+\newblock {The social fabric of the RNA degradosome}.
+\newblock \emph{Biochimica et Biophysica Acta - Gene Regulatory Mechanisms},
+  1829\penalty0 (6-7):\penalty0 514--522, 2013.
+\newblock ISSN 18749399.
+\newblock \doi{10.1016/j.bbagrm.2013.02.011}.
+\newblock URL \url{http://dx.doi.org/10.1016/j.bbagrm.2013.02.011}.
+
+\bibitem[Belasco(2010)]{Belasco2010}
+J.~G. Belasco.
+\newblock {All things must pass: contrasts and commonalities in eukaryotic and
+  bacterial mRNA decay.}
+\newblock \emph{Nature reviews. Molecular cell biology}, 11\penalty0
+  (7):\penalty0 467--78, July 2010.
+\newblock ISSN 1471-0080.
+\newblock \doi{10.1038/nrm2917}.
+\newblock URL
+  \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3145457\&tool=pmcentrez\&rendertype=abstract}.
+
 \bibitem[Boccard and Prentki(1993)]{Boccard1993}
 F.~Boccard and P.~Prentki.
 \newblock {Specific interaction of IHF with RIBs, a class of bacterial
@@ -47,6 +68,16 @@ J.~Bosc.
   r\'{e}p\'{e}t\'{e}es ( REP ) chez l ' esp\`{e}ce Escherichia coli par une
   m\'{e}thode de reconstruction des \'{e}tats anc\^{e}tres .}
 \newblock Technical report, 2014.
+
+\bibitem[Callaghan et~al.(2005)Callaghan, Marcaida, Stead, McDowall, Scott, and
+  Luisi]{Callaghan2005}
+A.~J. Callaghan, M.~J. Marcaida, J.~a. Stead, K.~J. McDowall, W.~G. Scott, and
+  B.~F. Luisi.
+\newblock {Structure of Escherichia coli RNase E catalytic domain and
+  implications for RNA turnover.}
+\newblock \emph{Nature}, 437\penalty0 (7062):\penalty0 1187--1191, 2005.
+\newblock ISSN 0028-0836.
+\newblock \doi{10.1038/nature04084}.
 
 \bibitem[Choi et~al.(2003)Choi, Ohta, and Ohtsubo]{Choi2003}
 S.~Choi, S.~Ohta, and E.~Ohtsubo.
@@ -173,6 +204,14 @@ N.~Goosen, P.~V.~D. Putte, and P.~{Van De Putte}.
 \newblock URL
   \url{http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve\&db=PubMed\&dopt=Citation\&list\_uids=7961996}.
 
+\bibitem[Henkin(2000)]{Henkin2000}
+T.~M. Henkin.
+\newblock {Transcription termination control in bacteria}.
+\newblock \emph{Current Opinion in Microbiology}, 3\penalty0 (2):\penalty0
+  149--153, 2000.
+\newblock ISSN 13695274.
+\newblock \doi{10.1016/S1369-5274(00)00067-9}.
+
 \bibitem[Higgins et~al.(1982)Higgins, Ames, Barnes, Clement, and
   Hofnung]{Higgins1982}
 C.~F. Higgins, G.~F.-L. Ames, W.~M. Barnes, J.~M. Clement, and M.~Hofnung.
@@ -223,6 +262,17 @@ M.~Lawrence, W.~Huber, H.~Pag\`{e}s, P.~Aboyoun, M.~Carlson, R.~Gentleman,
   2013.
 \newblock ISSN 1553734X.
 \newblock \doi{10.1371/journal.pcbi.1003118}.
+
+\bibitem[Lesnik et~al.(2001)Lesnik, Sampath, Levene, Henderson, McNeil, and
+  Ecker]{Lesnik2001}
+E.~a. Lesnik, R.~Sampath, H.~B. Levene, T.~J. Henderson, J.~a. McNeil, and
+  D.~J. Ecker.
+\newblock {Prediction of rho-independent transcriptional terminators in
+  Escherichia coli.}
+\newblock \emph{Nucleic acids research}, 29\penalty0 (17):\penalty0 3583--3594,
+  2001.
+\newblock ISSN 1362-4962.
+\newblock \doi{10.1093/nar/29.17.3583}.
 
 \bibitem[Levin et~al.(2010)Levin, Yassour, and Adiconis]{Levin2010}
 J.~Levin, M.~Yassour, and X.~Adiconis.

@@ -19,7 +19,7 @@
 \usepackage[skip=2pt,font=scriptsize]{caption}
 \usepackage{listings}
 \usepackage{xcolor}
-\usepackage[top=3cm, bottom=4cm, left=2cm , right=2cm]{geometry}
+\usepackage[top=2cm, bottom=3cm, left=2cm , right=2cm]{geometry}
 
 \author{Nicolas JEANNE}
 \title{Rapport de stage de M2}
@@ -45,7 +45,8 @@
 \newacronym{rpkm}{RPKM}{Reads Per Kilobase per Million mapped reads}
 \newacronym{pdp}{PDP}{Pruned Dynamic Programming}
 % création des entrées du glossaire
-\newglossaryentry{PE}{name={Paired-end},description={Technique de séquençage haut débit consistant à réaliser les amplifications d'un fragment d'ADN en marquant l'extrémité 5' par un tag \no1 et l'extrémité 3' par un tag \no2. La distance entre les 2 tags est connue et fixe (négative ou jusqu'à 500 pb). Ceci permet lors de l'assemblage, de séquences de 35 pb par exemple, d'associer le read 1 et le read 2 grâce à la distance séparant les 2 et cela même si la séquence intermédiaire est inconnue. Si la distance est négative, il est possible d'obtenir des reads chevauchants de longueur plus importante que les 35 pb}}
+\newglossaryentry{PE}{name={Paired-end sequencing},description={Technique de séquençage haut débit consistant à réaliser les amplifications d'un fragment d'ADN en marquant l'extrémité 5' par un tag \no1 et l'extrémité 3' par un tag \no2. La distance entre les 2 tags est connue et fixe (négative ou jusqu'à 500 pb). Ceci permet lors de l'assemblage, de séquences de 35 pb par exemple, d'associer le read 1 et le read 2 grâce à la distance séparant les 2 et cela même si la séquence intermédiaire est inconnue. Si la distance est négative, il est possible d'obtenir des reads chevauchants de longueur plus importante que les 35 pb}}
+\newglossaryentry{SE}{name={Single-end sequencing},description={Technique de séquençage haut débit la plus simple consistant à ne réaliser le séquençage que depuis une extrémité du template.}}
 \newglossaryentry{reads}{name={reads},description={Séquence nucléotidique issue d'un séquençage NGS}}
 \newglossaryentry{GRanges}{name={Genomic Ranges},description={Format de stockage d'informations pour les éléments génomiques sous R. L'information minimale requise est le chromosome, les positions de départ et de fin, le sens du brin. Ces champs peuvent être suivis de méta-datas où d'autres informations libres peuvent être enregistrées}}
 \newglossaryentry{chimerique}{name={alignement chim\'erique},description={L'alignement d'un read ne peut pas être représenté comme un alignement linéaire. Un alignement chimérique est représenté comme un ensemble d'alignements, par exemple lorsqu'une partie d'un read est mappé à un locus du génome et la suite à un autre locus}}
@@ -96,15 +97,47 @@ La taille des REP varie de 20 à 40 nucléotides, la classification Y, Z\textsup
 \section*{Propriétés associées aux REP}
 La littérature décrit de nombreuses fonctions associées aux REP, mais certaines d'entre elles restent encore peu étudiées. Les REP ont été décrite comme jouant un rôle dans les événements de recombinaisons homologues \citep{Kofoid2003}. Les BIME ont été décrites comme des sites privilégiés pour l'insertion de séquences d'ADN mobiles comme certaines familles d'IS (Insertion Sequence) \citep{Bachellier1997,Clement1999,Choi2003,Tobes2005}. Lorsqu'elles sont transcrites, les REP joueraient un rôle dans la stabilisation de l'ARNm grâce à leur structure en tige-boucle \citep{Newbury1987,Espeli2001,Khemici2004,Aguena2009}, la terminaison de la transcription \citep{Gilson1986} et le contrôle de la traduction \citep{Stern1988}. Au niveau de l'ADN, les REP sont capables de lier plusieurs facteurs protéiques tels que l'ADN Gyrase \citep{Espeli1997} et l'ADN polymérase \citep{Gilson1990}. Plus spécifiquement, la BIME-1 peut lier l'IHF sur son linker \citep{Boccard1993} qui peut être notamment responsable de l'initiation de la transcription et d’événements de recombinaisons sites spécifiques \citep{Goosen1995}.
 
-\section*{Transcription chez E. coli}
+\section*{ARN messagers chez E. coli}
 
-\subsection*{Stabilité des ARN}
+\subsection*{Stabilité des ARNm}
+La dégradation des ARNm chez E.coli est processée par l'intervention du dégradosome. Il s'agit d'un complexe multi-enzimatique composé de quatre protéines majeurs, la RNase E, la PNPase, la RhlB et l'Enolase (\autoref{fig:degradosome}).
+
+\begin{figure}[ht]
+\centerline{\includegraphics[scale=4]{figures/degradosome.jpg}}
+\caption{\textbf{Structure du dégradosome.} Représentation canonique du dégradosome, l'astérisque marque la taille prédite du domaine catalytique de la RNase E \citep{Bandyra2013}.}
+\label{fig:degradosome} 
+\end{figure}
+
+Un élément clé dans la dégradation du transcrit chez E. coli est que celle-ci débute toujours par un clivage réalisé par une endoribonucléase (RNase E). Une fois clivés, les transcrits sont complètement dégradés par des exoribonucléases (RNase R, RNase II ou PNPase) dégradant l'ARNm par l'extrémité 3' et des oligoribonucléases grâce à la coopération de nombreuses enzymes telles que la poly(A) polymérase (PAP) et les RNA hélicases qui facilitent l'accès aux fragments d'ARN. La RNase E possède une affinité pour les substrats possédant une extrémité mono-phosphate en 5'. Les transcrits primaires bactériens possèdent une extrémité 5' tri-phosphate qui les protège de la dégradation jusqu'à ce qu'ils soient déphosphorylés par l'activité des pyrophosphohydrolases. La RNAse E reconnaît alors l'extrémité 5' mono-phosphate des transcrits par contact de son domaine catalytique \citep{Callaghan2005,Bandyra2013}.
+
+\begin{SCfigure}[][t]
+\fbox{\includegraphics[scale=0.65]{figures/mrna_degradation.jpg}
+\caption{\textbf{Facilitation de la dégradation des ARNm chez E. coli par l'intervention de polyadénylation.} Le clivage endonucléolytique par la RNase E génère de multiples fragments, dont certains possèdent à leur extrémité 3' une structure en tige-boucle. Ces fragments subissent une digestion de leur extrémité 3' par la PNPase, la RNase II et/ou la PNPase jusqu'à ce que cette structure soit rencontrée interrompant la dégradation. La PAP intervient pour déstabiliser la tige boucle par l'ajout d'une séquence poly-A en 3' autorisant la reprise de la dégradation par la PNPase et/ou la RNase R \citep{Belasco2010}.}
+\label{fig:mrna_degradation} }
+\end{SCfigure}
+
+La présence de structure secondaires peut entraver le processus de dégradation initié par les exoribonucléases, la PAP intervient alors en ajoutant sur l'extrémité 3' du transcrit une séquence poly-A qui va déstabiliser la structure secondaire et permettre ainsi aux exoribonucléases de poursuivre la dégradation (\autoref{fig:mrna_degradation}).
+
+\subsection*{Terminaison de la transcription}
+Le mécanisme de terminaison de la transcription chez les prokaryotes est gouverné par deux classes signaux de fin de transcription. Les terminateurs Rho-dépendant dont l'activité s'appuie sur la liaison de la protéine Rho à un site \emph{rut} (Rho utilization) présent sur le transcrit associé à une interaction avec la RNA Polymérase et les terminateurs Rho-indépendants caractérisés par une structure G-C riche formant une tige-boucle suivie d'une série de résidus U. Ces terminateurs peuvent être bi-directionnels (\autoref{fig:terminator}) \citep{Henkin2000,Lesnik2001}.  
+
+\begin{SCfigure}[][t]
+\fbox{\includegraphics[scale=0.65]{figures/terminator.png}
+\caption{\textbf{Terminateur Rho-indépendant bi-directionnel.} La région riche en G-C constitue la structure en tige, la boucle étant formée par les bases non appariées. A la suite de cette structure, nous observons la répétitions de T (U) caractéristique. \citep{Lesnik2001}.}
+\label{fig:terminator} }
+\end{SCfigure}
+
+
+\vspace{5cm}Les deux aspects de la transcription chez E. coli décrits ci-dessus sont importants car leur caractéristique commune est l'intervention de structures secondaires jouant un rôle dans le processus de dégradation ou de terminaison de la transcription. Pour notre étude ce point est intéressant du fait de la formation de structures secondaires des REP avec elles mêmes ou entre elles qui pourraient jouer un rôle dans la transcription. Nous avons développé des méthodes pour tenter de découvrir le rôle de ces REP en nous basant sur des données d'expressions issues d'expériences de RNA-Seq. 
 
 \chapter*{Matériel \& Méthodes}
 
 \section*{Données}
-Les données que nous avons exploité sont issues des expériences d'évolution adaptatives en laboratoire visant à découvrir l'émergence de mutations clés permettant la croissance rapide d'E. coli K-12 MG1655 sur un medium pauvre en glucose \citep{Lacroix2014}. Ces données ont été choisies car elles proviennent d'expériences de RNA-Seq comportant un nombre non négligeable de réplicats (9) pour la condition de croissance en milieu pauvre en glucose (ALE) et 2 réplicats pour le Wild Type (WT) , mais nous n'avons exploité que la condition ALE, le nombre de réplicats du WT étant faible. Il s'agit de données \gls{ngs} publiques, accessibles sur le base de données \href{http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE61327}{GEO} (Gene Expression Omnibus) du NCBI au format \gls{sra}, séquencées sur Illumina MiSeq à partir d'ARN total extrait des cultures d'E. coli et rétro-transcrit en cDNA. La librairie a été conçue en \gls{PE} \textcolor{red}{\textbf{et brin spécifique en utilisant la méthode dUTP} \citep{Levin2010} pas sûr du tout vu la tête des données sur IGV...}. Grâce au \href{http://www.ncbi.nlm.nih.gov/books/NBK158900/#SRA_download.how_do_i_use_the_sra_toolki}{SRA toolkit} et à la commande \texttt{fastq-dump}, elles sont décompressées au format \texttt{fastq}. Un contrôle de qualité a été effectué afin d'inspecter les séquences grâce au logiciel \texttt{fastqc}. 8 ALE ont été validés puisque disposant d'une qualité de séquence par base supérieure à 30 pour des \gls{reads} de 62 pb, seul le fichier \texttt{SRR1573441.fastq} a été rejeté car la longueur des reads allait de 35 à 502 pb avec des scores de qualités très variables.
+Plusieurs jeux de données \gls{ngs} ont été utilisés, tous issus d'expériences RNA-Seq publiques, accessibles sur le base de données \href{http://www.ncbi.nlm.nih.gov/geo/}{GEO} (Gene Expression Omnibus) du NCBI au format \gls{sra}. Grâce au \href{http://www.ncbi.nlm.nih.gov/books/NBK158900/#SRA_download.how_do_i_use_the_sra_toolki}{SRA toolkit} et à la commande \texttt{fastq-dump}, elles sont décompressées au format \texttt{fastq}. Un contrôle de qualité est effectué afin d'inspecter les \gls{reads} grâce au logiciel \texttt{fastqc}.
 
+Le \href{http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE61327}{premier jeu de données} que nous avons exploité est issu des expériences d'évolution adaptatives en laboratoire visant à découvrir l'émergence de mutations clés permettant la croissance rapide d'E. coli K-12 MG1655 sur un medium pauvre en glucose \citep{Lacroix2014}. Ces données ont été choisies car elles proviennent d'expériences de RNA-Seq comportant un nombre non négligeable de réplicats (9) pour la condition de croissance en milieu pauvre en glucose (ALE) et 2 réplicats pour le Wild Type (WT) , mais nous n'avons exploité que la condition ALE, le nombre de réplicats du WT étant faible. Elles ont été obtenues par séquençage sur Illumina MiSeq à partir d'ARN total extrait des cultures d'E. coli et rétro-transcrit en cDNA. La librairie a été conçue en \gls{PE} \textcolor{red}{\textbf{et brin spécifique en utilisant la méthode dUTP} \citep{Levin2010} pas sûr du tout vu la tête des données sur IGV...}.  8 ALE ont été validés puisque disposant d'une qualité de séquence par base supérieure à 30 pour des reads de 62 pb, seul le fichier \texttt{SRR1573441.fastq} a été rejeté car la longueur des reads allait de 35 à 502 pb avec des scores de qualités très variables.
+
+Le \href{http://bioinfolab.uncc.edu/TruHmm_package/raw_data/}{second jeu de données} provient d'une expérience visant à développer un algorithme pour la détection des opérons chez E. coli K12 \citep{Li2013}. Nous nous sommes intéressés à celles provenant des cultures ayant subi un choc thermique pendant 15 minutes (HS15min) ainsi qu'à celles provenant de culture privées de Phospore pendant 4 heures (M-P4h). Ces 2 conditions ont été retenues car elles possèdent 3 réplicats contre 2 pour toutes les autres. Les librairies ont été conçues en \gls{SE} et brin spécifique en utilisant le kit Illumina’s TruSeq Small RNA Sample Prep, puis séquencées à la fois sur Illumina HiSeq 2000 et Illumina GA II. Aucun réplicat n'a été rejeté suite aux contrôles qualité.
 
 \section*{Alignement des reads}
 Les reads ont été alignés grâce au logiciel \href{http://bio-bwa.sourceforge.net/}{BWA} sur le génome d'E. coli \href{http://www.ncbi.nlm.nih.gov/nuccore/NC_000913.2}{NC\_000913.2} qui est le génome utilisé pour annoter les REP au laboratoire.  Le logiciel BWA propose 3 algorithmes distincts, BWA-backtrack, BWA-SW et BWA-MEM. Pour chacun de ces alignements, il est nécessaire de disposer d'une séquence de référence indexée, obtenue par la commande \texttt{bwa index NC\_000913.2.fasta}. 
@@ -263,14 +296,14 @@ où $\theta$ est le paramètre de coût du dernier segment directement lié au c
 qui est le coût de la meilleur partition en $k$ régions jusqu'à $t$, le paramètre du dernier segment étant $\theta$. $C_{k,t}$ est alors obtenu comme le $min_\theta\{H_{k,t}(\theta)\}$.
 Pour chaque itération $k$, l'algorithme travaille sur une liste de candidats pour les derniers points de cassure. Pour chaque élément $\tau$ et chaque valeur $t$, il met à jour un ensemble $S_{k,t}^\tau$ contenant les paramètres $\theta$ pour lequel ce candidat est optimal. Si cet ensemble $S_{k,t}^\tau$ est vide, le candidat est supprimé autorisant un élagage et une diminution de la complexité de l'algorithme.
 
-\begin{SCfigure}[][t]
-\fbox{\includegraphics[scale=0.65]{figures/segmentation.png}
-\caption{\textbf{Résultat de segmentation pour $K_{max} \mathord{=} 4$.} Les gènes sont symbolisés par les zones bleues, leur sens de transcription par les flèches noires. La BIME est représentée par la zone orange et sa classe est précisée dans la légende (Genomic element). Les promoteurs sont représentés par des points rouges et les terminateurs par des points verts, leur sens affichés par les symboles '+' ou '-' sur ces points. La courbe noire représente la couverture sur la région et les barres bleues horizontales indiquent les couvertures moyennes des éléments génomiques. Les points de cassure dans la couverture, déterminés par la segmentation, sont matérialisés par des lignes rouges verticales en pointillés. Ici, 2 segments sont représentés avec un point de cassure situé sur la BIME.}
-\label{fig:segmentation} }
-\end{SCfigure}
-
 Au final, l'utilisation de ce package produit un découpage de la région d'intérêt en $K$ segments, $K$ étant fixé par l'utilisateur, dont les limites sont définies par les positions de leurs points de cassures. Nous avons fixé le paramètre $K$ à 4 segments maximum donc 3 points de cassure de façon à vérifier la présence éventuelle de plusieurs de ces points sur la région inter-génique.
 Dans notre étude, nous nous intéressons aux positions de ces points de cassures pour nos régions d'intérêt, lorsqu'au moins un des deux gènes possède une couverture supérieure à 10. Les résultats sont croisés avec la présence de promoteurs ou de terminateurs dans la région inter-génique et si les deux gènes appartiennent à un opéron, un test de significativité de la différence d'expression est réalisé avec la même méthodologie que pour la partie~\nameref{subsec:expression}.
+
+\begin{SCfigure}[][t]
+\fbox{\includegraphics[scale=0.13]{figures/segmentation.png}
+\caption{\textbf{Résultat de segmentation pour $K_{max} \mathord{=} 4$.} Les gènes sont symbolisés par les zones bleues, leur sens de transcription par les flèches noires. La BIME est représentée par la zone orange et sa classe est précisée dans la légende (Genomic element). Les promoteurs sont représentés par des points rouges et les terminateurs par des points verts, leur sens affichés par les symboles '+' ou '-' sur ces points. La courbe noire représente la couverture sur la région et les barres bleues horizontales indiquent les couvertures moyennes des éléments génomiques. Les points de cassure dans la couverture, déterminés par la segmentation, sont matérialisés par des lignes rouges verticales en pointillés. Ici, 2 segments sont représentés avec un point de cassure situé en dehors de la BIME après les promoteurs.}
+\label{fig:segmentation} }
+\end{SCfigure}
 
 L'analyse renvoie une représentation graphique de la couverture de ces régions avec les positionnements des gènes et de la BIME, ainsi que des promoteurs et terminateurs éventuels. Une classification est faite en fonction du sens des gènes et de l'impact des régulateurs de transcription sur la couverture (\autoref{fig:segmentation}). Deux fichiers au format \texttt{CSV} sont générés pour recueillir les informations de la segmentation, le 1\up{er} pour les gènes sur le même brin, le 2\up{nd} pour les gènes sur des brins opposés.
 
