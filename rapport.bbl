@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{38}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -273,15 +273,6 @@ E.~a. Lesnik, R.~Sampath, H.~B. Levene, T.~J. Henderson, J.~a. McNeil, and
   2001.
 \newblock ISSN 1362-4962.
 \newblock \doi{10.1093/nar/29.17.3583}.
-
-\bibitem[Levin et~al.(2010)Levin, Yassour, and Adiconis]{Levin2010}
-J.~Levin, M.~Yassour, and X.~Adiconis.
-\newblock {Comprehensive comparative analysis of strand specific RNA sequencing
-  methods}.
-\newblock \emph{\ldots methods}, 7\penalty0 (9):\penalty0 709--715, 2010.
-\newblock \doi{10.1038/nmeth.1491.Comprehensive}.
-\newblock URL
-  \url{http://www.nature.com/nmeth/journal/v7/n9/abs/nmeth.1491.html}.
 
 \bibitem[Li et~al.(2013)Li, Dong, and Su]{Li2013}
 S.~Li, X.~Dong, and Z.~Su.
