@@ -260,11 +260,11 @@ Le cœur de cette méthode consiste déplacer une fenêtre glissante parcourant 
 \end{itemize}
 \begin{SCfigure}[][t]
 \fbox{\includegraphics[scale=0.5]{figures/igr_distance.png}
-\caption{\textbf{Distances inter-géniques dans les opérons avec et sans BIME.} En bleu absence de BIME dans la région inter-génique, en rouge présence de BIME. Nous observons une croissance de 2 à 3 fois de la taille de cette région lors de la présence de BIME.}
+\caption{\textbf{Distances inter-géniques dans les opérons avec et sans BIME.} En bleu absence de BIME dans la région inter-génique, en rouge présence de BIME. Pour les données en absence de BIME, nous observons une valeur modale dans les régions inter-géniques de 50 pb, alors qu'en présence de BIME, la valeur modale se situe dans les régions inter-géniques de 150 pb.}
 \label{fig:igr_distance} }
 \end{SCfigure}
 
-Le choix de la taille de la fenêtre glissante a été motivé par la taille des régions inter-géniques contenant des BIME dans les opérons . L'idée étant de rechercher le changement d'expression en ayant des informations sur la couverture moyenne des gènes entourant la BIME. La \autoref{fig:igr_distance} nous indique que les majorité des régions contenant des REP/BIME se situent entre 200 et 300 pb. Comme la BIME se situe dans la majorité des cas proche d'un des deux gènes nous avons opté pour une fenêtre de taille 300 pb. Les seuils de corrélation, de p-valeur ont été repris de la publication ainsi que le $Log_2 \geq~1$ représentant un facteur 2 de changement d'expression.
+Le choix de la taille de la fenêtre glissante a été motivé par la taille des régions inter-géniques contenant des BIME dans les opérons . L'idée étant de rechercher le changement d'expression en ayant des informations sur la couverture moyenne des gènes entourant la BIME. La \autoref{fig:igr_distance} nous indique que les majorité des régions contenant des BIME se situent dans les 150 pb. Comme la BIME se situe dans la majorité des cas proche d'un des deux gènes nous avons opté pour une fenêtre de taille 300 pb pour couvrir à la fois les gène et la région inter-génique. Les seuils de corrélation, de p-valeur ont été repris de la publication ainsi que le $Log_2 \geq~1$ représentant un facteur 2 de changement d'expression.
 
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.35]{figures/igv_profil.png}}
