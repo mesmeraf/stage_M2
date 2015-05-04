@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2015.4.13)  30 APR 2015 17:53
+This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2015.4.13)  4 MAY 2015 19:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -855,7 +855,7 @@ Underfull \hbox (badness 3679) in paragraph at lines 131--131
 
 [4 <./figures/degradosome.jpg>] [5 <./figures/mrna_degradation.jpg> <./figures/
 terminator.png>] [6]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 151.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 148.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -865,106 +865,111 @@ File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 ) [8]
-<figures/igv_snapshot.png, id=259, 1221.56375pt x 676.5275pt>
+<figures/igv_snapshot.png, id=252, 1221.56375pt x 676.5275pt>
 File: figures/igv_snapshot.png Graphic file (type png)
 
 <use figures/igv_snapshot.png>
-Package pdftex.def Info: figures/igv_snapshot.png used on input line 195.
+Package pdftex.def Info: figures/igv_snapshot.png used on input line 192.
 (pdftex.def)             Requested size: 488.61685pt x 270.6062pt.
- [9] [10 <./figures/igv_snapshot.png>]
-<figures/easyRNASeq.png, id=300, 601.24625pt x 798.985pt>
-File: figures/easyRNASeq.png Graphic file (type png)
+ [9]
+<figures/easy.png, id=289, 656.4525pt x 163.61125pt>
+File: figures/easy.png Graphic file (type png)
+ <use figures/easy.png>
+Package pdftex.def Info: figures/easy.png used on input line 204.
+(pdftex.def)             Requested size: 459.51361pt x 114.52708pt.
 
-<use figures/easyRNASeq.png>
-Package pdftex.def Info: figures/easyRNASeq.png used on input line 210.
-(pdftex.def)             Requested size: 300.62238pt x 399.49152pt.
- [11 <./figures/easyRNASeq.png>]
-<figures/expression1.png, id=322, 505.89pt x 361.35pt>
-File: figures/expression1.png Graphic file (type png)
-
-<use figures/expression1.png>
-Package pdftex.def Info: figures/expression1.png used on input line 229.
-(pdftex.def)             Requested size: 227.64839pt x 162.60599pt.
-
-<figures/expression2.png, id=323, 505.89pt x 361.35pt>
-File: figures/expression2.png Graphic file (type png)
-
-<use figures/expression2.png>
-Package pdftex.def Info: figures/expression2.png used on input line 231.
-(pdftex.def)             Requested size: 227.64839pt x 162.60599pt.
-
-
-Package hyperref Warning: No autoref name for `subfigure' on input line 236.
-
-
-Package hyperref Warning: No autoref name for `subfigure' on input line 236.
-
-[12]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 251.
-
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 251.
- [13 <./figures/expression1.png (PNG copy)> <./figures/expression2.png>]
-<figures/profil.jpg, id=362, 602.25pt x 202.7575pt>
-File: figures/profil.jpg Graphic file (type jpg)
- <use figures/profil.jpg>
-Package pdftex.def Info: figures/profil.jpg used on input line 258.
-(pdftex.def)             Requested size: 361.35278pt x 121.65543pt.
-
+[10 <./figures/igv_snapshot.png> <./figures/easy.png>]
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 )
-<figures/igr_distance.png, id=368, 595.023pt x 483.7272pt>
-File: figures/igr_distance.png Graphic file (type png)
+<figures/profil.jpg, id=307, 602.25pt x 202.7575pt>
+File: figures/profil.jpg Graphic file (type jpg)
+ <use figures/profil.jpg>
+Package pdftex.def Info: figures/profil.jpg used on input line 222.
+(pdftex.def)             Requested size: 361.35278pt x 121.65543pt.
 
-<use figures/igr_distance.png>
-Package pdftex.def Info: figures/igr_distance.png used on input line 275.
-(pdftex.def)             Requested size: 297.51077pt x 241.863pt.
+[11] [12 <./figures/profil.jpg>]
 
-<figures/igv_profil.png, id=370, 1187.43625pt x 625.33624pt>
-File: figures/igv_profil.png Graphic file (type png)
+LaTeX Warning: Reference `subsec:expression' on page 13 undefined on input line
+ 245.
 
-<use figures/igv_profil.png>
-Package pdftex.def Info: figures/igv_profil.png used on input line 281.
-(pdftex.def)             Requested size: 415.60892pt x 218.87096pt.
- [14 <./figures/profil.jpg>]
-<figures/profil_plot.png, id=382, 595.023pt x 483.7272pt>
-File: figures/profil_plot.png Graphic file (type png)
-
-<use figures/profil_plot.png>
-Package pdftex.def Info: figures/profil_plot.png used on input line 291.
-(pdftex.def)             Requested size: 249.90796pt x 203.16403pt.
- [15 <./figures/igr_distance.png (PNG copy)>]
-[16 <./figures/igv_profil.png>]
-<figures/segmentation.png, id=408, 2479.2625pt x 2015.53pt>
+<figures/segmentation.png, id=344, 2479.2625pt x 2015.53pt>
 File: figures/segmentation.png Graphic file (type png)
 
 <use figures/segmentation.png>
-Package pdftex.def Info: figures/segmentation.png used on input line 317.
+Package pdftex.def Info: figures/segmentation.png used on input line 250.
 (pdftex.def)             Requested size: 322.31544pt x 262.02809pt.
 
-Underfull \hbox (badness 1082) in paragraph at lines 318--318
+Underfull \hbox (badness 1082) in paragraph at lines 251--251
 \T1/cmr/m/n/8 est pré-cisée dans la lé-gende (Ge-
  []
 
 
-Underfull \hbox (badness 1067) in paragraph at lines 318--318
+Underfull \hbox (badness 1067) in paragraph at lines 251--251
 \T1/cmr/m/n/8 i-zon-tales in-diquent les cou-ver-tures
  []
 
-[17 <./figures/profil_plot.png>] [18 <./figures/segmentation.png>] [19
+[13 <./figures/segmentation.png>] [14] [15
 
 ]
-(./rapport.gls [20
+<figures/expression1.png, id=370, 505.89pt x 361.35pt>
+File: figures/expression1.png Graphic file (type png)
+
+<use figures/expression1.png>
+Package pdftex.def Info: figures/expression1.png used on input line 273.
+(pdftex.def)             Requested size: 227.64839pt x 162.60599pt.
+
+<figures/expression2.png, id=371, 505.89pt x 361.35pt>
+File: figures/expression2.png Graphic file (type png)
+
+<use figures/expression2.png>
+Package pdftex.def Info: figures/expression2.png used on input line 275.
+(pdftex.def)             Requested size: 227.64839pt x 162.60599pt.
+
+
+Package hyperref Warning: No autoref name for `subfigure' on input line 280.
+
+
+Package hyperref Warning: No autoref name for `subfigure' on input line 280.
+
+[16 <./figures/expression1.png (PNG copy)> <./figures/expression2.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 295.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 295.
+ [17]
+<figures/igr_distance.png, id=409, 595.023pt x 483.7272pt>
+File: figures/igr_distance.png Graphic file (type png)
+
+<use figures/igr_distance.png>
+Package pdftex.def Info: figures/igr_distance.png used on input line 316.
+(pdftex.def)             Requested size: 297.51077pt x 241.863pt.
+
+<figures/igv_profil.png, id=410, 1187.43625pt x 625.33624pt>
+File: figures/igv_profil.png Graphic file (type png)
+
+<use figures/igv_profil.png>
+Package pdftex.def Info: figures/igv_profil.png used on input line 320.
+(pdftex.def)             Requested size: 415.60892pt x 218.87096pt.
+
+<figures/profil_plot.png, id=411, 595.023pt x 483.7272pt>
+File: figures/profil_plot.png Graphic file (type png)
+
+<use figures/profil_plot.png>
+Package pdftex.def Info: figures/profil_plot.png used on input line 328.
+(pdftex.def)             Requested size: 249.90796pt x 203.16403pt.
+ [18 <./figures/igr_distance.png (PNG copy)> <./figures/igv_profil.png>] [19 <.
+/figures/profil_plot.png>] (./rapport.gls [20
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.40 ...entrycounter[]{page}\glsnumberformat{10}}}
+l.40 ...tentrycounter[]{page}\glsnumberformat{9}}}
                                                   \glsgroupskip [21
 
 
@@ -1040,29 +1045,33 @@ SSN 1477-4054.  doi : $10 . 1093 / bib /
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 341.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 350.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.341 \end{document}
+l.350 \end{document}
                      [26]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 341.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 350.
  (./rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 341.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 341.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 350.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 350.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 341.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 350.
  ) 
 Here is how much of TeX's memory you used:
- 18021 strings out of 495034
- 258228 string characters out of 6181677
- 438942 words of memory out of 5000000
- 20746 multiletter control sequences out of 15000+600000
+ 18025 strings out of 495034
+ 258249 string characters out of 6181677
+ 441864 words of memory out of 5000000
+ 20747 multiletter control sequences out of 15000+600000
  29769 words of font info for 75 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,9n,92p,1732b,2212s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,9n,92p,1769b,2186s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texli
@@ -1091,10 +1100,10 @@ texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/cm-super/sfti1200.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/cm-super/sftt1200.pfb>
-Output written on rapport.pdf (27 pages, 1555712 bytes).
+Output written on rapport.pdf (27 pages, 1508133 bytes).
 PDF statistics:
- 631 PDF objects out of 1000 (max. 8388607)
- 536 compressed objects within 6 object streams
- 149 named destinations out of 1000 (max. 500000)
+ 630 PDF objects out of 1000 (max. 8388607)
+ 537 compressed objects within 6 object streams
+ 152 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
