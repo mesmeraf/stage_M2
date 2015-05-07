@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2015.4.13)  6 MAY 2015 19:15
+This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2015.4.13)  7 MAY 2015 18:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -613,48 +613,51 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layoutvoffset=\dimen158
 \Gm@dimlist=\toks41
 )
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen159
+)
 \glo@main@file=\write4
 \openout4 = `rapport.glo'.
 
-Package glossaries Info: Writing glossary file rapport.glo on input line 59.
+Package glossaries Info: Writing glossary file rapport.glo on input line 60.
 \@float@every@figure=\toks42
-Package hyperref Info: Option `colorlinks' set `true' on input line 70.
+Package hyperref Info: Option `colorlinks' set `true' on input line 71.
  (./rapport.aux)
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-LaTeX Info: Redefining \degres on input line 75.
-LaTeX Info: Redefining \dots on input line 75.
+LaTeX Info: Redefining \degres on input line 76.
+LaTeX Info: Redefining \dots on input line 76.
 
 
 Package frenchb.ldf Warning: Setting StandardItemizeEnv=true for
 (frenchb.ldf)                compatibility with enumitem package,
-(frenchb.ldf)                 on input line 75.
+(frenchb.ldf)                 on input line 76.
 
 
 Package frenchb.ldf Warning: Setting StandardEnumerateEnv=true for
 (frenchb.ldf)                compatibility with enumitem package,
-(frenchb.ldf)                 on input line 75.
+(frenchb.ldf)                 on input line 76.
 
-LaTeX Info: Redefining \up on input line 75.
+LaTeX Info: Redefining \up on input line 76.
 \AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring ON on input line 75.
+Package hyperref Info: Link coloring ON on input line 76.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -663,9 +666,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count165
 )
-LaTeX Info: Redefining \ref on input line 75.
-LaTeX Info: Redefining \pageref on input line 75.
-LaTeX Info: Redefining \nameref on input line 75.
+LaTeX Info: Redefining \ref on input line 76.
+LaTeX Info: Redefining \pageref on input line 76.
+LaTeX Info: Redefining \nameref on input line 76.
 
 (./rapport.out) (./rapport.out)
 \@outlinefile=\write5
@@ -678,13 +681,13 @@ Dictionary: glossaries-dictionary, Language: English
 ) (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count166
-\scratchdimen=\dimen159
+\scratchdimen=\dimen160
 \scratchbox=\box40
 \nofMPsegments=\count167
 \nofMParguments=\count168
 \everyMPshowfont=\toks43
 \MPscratchCnt=\count169
-\MPscratchDim=\dimen160
+\MPscratchDim=\dimen161
 \MPnumerator=\count170
 \makeMPintoPDFobject=\count171
 \everyMPtoPDFconversion=\toks44
@@ -766,11 +769,11 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 78.
+LaTeX Font Info:    Try loading font information for U+msa on input line 79.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 78.
+LaTeX Font Info:    Try loading font information for U+msb on input line 79.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -785,20 +788,20 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 <figures/rep_bime.jpg, id=27, 803.0pt x 566.115pt>
 File: figures/rep_bime.jpg Graphic file (type jpg)
  <use figures/rep_bime.jpg>
-Package pdftex.def Info: figures/rep_bime.jpg used on input line 88.
+Package pdftex.def Info: figures/rep_bime.jpg used on input line 89.
 (pdftex.def)             Requested size: 401.49902pt x 283.05681pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.94 
+l.95 
       [1
 
 ] <figures/malEF_rep.png, id=62, 500.87125pt x 418.56375pt>
 File: figures/malEF_rep.png Graphic file (type png)
 
 <use figures/malEF_rep.png>
-Package pdftex.def Info: figures/malEF_rep.png used on input line 96.
+Package pdftex.def Info: figures/malEF_rep.png used on input line 97.
 (pdftex.def)             Requested size: 250.435pt x 209.28136pt.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
@@ -808,17 +811,17 @@ File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 File: figures/degradosome.jpg Graphic file (type jpg)
 
 <use figures/degradosome.jpg>
-Package pdftex.def Info: figures/degradosome.jpg used on input line 110.
+Package pdftex.def Info: figures/degradosome.jpg used on input line 111.
 (pdftex.def)             Requested size: 427.83728pt x 160.14984pt.
  [3 <./figures/malEF_rep.png>]
 <figures/mrna_degradation.jpg, id=147, 385.44pt x 425.4294pt>
 File: figures/mrna_degradation.jpg Graphic file (type jpg)
 
 <use figures/mrna_degradation.jpg>
-Package pdftex.def Info: figures/mrna_degradation.jpg used on input line 120.
+Package pdftex.def Info: figures/mrna_degradation.jpg used on input line 121.
 (pdftex.def)             Requested size: 250.53302pt x 276.52582pt.
 
-Underfull \hbox (badness 4518) in paragraph at lines 121--121
+Underfull \hbox (badness 4518) in paragraph at lines 122--122
 \T1/cmr/bx/n/8 ARNm chez E. coli par l'in-ter-ven-tion de
  []
 
@@ -826,36 +829,36 @@ Underfull \hbox (badness 4518) in paragraph at lines 121--121
 File: figures/terminator.png Graphic file (type png)
 
 <use figures/terminator.png>
-Package pdftex.def Info: figures/terminator.png used on input line 131.
+Package pdftex.def Info: figures/terminator.png used on input line 132.
 (pdftex.def)             Requested size: 287.06909pt x 125.2665pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--132
+Underfull \hbox (badness 10000) in paragraph at lines 133--133
 [][] \T1/cmr/m/n/8 ^^U |\T1/cmr/bx/n/8 Ter-mi-na-teur Rho-
  []
 
 
-Underfull \hbox (badness 2547) in paragraph at lines 132--132
+Underfull \hbox (badness 2547) in paragraph at lines 133--133
 \T1/cmr/bx/n/8 indépendant bi-directionnel. \T1/cmr/m/n/8 La ré-gion
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 132--132
+Underfull \hbox (badness 1226) in paragraph at lines 133--133
 \T1/cmr/m/n/8 la boucle étant for-mée par les bases non
  []
 
 
-Underfull \hbox (badness 2608) in paragraph at lines 132--132
+Underfull \hbox (badness 2608) in paragraph at lines 133--133
 \T1/cmr/m/n/8 ap-par-iées. A la suite de cette struc-ture,
  []
 
 
-Underfull \hbox (badness 3679) in paragraph at lines 132--132
+Underfull \hbox (badness 3679) in paragraph at lines 133--133
 \T1/cmr/m/n/8 nous ob-ser-vons la répéti-tions de T (U)
  []
 
 [4 <./figures/degradosome.jpg>] [5 <./figures/mrna_degradation.jpg> <./figures/
 terminator.png>] [6]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 149.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 150.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -869,13 +872,13 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 File: figures/igv_snapshot.png Graphic file (type png)
 
 <use figures/igv_snapshot.png>
-Package pdftex.def Info: figures/igv_snapshot.png used on input line 193.
+Package pdftex.def Info: figures/igv_snapshot.png used on input line 194.
 (pdftex.def)             Requested size: 488.61685pt x 270.6062pt.
  [9]
 <figures/easy.png, id=289, 656.4525pt x 163.61125pt>
 File: figures/easy.png Graphic file (type png)
  <use figures/easy.png>
-Package pdftex.def Info: figures/easy.png used on input line 205.
+Package pdftex.def Info: figures/easy.png used on input line 206.
 (pdftex.def)             Requested size: 459.51361pt x 114.52708pt.
 
 [10 <./figures/igv_snapshot.png> <./figures/easy.png>]
@@ -885,20 +888,20 @@ File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 <figures/profil.jpg, id=307, 602.25pt x 202.7575pt>
 File: figures/profil.jpg Graphic file (type jpg)
  <use figures/profil.jpg>
-Package pdftex.def Info: figures/profil.jpg used on input line 224.
+Package pdftex.def Info: figures/profil.jpg used on input line 225.
 (pdftex.def)             Requested size: 361.35278pt x 121.65543pt.
 
 [11] [12 <./figures/profil.jpg>] [13] [14
 
 ]
 
-Package hyperref Warning: No autoref name for `subfigure' on input line 265.
+Package hyperref Warning: No autoref name for `subfigure' on input line 266.
 
 <figures/nbGenesBimeByOperon.png, id=365, 595.21571pt x 483.77538pt>
 File: figures/nbGenesBimeByOperon.png Graphic file (type png)
 
 <use figures/nbGenesBimeByOperon.png>
-Package pdftex.def Info: figures/nbGenesBimeByOperon.png used on input line 269
+Package pdftex.def Info: figures/nbGenesBimeByOperon.png used on input line 270
 .
 (pdftex.def)             Requested size: 226.18433pt x 183.83655pt.
 
@@ -906,91 +909,91 @@ Package pdftex.def Info: figures/nbGenesBimeByOperon.png used on input line 269
 File: figures/igr_distance.png Graphic file (type png)
 
 <use figures/igr_distance.png>
-Package pdftex.def Info: figures/igr_distance.png used on input line 270.
+Package pdftex.def Info: figures/igr_distance.png used on input line 271.
 (pdftex.def)             Requested size: 226.18433pt x 183.83655pt.
 
 
-Package hyperref Warning: No autoref name for `subfigure' on input line 277.
+Package hyperref Warning: No autoref name for `subfigure' on input line 278.
 
 [15 <./figures/nbGenesBimeByOperon.png (PNG copy)> <./figures/igr_distance.png 
 (PNG copy)>]
-<figures/genesOperon_histoDens.png, id=379, 595.21571pt x 483.77538pt>
+<figures/genesOperon_histoDens.png, id=379, 595.023pt x 483.7272pt>
 File: figures/genesOperon_histoDens.png Graphic file (type png)
 
 <use figures/genesOperon_histoDens.png>
 Package pdftex.def Info: figures/genesOperon_histoDens.png used on input line 2
-80.
-(pdftex.def)             Requested size: 488.08005pt x 396.69838pt.
+81.
+(pdftex.def)             Requested size: 487.92201pt x 396.65886pt.
  [16 <./figures/genesOperon_histoDens.png>] [17] <figures/expression1.png, id=3
-97, 505.89pt x 361.35pt>
+98, 505.89pt x 361.35pt>
 File: figures/expression1.png Graphic file (type png)
 
 <use figures/expression1.png>
-Package pdftex.def Info: figures/expression1.png used on input line 293.
+Package pdftex.def Info: figures/expression1.png used on input line 315.
 (pdftex.def)             Requested size: 227.64839pt x 162.60599pt.
 
-<figures/expression2.png, id=398, 505.89pt x 361.35pt>
+<figures/expression2.png, id=399, 505.89pt x 361.35pt>
 File: figures/expression2.png Graphic file (type png)
 
 <use figures/expression2.png>
-Package pdftex.def Info: figures/expression2.png used on input line 294.
+Package pdftex.def Info: figures/expression2.png used on input line 316.
 (pdftex.def)             Requested size: 227.64839pt x 162.60599pt.
 
 
-Package hyperref Warning: No autoref name for `subfigure' on input line 299.
+Package hyperref Warning: No autoref name for `subfigure' on input line 321.
 
 
-Package hyperref Warning: No autoref name for `subfigure' on input line 299.
+Package hyperref Warning: No autoref name for `subfigure' on input line 321.
 
 [18 <./figures/expression1.png (PNG copy)> <./figures/expression2.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 316.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 338.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 316.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 338.
 
 
-Package hyperref Warning: No autoref name for `subfigure' on input line 332.
+Package hyperref Warning: No autoref name for `subfigure' on input line 354.
 
-<figures/igv_profil.png, id=421, 1187.43625pt x 625.33624pt>
+<figures/igv_profil.png, id=417, 1187.43625pt x 625.33624pt>
 File: figures/igv_profil.png Graphic file (type png)
 
 <use figures/igv_profil.png>
-Package pdftex.def Info: figures/igv_profil.png used on input line 335.
+Package pdftex.def Info: figures/igv_profil.png used on input line 357.
 (pdftex.def)             Requested size: 415.60892pt x 218.87096pt.
 
-<figures/profil_plot.png, id=422, 595.023pt x 483.7272pt>
+<figures/profil_plot.png, id=418, 595.023pt x 483.7272pt>
 File: figures/profil_plot.png Graphic file (type png)
 
 <use figures/profil_plot.png>
-Package pdftex.def Info: figures/profil_plot.png used on input line 343.
+Package pdftex.def Info: figures/profil_plot.png used on input line 365.
 (pdftex.def)             Requested size: 249.90796pt x 203.16403pt.
+ [19]
 
+LaTeX Warning: Reference `expression_operon' on page 20 undefined on input line
+ 373.
 
-LaTeX Warning: Reference `expression_operon' on page 19 undefined on input line
- 351.
-
-[19] <figures/segmentation.png, id=442, 2479.2625pt x 2015.53pt>
+<figures/segmentation.png, id=441, 2479.2625pt x 2015.53pt>
 File: figures/segmentation.png Graphic file (type png)
 
 <use figures/segmentation.png>
-Package pdftex.def Info: figures/segmentation.png used on input line 356.
+Package pdftex.def Info: figures/segmentation.png used on input line 378.
 (pdftex.def)             Requested size: 322.31544pt x 262.02809pt.
 
-Underfull \hbox (badness 1082) in paragraph at lines 357--357
+Underfull \hbox (badness 1082) in paragraph at lines 379--379
 \T1/cmr/m/n/8 est pré-cisée dans la lé-gende (Ge-
  []
 
 
-Underfull \hbox (badness 1067) in paragraph at lines 357--357
+Underfull \hbox (badness 1067) in paragraph at lines 379--379
 \T1/cmr/m/n/8 i-zon-tales in-diquent les cou-ver-tures
  []
 
-[20 <./figures/igv_profil.png>] [21 <./figures/profil_plot.png> <./figures/segm
-entation.png>] (./rapport.gls [22
+[20 <./figures/igv_profil.png>] [21 <./figures/profil_plot.png>] [22 <./figures
+/segmentation.png>] (./rapport.gls [23
 
 ]
 Overfull \hbox (0.42607pt too wide) in paragraph at lines 5--5
@@ -1003,7 +1006,7 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.42 ...tentrycounter[]{page}\glsnumberformat{9}}}
-                                                  \glsgroupskip [23
+                                                  \glsgroupskip [24
 
 
 ])
@@ -1012,7 +1015,7 @@ l.42 ...tentrycounter[]{page}\glsnumberformat{9}}}
 <to be read again> 
                    \relax 
 l.1 \begin{thebibliography}{38}
-                                [24]
+                                [25]
 Underfull \hbox (badness 2269) in paragraph at lines 83--92
 \T1/cmr/m/n/12 fam-ily trans-poses to a spe-cific site in repet-i-tive ex-tra-g
 enic palin-dromic se-quences
@@ -1035,7 +1038,7 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.102 
-       [25
+       [26
 
 ]
 Underfull \hbox (badness 1867) in paragraph at lines 105--114
@@ -1054,7 +1057,7 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.214 
-       [26]
+       [27]
 Underfull \hbox (badness 1087) in paragraph at lines 278--287
 []\T1/cmr/m/n/12 S. Li, X. Dong, and Z. Su.  Di-rec-tional RNA-seq re-veals hig
 hly com-plex condition-
@@ -1071,40 +1074,40 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.324   Lander, Getz, and Mesirov]{Robinson2011}
-                                                 [27]
+                                                 [28]
 Underfull \hbox (badness 2310) in paragraph at lines 344--353
 \T1/cmr/m/it/12 bioin-for-mat-ics\T1/cmr/m/n/12 , 14(2) :178--92, Mar. 2013.  I
 SSN 1477-4054.  doi : $10 . 1093 / bib /
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 374.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 396.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.374 \end{document}
-                     [28]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 374.
+l.396 \end{document}
+                     [29]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 396.
  (./rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 374.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 374.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 396.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 396.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 374.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 396.
  ) 
 Here is how much of TeX's memory you used:
- 18084 strings out of 495034
- 259296 string characters out of 6181677
- 444163 words of memory out of 5000000
- 20795 multiletter control sequences out of 15000+600000
+ 18097 strings out of 495034
+ 259582 string characters out of 6181677
+ 446336 words of memory out of 5000000
+ 20803 multiletter control sequences out of 15000+600000
  29769 words of font info for 75 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,9n,92p,1944b,2222s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,9n,92p,1944b,2186s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texli
@@ -1133,10 +1136,10 @@ texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/cm-super/sfti1200.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/cm-super/sftt1200.pfb>
-Output written on rapport.pdf (29 pages, 2367794 bytes).
+Output written on rapport.pdf (30 pages, 2091159 bytes).
 PDF statistics:
- 660 PDF objects out of 1000 (max. 8388607)
- 562 compressed objects within 6 object streams
- 161 named destinations out of 1000 (max. 500000)
+ 665 PDF objects out of 1000 (max. 8388607)
+ 566 compressed objects within 6 object streams
+ 162 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

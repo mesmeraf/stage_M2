@@ -20,6 +20,7 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage[top=2cm, bottom=3cm, left=2cm , right=2cm]{geometry}
+\usepackage{multirow}
 
 \author{Nicolas JEANNE}
 \title{Rapport de stage de M2}
@@ -278,12 +279,33 @@ Cet indice $I_{exp}$ permet de comparer la variation entre les couples de gènes
 
 \begin{figure}[!h]
 \centerline{\includegraphics[scale=0.82]{figures/genesOperon_histoDens.png}}
-\caption{\textbf{Niveau d'expression des gènes consécutifs dans les opérons.} Les données proviennent de l'expérience de choc thermique pendant 15 minutes. L'$I_{expr}$ en abscisses est l'indice d'expression du gène 1 par rapport au gène 2 $(gene1 - gene2) / (gene1 + gene2)$, borné sur [-1,1]. Les valeurs positives indiquent un niveau d'expression plus élevé du gène 1, les valeurs négatives l'inverse. Les éléments de couleur rouge se réfèrent aux gènes flanquant une BIME, ceux en bleu aux gènes sans BIME. Les histogrammes indiquent la densité pour chacune des valeurs de l'$I_{expr}$ par rapport au type d'élément transcriptionnel présent dans la RIG, violet pour les promoteurs, orange pour les terminateurs et incolore en leur absence. La couleur de leur contour souligne à titre indicatif la présence d'une BIME. Les courbes de densité montrent la tendance de l'$I_{exp}$ par rapport aux BIME, la comparaison entre les 2 distributions est réalisée à l'aide d'un test de Wilcoxon.}
+\caption{\textbf{Niveau d'expression des gènes consécutifs dans les opérons.} Les données proviennent de l'expérience de choc thermique pendant 15 minutes. L'$I_{expr}$ en abscisses est l'indice d'expression du gène 1 par rapport au gène 2 $(gene1 - gene2) / (gene1 + gene2)$, borné sur [-1,1]. Les valeurs positives indiquent un niveau d'expression plus élevé du gène 1, les valeurs négatives l'inverse. Les éléments de couleur rouge se réfèrent aux gènes flanquant une BIME, ceux en bleu aux gènes sans BIME. Les histogrammes indiquent la densité pour chacune des valeurs de l'$I_{expr}$. Les courbes de densité montrent la tendance de l'$I_{expr}$ par rapport aux BIME, la comparaison entre les 2 distributions est réalisée à l'aide d'un test de Wilcoxon dont la p-valeur est affichée dans chaque graphique. Les graphiques sont décomposées sur 2 critères, les éléments transcriptionnels (promoteurs/terminateurs) dans la RIG et la taille de la RIG (<150 pb ou >= 150 pb).}
 \label{fig:expression_operon}
 \end{figure}
 
-L'analyse menée sur les données d'expression des bactéries soumises à un choc thermique pendant 15 minutes est représentative des deux autres jeux de données (résultats non montrés). La comparaison des distributions en présence et absence de BIME est effectuée à l'aide d'un test de Wilcoxon car toutes les distributions ne suivent pas une loi normale, l'hypothèse nulle étant la similitude des distributions. L'absence de BIME montre une répartition symétrique de l'expression des deux gènes centrée sur une expression similaire sauf en présence de promoteurs/terminateurs dans la RIG, la tendance étant vers une expression plus importante du gène 2 (\autoref{fig:expression_operon} - (b,e,h)). Ceci s'explique par la présence de promoteurs favorisant la transcription du gène 2 visibles sur les valeurs négatives de l'$I_{expr}$.
-L'absence de promoteur/terminateur et la présence de BIME montre un niveau d'expression plus élevé du gène 1 par rapport au gène 2 et cela indépendamment de la taille de la RIG (\autoref{fig:expression_operon} - (a,d); p-values: 0.047, 0.00035). La présence de promoteur/terminateur et de BIME dans les RIG inférieures à 150 pb permet de distinguer nettement trois effets, expression augmentée du gène 1, expression augmentée du gène 2 et même niveau d'expression sans pour autant observer de différence significative des distributions en présence et absence de BIME (\autoref{fig:expression_operon} - (b); p-value: 0.303). Cela peut être dû à un effet compensatoire de la BIME qui pourrait révéler un rôle de stabilisation de la partie 5' du transcrit face au dégradosome. Avec l'augmentation de la taille de la RIG, nous perdons cette distribution tri-modale, mais nous observons un décalage de la courbe en présence de BIME vers la droite indiquant un niveau plus important d'expression du gène 1 (\autoref{fig:expression_operon} - (e); p-value: 0.047). Cette tendance est peut être due à la présence combinée des terminateurs et des BIME pouvant jouer le même rôle puisque nous observons un regroupement de ces derniers vers la droite (contours rouges et remplissage orange) par rapport à ceux sans BIME étalés entre 0 et 1 (contours bleus et remplissage orange) ou à un effet de stabilisation du transcrit en 5' par la BIME.
+L'analyse menée sur les données d'expression des bactéries soumises à un choc thermique pendant 15 minutes est représentative des deux autres jeux de données (résultats non montrés). La comparaison des distributions en présence et absence de BIME est effectuée à l'aide d'un test de Wilcoxon car toutes les distributions ne suivent pas une loi normale, l'hypothèse nulle étant la similitude des distributions. L'absence de BIME montre une répartition symétrique de l'expression des deux gènes centrée sur une valeur d'$I_{expr}$ à zéro sauf en présence de promoteurs/terminateurs dans la RIG, la tendance étant vers une expression plus importante du gène 2 (\autoref{fig:expression_operon} - (b,e,h)).
+En s'intéressant dans un premier temps au RIG de moins de 150 pb, le niveau d'expression du gène 1 en présence de BIME semble plus important qu'en absence de BIME bien que le test statistique ne montre pas de significativité (\autoref{fig:expression_operon} - (a,b,c); p-values: 0.291, 0.203, 0.141). Pour les RIG de plus de 150 pb, la tendance vers un niveau d'expression supérieur du gène 1 est plus marquée avec un décalage de la courbe en présence de BIME (rouge) vers la droite et la significativité devient avérée (\autoref{fig:expression_operon} - (d,e,f); p-values: 0.016, 0.034, 0.005). Cet effet est peut être dû à rôle de terminateur de transcription joué par les BIME ou à un effet de stabilisation de la partie 5' du transcrit favorisé par la présence de la BIME.
+En étudiant maintenant le facteur promoteur/terminateur, nous remarquons en leur absence une tendance à l'expression plus importante du gène 1 qui devient significative avec l'augmentation de la taille de la RIG (\autoref{fig:expression_operon} - (a,d,g); p-values: 0.291, 0.016, 0.005). En leur présence, nous notons que la courbe marquant l'absence de BIME (bleue) tend vers la droite, donc une expression plus importante du gène 2, ceci s'explique par la présence de promoteurs dans la RIG (\autoref{fig:expression_operon} - (b,e,h); p-values: 0.203, 0.034, 0.021).
+
+
+
+\begin{tabular}{|l|l|l|}
+  \hline
+  \multicolumn{3}{|c|}{Membres de l'équipe} \\
+  \hline
+  Gardien de but & GK & Paul Robinson \\ \hline
+  \multirow{4}{*}{Défenseurs} & LB & Lucus Radebe \\
+    & DC & Michael Duberry \\
+    & DC & Dominic Matteo \\
+    & RB & Didier Domi \\ \hline
+  \multirow{3}{*}{Milieux de terrain } & MC & David Batty \\
+    & MC & Eirik Bakke \\
+    & MC & Jody Morris \\ \hline
+  Avant & FW & Jamie McMaster \\ \hline
+  \multirow{2}{*}{Attaquants} & ST & Alan Smith \\
+    & ST & Mark Viduka \\
+ \hline
+\end{tabular}
 
 \section*{Étude des opérons, différence d'expression en présence de BIME}
 L'hypothèse privilégiée ici est que les gènes appartenant à un opéron vont être exprimés à un niveau similaire, la question qui se pose est de savoir si la présence d'une BIME entre 2 gènes d'un opéron va avoir un impact sur la transcription ou la dégradation d'un des gènes. Dans ce cadre, les opérons contenant des BIME sont sélectionnés et l'expression des 2 gènes de l'opéron flanquant la BIME prise en compte si au moins un des deux gènes a une couverture > 10, cette valeur est choisie car elle représente le premier quartile de nos données, supprimant les gènes les moins exprimés. De plus cela nous permet d'éliminer des variations qui seraient jugées importantes pour de petites valeurs (e.g: 2 et 8 qui implique un facteur 4 pour le changement d'expression). Nous avons vérifié par un test de Shapiro que nos valeurs de comptage ne suivaient pas une loi Normale, ce qui nous a conduit à choisir d'appliquer un test non paramétrique de rangs de Wilcoxon si l'expérience contient au moins 5 réplicats et un test de Student si l'expérience contient moins de réplicats. L'hypothèse nulle de ces tests est qu'il n'existe pas de DE entre les 2 gènes. La p-value significative étant fixée à 0.01 pour nous permettre d'être plus stricts sans pour autant limiter les résultats. Nous n'avons pas jugé utile d'appliquer de correction à ces tests car le nombre d'opérons contenant des BIME se limite à 36.
