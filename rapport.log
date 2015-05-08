@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2015.4.13)  7 MAY 2015 18:50
+This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2015.4.13)  8 MAY 2015 20:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -905,95 +905,106 @@ Package pdftex.def Info: figures/nbGenesBimeByOperon.png used on input line 270
 .
 (pdftex.def)             Requested size: 226.18433pt x 183.83655pt.
 
-<figures/igr_distance.png, id=366, 595.21571pt x 483.77538pt>
+<figures/igr_distance.png, id=366, 594.0594pt x 482.7636pt>
 File: figures/igr_distance.png Graphic file (type png)
 
 <use figures/igr_distance.png>
 Package pdftex.def Info: figures/igr_distance.png used on input line 271.
-(pdftex.def)             Requested size: 226.18433pt x 183.83655pt.
+(pdftex.def)             Requested size: 225.74492pt x 183.45206pt.
 
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 278.
 
 [15 <./figures/nbGenesBimeByOperon.png (PNG copy)> <./figures/igr_distance.png 
 (PNG copy)>]
-<figures/genesOperon_histoDens.png, id=379, 595.023pt x 483.7272pt>
+<figures/genesOperon_histoDens.png, id=379, 594.0594pt x 482.7636pt>
 File: figures/genesOperon_histoDens.png Graphic file (type png)
 
 <use figures/genesOperon_histoDens.png>
 Package pdftex.def Info: figures/genesOperon_histoDens.png used on input line 2
 81.
-(pdftex.def)             Requested size: 487.92201pt x 396.65886pt.
- [16 <./figures/genesOperon_histoDens.png>] [17] <figures/expression1.png, id=3
-98, 505.89pt x 361.35pt>
+(pdftex.def)             Requested size: 487.13187pt x 395.8687pt.
+ [16 <./figures/genesOperon_histoDens.png>] <figures/genesOperonReg_histoDens.p
+ng, id=397, 594.0594pt x 482.7636pt>
+File: figures/genesOperonReg_histoDens.png Graphic file (type png)
+
+<use figures/genesOperonReg_histoDens.png>
+Package pdftex.def Info: figures/genesOperonReg_histoDens.png used on input lin
+e 296.
+(pdftex.def)             Requested size: 297.02898pt x 241.3812pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17] <figures/expression1.png, id=406, 505.89pt x 361.35pt>
 File: figures/expression1.png Graphic file (type png)
 
 <use figures/expression1.png>
-Package pdftex.def Info: figures/expression1.png used on input line 315.
+Package pdftex.def Info: figures/expression1.png used on input line 321.
 (pdftex.def)             Requested size: 227.64839pt x 162.60599pt.
 
-<figures/expression2.png, id=399, 505.89pt x 361.35pt>
+<figures/expression2.png, id=407, 505.89pt x 361.35pt>
 File: figures/expression2.png Graphic file (type png)
 
 <use figures/expression2.png>
-Package pdftex.def Info: figures/expression2.png used on input line 316.
+Package pdftex.def Info: figures/expression2.png used on input line 322.
 (pdftex.def)             Requested size: 227.64839pt x 162.60599pt.
 
 
-Package hyperref Warning: No autoref name for `subfigure' on input line 321.
+Package hyperref Warning: No autoref name for `subfigure' on input line 327.
 
 
-Package hyperref Warning: No autoref name for `subfigure' on input line 321.
+Package hyperref Warning: No autoref name for `subfigure' on input line 327.
 
-[18 <./figures/expression1.png (PNG copy)> <./figures/expression2.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 338.
+[18 <./figures/genesOperonReg_histoDens.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 344.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 338.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 344.
+ [19 <./figures/expression1.png (PNG copy)> <./figures/expression2.png>]
 
+Package hyperref Warning: No autoref name for `subfigure' on input line 360.
 
-Package hyperref Warning: No autoref name for `subfigure' on input line 354.
-
-<figures/igv_profil.png, id=417, 1187.43625pt x 625.33624pt>
+<figures/igv_profil.png, id=446, 1187.43625pt x 625.33624pt>
 File: figures/igv_profil.png Graphic file (type png)
 
 <use figures/igv_profil.png>
-Package pdftex.def Info: figures/igv_profil.png used on input line 357.
+Package pdftex.def Info: figures/igv_profil.png used on input line 363.
 (pdftex.def)             Requested size: 415.60892pt x 218.87096pt.
 
-<figures/profil_plot.png, id=418, 595.023pt x 483.7272pt>
+<figures/profil_plot.png, id=447, 595.023pt x 483.7272pt>
 File: figures/profil_plot.png Graphic file (type png)
 
 <use figures/profil_plot.png>
-Package pdftex.def Info: figures/profil_plot.png used on input line 365.
+Package pdftex.def Info: figures/profil_plot.png used on input line 371.
 (pdftex.def)             Requested size: 249.90796pt x 203.16403pt.
- [19]
+ [20 <./figures/igv_profil.png>]
 
-LaTeX Warning: Reference `expression_operon' on page 20 undefined on input line
- 373.
+LaTeX Warning: Reference `expression_operon' on page 21 undefined on input line
+ 379.
 
-<figures/segmentation.png, id=441, 2479.2625pt x 2015.53pt>
+<figures/segmentation.png, id=457, 2479.2625pt x 2015.53pt>
 File: figures/segmentation.png Graphic file (type png)
 
 <use figures/segmentation.png>
-Package pdftex.def Info: figures/segmentation.png used on input line 378.
+Package pdftex.def Info: figures/segmentation.png used on input line 384.
 (pdftex.def)             Requested size: 322.31544pt x 262.02809pt.
 
-Underfull \hbox (badness 1082) in paragraph at lines 379--379
+Underfull \hbox (badness 1082) in paragraph at lines 385--385
 \T1/cmr/m/n/8 est pré-cisée dans la lé-gende (Ge-
  []
 
 
-Underfull \hbox (badness 1067) in paragraph at lines 379--379
+Underfull \hbox (badness 1067) in paragraph at lines 385--385
 \T1/cmr/m/n/8 i-zon-tales in-diquent les cou-ver-tures
  []
 
-[20 <./figures/igv_profil.png>] [21 <./figures/profil_plot.png>] [22 <./figures
-/segmentation.png>] (./rapport.gls [23
+[21 <./figures/profil_plot.png>] [22 <./figures/segmentation.png>]
+(./rapport.gls [23
 
 ]
 Overfull \hbox (0.42607pt too wide) in paragraph at lines 5--5
@@ -1081,33 +1092,33 @@ SSN 1477-4054.  doi : $10 . 1093 / bib /
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 396.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 402.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.396 \end{document}
+l.402 \end{document}
                      [29]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 396.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 402.
  (./rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 396.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 396.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 402.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 402.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 396.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 402.
  ) 
 Here is how much of TeX's memory you used:
- 18097 strings out of 495034
- 259582 string characters out of 6181677
- 446336 words of memory out of 5000000
- 20803 multiletter control sequences out of 15000+600000
+ 18110 strings out of 495034
+ 259896 string characters out of 6181677
+ 443580 words of memory out of 5000000
+ 20813 multiletter control sequences out of 15000+600000
  29769 words of font info for 75 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,9n,92p,1944b,2186s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,10n,92p,1944b,2186s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texli
@@ -1136,10 +1147,10 @@ texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/cm-super/sfti0800.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/cm-super/sfti1200.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/cm-super/sftt1200.pfb>
-Output written on rapport.pdf (30 pages, 2091159 bytes).
+Output written on rapport.pdf (30 pages, 2300817 bytes).
 PDF statistics:
- 665 PDF objects out of 1000 (max. 8388607)
- 566 compressed objects within 6 object streams
- 162 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 676 PDF objects out of 1000 (max. 8388607)
+ 574 compressed objects within 6 object streams
+ 164 named destinations out of 1000 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
