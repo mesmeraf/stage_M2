@@ -21,6 +21,7 @@
 \usepackage{xcolor}
 \usepackage[top=2cm, bottom=3cm, left=2cm , right=2cm]{geometry}
 \usepackage{multirow}
+\usepackage{colortbl}
 
 \author{Nicolas JEANNE}
 \title{Rapport de stage de M2}
@@ -262,17 +263,28 @@ Pour le génome d'\textit{E. coli K-12}, 93 REP ont été répertoriées comme �
 
 \subsection*{Visualisation de la couverture}
 \label{uniformite_couverture}
-Il est important de noter que la couverture le long du génome n'est pas uniforme, ni même sur les gènes, car nous observons la présence de nombreuses vallées et pics (\autoref{fig:igv}). Ce phénomène peut s'expliquer par plusieurs raisons techniques \citep{Li2013}. Premièrement, les \textbf{méthodes de fragmentation} des protocoles de préparation des bibliothèques amènent un biais en cassant ou dégradant certaines séquences. Le second biais possible est produit par le \textbf{Random Priming} lors de l'étape de rétro-transcription pouvant préférentiellement transcrire certaines séquences. Troisième point, les \textbf{ligases peuvent lier préférentiellement les adaptateurs} à certaines séquences. Quatrième point, l'amplification de la PCR est bien connue pour introduire des \textbf{biais dépendant de la proportion en GC} des séquences (formation de structures secondaires et température de dénaturation plus élevée). Le dernier point, spécifique au séquençage Illumina, implique des \textbf{interférences spécifiques aux séquences} lors du processus d'élongation pendant le séquençage générés par des schémas particuliers du template, tel que des répétitions de GCC ou CGG et des répétitions inversées d'une séquence de plus de 8 pb sur un même brin (ex : \textcolor{blue}{AAAAAACCTTGAAAAGCC}\textcolor{cyan}{A}\textcolor{blue}{GGCTTTTCAAGGTTTTTTT}), produisant des repliements du brin d'ADN et altérant l'affinité des enzymes \citep{Nakamura2011}.
+Il est important de noter que la couverture le long du génome n'est pas uniforme, ni même sur les gènes, car nous observons la présence de nombreuses vallées et pics (\autoref{fig:igv}). Ce phénomène peut s'expliquer par plusieurs raisons techniques \citep{Li2013}. Premièrement, les \textbf{méthodes de fragmentation} des protocoles de préparation des bibliothèques amènent un biais en cassant ou dégradant certaines séquences. Le second biais possible est produit par le \textbf{Random Priming} lors de l'étape de rétro-transcription pouvant préférentiellement transcrire certaines séquences. Troisième point, les \textbf{ligases peuvent lier préférentiellement les adaptateurs} à certaines séquences. Quatrième point, l'amplification de la PCR est bien connue pour introduire des \textbf{biais dépendant de la proportion en GC} des séquences (formation de structures secondaires et température de dénaturation plus élevée). Le dernier point, spécifique au séquençage Illumina, implique des \textbf{interférences spécifiques aux séquences} lors du processus d'élongation pendant le séquençage générés par des schémas particuliers du template, tel que des répétitions de GCC ou CGG et des répétitions inversées d'une séquence de plus de 8 pb sur un même brin (ex : \textcolor{blue}{AAAAAACCTTGAAAAGCC}\textcolor{cyan}{A}\textcolor{blue}{GGCTTTTCAAGGTTTTTTT}), produisant des repliements du brin d'ADN et altérant l'affinité des enzymes \citep{Nakamura2011}. 
+
+Nos données provenant de la technologie Illumina et les REP étant des séquences répétées inversées mais contenant des sites de mésappariement, elles sont susceptibles d'être sensibles à ce genre de biais et nous risquons d'obtenir des valeurs de couverture erronées sur ces éléments. Nous avons vérifié le niveau d'expression des BIME par rapport aux gènes les flanquant en absence de promoteur et de terminateur de transcription dans les opérons afin de savoir si il existe un biais de séquençage sur celles-ci. Les  différence de niveaux d'expression entre les deux gènes ont été testé à l'aide d'un test de Wilcoxon dont la significativité est avérée pour une p-valeur < 0.01 \autoref{fig:same_expression_operon_point}.
+
+\begin{SCfigure}[][h!]
+\fbox{\includegraphics[scale=0.5]{figures/scatterplotSameStrandNoReg.png}
+\caption{\textbf{Niveau d'expression de la BIME par rapport aux gènes flanquant non DE dans les opérons en absence de promoteurs et de terminateurs de transcription.} L'axe des abscisses représente le niveau d'expression du gène 1 en $log_{10}$, celui des ordonnées le niveau d'expression de la BIME en $log_{10}$. La coloration des points représente la corrélation du niveau d'expression du premier gène par rapport au second gène flanquant la BIME. La droite pleine représente la régression dans le cas où l'on observe une expression similaire, celle en pointillés représente la régression sur nos points.
+\label{fig:same_expression_operon_point}}}
+\end{SCfigure}
+
+Nous notons que la régression sur nos données tend vers une expression plus importante du premier gène par rapport à la BIME alors que nous nous attendions à trouver un même niveau d'expression pour la BIME et les deux gènes dans l'opéron pour des gènes dont le test de Wilcoxon n'est pas significatif. Un biais de séquençage est donc présent pour les BIME.
 
 \subsection*{Opérons}
-Chez \textit{E. coli K12}, 1792 opérons sont formés d'un seul gène et sur les 848 autres opérons formés par plus d'un gène, 36 contiennent au moins une BIME. Nous avons étudié la répartition de la composition en nombre de gènes de cette catégorisation et nous avons visualisé laquelle contient le plus de BIME (Figure \autoref{fig:operonFigA}).
+Chez \textit{E. coli K12}, 1792 opérons sont formés d'un seul gène et sur les 848 autres opérons formés par plus d'un gène, 36 contiennent au moins une BIME. Pour information, nous avons étudié la répartition de la composition en nombre de gènes de cette catégorisation et nous avons visualisé laquelle contient le plus de BIME (Figure \autoref{fig:operonFigA}).
 
-\begin{figure}[ht]
+\begin{figure}[h!]
 \centering
 \subfigure[]{\label{fig:operonFigA} \includegraphics[scale=0.38]{figures/nbGenesBimeByOperon.png}}
 \subfigure[]{\label{fig:operonFigB} \includegraphics[scale=0.38]{figures/igr_distance.png}}
-\caption{\textbf{(a) Distribution du nombre de gènes par opérons et répartition des BIME.} L'échelle des abscisses indique le nombre de gènes dans l'opéron. Les histogrammes blancs représentent le compte du nombre d'opérons, les histogrammes bleus le compte des BIME au sein des opérons. La grande majorité des opérons sont constitués de 2 gènes mais peuvent aller jusqu'à 16 gènes. Sur les 36 BIME présentes dans les opérons, 18 sont dans des opérons de 3 gènes, 11 dans ceux de 5 gènes et 6 dans ceux de 2 gènes. \textbf{(b) Distances inter-géniques dans les opérons avec et sans BIME.} L'échelle des ordonnées représente la densité car l'écart entre les valeurs est trop important pour une visualisation correcte de l'histogramme avec les comptes. En bleu absence de BIME dans la RIG, en rouge présence de BIME. Pour les données en absence de BIME, nous observons une valeur modale dans les régions inter-géniques de 50 pb, alors qu'en présence de BIME, la valeur modale se situe dans les régions inter-géniques de 150 pb.}
-\label{fig:operon}
+\subfigure[]{\label{fig:operonFigC} \includegraphics[scale=0.38]{figures/distance_BIME_gene_in_operon.png}}
+\caption{\textbf{(a) Distribution du nombre de gènes par opérons et répartition des BIME.} L'échelle des abscisses indique le nombre de gènes dans l'opéron. Les histogrammes blancs représentent le compte du nombre d'opérons, les histogrammes bleus le compte des BIME au sein des opérons. La grande majorité des opérons sont constitués de 2 gènes mais peuvent aller jusqu'à 16 gènes. Sur les 36 BIME présentes dans les opérons, 18 sont dans des opérons de 3 gènes, 11 dans ceux de 5 gènes et 6 dans ceux de 2 gènes. \textbf{(b) Distances inter-géniques dans les opérons avec et sans BIME.} L'échelle des ordonnées représente la densité car l'écart entre les valeurs est trop important pour une visualisation correcte de l'histogramme avec les comptes. En bleu absence de BIME dans la RIG, en rouge présence de BIME. Pour les données en absence de BIME, nous observons une valeur modale dans les régions inter-géniques de 50 pb, alors qu'en présence de BIME, la valeur modale se situe dans les régions inter-géniques de 150 pb. \textbf{(c) Distance de la BIME au gène le plus proche dans les opérons.} En abscisses le nombre de BIME, en ordonnées la distance de la BIME au gène le plus proche pour les 39 BIME situées dans les opérons. La ligne pointillé bleue représente la médiane des distances située à 16 pb.
+\label{fig:operon}}
 \end{figure}
 
 Nous avons ensuite établi un indice d'expression, $I_{expr}$, permettant de mesurer l'écart entre le niveau d'expression de deux gènes consécutifs dans un opéron. La numérotation des gènes se faisant dans le sens de la transcription :
@@ -302,9 +314,9 @@ En approfondissant l'étude de ses données et en nous plaçant dans le cas de l
 \centerline{
 \begin{tabular}{|l|c|c|c|}
   \hline
-  \multirow{2}{*}{Wilcoxon test p-valeurs} & \multicolumn{3}{|c|}{Élément transcriptionnel} \\
+  \multirow{2}{*}{Wilcoxon test p-valeurs} & \multicolumn{3}{|c|}{\cellcolor{Gray}Élément transcriptionnel} \\
   \cline{2-4}
-  & Promoteur & Terminateur & Promoteur \& Terminateur\\  
+  & \cellcolor{Gray}Promoteur & \cellcolor{Gray}Terminateur & Promoteur \& \cellcolor{Gray}Terminateur\\  
   \hline
   Absence de BIME & $5.48~e^{-14}$ & $7.3~e^{-5}$ & $0.0091$ \\ 
   \hline
@@ -318,6 +330,7 @@ En approfondissant l'étude de ses données et en nous plaçant dans le cas de l
 Afin d'approfondir ces hypothèses, nous avons étudié plus en détail le niveau d'expression des gènes dans les 36 opérons contenant des BIME.
 
 \section*{Étude des opérons, différence d'expression en présence de BIME}
+\label{expression_operon}
 L'hypothèse privilégiée ici est que les gènes appartenant à un opéron vont être exprimés à un niveau similaire, la question qui se pose est de savoir si la présence d'une BIME entre deux gènes d'un opéron va avoir un impact sur la transcription ou la dégradation d'un des gènes. Dans ce cadre, les opérons contenant des BIME sont sélectionnés et l'expression des deux gènes de l'opéron flanquant la BIME prise en compte si au moins un des deux gènes a une couverture > 10, cette valeur est choisie car elle représente le premier quartile de nos données, supprimant les gènes les moins exprimés. De plus, cela nous permet d'éliminer des variations qui seraient jugées importantes pour de petites valeurs (e.g: 2 et 8 qui implique un facteur 4 pour le changement d'expression). Nous avons vérifié par un test de Shapiro que nos valeurs de comptage ne suivaient pas une loi Normale, ce qui nous a conduit à choisir d'appliquer un test non paramétrique de rangs de Wilcoxon si l'expérience contient au moins 5 réplicats et un test de Student si l'expérience contient moins de réplicats. L'hypothèse nulle de ces tests est qu'il n'existe pas de DE entre les 2 gènes. La p-value significative étant fixée à 0.01 pour nous permettre d'être plus stricts sans pour autant limiter les résultats. Nous n'avons pas jugé utile d'appliquer de correction à ces tests car le nombre d'opérons contenant des BIME se limite à 36.
 
 Pour les gènes dont le test est significatif, deux représentations graphiques sont générées. La 1\up{ère} est un schéma décrivant les niveaux d'expression normalisé des gènes de l'opéron ainsi que la position relative des REP formant la BIME (Figure \autoref{fig:expressionFigA}). La 2\up{nde} est une représentation de la couverture sur l'opéron par rapport à l'organisation génomique de celui-ci ainsi que la catégorisation des REP composant la BIME (Figure \autoref{fig:expressionFigB}).
@@ -336,20 +349,22 @@ Nous avons testé cette méthode sur nos trois jeux de données qui ont produit 
 \centerline{
 \begin{tabular}{|l|c|c|c|c|}
   \hline
-  Jeux de données & $\frac{Nb.~operons~avec~genes~DE}{Nb.~d'operons~exprimes}$ & Nb. BIME & Nb. Terminateurs & Nb. Transporteurs ABC\\ 
+  \rowcolor{Gray} Jeux de données & $\frac{Nb.~operons~avec~genes~DE}{Nb.~d'operons~exprimes}$ & \begin{tabular}{c}Nb. de\\BIME\end{tabular} & \begin{tabular}{c}Nb. de RIG\\avec Terminateurs\end{tabular} & \begin{tabular}{c}Nb. de\\Transporteurs ABC\end{tabular}\\ 
   \hline
-  GSE61327\_ALE & 17/32 & 18 & 6 & 7\\  
+  GSE61327\_ALE & 17/32 & 18 & 7 & 7\\  
   \hline
   HS-15min & 8/20 & 8 & 1 & 4\\ 
   \hline
   M-P4h & 12/30 & 12 & 4 & 5 \\
  \hline
 \end{tabular}}
-\caption{\textbf{Résultats de l'étude de différence d'expression des gènes des opérons flanquant une BIME.} La 2\up{ème} colonne indique le nombre d'opérons contenant une 2 gènes flanquant une BIME et pour lesquels nous observons une différence de niveau d'expression par rapport au nombre d'opérons dont les 2 gènes flanquant la BIME sont exprimés (au moins un des 2 possède une couverture > 10). La 3\up{ème} colonne indique le nombre de BIME concernées, un opéron pouvant en contenir plusieurs. La 4\up{ème} le nombre d'opérons contenant un terminateur de transcription dans la RIG avec la BIME pour les gènes DE. La dernière colonne indique le nombre de transporteurs ABC parmi les opérons dont les gènes sont DE.
+\caption{\textbf{Résultats de l'étude de différence d'expression des gènes des opérons flanquant une BIME.} La 2\up{ème} colonne indique le nombre d'opérons contenant une 2 gènes flanquant une BIME pour lesquels nous observons une différence de niveau d'expression sur le nombre d'opérons dont les 2 gènes flanquant la BIME sont exprimés (au moins un des 2 possède une couverture > 10). La 3\up{ème} colonne indique le nombre de BIME concernées, un opéron pouvant en contenir plusieurs. La 4\up{ème}, le nombre d'opérons contenant un terminateur de transcription dans la RIG avec la BIME pour les gènes DE. La dernière colonne indique le nombre de transporteurs ABC parmi les opérons dont les gènes sont DE.
 \label{table:expression}}
 \end{table}
 
+Sur les résultats obtenus, nous constatons tout d'abord une hétérogénéité du nombre d'opérons exprimés, ce phénomène n'est pas une surprise car les trois jeux de données sont issus de conditions de culture différentes donc avec des voies métaboliques distinctes. Concernant les terminateurs de transcription présent dans la RIG contenant la BIME, 2/7 se situent avant la BIME, 3/7 la chevauchent et 2/7 sont après pour GSE61327\_ALE. Le terminateur est situé après la BIME pour HS-15min. Pour M-P4h, un seul terminateur est situé avant la BIME, 2/4 la chevauchent et un seul est situé après. \textcolor{red}{Le phénomène de colocalisation des BIME et des terminateurs pourrait indiquer un rôle de la BIME dans la terminaison de transcription ou tout du moins d'atténuation dans les opérons car dans les six cas de chevauchement avec le terminateur, nous observons un niveau d'expression diminué du second gène par rapport au premier.}
 
+\textcolor{red}{Rôle des transporteurs ABC à explorer et voir qu'elle partie du transporteur est plus exprimée}
 
 \section*{Approche locale, corrélation de profils d'expression}
 \label{approche_locale}
@@ -382,7 +397,7 @@ Les seuils que nous avons utilisés sont différents de ceux de la méthode orig
 \item une p-valeur du test de corrélation $< 10^{-7}$
 \end{itemize}
 
-Le choix de la taille de la fenêtre glissante a été motivé par plusieurs raisons, suite à des essais nous sommes arrivés aux conclusions qu'une fenêtre trop petite (100 pb) présente une sensibilité trop importante aux variations locales dues au manque d'uniformité de la couverture (voir \nameref{uniformite_couverture}), alors qu'une fenêtre de taille trop grande (500 pb) produit une perte de sensibilité en lissant les couvertures de chaque moitié de la fenêtre. L'idée étant de rechercher le changement d'expression en ayant des informations sur la couverture moyenne des gènes entourant la BIME, les informations d'annotation (Figure \autoref{fig:operonFigB}) nous indiquent que la majorité des régions inter-géniques contenant des BIME mesurent dans les 150 pb. Comme la BIME se situe dans la plupart des cas proche d'un des deux gènes nous avons opté pour une fenêtre de taille 300 pb pour couvrir à la fois un des gènes et la RIG. Les seuils de corrélation, de p-valeur ainsi que de niveau de changement d'expression ont été repris de la publication.
+Le choix de la taille de la fenêtre glissante a été motivé par plusieurs raisons, suite à des essais nous sommes arrivés aux conclusions qu'une fenêtre trop petite (100 pb) présente une sensibilité trop importante aux variations locales dues au manque d'uniformité de la couverture (voir \nameref{uniformite_couverture}), alors qu'une fenêtre de taille trop grande (500 pb) produit une perte de sensibilité en lissant les couvertures de chaque moitié de la fenêtre. L'idée étant de rechercher le changement d'expression en ayant des informations sur la couverture moyenne des gènes flanquant la BIME, les informations d'annotation (Figure \autoref{fig:operonFigB}) nous indiquent que la majorité des régions inter-géniques contenant des BIME mesurent dans les 150 pb. Comme la BIME se situe dans la plupart des cas proche d'un des deux gènes nous avons opté pour une fenêtre de taille 300 pb pour couvrir à la fois un des gènes et la RIG. Les seuils de corrélation, de p-valeur ainsi que de niveau de changement d'expression ont été repris de la publication. Les espaces génomiques des BIME ont été augmentés de 40 pb de chaque côté (taille moyenne d'une REP) afin de capter les points de cassure se situant aux limites de la BIME. 
 
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.35]{figures/igv_profil.png}}
@@ -391,12 +406,12 @@ Le choix de la taille de la fenêtre glissante a été motivé par plusieurs rai
 \end{figure}
 
 \begin{SCfigure}[][t]
-\fbox{\includegraphics[scale=0.42]{figures/profil_plot.png}
-\caption{\textbf{Résultat de corrélation de profils.} Les niveaux d'expression des gènes encadrant la BIME et de cette dernière sont représentés par les histogrammes. La couleur de l'histogramme indique le sens de transcription de l'élément, bleu pour le brin sens, rouge pour l'anti-sens et noir lorsque aucun brin est défini. La présence d'éléments de régulation dans la RIG est représentée par des ronds de couleur verte pour les promoteurs et rouge pour les terminateurs avec un symbole '+' ou '-' pour indiquer le brin de cet élément. La représentation est schématique et ne donne pas d'information sur la position exacte de ces éléments.}
+\fbox{\includegraphics[scale=0.7]{figures/profil_plot.png}
+\caption{\textbf{Résultat de corrélation de profils.} Les niveaux d'expression des gènes encadrant la BIME et de cette dernière sont représentés par les histogrammes. La couleur de l'histogramme indique le sens de transcription de l'élément, bleu pour le brin direct, rouge pour le brin complémentaire et noir lorsque aucun brin est défini. La présence d'éléments de régulation dans la RIG est représentée par des ronds de couleur verte pour les promoteurs et rouge pour les terminateurs avec un symbole '+' ou '-' pour indiquer le brin de cet élément. La représentation est schématique et ne donne pas d'information sur la position exacte de ces éléments ni sur leur nombre.}
 \label{fig:profil_plot} }
 \end{SCfigure}
 
-Sur un ensemble de positions consécutives dont les corrélations sont significatives et sont situées sur l'espace génomique de la BIME (étendu de 40 pb de chaque côté), celle dont la corrélation est la plus élevée sera définie comme position de changement d'expression. Deux types de fichiers sont générés au format \texttt{bedgraph} pour une visualisation sur un Genome Browser, le premier sous forme de diagramme de barre représentant les couvertures moyennes des deux parties de la fenêtre, le second représentant l'évolution de la corrélation sur la zone (\autoref{fig:igv_profil}). Une visualisation des niveaux d'expression des 2 gènes et de la BIME est également générée sous forme d'histogrammes avec les informations de sens et du type de la BIME (\autoref{fig:profil_plot}). Finalement, un fichier au format \texttt{CSV} recueille toutes les informations de l'analyse.
+Sur un ensemble de positions consécutives dont les corrélations sont significatives et sont situées sur l'espace génomique de la BIME, celle dont la corrélation est la plus élevée sera définie comme position de changement d'expression. Deux types de fichiers sont générés au format \texttt{bedgraph} pour une visualisation sur un Genome Browser, le premier sous forme de diagramme de barre représentant les couvertures moyennes des deux parties de la fenêtre, le second représentant l'évolution de la corrélation sur la zone (\autoref{fig:igv_profil}). Une visualisation des niveaux d'expression des 2 gènes et de la BIME est également générée sous forme d'histogrammes avec les informations de sens et du type de la BIME (\autoref{fig:profil_plot}).
 
 \section*{Approche globale, segmentation}
 
