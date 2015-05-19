@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{40}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -220,6 +220,14 @@ C.~F. Higgins, G.~F.-L. Ames, W.~M. Barnes, J.~M. Clement, and M.~Hofnung.
 \newblock ISSN 0028-0836.
 \newblock \doi{10.1038/298760a0}.
 
+\bibitem[Hubisz et~al.(2011)Hubisz, Pollard, and Siepel]{Hubisz2011}
+M.~J. Hubisz, K.~S. Pollard, and A.~Siepel.
+\newblock {Phastand Rphast: Phylogenetic analysis with space/time models}.
+\newblock \emph{Briefings in Bioinformatics}, 12\penalty0 (1):\penalty0 41--51,
+  2011.
+\newblock ISSN 14675463.
+\newblock \doi{10.1093/bib/bbq072}.
+
 \bibitem[Khemici and Carpousis(2004)]{Khemici2004}
 V.~Khemici and A.~J. Carpousis.
 \newblock {The RNA degradosome and poly(A) polymerase of Escherichia coli are
@@ -284,6 +292,16 @@ S.~Li, X.~Dong, and Z.~Su.
 \newblock \doi{10.1186/1471-2164-14-520}.
 \newblock URL
   \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3734233\&tool=pmcentrez\&rendertype=abstract}.
+
+\bibitem[Lorenz et~al.(2011)Lorenz, Bernhart, {H\"{o}ner zu Siederdissen},
+  Tafer, Flamm, Stadler, and Hofacker]{Lorenz2011}
+R.~Lorenz, S.~H. Bernhart, C.~{H\"{o}ner zu Siederdissen}, H.~Tafer, C.~Flamm,
+  P.~F. Stadler, and I.~L. Hofacker.
+\newblock {ViennaRNA Package 2.0}.
+\newblock \emph{Algorithms for Molecular Biology}, 6\penalty0 (1):\penalty0 26,
+  2011.
+\newblock ISSN 1748-7188.
+\newblock \doi{10.1186/1748-7188-6-26}.
 
 \bibitem[Mortazavi et~al.(2008)Mortazavi, Williams, McCue, Schaeffer, and
   Wold]{Mortazavi2008}

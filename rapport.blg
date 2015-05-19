@@ -5,45 +5,45 @@ The style file: abbrvnat.bst
 Database file #1: biblio_rapport.bib
 Warning--empty institution in Bosc2014
 Warning--empty institution in Weyder2013
-You've used 38 entries,
+You've used 40 entries,
             2773 wiz_defined-function locations,
-            957 strings with 16719 characters,
-and the built_in function-call counts, 22589 in all, are:
-= -- 2082
-> -- 1652
+            971 strings with 17251 characters,
+and the built_in function-call counts, 23779 in all, are:
+= -- 2187
+> -- 1748
 < -- 10
-+ -- 554
-- -- 516
-* -- 2179
-:= -- 3641
-add.period$ -- 194
-call.type$ -- 38
-change.case$ -- 288
-chr.to.int$ -- 38
-cite$ -- 78
-duplicate$ -- 781
-empty$ -- 1474
-format.name$ -- 562
-if$ -- 4567
++ -- 586
+- -- 546
+* -- 2297
+:= -- 3835
+add.period$ -- 204
+call.type$ -- 40
+change.case$ -- 304
+chr.to.int$ -- 40
+cite$ -- 82
+duplicate$ -- 823
+empty$ -- 1549
+format.name$ -- 594
+if$ -- 4807
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 36
-newline$ -- 278
-num.names$ -- 152
-pop$ -- 424
+missing$ -- 38
+newline$ -- 292
+num.names$ -- 160
+pop$ -- 448
 preamble$ -- 1
-purify$ -- 248
+purify$ -- 262
 quote$ -- 0
-skip$ -- 622
+skip$ -- 656
 stack$ -- 0
-substring$ -- 859
-swap$ -- 53
+substring$ -- 888
+swap$ -- 55
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 418
+type$ -- 440
 warning$ -- 2
-while$ -- 180
+while$ -- 189
 width$ -- 0
-write$ -- 659
+write$ -- 693
 (There were 2 warnings)
