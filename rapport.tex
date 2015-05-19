@@ -254,7 +254,13 @@ Au final, l'utilisation de ce package produit un découpage de la région d'int�
 
 \chapter*{Résultats}
 
-Pour réaliser nos analyses, nous nous sommes inspirés de la méthodologie employée en RNA-Seq pour l'étude de \gls{de}. L'analyse statistique de recherche de changement d'expression liée à la présence de BIME a été menée sur le logiciel R. La première étape a consisté à examiner les données concernant les BIME et l'expression de manière générale, puis nous nous sommes intéressés aux opérons pour lesquels nous nous attendons à un niveau d'expression similaire des gènes les composant, nous avons ensuite étendu notre étude à tous les gènes en recherchant des changements de niveaux d'expression qui pourraient être liés à la présence de BIME à proximité par une approche locale (la corrélation de profils d'expression) et une approche globale (la segmentation). 
+Pour réaliser nos analyses, nous nous sommes inspirés de la méthodologie employée en RNA-Seq pour l'étude de \gls{de}. L'analyse statistique de recherche de changement d'expression liée à la présence de BIME a été menée sur le logiciel R. La première étape a consisté à examiner les données concernant les BIME et l'expression de manière générale, puis nous nous sommes intéressés aux opérons pour lesquels nous nous attendons à un niveau d'expression similaire des gènes les composant, nous avons ensuite étendu notre étude à tous les gènes en recherchant des changements de niveaux d'expression qui pourraient être liés à la présence de BIME à proximité par une approche locale (la corrélation de profils d'expression) et une approche globale (la segmentation). L'analyse se déroule en suivant le processus décrit sur la \autoref{fig:process_analyse}.
+
+\begin{figure}[h!]
+\centerline{\includegraphics[scale=0.82]{figures/process_analyse.png}}
+\caption{\textbf{Processus de l'analyse de l'effet des BIME dans la régulation transcriptionnelle des opérons.}}
+\label{fig:process_analyse}
+\end{figure}
 
 \section*{Examen des données et des résultats de comptage}
 
@@ -275,7 +281,7 @@ Nos données provenant de la technologie Illumina et les REP étant des séquenc
 
 Nous notons que la régression sur nos données tend vers une expression plus importante du premier gène par rapport à la BIME alors que nous nous attendions à trouver un même niveau d'expression pour la BIME et les deux gènes dans l'opéron pour des gènes dont le test de Wilcoxon n'est pas significatif. Nous pouvons donc penser qu'un biais de séquençage est bien présent pour les BIME, tendant vers une sous-expression de ces dernières. Afin de poursuivre l'étude de leur effet sur la transcription, nous étudierons leur impact de façon indirecte en nous intéressant aux niveaux d'expression des gènes flanquant les BIME.
 
-\subsection*{Opérons}
+\subsection*{Étude générale des opérons}
 Chez \textit{E. coli K12}, 1792 opérons sont formés d'un seul gène et sur les 848 autres opérons formés par plus d'un gène, 36 contiennent au moins une BIME et parmi ceux-ci 39 BIME sont répertoriées. Pour information, nous avons étudié la répartition de la composition en nombre de gènes de cette catégorisation et nous avons visualisé laquelle contient le plus de BIME (Figure \autoref{fig:operonFigA}).
 
 \begin{figure}[h!]
@@ -297,7 +303,7 @@ Cet indice $I_{expr}$ permet de comparer la variation entre les couples de gène
 \label{fig:expression_operon}
 \end{figure}
 
-L'analyse menée sur les données d'expression des bactéries soumises à un choc thermique pendant 15 minutes (HS-15min) est représentative des deux autres jeux de données (résultats non montrés). La comparaison des distributions en présence et absence de BIME est effectuée à l'aide d'un test de Wilcoxon (p-valeur significative < 0.05) car toutes les distributions ne suivent pas une loi normale (test de Shapiro), l'hypothèse nulle étant la similitude des distributions. L'absence de BIME montre une répartition symétrique de l'expression des deux gènes centrée sur une valeur d'$I_{expr}$ à zéro sauf en présence de promoteurs/terminateurs dans la RIG, la tendance étant vers une expression plus importante du gène 2 (\autoref{fig:expression_operon} - (b,e,h)).
+L'analyse menée sur les données d'expression des bactéries soumises à un choc thermique pendant 15 minutes (HS-15min) est représentative des deux autres jeux de données (Voir annexe \ref{annexeOperon}). La comparaison des distributions en présence et absence de BIME est effectuée à l'aide d'un test de Wilcoxon (p-valeur significative < 0.05) car toutes les distributions ne suivent pas une loi normale (test de Shapiro), l'hypothèse nulle étant la similitude des distributions. L'absence de BIME montre une répartition symétrique de l'expression des deux gènes centrée sur une valeur d'$I_{expr}$ à zéro sauf en présence de promoteurs/terminateurs dans la RIG, la tendance étant vers une expression plus importante du gène 2 (\autoref{fig:expression_operon} - (b,e,h)).
 En s'intéressant dans un premier temps au RIG de moins de 150 pb, en présence de promoteur/terminateur, le test statistique ne montre pas de différence entre les deux distributions (\autoref{fig:expression_operon} - (b); p-valeur: 0.216), ce qui n'est pas le cas en leur absence ou avec toutes les valeurs (\autoref{fig:expression_operon} - (a-c); p-valeurs: 0.024, 0.032). 
 Pour les RIG de plus de 150 pb, la tendance vers un niveau d'expression supérieur du gène 1 est plus marquée avec un décalage de la courbe en présence de BIME (rouge) vers la gauche mais la significativité n'est pas avérée sauf lorsque le facteur promoteur/terminateur n'est plus pris en compte  (\autoref{fig:expression_operon} - (f); p-valeur: 0.022). 
 En étudiant maintenant le facteur promoteur/terminateur, nous remarquons en leur absence une tendance à l'expression plus importante du gène 1 qui devient significative en ne s'intéressant plus à la taille de la RIG (\autoref{fig:expression_operon} - (g); p-valeur: 0.0006). En leur présence, nous notons que la courbe marquant l'absence de BIME (bleue) tend vers les valeurs positives, donc une expression plus importante du gène 2, ceci s'explique par la présence de promoteurs dans la RIG (\autoref{fig:expression_operon} - (b,e,h); p-valeurs: 0.216, 0.057, 0.028). Le décalage de la courbe des BIME (rouge) vers les valeurs négatives est visible de façon plus ou moins marquée dans tous les cas de figure, cet effet est peut être dû à rôle de terminateur de transcription joué par les BIME ou à un effet de stabilisation de la partie 5' du transcrit favorisé par la présence de la BIME.
@@ -464,7 +470,7 @@ L'analyse renvoie une représentation graphique de la couverture de ces régions
 \label{table:segmentation}}
 \end{table}
 
-Les résultats obtenus par la segmentation sont proches de ceux de la recherche de changement de niveau d'expression du \autoref{table:expression} sauf pour le jeux de données M-P4h pour lequel très peu de changements de niveau d'expression sont détectés dans les opérons. La plupart des points de cassure sont détectés sur les BIME, ce qui va dans le sens d'une implication de ces dernières dans la régulation transcriptionnelle. Pour le jeu de données GSE61327\_ALE, la présence de promoteurs et de régulateurs est plus importante et seuls 3 cas sur 15 ont un point de cassure situé en dehors de la BIME (voir \autoref{annexeSegmentation}).
+Les résultats obtenus par la segmentation sont proches de ceux de la recherche de changement de niveau d'expression du \autoref{table:expression} sauf pour le jeux de données M-P4h pour lequel très peu de changements de niveau d'expression sont détectés dans les opérons. La plupart des points de cassure sont détectés sur les BIME, ce qui va dans le sens d'une implication de ces dernières dans la régulation transcriptionnelle. Pour le jeu de données GSE61327\_ALE, la présence de promoteurs et de régulateurs est plus importante et seuls 3 cas sur 15 ont un point de cassure situé en dehors de la BIME (voir annexe \ref{annexeSegmentation}).
 
 \chapter*{Discussion}
 
@@ -483,6 +489,19 @@ Les résultats obtenus par la segmentation sont proches de ceux de la recherche 
 
 % annexes
 \appendix
+
+\chapter{}
+\label{annexeOperon}
+\begin{figure}[!h]
+\centerline{\includegraphics[scale=0.7]{figures/supData/genesOperon_histoDens_GSE61327_ALE.png}}
+\caption{\textbf{Niveau d'expression des gènes consécutifs dans les opérons pour le jeux de données GSE61327\_ALE.}}
+\end{figure}
+
+\begin{figure}[!h]
+\centerline{\includegraphics[scale=0.7]{figures/supData/genesOperon_histoDens_M-P4h.png}}
+\caption{\textbf{Niveau d'expression des gènes consécutifs dans les opérons pour le jeux de données M-P4h.}}
+\end{figure}
+
 \chapter{}
 \label{annexeSegmentation}
 \begin{figure}[h!]
@@ -492,5 +511,10 @@ Les résultats obtenus par la segmentation sont proches de ceux de la recherche 
 \subfigure[]{\label{fig:segmentation_C} \includegraphics[scale=0.48]{figures/supData/termSameStrand_GLNL-b3869_GLNA-b3870.png}}
 \caption{\textbf{(a) Opéron glpFKX.} \textbf{(b) Opéron cysPUWAM.} \textbf{(c) Opéron glnALG.} Il s'agit des 3 seuls sur 22 points de cassures détectés par la segmentation tombant en dehors de la région génomique de la BIME. Le changement de niveau d'expression est probablement dû aux promoteurs et aux terminateurs plutôt qu'aux BIME.}
 \end{figure}
+
+
+
+
+
 
 \end{document}
