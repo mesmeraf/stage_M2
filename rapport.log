@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2015.4.13)  25 MAY 2015 12:31
+This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2015.4.13)  25 MAY 2015 18:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -874,25 +874,26 @@ Underfull \hbox (badness 5147) in paragraph at lines 136--136
  []
 
 [5 <./figures/terminator.png>] [6]
-<figures/data_preparation.png, id=207, 484.05844pt x 362.85562pt>
-File: figures/data_preparation.png Graphic file (type png)
-
-<use figures/data_preparation.png>
-Package pdftex.def Info: figures/data_preparation.png used on input line 149.
-(pdftex.def)             Requested size: 435.64856pt x 326.56705pt.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 150.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 147.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [7
+)
+<figures/data_preparation.png, id=210, 483.37967pt x 362.53476pt>
+File: figures/data_preparation.png Graphic file (type png)
 
- <./figures/data_preparation.png>] [8]
-<figures/igv_snapshot.png, id=268, 1221.56375pt x 676.5275pt>
+<use figures/data_preparation.png>
+Package pdftex.def Info: figures/data_preparation.png used on input line 150.
+(pdftex.def)             Requested size: 435.03767pt x 326.27826pt.
+ [7
+
+ <./figures/data_preparation.png>]
+[8] <figures/igv_snapshot.png, id=269, 1221.56375pt x 676.5275pt>
 File: figures/igv_snapshot.png Graphic file (type png)
 
 <use figures/igv_snapshot.png>
-Package pdftex.def Info: figures/igv_snapshot.png used on input line 177.
+Package pdftex.def Info: figures/igv_snapshot.png used on input line 178.
 (pdftex.def)             Requested size: 488.61685pt x 270.6062pt.
 
 
@@ -901,337 +902,333 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [9] [10 <./figures/igv_snapshot.png>]
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
-)
-<figures/profil.jpg, id=311, 602.25pt x 202.7575pt>
+) [11]
+<figures/profil.jpg, id=325, 602.25pt x 202.7575pt>
 File: figures/profil.jpg Graphic file (type jpg)
  <use figures/profil.jpg>
-Package pdftex.def Info: figures/profil.jpg used on input line 199.
+Package pdftex.def Info: figures/profil.jpg used on input line 200.
 (pdftex.def)             Requested size: 361.35278pt x 121.65543pt.
 
-[11] [12 <./figures/profil.jpg>] [13] [14
+[12 <./figures/profil.jpg>] [13] [14
 
 ]
-<figures/scatterplotSameStrandNoReg_all.png, id=379, 592.1322pt x 479.6319pt>
+<figures/scatterplotSameStrandNoReg_all.png, id=381, 592.1322pt x 479.6319pt>
 File: figures/scatterplotSameStrandNoReg_all.png Graphic file (type png)
 
 <use figures/scatterplotSameStrandNoReg_all.png>
 Package pdftex.def Info: figures/scatterplotSameStrandNoReg_all.png used on inp
-ut line 245.
+ut line 246.
 (pdftex.def)             Requested size: 296.06537pt x 239.81535pt.
 
 
-Package hyperref Warning: No autoref name for `subfigure' on input line 251.
+Package hyperref Warning: No autoref name for `subfigure' on input line 252.
 
 [15 <./figures/scatterplotSameStrandNoReg_all.png (PNG copy)>]
-<figures/nbGenesBimeByOperon.png, id=388, 595.21571pt x 483.77538pt>
+<figures/nbGenesBimeByOperon.png, id=390, 595.21571pt x 483.77538pt>
 File: figures/nbGenesBimeByOperon.png Graphic file (type png)
 
 <use figures/nbGenesBimeByOperon.png>
-Package pdftex.def Info: figures/nbGenesBimeByOperon.png used on input line 255
+Package pdftex.def Info: figures/nbGenesBimeByOperon.png used on input line 256
 .
 (pdftex.def)             Requested size: 226.18433pt x 183.83655pt.
 
-<figures/igr_distance.png, id=389, 594.0594pt x 482.7636pt>
+<figures/igr_distance.png, id=391, 594.0594pt x 482.7636pt>
 File: figures/igr_distance.png Graphic file (type png)
 
 <use figures/igr_distance.png>
-Package pdftex.def Info: figures/igr_distance.png used on input line 256.
+Package pdftex.def Info: figures/igr_distance.png used on input line 257.
 (pdftex.def)             Requested size: 225.74492pt x 183.45206pt.
 
-<figures/distance_BIME_gene_in_operon.png, id=390, 592.1322pt x 479.6319pt>
+<figures/distance_BIME_gene_in_operon.png, id=392, 592.1322pt x 479.6319pt>
 File: figures/distance_BIME_gene_in_operon.png Graphic file (type png)
 
 <use figures/distance_BIME_gene_in_operon.png>
 Package pdftex.def Info: figures/distance_BIME_gene_in_operon.png used on input
- line 257.
+ line 258.
 (pdftex.def)             Requested size: 225.01257pt x 182.26201pt.
  [16 <./figures/nbGenesBimeByOperon.png (PNG copy)> <./figures/igr_distance.png
  (PNG copy)> <./figures/distance_BIME_gene_in_operon.png (PNG copy)>]
 
-Package hyperref Warning: No autoref name for `subfigure' on input line 264.
+Package hyperref Warning: No autoref name for `subfigure' on input line 265.
 
-<figures/genesOperon_histoDens.png, id=402, 594.0594pt x 482.7636pt>
+
+Package hyperref Warning: No autoref name for `subfigure' on input line 265.
+
+<figures/genesOperon_histoDens.png, id=405, 594.0594pt x 482.7636pt>
 File: figures/genesOperon_histoDens.png Graphic file (type png)
 
 <use figures/genesOperon_histoDens.png>
 Package pdftex.def Info: figures/genesOperon_histoDens.png used on input line 2
-67.
+68.
 (pdftex.def)             Requested size: 487.13187pt x 395.8687pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [17] [18 <./figures/genesOperon_histoDens.png>]
-<figures/genesOperonReg_histoDens.png, id=426, 594.0594pt x 482.7636pt>
+<figures/genesOperonReg_histoDens.png, id=429, 594.0594pt x 482.7636pt>
 File: figures/genesOperonReg_histoDens.png Graphic file (type png)
 
 <use figures/genesOperonReg_histoDens.png>
 Package pdftex.def Info: figures/genesOperonReg_histoDens.png used on input lin
-e 282.
+e 283.
 (pdftex.def)             Requested size: 297.02898pt x 241.3812pt.
- [19 <./figures/genesOperonReg_histoDens.png>]
-
-Package hyperref Warning: No autoref name for `subfigure' on input line 308.
 
 
-Package hyperref Warning: No autoref name for `subfigure' on input line 308.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/expression1.png, id=438, 592.1322pt x 479.6319pt>
+[19 <./figures/genesOperonReg_histoDens.png>]
+
+Package hyperref Warning: No autoref name for `subfigure' on input line 309.
+
+
+Package hyperref Warning: No autoref name for `subfigure' on input line 309.
+
+<figures/expression1.png, id=441, 592.1322pt x 479.6319pt>
 File: figures/expression1.png Graphic file (type png)
 
 <use figures/expression1.png>
-Package pdftex.def Info: figures/expression1.png used on input line 312.
+Package pdftex.def Info: figures/expression1.png used on input line 313.
 (pdftex.def)             Requested size: 207.24937pt x 167.87367pt.
 
-<figures/expression2.png, id=439, 594.0594pt x 482.7636pt>
+<figures/expression2.png, id=442, 594.0594pt x 482.7636pt>
 File: figures/expression2.png Graphic file (type png)
 
 <use figures/expression2.png>
-Package pdftex.def Info: figures/expression2.png used on input line 313.
+Package pdftex.def Info: figures/expression2.png used on input line 314.
 (pdftex.def)             Requested size: 207.9239pt x 168.96979pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (8.25241pt too wide) in paragraph at lines 337--338
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (8.25241pt too wide) in paragraph at lines 338--339
 []\T1/cmr/m/n/12 Sur les ré-sul-tats obtenus, nous con-sta-tons tout d'abord un
 e hétérogénéité du nom-bre d'opérons
  []
 
 [20] [21 <./figures/expression1.png (PNG copy)> <./figures/expression2.png (PNG
- copy)>] <figures/igv_profil.png, id=460, 918.43124pt x 437.635pt>
+ copy)>] <figures/igv_profil.png, id=463, 918.43124pt x 437.635pt>
 File: figures/igv_profil.png Graphic file (type png)
 
 <use figures/igv_profil.png>
-Package pdftex.def Info: figures/igv_profil.png used on input line 356.
+Package pdftex.def Info: figures/igv_profil.png used on input line 357.
 (pdftex.def)             Requested size: 486.76624pt x 231.94543pt.
 
 
-Package hyperref Warning: No autoref name for `subfigure' on input line 361.
+Package hyperref Warning: No autoref name for `subfigure' on input line 362.
 
 [22 <./figures/igv_profil.png>]
-<figures/profil_plot.png, id=469, 560.0925pt x 436.5108pt>
+<figures/profil_plot.png, id=472, 560.0925pt x 436.5108pt>
 File: figures/profil_plot.png Graphic file (type png)
 
 <use figures/profil_plot.png>
-Package pdftex.def Info: figures/profil_plot.png used on input line 366.
+Package pdftex.def Info: figures/profil_plot.png used on input line 367.
 (pdftex.def)             Requested size: 280.04556pt x 218.25485pt.
- [23 <./figures/profil_plot.png>]
-<figures/segmentation.png, id=483, 475.0548pt x 341.1144pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[23 <./figures/profil_plot.png>]
+<figures/segmentation.png, id=486, 475.0548pt x 341.1144pt>
 File: figures/segmentation.png Graphic file (type png)
 
 <use figures/segmentation.png>
-Package pdftex.def Info: figures/segmentation.png used on input line 401.
+Package pdftex.def Info: figures/segmentation.png used on input line 402.
 (pdftex.def)             Requested size: 356.29022pt x 255.83514pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--402
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
 [][] \T1/cmr/m/n/8 ^^U |\T1/cmr/bx/n/8 Ré-sul-tat
  []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 402--402
+Underfull \hbox (badness 2600) in paragraph at lines 403--403
 \T1/cmr/bx/n/8 de seg-men-ta-tion pour
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--402
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
 \OML/cmm/m/it/8 K[][]\OT1/cmr/m/n/8 4$\T1/cmr/bx/n/8 . \T1/cmr/m/n/8 Les gènes
  []
 
 
-Underfull \hbox (badness 7613) in paragraph at lines 402--402
+Underfull \hbox (badness 7613) in paragraph at lines 403--403
 \T1/cmr/m/n/8 sont sym-bol-isés par les
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--402
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
 \T1/cmr/m/n/8 zones bleues, leur sens
  []
 
 
-Underfull \hbox (badness 5592) in paragraph at lines 402--402
+Underfull \hbox (badness 5592) in paragraph at lines 403--403
 \T1/cmr/m/n/8 de tran-scrip-tion par les
  []
 
 
-Underfull \hbox (badness 3601) in paragraph at lines 402--402
+Underfull \hbox (badness 3601) in paragraph at lines 403--403
 \T1/cmr/m/n/8 flèches noires. La BIME
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 402--402
+Underfull \hbox (badness 5008) in paragraph at lines 403--403
 \T1/cmr/m/n/8 or-ange et sa classe est
  []
 
 
-Underfull \hbox (badness 3872) in paragraph at lines 402--402
+Underfull \hbox (badness 3872) in paragraph at lines 403--403
 \T1/cmr/m/n/8 pré-cisée dans la lé-gende
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--402
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
 \T1/cmr/m/n/8 (Ge-nomic el-e-ment). Les
  []
 
 
-Underfull \hbox (badness 2326) in paragraph at lines 402--402
+Underfull \hbox (badness 2326) in paragraph at lines 403--403
 \T1/cmr/m/n/8 tés par des points verts
  []
 
 
-Underfull \hbox (badness 7777) in paragraph at lines 402--402
+Underfull \hbox (badness 7777) in paragraph at lines 403--403
 \T1/cmr/m/n/8 et les ter-mi-na-teurs par
  []
 
 
-Underfull \hbox (badness 5504) in paragraph at lines 402--402
+Underfull \hbox (badness 5504) in paragraph at lines 403--403
 \T1/cmr/m/n/8 des points rouges, leurs
  []
 
 
-Underfull \hbox (badness 5245) in paragraph at lines 402--402
+Underfull \hbox (badness 5245) in paragraph at lines 403--403
 \T1/cmr/m/n/8 ori-en-ta-tions af-fichées par
  []
 
 
-Underfull \hbox (badness 2689) in paragraph at lines 402--402
+Underfull \hbox (badness 2689) in paragraph at lines 403--403
 \T1/cmr/m/n/8 hor-i-zon-tales in-diquent les
  []
 
 
-Underfull \hbox (badness 1515) in paragraph at lines 402--402
+Underfull \hbox (badness 1515) in paragraph at lines 403--403
 \T1/cmr/m/n/8 cou-ver-tures moyennes des
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 402--402
+Underfull \hbox (badness 1931) in paragraph at lines 403--403
 \T1/cmr/m/n/8 élé-ments génomiques. Les
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--402
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
 \T1/cmr/m/n/8 cou-ver-ture, déter-minés
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--402
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
 \T1/cmr/m/n/8 par la seg-men-ta-tion,
  []
 
 
-Underfull \hbox (badness 1838) in paragraph at lines 402--402
+Underfull \hbox (badness 1838) in paragraph at lines 403--403
 \T1/cmr/m/n/8 sont matéri-al-isés par des
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 [24] [25 <./figures/segmentation.png>]
-<figures/ancetre_ACEA_ACEK.png, id=501, 448.074pt x 617.1858pt>
+<figures/ancetre_ACEA_ACEK.png, id=504, 448.074pt x 617.1858pt>
 File: figures/ancetre_ACEA_ACEK.png Graphic file (type png)
 
 <use figures/ancetre_ACEA_ACEK.png>
-Package pdftex.def Info: figures/ancetre_ACEA_ACEK.png used on input line 431.
-(pdftex.def)             Requested size: 313.64964pt x 432.02711pt.
+Package pdftex.def Info: figures/ancetre_ACEA_ACEK.png used on input line 432.
+(pdftex.def)             Requested size: 291.24464pt x 401.16602pt.
 
-Underfull \hbox (badness 3009) in paragraph at lines 432--432
-[][] \T1/cmr/m/n/8 ^^U |\T1/cmr/bx/n/8 Re-con-struc-tion des
- []
-
-
-Underfull \hbox (badness 6348) in paragraph at lines 432--432
-\T1/cmr/bx/n/8 (a) \T1/cmr/m/n/8 L'ar-bre phy-logénique est une
- []
-
-
-Underfull \hbox (badness 5504) in paragraph at lines 432--432
-\T1/cmr/m/n/8 représen-ta-tion de la re-con-struc-tion
- []
-
-
-Underfull \hbox (badness 1142) in paragraph at lines 432--432
-\T1/cmr/m/n/8 au bout des traits bleus fon-cés in-
+Underfull \hbox (badness 1527) in paragraph at lines 433--433
+\T1/cmr/m/n/8 cour-cies par souci de représen-ta-tion. Les
  []
 
 [26 <./figures/ancetre_ACEA_ACEK.png>]
-<figures/boxplot_ancestor_GSE61327_ALE.png, id=511, 592.1322pt x 479.6319pt>
+<figures/boxplot_ancestor_GSE61327_ALE.png, id=514, 592.1322pt x 479.6319pt>
 File: figures/boxplot_ancestor_GSE61327_ALE.png Graphic file (type png)
 
 <use figures/boxplot_ancestor_GSE61327_ALE.png>
 Package pdftex.def Info: figures/boxplot_ancestor_GSE61327_ALE.png used on inpu
-t line 439.
+t line 440.
 (pdftex.def)             Requested size: 355.28206pt x 287.78136pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--440
+Underfull \hbox (badness 10000) in paragraph at lines 441--441
 [][] \T1/cmr/m/n/8 ^^U |\T1/cmr/bx/n/8 Dis-tri-bu-
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 440--440
+Underfull \hbox (badness 1648) in paragraph at lines 441--441
 \T1/cmr/bx/n/8 tion de l'évo-lu-tion de
  []
 
 
-Underfull \hbox (badness 5091) in paragraph at lines 440--440
+Underfull \hbox (badness 5091) in paragraph at lines 441--441
 \T1/cmr/bx/n/8 l'én-ergie min-i-male de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--440
+Underfull \hbox (badness 10000) in paragraph at lines 441--441
 \T1/cmr/bx/n/8 des BIME par rap-
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 440--440
+Underfull \hbox (badness 2495) in paragraph at lines 441--441
 \T1/cmr/bx/n/8 port à l'é-tat an-cêtre.
  []
 
 
-Underfull \hbox (badness 4096) in paragraph at lines 440--440
+Underfull \hbox (badness 4096) in paragraph at lines 441--441
 \T1/cmr/m/n/8 Le jeux de don-nées est
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--440
+Underfull \hbox (badness 10000) in paragraph at lines 441--441
 \T1/cmr/m/n/8 celui de l'-ex-péri-ence
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--440
+Underfull \hbox (badness 10000) in paragraph at lines 441--441
 \T1/cmr/m/n/8 GSE61327_ALE. L'axe
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--440
+Underfull \hbox (badness 10000) in paragraph at lines 441--441
 \T1/cmr/m/n/8 des ab-scisses représente
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 440--440
+Underfull \hbox (badness 1895) in paragraph at lines 441--441
 \T1/cmr/m/n/8 les dif-férentes familles de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--440
+Underfull \hbox (badness 10000) in paragraph at lines 441--441
 \T1/cmr/m/n/8 représente la dif-férence
  []
 
 
-Underfull \hbox (badness 2941) in paragraph at lines 440--440
+Underfull \hbox (badness 2941) in paragraph at lines 441--441
 \T1/cmr/m/n/8 d'én-ergie min-i-male de la
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--440
+Underfull \hbox (badness 10000) in paragraph at lines 441--441
 \T1/cmr/m/n/8 struc-ture sec-ondaire des
  []
 
 
-Underfull \hbox (badness 5667) in paragraph at lines 440--440
+Underfull \hbox (badness 5667) in paragraph at lines 441--441
 \T1/cmr/m/n/8 en bleu représen-tent les
  []
 
@@ -1331,45 +1328,45 @@ SSN 1477-4054.  doi : $10 . 1093 / bib /
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.474 \chapter
+l.475 \chapter
               {} [36]
 Annexe A.
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 520.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 521.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 520.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 521.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.526 \chapter
+l.527 \chapter
               {} [37
 
 ]
 Annexe B.
 
-<figures/supData/genesOperon_histoDens_GSE61327_ALE.png, id=651, 592.1322pt x 4
+<figures/supData/genesOperon_histoDens_GSE61327_ALE.png, id=655, 592.1322pt x 4
 79.6319pt>
 File: figures/supData/genesOperon_histoDens_GSE61327_ALE.png Graphic file (type
  png)
  <use figures/supData/genesOperon_histoDens_GSE61327_ALE.png>
 Package pdftex.def Info: figures/supData/genesOperon_histoDens_GSE61327_ALE.png
- used on input line 529.
+ used on input line 530.
 (pdftex.def)             Requested size: 414.48972pt x 335.74004pt.
 
-<figures/supData/genesOperon_histoDens_M-P4h.png, id=652, 592.1322pt x 479.6319
+<figures/supData/genesOperon_histoDens_M-P4h.png, id=656, 592.1322pt x 479.6319
 pt>
 File: figures/supData/genesOperon_histoDens_M-P4h.png Graphic file (type png)
  <use figures/supData/genesOperon_histoDens_M-P4h.png>
 Package pdftex.def Info: figures/supData/genesOperon_histoDens_M-P4h.png used o
-n input line 534.
+n input line 535.
 (pdftex.def)             Requested size: 414.48972pt x 335.74004pt.
 
 
@@ -1379,7 +1376,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.538 \chapter
+l.539 \chapter
               {} [38
 
  <./figures/supData/genesOperon_histoDens_GSE61327_ALE.png>]pdfTeX warning (ext
@@ -1387,37 +1384,37 @@ l.538 \chapter
 uplicate ignored
 <to be read again> 
                    \relax 
-l.538 \chapter
+l.539 \chapter
               {} [39 <./figures/supData/genesOperon_histoDens_M-P4h.png>]
 Annexe C.
-<figures/supData/venn_GSE61327_ALE.png, id=663, 481.8pt x 481.8pt>
+<figures/supData/venn_GSE61327_ALE.png, id=667, 481.8pt x 481.8pt>
 File: figures/supData/venn_GSE61327_ALE.png Graphic file (type png)
 
 <use figures/supData/venn_GSE61327_ALE.png>
 Package pdftex.def Info: figures/supData/venn_GSE61327_ALE.png used on input li
-ne 542.
+ne 543.
 (pdftex.def)             Requested size: 202.35461pt x 202.35461pt.
 
-<figures/supData/venn_HS-15min.png, id=664, 481.8pt x 481.8pt>
+<figures/supData/venn_HS-15min.png, id=668, 481.8pt x 481.8pt>
 File: figures/supData/venn_HS-15min.png Graphic file (type png)
 
 <use figures/supData/venn_HS-15min.png>
 Package pdftex.def Info: figures/supData/venn_HS-15min.png used on input line 5
-43.
+44.
 (pdftex.def)             Requested size: 202.35461pt x 202.35461pt.
 
-<figures/supData/venn_M-P4h.png, id=665, 481.8pt x 481.8pt>
+<figures/supData/venn_M-P4h.png, id=669, 481.8pt x 481.8pt>
 File: figures/supData/venn_M-P4h.png Graphic file (type png)
 
 <use figures/supData/venn_M-P4h.png>
-Package pdftex.def Info: figures/supData/venn_M-P4h.png used on input line 544.
+Package pdftex.def Info: figures/supData/venn_M-P4h.png used on input line 545.
 
 (pdftex.def)             Requested size: 202.35461pt x 202.35461pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.548 \chapter
+l.549 \chapter
               {} [40
 
  <./figures/supData/venn_GSE61327_ALE.png (PNG copy)> <./figures/supData/venn_H
@@ -1426,32 +1423,32 @@ Annexe D.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 627.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 628.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.627 \end{document}
+l.628 \end{document}
                      [41
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.627 \end{document}
+l.628 \end{document}
                      [42]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 627.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 628.
  (./rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 627.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 627.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 628.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 628.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: 8C7072BFF468F312EAA352E1393F6815;144.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 627.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 628.
  ) 
 Here is how much of TeX's memory you used:
- 18345 strings out of 495034
- 264226 string characters out of 6181677
- 472375 words of memory out of 5000000
+ 18346 strings out of 495034
+ 264237 string characters out of 6181677
+ 472421 words of memory out of 5000000
  20997 multiletter control sequences out of 15000+600000
  30848 words of font info for 77 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1487,10 +1484,10 @@ s/type1/public/cm-super/sfrm2074.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /cm-super/sfti1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-sup
 er/sftt0800.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt
 1200.pfb>
-Output written on rapport.pdf (43 pages, 3588205 bytes).
+Output written on rapport.pdf (43 pages, 3641971 bytes).
 PDF statistics:
- 827 PDF objects out of 1000 (max. 8388607)
- 696 compressed objects within 7 object streams
- 197 named destinations out of 1000 (max. 500000)
+ 831 PDF objects out of 1000 (max. 8388607)
+ 700 compressed objects within 7 object streams
+ 198 named destinations out of 1000 (max. 500000)
  163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
