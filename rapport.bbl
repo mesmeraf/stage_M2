@@ -1,4 +1,4 @@
-\begin{thebibliography}{42}
+\begin{thebibliography}{43}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -300,6 +300,14 @@ S.~Li, X.~Dong, and Z.~Su.
 \newblock \doi{10.1186/1471-2164-14-520}.
 \newblock URL
   \url{http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3734233\&tool=pmcentrez\&rendertype=abstract}.
+
+\bibitem[Liu et~al.(2014)Liu, Zhou, and White]{Liu2014}
+Y.~Liu, J.~Zhou, and K.~P. White.
+\newblock {RNA-seq differential expression studies: More sequence or more
+  replication?}
+\newblock \emph{Bioinformatics}, 30\penalty0 (3):\penalty0 301--304, 2014.
+\newblock ISSN 13674803.
+\newblock \doi{10.1093/bioinformatics/btt688}.
 
 \bibitem[Lorenz et~al.(2011)Lorenz, Bernhart, {H\"{o}ner zu Siederdissen},
   Tafer, Flamm, Stadler, and Hofacker]{Lorenz2011}

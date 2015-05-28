@@ -25,7 +25,7 @@
 \usepackage{rotating}
 
 \author{Nicolas JEANNE}
-\title{Métabolisme de l'ARN messager dans les opérons : Rôle des BIME chez \textit{Escherichia coli.}}
+\title{Étude par RNA-Seq d métabolisme de l'ARN messager dans les opérons : Rôle des BIME chez \textit{Escherichia coli.}}
 \date{Juin 2015}
 
 % Mise en page des citations
@@ -326,7 +326,7 @@ Afin d'approfondir ces hypothèses, nous avons étudié plus en détail le nivea
 \section*{Impact des BIME au niveau des paires de gènes}
 \label{expression_operon}
 
-Dans l’expérience précédente nous avons observé des tendances globales sur les biais du taux d’expression en présence de BIME. Nous allons maintenant identifier les paires de gènes qui présentent des différences de taux d’expression significatives. Pour cela, nous avons calculé, pour chaque gène, les moyennes des RPKM obtenus avec les différents réplicats et nous avons comparé les moyennes des gènes localisés de part et d’autre d’une RIG contenant une BIME. Encore une fois le faible effectif des échantillons nous a conduits à utiliser le test de Wilcoxon pour tester l’égalité des médianes. Nous avons retenu comme paires de gènes différentiellement exprimés celles dont le test de Wilcoxon donne une p-valeur < 0,01. Dans ce cadre, les opérons contenant des BIME sont sélectionnés et l'expression des deux gènes de l'opéron flanquant la BIME prise en compte si au moins un des deux gènes a une couverture > 10, cette valeur est choisie car elle représente le premier quartile de nos données, supprimant les gènes les moins exprimés.
+Dans l’expérience précédente nous avons observé des tendances globales sur les biais du taux d’expression en présence de BIME. Nous allons maintenant identifier les paires de gènes qui présentent des différences de taux d’expression significatives. Pour cela, nous avons calculé, pour chaque gène, les moyennes des RPKM obtenus avec les différents réplicats et nous avons comparé les moyennes des gènes localisés de part et d’autre d’une RIG contenant une BIME. Encore une fois le faible effectif des échantillons nous a conduits à utiliser le test de Wilcoxon pour tester l’égalité des médianes. Nous avons retenu comme paires de gènes différentiellement exprimés celles dont le test donne une p-valeur < 0,01. Dans ce cadre, les opérons contenant des BIME sont sélectionnés et l'expression des deux gènes de l'opéron flanquant la BIME prise en compte si au moins un des deux gènes a une couverture > 10, cette valeur est choisie car elle représente le premier quartile de nos données, supprimant les gènes les moins exprimés.
 
 Afin de facilité l’interprétation des résultats, nous avons écrits deux fonctions pour générer des représentations graphiques. La première est une visualisation graphique du test réalisé représentant les niveaux d’expression normalisés des gènes de l'opéron ainsi que la position relative des REP formant la BIME (Figure \autoref{fig:expressionFigA}). La seconde est une représentation de la couverture des reads au niveau de la région chromosomique codant pour l’opéron par rapport à l'organisation génomique de celui-ci ainsi que la catégorisation des REP composant la BIME (Figure \autoref{fig:expressionFigB}). Elle permet d’analyser plus finement la contribution de la BIME dans les variations de la couverture.
 
@@ -342,22 +342,22 @@ Nous avons testé cette méthode sur les trois jeux de données qui ont produit 
 
 \begin{table}[h!]
 \centerline{
-\begin{tabular}{|l|c|c|c|c|}
+\begin{tabular}{|l|c|c|c|c|c|c|}
   \hline
-  \rowcolor{Gray} Jeux de données & $\frac{Nb.~operons~avec~genes~DE}{Nb.~d'operons~exprimes}$ \scriptsize{\dag} & \begin{tabular}{c}Nb. de RIG\\avec Terminateurs\end{tabular}\\ 
+  \rowcolor{Gray} Jeux de données & $\frac{Nb.~operons~avec~genes~DE}{Nb.~d'operons~exprimes}$ \scriptsize{\dag} & \begin{tabular}{c}RIG avec\\Terminateurs\end{tabular} & \begin{tabular}{c}Terminateurs\\avant BIME\end{tabular} & \begin{tabular}{c}Terminateurs\\sur BIME\end{tabular}\\ 
   \hline
-  GSE61327\_ALE & 17/32 & 7/17\\  
+  GSE61327\_ALE & 17/32 & 7/17 & 2/7 & 3/7\\  
   \hline
-  HS-15min & 8/20& 1/8\\ 
+  HS-15min & 8/20& 1/8 & 0/1 & 0/1\\ 
   \hline
-  M-P4h & 12/30& 4/12\\
+  M-P4h & 12/30& 4/12 & 0/4 & 2/4\\
  \hline
 \end{tabular}}
 \caption{\textbf{Résultats de l'étude de différence d'expression des gènes des opérons flanquant une BIME.} \scriptsize{\dag} Nombre d'opérons contenant 2 gènes flanquant une BIME pour lesquels nous observons une différence de niveau d'expression sur le nombre d'opérons dont les 2 gènes flanquant la BIME sont exprimés (au moins un des 2 gènes possède une couverture > 10).
 \label{table:expression}}
 \end{table}
 
-Sur les résultats obtenus, nous constatons tout d'abord une hétérogénéité du nombre d'opérons exprimés. Concernant les terminateurs de transcription présent dans la RIG contenant la BIME, 2/7 se situent avant la BIME, 3/7 la chevauchent et 2/7 sont après pour GSE61327\_ALE. Le terminateur est situé après la BIME pour HS-15min. Pour M-P4h, un seul terminateur est situé avant la BIME, 2/4 la chevauchent et un seul est situé après. \textcolor{red}{Le phénomène de colocalisation des BIME et des terminateurs pourrait indiquer un rôle de la BIME dans la terminaison de transcription ou tout du moins d'atténuation dans les opérons car dans les six cas de chevauchement avec le terminateur, nous observons un niveau d'expression diminué du second gène par rapport au premier.}
+Sur les résultats obtenus, nous constatons tout d'abord une hétérogénéité du nombre d'opérons exprimés. Concernant les 12 terminateurs de transcription présent dans une RIG contenant une BIME des trois jeux de données, nous n'en observons que 2 situés en amont de la BIME et 5 chevauchant la BIME. Ces terminateurs en amont jouent leur rôle de terminateurs de transcription, mais le phénomène de colocalisation des BIME et des terminateurs de transcription pourrait indiquer un rôle de la BIME dans la terminaison de transcription ou tout du moins d'atténuation dans les opérons car dans les cinq cas de chevauchement avec le terminateur, nous observons un niveau d'expression diminué du second gène par rapport au premier.
 
 \begin{SCfigure}[][h!]
 \fbox{\includegraphics[scale=0.33]{figures/jVenn_expr.png}
@@ -365,7 +365,7 @@ Sur les résultats obtenus, nous constatons tout d'abord une hétérogénéité 
 \label{fig:jVenn_expr}}}
 \end{SCfigure}
 
-Nous avons également comparé les paires de gènes flanquant un BIME qui sont exprimés dans les trois jeux de données. 37 paires de gènes sont exprimées dans les trois jeux de données et 4 dans deux (un opéron pouvant contenir plusieurs BIME), ce qui nous indique une expression de tous ces opérons indépendamment du jeux de données (\autoref{fig:jVenn_expr}-a). En revanche, si nous nous intéressons aux paires de gènes DE nous observons beaucoup plus de variations (\autoref{fig:jVenn_expr}-b), ce phénomène est une surprise car nous nous attendions à voir des recouvrements similaires. Il sera discuté par la suite.
+Nous avons également comparé les paires de gènes flanquant un BIME qui sont exprimés dans les trois jeux de données. 37 paires de gènes sont exprimées dans les trois jeux de données et 4 dans deux jeux de données (un opéron pouvant contenir plusieurs BIME), ce qui nous indique une expression de tous ces opérons indépendamment du jeux de données (\autoref{fig:jVenn_expr}-a). En revanche, si nous nous intéressons aux paires de gènes DE nous observons beaucoup plus de variations (\autoref{fig:jVenn_expr}-b), ce phénomène est une surprise car nous nous attendions à voir des recouvrements similaires. Il sera discuté par la suite.
 
 \section*{Localisation des variations de taux d'expression}
 
@@ -481,7 +481,7 @@ Un test de Chi2 d'indépendance sur les effectifs des différentes familles de B
 La synthèse des résultats de notre étude est présentée sur la \autoref{fig:bilan}.
 
 \begin{sidewaysfigure}
-\centerline{\includegraphics[scale=0.85]{figures/supData/synthese_french.png}}
+\centerline{\includegraphics[scale=0.85]{figures/synthese_french.png}}
 \caption{\textbf{Tableau récapitulatif des résultats sur les trois jeux de données.} \& : Paires de gènes de l'opéron flanquant la BIME dont la différence d'expression est validée par un test statistique (p-valeur < 0.01). \dag~: Les données d'expression présentées sont uniquement celles de l'expérience GSE61327\_ALE par souci de clarté du tableau. \ddag~: Les données manquantes sont dues au fait que la méthode de calcul de proximité des gènes à la BIME, de la taille de la BIME, et de la taille de la région inter-génique n'ont été implémentés que dans la méthode de segmentation, ces informations sont donc liées à un résultat positif de cette méthode.}
 \label{fig:bilan}
 \end{sidewaysfigure}
@@ -494,12 +494,20 @@ La première question que nous nous sommes posés est de savoir si nous pouvions
 \section*{Expression des gènes dans les opérons et présence de BIME}
 Grâce à l'indice $I_{expr}$, nous avons pu exploiter simplement les données d'expression de deux gènes consécutifs d'un opéron. En absence de BIME dans la RIG, les résultats sont conformes à ce que nous attendions, une distribution centrée sur zéro indiquant un niveau similaire d'expression des gènes et une distribution aplatie en présence des ET due à la contribution des promoteurs (gène 2 plus exprimé) et des terminateurs de transcription (gène 1 plus exprimé). La présence de BIME dans la RIG a pour effet notable d'augmenter le taux d'expression du gène 1 en présence ou non d'ET (\autoref{fig:expression_operon} (g-h-i)). La taille de la RIG ne semble pas être un facteur expliquant un niveau d'expression supérieur du premier gène, en revanche la localisation de la BIME à proximité du gène 1 paraît être un facteur important puisque dans 14 cas sur 18 observés de différence de niveau d'expression, la BIME se localise plus près du gène possédant le niveau d'expression le plus élevé.
 
-L'étude de l'impact de la présence de promoteurs et de terminateurs dans la RIG sans BIME nous a démontré que dans tous les cas nous observions une différence avec l'$I_{expr}$ des gènes sans ET dans la RIG, alors qu'en présence de BIME, cette différence disparaît quasi complètement avec toujours un taux d'expression plus élevé du gène 1 (\autoref{table:p-val_reg}). La BIME joue donc un rôle dans le métabolisme de l'ARNm des opérons qui pourrait être celui d'atténuateur de transcription, notamment lorsque celle-ci chevauche un terminateur de transcription (14/39 BIME) ou un rôle de stabilisateur de la partie 5' du transcrit en le protégeant de l'action des exoribonucléases. Ces deux mécanismes mènent à la même constatation sur les données de RNA-Seq, un taux d'expression plus important du gène en amont de la BIME.
+L'étude de l'impact de la présence de promoteurs et de terminateurs de transcription dans la RIG sans BIME nous a démontré que dans tous les cas nous observions une différence avec l'$I_{expr}$ des gènes sans ET dans la RIG, alors qu'en présence de BIME, cette différence disparaît quasi complètement avec toujours un taux d'expression plus élevé du gène 1 (\autoref{table:p-val_reg}). La BIME joue donc un rôle dans le métabolisme de l'ARNm des opérons qui pourrait être celui d'atténuateur de transcription, notamment lorsque celle-ci chevauche un terminateur de transcription (14/39 BIME) ou un rôle de stabilisateur de la partie 5' du transcrit en le protégeant de l'action des exoribonucléases. Ces deux mécanismes mènent à la même constatation sur les données de RNA-Seq, un taux d'expression plus important du gène en amont de la BIME.
+
+L'étude de la différence d'expression des paires gènes flanquant les BIME a permis de mettre en évidence 24 opérons distincts présentant une DE de ces paires de gènes sur l'ensemble des jeux de données (\autoref{table:expression}). La localisation des terminateurs de transcription par rapport à la BIME nous a montré que peu de ces terminateurs (2/12) étaient situés en amont de la BIME. Cette information nous conforte dans le fait que les BIME sont transcrites et qu'elles jouent possiblement un rôle de terminateur/atténuateur de transcription puisque 5/12 sont chevauchées par des terminateurs de transcription. Pour les cas sans terminateurs, il est difficile d'émettre une hypothèse sur le rôle exact des BIME, bien qu'elles aient un impact sur le niveau d'expression des gènes les flanquant. Leur rôle pouvant être soit terminateur/atténuateur de transcription ou celui de stabilisateur de la partie 5' du transcrit. 
+
+Quant à l'observation d'une hétérogénéité des gènes DE par rapport à l'homogénéité de ceux non DE sur les 3 jeux de données (\autoref{fig:jVenn_expr}), nous pouvons émettre deux hypothèses. Soit nous observons un phénomène de régulation différentielle due au rôle des BIME en fonction des différentes conditions expérimentales de chacun des jeux de données, soit nous voyons se manifester une forte dépendance aux jeux de données (nombre de réplicats) et donc à la méthode statistique utilisée. 
+
+\section*{Localisation des points de cassure}
+Les deux méthodes (locale et segmentation) utilisées pour détecter les points de cassures dans la couverture dénotant un changement de niveau d'expression sur les trois jeux de données ont produit un nombre de détection proche, 18 pour la méthode locale et 17 pour la segmentation mais avec quelques nuances (\autoref{fig:bilan}). L'approche locale détecte 4 opérons différents de celle par segmentation qui elle en détecte 3 différents de l'approche locale. Comme nous l'avons vu précédemment, la couverture produite par le RNA-Seq n'est pas uniforme et nous observons également un déficit de couverture sur les BIME, cela peut quand même produire une détection accrue de faux positifs par la méthode locale, du fait qu'elle travaille sur un fenêtre de taille réduite par rapport à l'ensemble de la région étudiée, malgré le fait que le seuil du test statistique de la corrélation soit bas. Ce phénomène a moins d'impact sur la méthode de segmentation car celle-ci prend en compte la totalité de la région pour définir ses segments. Un autre facteur peut jouer sur les résultats des deux méthodes, nous l'avons mis en évidence sur l'approche par segmentation, il s'agit du nombre de réplicats par expérience. Nous avons comparé la segmentation de 2 mêmes paires de gènes flanquant une BIME et différentiellement exprimés pour 2 jeux de données, GSE61327\_ALE contenant 8 réplicats et M-P4h constitué de 3 (Annexe \ref{annexeReplicats}). La moyenne de la couverture du gène \textit{dppA} est diminuée d'un facteur 2 pour M-P4h mais une DE a quand même été détectée statistiquement, en revanche aucun point de cassure n'est trouvé. En se focalisant sur l'allure de la courbe de couverture, nous constatons que celle-ci est moins bien définie avec 3 réplicats qu'avec 8. Ceci peut certainement perturber les résultats de nos méthodes. Le nombre de réplicats est un facteur important pour augmenter le pouvoir de détection et la précision  d'une expérience de RNA-Seq \citep{Liu2014}. Ce fait explique également que moins de points de cassures sont retrouvés sur les jeux de données à 3 réplicats HS-15min et M-P4h, respectivement 5 et 5 par l'approche locale et 5 et 2 par la segmentation, alors que pour GSE61327\_ALE avec ses 8 réplicats nous en trouvons 12 par l'approche locale et 15 par la segmentation.
+
+Sur les jeux de données GSE61327\_ALE et HS-15min, pour lesquels l'opéron malEFG est exprimé, nous observons des résultats similaires à l'expérience menée par Khemici \citep{Khemici2004}, avec une détection d'un point de cassure par les deux méthodes sur la BIME située entre \textit{malE} et \textit{malF} et un taux d'expression plus important de \textit{malE} sans la présence d'éléments autre que la BIME dans la région inter-génique.
 
 
-
-
-
+\section*{Évolution des structures secondaires}
+Grâce à la reconstruction des séquences ancêtres, nous avons pu étudier l'évolution des structures secondaires des BIME en suivant la variation de leur énergie minimale. Sur les données que nous avons étudier \autoref{fig:ancetreBoxplot}, nous avons observé une déstabilisation plus prononcée des structures secondaires pour les BIME entourées de gènes non DE et plus particulièrement des BIME-2 et atypiques. Quant aux cas des BIME entourées de gènes DE, ces mêmes familles de BIME se stabilisent ou restent inchangées alors que les BIME solitaires se déstabilisent. Nous pouvons avancer l'hypothèse que du fait de la structure répétée en paires de REP Z\up{2} et Y des BIME-2 ou multiples combinaisons Z\up{1}, Z\up{2} et Y des BIME atypiques engendrant une augmentation de la taille des structures secondaires qu'elles forment, si elles sont intégrées dans un opérons et produisent un effet sur le métabolisme du transcrit, elles auront tendance à se stabiliser. Le cas des BIME solitaires et leur déstabilisation peut être la résultante du phénomène inverse et être des vestiges d'autres familles de BIME en cours de dégradation.
 
 \chapter*{Conclusions et perspectives}
 
@@ -668,7 +676,13 @@ cov_perBase_strandToFix.bed > cov_perBase.bed
 \caption{\textbf{Résultats de la reconstruction des états ancêtres et de l'étude des structures secondaires pour les BIME des couples de gènes consécutifs sans différence d'expression dans les opérons.} }
 \end{table}
 
-
-
+\chapter{}
+\label{annexeReplicats}
+\begin{figure}[h!]
+\centering
+\subfigure[]{\label{fig:seg_GSE} \includegraphics[scale=0.47]{figures/supData/seg_DPPB_DPPA_GSE.png}}
+\subfigure[]{\label{fig:seg_MP} \includegraphics[scale=0.47]{figures/supData/noSeg_DPPB_DPPA_MP4h.png}}
+\caption{\textbf{Différence de résultats de segmentation en fonction du nombre de réplicats. (a)} Données GSE61327\_ALE avec 8 réplicats, un point de cassure a été trouvé. \textbf{(b)} Données M-P4h avec 3 réplicats, aucun point de cassure n'a été trouvé.} 
+\end{figure}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2015.4.13)  28 MAY 2015 11:06
+This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2015.4.13)  28 MAY 2015 15:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -809,7 +809,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout3 = `rapport.ist'.
 
 {/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]
-<figures/rep_bime.jpg, id=44, 803.0pt x 566.115pt>
+<figures/rep_bime.jpg, id=48, 803.0pt x 566.115pt>
 File: figures/rep_bime.jpg Graphic file (type jpg)
  <use figures/rep_bime.jpg>
 Package pdftex.def Info: figures/rep_bime.jpg used on input line 93.
@@ -821,7 +821,7 @@ been already used, duplicate ignored
 l.99 
       [1
 
-] <figures/malEF_rep.png, id=79, 500.87125pt x 418.56375pt>
+] <figures/malEF_rep.png, id=83, 500.87125pt x 418.56375pt>
 File: figures/malEF_rep.png Graphic file (type png)
 
 <use figures/malEF_rep.png>
@@ -831,14 +831,14 @@ Package pdftex.def Info: figures/malEF_rep.png used on input line 101.
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 ) [2 <./figures/rep_bime.jpg>] [3 <./figures/malEF_rep.png>]
-<figures/degradosome.jpg, id=156, 106.9596pt x 40.03758pt>
+<figures/degradosome.jpg, id=160, 106.9596pt x 40.03758pt>
 File: figures/degradosome.jpg Graphic file (type jpg)
 
 <use figures/degradosome.jpg>
 Package pdftex.def Info: figures/degradosome.jpg used on input line 118.
 (pdftex.def)             Requested size: 427.83728pt x 160.14984pt.
 
-<figures/mrna_degradation.jpg, id=165, 385.44pt x 425.4294pt>
+<figures/mrna_degradation.jpg, id=169, 385.44pt x 425.4294pt>
 File: figures/mrna_degradation.jpg Graphic file (type jpg)
 
 <use figures/mrna_degradation.jpg>
@@ -854,7 +854,7 @@ n-tion de
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [4 <./figures/degradosome.jpg>]
-<figures/terminator.png, id=186, 441.65pt x 192.72pt>
+<figures/terminator.png, id=190, 441.65pt x 192.72pt>
 File: figures/terminator.png Graphic file (type png)
 
 <use figures/terminator.png>
@@ -892,7 +892,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 151.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-<figures/data_preparation.png, id=213, 483.37967pt x 362.53476pt>
+<figures/data_preparation.png, id=217, 483.37967pt x 362.53476pt>
 File: figures/data_preparation.png Graphic file (type png)
 
 <use figures/data_preparation.png>
@@ -946,7 +946,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--157
 [7
 
  <./figures/data_preparation.png>] [8]
-<figures/igv_snapshot.png, id=275, 1221.56375pt x 676.5275pt>
+<figures/igv_snapshot.png, id=279, 1221.56375pt x 676.5275pt>
 File: figures/igv_snapshot.png Graphic file (type png)
 
 <use figures/igv_snapshot.png>
@@ -999,7 +999,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 )
-<figures/profil.jpg, id=323, 602.25pt x 202.7575pt>
+<figures/profil.jpg, id=327, 602.25pt x 202.7575pt>
 File: figures/profil.jpg Graphic file (type jpg)
  <use figures/profil.jpg>
 Package pdftex.def Info: figures/profil.jpg used on input line 205.
@@ -1053,7 +1053,7 @@ iements du brin d'ADN
 [14
 
 ]
-<figures/scatterplotSameStrandNoReg_all.png, id=395, 592.1322pt x 479.6319pt>
+<figures/scatterplotSameStrandNoReg_all.png, id=399, 592.1322pt x 479.6319pt>
 File: figures/scatterplotSameStrandNoReg_all.png Graphic file (type png)
 
 <use figures/scatterplotSameStrandNoReg_all.png>
@@ -1064,8 +1064,8 @@ ut line 248.
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 254.
 
-[15 <./figures/scatterplotSameStrandNoReg_all.png (PNG copy)>]
-<figures/nbGenesBimeByOperon.png, id=405, 595.21571pt x 483.77538pt>
+[15 <./figures/scatterplotSameStrandNoReg_all.png>]
+<figures/nbGenesBimeByOperon.png, id=410, 595.21571pt x 483.77538pt>
 File: figures/nbGenesBimeByOperon.png Graphic file (type png)
 
 <use figures/nbGenesBimeByOperon.png>
@@ -1073,14 +1073,14 @@ Package pdftex.def Info: figures/nbGenesBimeByOperon.png used on input line 258
 .
 (pdftex.def)             Requested size: 226.18433pt x 183.83655pt.
 
-<figures/igr_distance.png, id=406, 594.0594pt x 482.7636pt>
+<figures/igr_distance.png, id=411, 594.0594pt x 482.7636pt>
 File: figures/igr_distance.png Graphic file (type png)
 
 <use figures/igr_distance.png>
 Package pdftex.def Info: figures/igr_distance.png used on input line 259.
 (pdftex.def)             Requested size: 225.74492pt x 183.45206pt.
 
-<figures/distance_BIME_gene_in_operon.png, id=407, 592.1322pt x 479.6319pt>
+<figures/distance_BIME_gene_in_operon.png, id=412, 592.1322pt x 479.6319pt>
 File: figures/distance_BIME_gene_in_operon.png Graphic file (type png)
 
 <use figures/distance_BIME_gene_in_operon.png>
@@ -1097,7 +1097,7 @@ Package hyperref Warning: No autoref name for `subfigure' on input line 265.
 Package hyperref Warning: No autoref name for `subfigure' on input line 267.
 
 
-<figures/genesOperon_histoDens_GSE61327_ALE.png, id=419, 2399.96625pt x 1885.04
+<figures/genesOperon_histoDens_GSE61327_ALE.png, id=424, 2399.96625pt x 1885.04
 25pt>
 File: figures/genesOperon_histoDens_GSE61327_ALE.png Graphic file (type png)
  <use figures/genesOperon_histoDens_GSE61327_ALE.png>
@@ -1105,7 +1105,7 @@ Package pdftex.def Info: figures/genesOperon_histoDens_GSE61327_ALE.png used on
  input line 279.
 (pdftex.def)             Requested size: 479.98476pt x 377.00182pt.
  [17] [18 <./figures/genesOperon_histoDens_GSE61327_ALE.png>]
-<figures/genesOperonReg_histoDens_GSE61327_ALE.png, id=442, 2393.94376pt x 1878
+<figures/genesOperonReg_histoDens_GSE61327_ALE.png, id=447, 2393.94376pt x 1878
 .01625pt>
 File: figures/genesOperonReg_histoDens_GSE61327_ALE.png Graphic file (type png)
 
@@ -1125,24 +1125,27 @@ Package hyperref Warning: No autoref name for `subfigure' on input line 331.
 
 Package hyperref Warning: No autoref name for `subfigure' on input line 331.
 
-<figures/expression1.png, id=452, 592.1322pt x 479.6319pt>
+<figures/expression1.png, id=457, 592.1322pt x 479.6319pt>
 File: figures/expression1.png Graphic file (type png)
 
 <use figures/expression1.png>
 Package pdftex.def Info: figures/expression1.png used on input line 335.
 (pdftex.def)             Requested size: 207.24937pt x 167.87367pt.
 
-<figures/expression2.png, id=453, 594.0594pt x 482.7636pt>
+<figures/expression2.png, id=458, 594.0594pt x 482.7636pt>
 File: figures/expression2.png Graphic file (type png)
 
 <use figures/expression2.png>
 Package pdftex.def Info: figures/expression2.png used on input line 336.
 (pdftex.def)             Requested size: 207.9239pt x 168.96979pt.
- [20]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[20]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 355.
 
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
@@ -1153,7 +1156,7 @@ Overfull \hbox (8.25241pt too wide) in paragraph at lines 360--361
 e hétérogénéité du nom-bre d'opérons
  []
 
-<figures/jVenn_expr.png, id=461, 878.28125pt x 450.68375pt>
+<figures/jVenn_expr.png, id=468, 878.28125pt x 450.68375pt>
 File: figures/jVenn_expr.png Graphic file (type png)
 
 <use figures/jVenn_expr.png>
@@ -1165,7 +1168,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [21 <./figures/expression1.png (PNG copy)> <./figures/expression2.png (PNG copy
 )>] [22 <./figures/jVenn_expr.png>]
-<figures/igv_profil.png, id=494, 918.43124pt x 437.635pt>
+<figures/igv_profil.png, id=499, 918.43124pt x 437.635pt>
 File: figures/igv_profil.png Graphic file (type png)
 
 <use figures/igv_profil.png>
@@ -1175,7 +1178,7 @@ Package pdftex.def Info: figures/igv_profil.png used on input line 393.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/profil_plot.png, id=495, 560.0925pt x 436.5108pt>
+<figures/profil_plot.png, id=500, 560.0925pt x 436.5108pt>
 File: figures/profil_plot.png Graphic file (type png)
 
 <use figures/profil_plot.png>
@@ -1186,7 +1189,7 @@ Package pdftex.def Info: figures/profil_plot.png used on input line 401.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [23] [24 <./figures/igv_profil.png> <./figures/profil_plot.png>]
-<figures/segmentation.png, id=512, 475.0548pt x 341.1144pt>
+<figures/segmentation.png, id=517, 475.0548pt x 341.1144pt>
 File: figures/segmentation.png Graphic file (type png)
 
 <use figures/segmentation.png>
@@ -1295,7 +1298,8 @@ Underfull \hbox (badness 1838) in paragraph at lines 435--435
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25] <figures/ancetre_ACEA_ACEK.png, id=524, 448.074pt x 617.1858pt>
+[25 <./figures/segmentation.png>]
+<figures/ancetre_ACEA_ACEK.png, id=529, 448.074pt x 617.1858pt>
 File: figures/ancetre_ACEA_ACEK.png Graphic file (type png)
 
 <use figures/ancetre_ACEA_ACEK.png>
@@ -1306,27 +1310,29 @@ Underfull \hbox (badness 1895) in paragraph at lines 466--466
 \T1/cmr/bx/n/8 ace-BAK). (a) \T1/cmr/m/n/8 L'ar-bre phy-logénique est
  []
 
-[26 <./figures/segmentation.png>] [27 <./figures/ancetre_ACEA_ACEK.png>]
-<figures/boxplot_ancestor_GSE61327_ALE.png, id=538, 562.9833pt x 460.3599pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[26]
+<figures/boxplot_ancestor_GSE61327_ALE.png, id=537, 562.9833pt x 460.3599pt>
 File: figures/boxplot_ancestor_GSE61327_ALE.png Graphic file (type png)
 
 <use figures/boxplot_ancestor_GSE61327_ALE.png>
 Package pdftex.def Info: figures/boxplot_ancestor_GSE61327_ALE.png used on inpu
 t line 473.
 (pdftex.def)             Requested size: 281.49097pt x 230.17938pt.
+ [27 <./figures/ancetre_ACEA_ACEK.png>] <figures/synthese_french.png, id=547, 8
+38.332pt x 384.4764pt>
+File: figures/synthese_french.png Graphic file (type png)
 
-<figures/supData/synthese_french.png, id=542, 834.7185pt x 382.3083pt>
-File: figures/supData/synthese_french.png Graphic file (type png)
+<use figures/synthese_french.png>
+Package pdftex.def Info: figures/synthese_french.png used on input line 484.
+(pdftex.def)             Requested size: 712.58557pt x 326.80647pt.
+ [28 <./figures/boxplot_ancestor_GSE61327_ALE.png>] [29 <./figures/synthese_fre
+nch.png>] [30
 
-<use figures/supData/synthese_french.png>
-Package pdftex.def Info: figures/supData/synthese_french.png used on input line
- 484.
-(pdftex.def)             Requested size: 709.51408pt x 324.96358pt.
- [28 <./figures/boxplot_ancestor_GSE61327_ALE.png>] [29 <./figures/supData/synt
-hese_french.png>] [30
-
-] [31]
-(./rapport.gls [32
+] [31] [32] (./rapport.gls
+[33
 
 ]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
@@ -1342,15 +1348,15 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.46 ...entrycounter[]{page}\glsnumberformat{14}}}
-                                                  % [33
+                                                  % [34
 
 
 ]) (./rapport.bblpdfTeX warning (ext4): destination with the same identifier (n
 ame{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \begin{thebibliography}{42}
-                                [34]
+l.1 \begin{thebibliography}{43}
+                                [35]
 Underfull \hbox (badness 2269) in paragraph at lines 91--100
 \T1/cmr/m/n/12 fam-ily trans-poses to a spe-cific site in repet-i-tive ex-tra-g
 enic palin-dromic se-quences
@@ -1373,7 +1379,7 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.100 
-       [35
+       [36
 
 ]
 Underfull \hbox (badness 1867) in paragraph at lines 113--122
@@ -1392,7 +1398,7 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.214 
-       [36]
+       [37]
 Underfull \hbox (badness 1087) in paragraph at lines 294--303
 []\T1/cmr/m/n/12 S. Li, X. Dong, and Z. Su.  Di-rec-tional RNA-seq re-veals hig
 hly com-plex condition-
@@ -1408,9 +1414,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.332 
-       [37]
-Underfull \hbox (badness 2310) in paragraph at lines 377--386
+l.329 
+       [38]
+Underfull \hbox (badness 2310) in paragraph at lines 385--394
 \T1/cmr/m/it/12 bioin-for-mat-ics\T1/cmr/m/n/12 , 14(2) :178--92, Mar. 2013.  I
 SSN 1477-4054.  doi : $10 . 1093 / bib /
  []
@@ -1419,38 +1425,38 @@ SSN 1477-4054.  doi : $10 . 1093 / bib /
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.519 \chapter
-              {} [38]
+l.527 \chapter
+              {} [39]
 Annexe A.
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 565.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 573.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.571 \chapter
-              {} [39
+l.579 \chapter
+              {} [40
 
 ]
 Annexe B.
 
-<figures/supData/genesOperon_histoDens_HS15.png, id=688, 594.0594pt x 482.7636p
+<figures/supData/genesOperon_histoDens_HS15.png, id=710, 594.0594pt x 482.7636p
 t>
 File: figures/supData/genesOperon_histoDens_HS15.png Graphic file (type png)
  <use figures/supData/genesOperon_histoDens_HS15.png>
 Package pdftex.def Info: figures/supData/genesOperon_histoDens_HS15.png used on
- input line 574.
+ input line 582.
 (pdftex.def)             Requested size: 415.83875pt x 337.9322pt.
 
-<figures/supData/genesOperon_histoDens_M-P4h.png, id=689, 592.1322pt x 479.6319
+<figures/supData/genesOperon_histoDens_M-P4h.png, id=711, 592.1322pt x 479.6319
 pt>
 File: figures/supData/genesOperon_histoDens_M-P4h.png Graphic file (type png)
  <use figures/supData/genesOperon_histoDens_M-P4h.png>
 Package pdftex.def Info: figures/supData/genesOperon_histoDens_M-P4h.png used o
-n input line 579.
+n input line 587.
 (pdftex.def)             Requested size: 414.48972pt x 335.74004pt.
 
 
@@ -1460,46 +1466,46 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.583 \chapter
-              {} [40
+l.591 \chapter
+              {} [41
 
  <./figures/supData/genesOperon_histoDens_HS15.png>]pdfTeX warning (ext4): dest
 ination with the same identifier (name{page.}) has been already used, duplicate
  ignored
 <to be read again> 
                    \relax 
-l.583 \chapter
-              {} [41 <./figures/supData/genesOperon_histoDens_M-P4h.png>]
+l.591 \chapter
+              {} [42 <./figures/supData/genesOperon_histoDens_M-P4h.png>]
 Annexe C.
-<figures/supData/venn_GSE61327_ALE.png, id=700, 481.8pt x 481.8pt>
+<figures/supData/venn_GSE61327_ALE.png, id=723, 481.8pt x 481.8pt>
 File: figures/supData/venn_GSE61327_ALE.png Graphic file (type png)
 
 <use figures/supData/venn_GSE61327_ALE.png>
 Package pdftex.def Info: figures/supData/venn_GSE61327_ALE.png used on input li
-ne 587.
+ne 595.
 (pdftex.def)             Requested size: 202.35461pt x 202.35461pt.
 
-<figures/supData/venn_HS-15min.png, id=701, 481.8pt x 481.8pt>
+<figures/supData/venn_HS-15min.png, id=724, 481.8pt x 481.8pt>
 File: figures/supData/venn_HS-15min.png Graphic file (type png)
 
 <use figures/supData/venn_HS-15min.png>
 Package pdftex.def Info: figures/supData/venn_HS-15min.png used on input line 5
-88.
+96.
 (pdftex.def)             Requested size: 202.35461pt x 202.35461pt.
 
-<figures/supData/venn_M-P4h.png, id=702, 481.8pt x 481.8pt>
+<figures/supData/venn_M-P4h.png, id=725, 481.8pt x 481.8pt>
 File: figures/supData/venn_M-P4h.png Graphic file (type png)
 
 <use figures/supData/venn_M-P4h.png>
-Package pdftex.def Info: figures/supData/venn_M-P4h.png used on input line 589.
+Package pdftex.def Info: figures/supData/venn_M-P4h.png used on input line 597.
 
 (pdftex.def)             Requested size: 202.35461pt x 202.35461pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.593 \chapter
-              {} [42
+l.601 \chapter
+              {} [43
 
  <./figures/supData/venn_GSE61327_ALE.png (PNG copy)> <./figures/supData/venn_H
 S-15min.png (PNG copy)> <./figures/supData/venn_M-P4h.png (PNG copy)>]
@@ -1507,36 +1513,61 @@ Annexe D.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 674.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.674 \end{document}
-                     [43
+l.679 \chapter
+              {} [44
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.674 \end{document}
-                     [44]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 674.
+l.679 \chapter
+              {} [45]
+Annexe E.
+<figures/supData/seg_DPPB_DPPA_GSE.png, id=741, 592.1322pt x 479.6319pt>
+File: figures/supData/seg_DPPB_DPPA_GSE.png Graphic file (type png)
+
+<use figures/supData/seg_DPPB_DPPA_GSE.png>
+Package pdftex.def Info: figures/supData/seg_DPPB_DPPA_GSE.png used on input li
+ne 683.
+(pdftex.def)             Requested size: 278.30217pt x 225.42702pt.
+
+<figures/supData/noSeg_DPPB_DPPA_MP4h.png, id=742, 592.1322pt x 479.6319pt>
+File: figures/supData/noSeg_DPPB_DPPA_MP4h.png Graphic file (type png)
+
+<use figures/supData/noSeg_DPPB_DPPA_MP4h.png>
+Package pdftex.def Info: figures/supData/noSeg_DPPB_DPPA_MP4h.png used on input
+ line 684.
+(pdftex.def)             Requested size: 278.30217pt x 225.42702pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 688.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.688 \end{document}
+                     [46
+
+ <./figures/supData/seg_DPPB_DPPA_GSE.png (PNG copy)> <./figures/supData/noSeg_
+DPPB_DPPA_MP4h.png (PNG copy)>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 688.
  (./rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 674.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 674.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 688.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 688.
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 8C7072BFF468F312EAA352E1393F6815;144.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 674.
+(rerunfilecheck)             Checksum: 055190E3A159E511DE1CC3C5AE303E4F;180.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 688.
  ) 
 Here is how much of TeX's memory you used:
- 18439 strings out of 495034
- 265814 string characters out of 6181677
- 475380 words of memory out of 5000000
- 21077 multiletter control sequences out of 15000+600000
+ 18466 strings out of 495034
+ 266396 string characters out of 6181677
+ 475691 words of memory out of 5000000
+ 21094 multiletter control sequences out of 15000+600000
  30775 words of font info for 77 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 53i,17n,92p,2128b,1200s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,17n,92p,2411b,1200s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texli
@@ -1568,10 +1599,10 @@ s/type1/public/cm-super/sfti0800.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /cm-super/sfti2074.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-sup
 er/sftt0800.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sftt
 1200.pfb>
-Output written on rapport.pdf (45 pages, 3861867 bytes).
+Output written on rapport.pdf (47 pages, 4268874 bytes).
 PDF statistics:
- 867 PDF objects out of 1000 (max. 8388607)
- 729 compressed objects within 8 object streams
- 205 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 898 PDF objects out of 1000 (max. 8388607)
+ 755 compressed objects within 8 object streams
+ 213 named destinations out of 1000 (max. 500000)
+ 191 words of extra memory for PDF output out of 10000 (max. 10000000)
 
