@@ -22,6 +22,7 @@
 \usepackage[top=2cm, bottom=3cm, left=2cm , right=2cm]{geometry}
 \usepackage{multirow}
 \usepackage{colortbl}
+\usepackage{rotating}
 
 \author{Nicolas JEANNE}
 \title{Métabolisme de l'ARN messager dans les opérons : Rôle des BIME chez \textit{Escherichia coli.}}
@@ -467,7 +468,7 @@ Les résultats obtenus suggèrent qu’au moins certaines BIME pourraient être 
 Nous nous donc sommes intéressés aux 11 résultats produits par GSE61327\_ALE que nous avons traités par la méthode de reconstruction des séquences ancêtres. Cette méthode produit un arbre phylogénique contenant les séquences ancêtres reconstruites à partir d'un arbre guide ainsi qu'une représentation de l'évolution de l'énergie minimale de la structure secondaire de l'ARN (\autoref{fig:ancetre}). Les résultats de l'analyse sont présentés en Annexe \ref{annexeAncetre}. Seul 10 résultats sont produits car le 11\up{ème} provient d'une BoxC+ unique annotée dans la base de données des REP de l'équipe. Les BoxC ne sont pas des REP et appartiennent à une autre famille d’éléments répétés, mais elles se trouvent souvent associées aux REP. Nous avons jugé préférable de l'exclure. \textcolor{red}{Sur les 10 résultats présentés, celui du couple hydN/hypF n'est pas utilisé pour la suite de l'analyse, car dans ce cas le second gène hypF est plus fortement exprimé sans la présence de promoteur.} L'énergie minimale de la structure secondaire est dépendante de la taille de la séquence de l'alignement (Données non montrées), cependant nous n'observons pas de tendance générale se dégageant sur la variation de cette valeur par rapport à l'énergie minimale de l'état ancêtre le plus éloigné. Nous observons à la fois des cas de stabilisation de la structure secondaire avec une diminution ou une conservation de l'énergie minimale dans 5 BIME sur 10 et des cas de déstabilisation semblant moins prononcés avec une augmentation de l'énergie minimale. Quand aux familles de BIME impliquées, il est intéressant de noter que les BIME-2 sont surreprésentées avec 60\% de présence (30\% sur l'ensemble du génome d'\textit{E. coli K12 MG1655}) au détriment des BIME solitaires et BIME-1.
 
 \begin{SCfigure}[][h!]
-\fbox{\includegraphics[scale=0.6]{figures/boxplot_ancestor_GSE61327_ALE.png}
+\fbox{\includegraphics[scale=0.5]{figures/boxplot_ancestor_GSE61327_ALE.png}
 \caption{\textbf{Distribution de l'évolution de l'énergie minimale de la structure secondaire des BIME par rapport à l'état ancêtre.} Le jeux de données est celui de l'expérience GSE61327\_ALE. L'axe des abscisses représente les différentes familles de BIME, l'axe des ordonnées représente la différence d'énergie minimale de la structure secondaire des BIME par rapport à l'état ancêtre le plus éloigné. Les données en rouge sont celles des BIME dont les 2 gènes flanquants sont DE, celles en bleu représentent les données des BIME dont les gènes flanquant ne sont pas DE.}
 \label{fig:ancetreBoxplot} }
 \end{SCfigure}
@@ -477,6 +478,13 @@ Nous avons ensuite appliqué le même traitement sur les 17 cas où dans un opé
 La comparaison des distributions des différences d'énergie minimale avec la séquence ancêtre en fonction des familles de BIME et une DE des gènes flanquant la BIME (\autoref{fig:ancetreBoxplot}) nous permet d'observer la tendance pour toutes les familles de BIME vers une déstabilisation des structures secondaires dans le cas où il n'y a pas de DE. Cet effet apparaît nettement lorsque l'on s'intéresse aux BIME-2 avec un écart important entre les distributions avec et sans DE. Le cas des BIME atypiques semble similaire, mais est soumis à caution du fait du faible effectif dans le contexte d'une DE. Les BIME-1 sont soumises au même problème mais sans différence de distribution notable. La déstabilisation des BIME solitaires semble plus importante dans les cas de DE.
 Un test de Chi2 d'indépendance sur les effectifs des différentes familles de BIME et en cas de DE ou non a conclu sur une indépendance des distributions (p-valeur : 0.7504).
 
+La synthèse des résultats de notre étude est présentée sur la \autoref{fig:bilan}.
+
+\begin{sidewaysfigure}
+\centerline{\includegraphics[scale=0.85]{figures/supData/synthese_french.png}}
+\caption{\textbf{Tableau récapitulatif des résultats sur les trois jeux de données.} \& : Paires de gènes de l'opéron flanquant la BIME dont la différence d'expression est validée par un test statistique (p-valeur < 0.01). \dag~: Les données d'expression présentées sont uniquement celles de l'expérience GSE61327\_ALE par souci de clarté du tableau. \ddag~: Les données manquantes sont dues au fait que la méthode de calcul de proximité des gènes à la BIME, de la taille de la BIME, et de la taille de la région inter-génique n'ont été implémentés que dans la méthode de segmentation, ces informations sont donc liées à un résultat positif de cette méthode.}
+\label{fig:bilan}
+\end{sidewaysfigure}
 
 \chapter*{Discussion}
 
@@ -486,7 +494,9 @@ La première question que nous nous sommes posés est de savoir si nous pouvions
 \section*{Expression des gènes dans les opérons et présence de BIME}
 Grâce à l'indice $I_{expr}$, nous avons pu exploiter simplement les données d'expression de deux gènes consécutifs d'un opéron. En absence de BIME dans la RIG, les résultats sont conformes à ce que nous attendions, une distribution centrée sur zéro indiquant un niveau similaire d'expression des gènes et une distribution aplatie en présence des ET due à la contribution des promoteurs (gène 2 plus exprimé) et des terminateurs de transcription (gène 1 plus exprimé). La présence de BIME dans la RIG a pour effet notable d'augmenter le taux d'expression du gène 1 en présence ou non d'ET (\autoref{fig:expression_operon} (g-h-i)). La taille de la RIG ne semble pas être un facteur expliquant un niveau d'expression supérieur du premier gène, en revanche la localisation de la BIME à proximité du gène 1 paraît être un facteur important puisque dans 14 cas sur 18 observés de différence de niveau d'expression, la BIME se localise plus près du gène possédant le niveau d'expression le plus élevé.
 
-L'étude de l'impact de la présence de promoteurs et de terminateurs dans la RIG sans BIME nous a démontré que dans tous les cas nous observions une différence avec l'$I_{expr}$ des gènes sans ET dans la RIG, alors qu'en présence de BIME, cette différence disparaît quasi complètement avec toujours un taux d'expression plus élevé du gène 1 (\autoref{table:p-val_reg}). La BIME joue donc un rôle dans le métabolisme de l'ARNm des opérons qui pourrait être celui d'atténuateur de transcription, notamment lorsque celle-ci chevauche un terminateur de transcription (14/39 BIME) ou un rôle de stabilisateur de la partie 5' du transcrit en le protégeant de l'action des exoribonucléases. Ces deux mécanismes mènent à la même constatation sur les données de RNA-Seq, un taux d'expression plus important du gène 1 par rapport à celui du gène 2.
+L'étude de l'impact de la présence de promoteurs et de terminateurs dans la RIG sans BIME nous a démontré que dans tous les cas nous observions une différence avec l'$I_{expr}$ des gènes sans ET dans la RIG, alors qu'en présence de BIME, cette différence disparaît quasi complètement avec toujours un taux d'expression plus élevé du gène 1 (\autoref{table:p-val_reg}). La BIME joue donc un rôle dans le métabolisme de l'ARNm des opérons qui pourrait être celui d'atténuateur de transcription, notamment lorsque celle-ci chevauche un terminateur de transcription (14/39 BIME) ou un rôle de stabilisateur de la partie 5' du transcrit en le protégeant de l'action des exoribonucléases. Ces deux mécanismes mènent à la même constatation sur les données de RNA-Seq, un taux d'expression plus important du gène en amont de la BIME.
+
+
 
 
 
@@ -560,7 +570,7 @@ cov_perBase_strandToFix.bed > cov_perBase.bed
 
 \chapter{}
 \label{annexeOperon}
-\begin{figure}[!h]
+\begin{figure}[h!]
 \centerline{\includegraphics[scale=0.7]{figures/supData/genesOperon_histoDens_HS15.png}}
 \caption{\textbf{Niveau d'expression des gènes consécutifs dans les opérons pour le jeux de données GSE61327\_ALE.}}
 \end{figure}
@@ -657,6 +667,8 @@ cov_perBase_strandToFix.bed > cov_perBase.bed
 }
 \caption{\textbf{Résultats de la reconstruction des états ancêtres et de l'étude des structures secondaires pour les BIME des couples de gènes consécutifs sans différence d'expression dans les opérons.} }
 \end{table}
+
+
 
 
 \end{document}
