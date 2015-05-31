@@ -1,0 +1,34 @@
+\select@language {french}
+\contentsline {chapter}{Introduction}{1}{chapter*.5}
+\contentsline {section}{Caract\IeC {\'e}ristiques des REP et organisations en BIME}{1}{section*.6}
+\contentsline {section}{Propri\IeC {\'e}t\IeC {\'e}s associ\IeC {\'e}es aux REP}{2}{section*.7}
+\contentsline {section}{ARN messagers chez \textit {E. coli}}{3}{section*.8}
+\contentsline {subsection}{Unit\IeC {\'e}s de transcription}{3}{section*.9}
+\contentsline {subsection}{Stabilit\IeC {\'e} des ARNm}{3}{section*.10}
+\contentsline {subsection}{Terminaison de la transcription}{4}{section*.12}
+\contentsline {section}{Objectifs}{4}{section*.14}
+\contentsline {chapter}{Mat\IeC {\'e}riel \& M\IeC {\'e}thodes}{6}{chapter*.15}
+\contentsline {section}{Jeux de donn\IeC {\'e}es}{6}{section*.17}
+\contentsline {section}{Fichiers d'annotations}{7}{section*.18}
+\contentsline {section}{Alignement des reads}{8}{section*.19}
+\contentsline {section}{Int\IeC {\'e}gration des donn\IeC {\'e}es}{8}{section*.20}
+\contentsline {section}{Visualisation du mapping}{8}{section*.21}
+\contentsline {section}{Cr\IeC {\'e}ation de la table de comptages et normalisation}{8}{section*.23}
+\contentsline {section}{D\IeC {\'e}termination des transcrits}{10}{section*.24}
+\contentsline {section}{Segmentation}{10}{section*.26}
+\contentsline {section}{Reconstruction des s\IeC {\'e}quences anc\IeC {\^e}tres et structures secondaires}{12}{section*.27}
+\contentsline {chapter}{R\IeC {\'e}sultats}{13}{chapter*.28}
+\contentsline {section}{Couverture du g\IeC {\'e}nome}{13}{section*.29}
+\contentsline {section}{BIME et unit\IeC {\'e}s de transcription}{14}{section*.31}
+\contentsline {section}{Effet global dans les unit\IeC {\'e}s de transcription}{16}{section*.32}
+\contentsline {section}{Impact des BIME au niveau des paires de g\IeC {\`e}nes}{19}{section*.35}
+\contentsline {section}{Localisation des variations de taux d'expression}{20}{section*.38}
+\contentsline {subsection}{Approche locale}{21}{section*.39}
+\contentsline {subsection}{Approche par segmentation}{23}{section*.42}
+\contentsline {section}{\IeC {\'E}volution des structures des BIME}{24}{section*.45}
+\contentsline {chapter}{Discussion}{27}{chapter*.48}
+\contentsline {section}{Biais de s\IeC {\'e}quen\IeC {\c c}age des REP}{27}{section*.49}
+\contentsline {section}{Expression des g\IeC {\`e}nes dans les op\IeC {\'e}rons et pr\IeC {\'e}sence de BIME}{27}{section*.50}
+\contentsline {section}{Localisation des points de cassure}{28}{section*.52}
+\contentsline {section}{\IeC {\'E}volution des structures secondaires}{30}{section*.53}
+\contentsline {chapter}{Conclusions et perspectives}{}{chapter*.54}

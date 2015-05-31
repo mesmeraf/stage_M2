@@ -24,9 +24,9 @@
 \usepackage{colortbl}
 \usepackage{rotating}
 
-\author{Nicolas JEANNE}
-\title{Étude par RNA-Seq d métabolisme de l'ARN messager dans les opérons : Rôle des BIME chez \textit{Escherichia coli.}}
-\date{Juin 2015}
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
 
 % Mise en page des citations
 \bibliographystyle{abbrvnat}
@@ -78,16 +78,84 @@
 \lstset{basicstyle=\small}
 
 \begin{document}
+\thispagestyle{empty}
+\setcounter{page}{0}
 
-\maketitle
+% Page de garde
+\begin{titlepage}
+  \begin{sffamily}
+  \begin{center}
+
+    % Upper part of the page. The '~' is needed because \\
+    % only works if a paragraph has started.
+    \includegraphics[scale=0.2]{figures/garde/coli1.jpeg}~\\[1.5cm]
+
+    \textsc{\LARGE Master Bioinformatique \\ \& Biologie des Systèmes}\\[2cm]
+
+    \textsc{\Large Rapport de stage de M2}\\[1.5cm]
+
+    % Title
+    \HRule \\[0.4cm]
+    { \huge \bfseries Étude par RNA-Seq du métabolisme de l'ARN messager dans les opérons :\\Rôle des BIME chez \textit{Escherichia coli.}\\[0.4cm] }
+    \HRule \\[0.4cm]
+\vspace{1.5cm}
+    % Author and supervisor
+    \begin{minipage}{0.4\textwidth}
+      \begin{flushleft} \large
+        Nicolas JEANNE\\
+        Juin 2015\\
+      \end{flushleft}
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+      \begin{flushright} \large
+        \emph{Tuteurs :} Yves QUENTIN\\
+        Roland BARRIOT\\
+        \emph{Rapportrice : } Christine GASPIN
+      \end{flushright}
+    \end{minipage}
+
+    \vfill   
+    
+  \includegraphics[width = 30mm]{figures/garde/lmgm_logo.png} \hfill
+  \includegraphics[width = 30mm]{figures/garde/ups_logo.jpg} \hfill
+  \includegraphics[width = 20mm]{figures/garde/cnrs_logo.png}
+
+  \end{center}
+  \end{sffamily}
+\end{titlepage}
 
 \begin{onehalfspace}
+
+\chapter*{Remerciements}
+\thispagestyle{empty}
+Je tiens à remercier Gwenaelle Fichant qui m'a accueilli au sein de son laboratoire et qui a su me convaincre de m'investir sur un domaine biologique qui n'est pas le mien.
+
+Je remercie également mes tuteurs Yves Quentin et Roland Barriot pour leurs conseils perspicaces, leur aide précieuse, les idées judicieuses et leurs relectures pointilleuses.
+ 
+Un grand merci également à tous les membres de l'équipe, Petra
+Langendijk-Genevaux, Mathias Weyder et Arnaud Frèche pour leur soutien et les moments de détente. 
+
+Je remercie aussi Christine Gaspin qui a généreusement accepté d'être rapportrice de mon travail et a consacré un temps précieux à la lecture de ce rapport.
+
+\chapter*{Résumé}
+\thispagestyle{empty}
+
+\chapter*{Abstract}
+\thispagestyle{empty}
+
+\thispagestyle{empty}
+\tableofcontents
+\thispagestyle{empty}
+
 \chapter*{Introduction}
+\setcounter{page}{1}
+\addcontentsline{toc}{chapter}{Introduction}
 En 1982, la découverte par Higgins de nouveaux éléments génétiques communs dans les régions intercistroniques des opérons de \textit{Escherichia coli} et \textit{Salmonella typhimurium} a constitué le premier pas de la recherche sur les \gls{rep} \citep{Higgins1982}. En 1991, Gilson \textit{et al.} ont mis en évidence l'organisation en clusters de ces REP \citep{Gilson1991}. Ces clusters ont été appelés \gls{bime}. Chez \textit{E. coli} en 1994, Bachelier et son équipe ont réussi à catégoriser les REP constituant les BIME en 2 types Y et Z, constituants 3 motifs Y, Z\textsuperscript{1}, Z\textsuperscript{2}  \citep{Bachellier1994}.
  
 Les REP constituent une part non négligeable du génome bactérien, chez \textit{E. coli} K12 ou \textit{S. typhimurium} elles représentent environ 1\% de celui-ci \citep{Gilson1991}. Nous les retrouvons chez de nombreux règnes bactériens, notamment chez les pathogènes humains tels que \textit{E. coli, Salmonella enterica, Neisseria meningitidis, Mycobacterium tuberculosis et Pseudomonas aeruginosa} mais également chez des pathogènes des plantes comme \textit{Agrobacterium tumefaciens} ou chez des bactéries ubiquitaires, \textit{Deinococcus radiodurans} ou \textit{Pseudomonas putida} par exemple. Les travaux précédents de l'équipe ont permis l'annotation des REP au sein des génomes d'\textit{E. coli} et \textit{Shigella} et de mettre en évidence le lien existant entre la prolifération des REP et le gène $tnpA_{REP}$ \citep{Weyder2013,Bosc2014}, ainsi que la reconstruction des états ancêtres des REP \citep{Bosc2014}.  \textcolor{red}{Le rôle exact des REP n'est pas clairement défini, des hypothèses sont avancées sur leur implication dans la régulation de l'expression des gènes, que ce soit en tant que terminateur de transcription ou comme stabilisateur de la partie 5' du transcrit.}
 
 \section*{Caractéristiques des REP et organisations en BIME}
+\addcontentsline{toc}{section}{Caractéristiques des REP et organisations en BIME}
 
 \begin{figure}[ht]
 \centerline{\includegraphics[scale=0.5]{figures/rep_bime.jpg}}
@@ -104,14 +172,21 @@ Chez \textit{E. coli}, la taille des REP est d'environ 40 nucléotides, la class
 \end{figure}
 
 \section*{Propriétés associées aux REP}
+\addcontentsline{toc}{section}{Propriétés associées aux REP}
+
 La littérature décrit de nombreuses fonctions hypothétiques associées aux REP au niveau structurel du génome, au niveau de l'ADN et au niveau de l'ARN. Sur un plan structurel, les REP ont été décrites comme jouant un rôle dans les événements de \textbf{recombinaisons homologues} \citep{Kofoid2003} et les BIME ont été décrites comme des sites privilégiés pour \textbf{l'insertion de séquences d'ADN mobiles} comme certaines familles d'IS (Insertion Sequence) \citep{Bachellier1997,Clement1999,Choi2003,Tobes2005}. Au niveau de l'ADN, les REP sont capables de \textbf{lier plusieurs facteurs protéiques} tels que l'ADN Gyrase \citep{Espeli1997} et l'ADN polymérase \citep{Gilson1990}. Plus spécifiquement, la BIME-1 peut \textbf{lier l'\textit{IHF} (Integrated Host Facteur) sur son linker} \citep{Boccard1993} qui peut être notamment responsable de l'\textbf{initiation de la transcription et d’événements de recombinaisons sites spécifiques} \citep{Goosen1995}. Au plan de l'ARN, lorsqu'elles sont transcrites, les REP joueraient un rôle dans la \textbf{stabilisation de l'ARNm} grâce à leur structure en tige-boucle \citep{Newbury1987,Espeli2001,Khemici2004,Aguena2009}, la \textbf{terminaison de la transcription} \citep{Gilson1986} et \textbf{le contrôle de la traduction} \citep{Stern1988}. 
 
 \section*{ARN messagers chez \textit{E. coli}}
+\addcontentsline{toc}{section}{ARN messagers chez \textit{E. coli}}
 
 \subsection*{Unités de transcription}
+\addcontentsline{toc}{subsection}{Unités de transcription}
+
 L'étude des unités de transcription (UT), également appelées \gls{operon}, est difficile de par leur complexité. Des approches globales ont révélé que la presque totalité du génome était transcrit et parfois dans les deux orientations. Il apparaît également que les gènes peuvent être transcrits à partir de plusieurs promoteurs et que la terminaison de la transcription pouvait également se produire à différentes positions. Ce dernier point suggère que les terminateurs de transcription sont sujets à des fuites plus ou moins importantes (cas extrêmes des atténuateurs de transcription). D'autre part, il existe peu d'évidences expérimentales directes de l'organisation en opérons, même dans le génome d'\textit{E. coli}. Par contre, avec le développement d'approches globales d'étude de la transcription des gènes, il devient possible de prédire la localisation des sites d'initiation et de terminaison de la transcription. Ces informations couplées à d'autres propriétés génomiques comme la distance inter-génique permet de prédire l'organisation en opérons des gènes.
 
 \subsection*{Stabilité des ARNm}
+\addcontentsline{toc}{subsection}{Stabilité des ARNm}
+
 La dégradation des ARNm chez \textit{E.coli} est réalisée par l'intervention du dégradosome. Il s'agit d'un complexe multi-enzymatique composé de quatre protéines majeures, la RNase E, la PNPase, la RhlB et l'Enolase. Un élément clé dans la dégradation du transcrit chez \textit{E. coli} est que celle-ci débute toujours par un clivage réalisé par une endoribonucléase (RNase E). Une fois clivés, les transcrits sont complètement dégradés par des exoribonucléases (RNase R, RNase II ou PNPase) dégradant l'ARNm par l'extrémité 3' et par des oligoribonucléases grâce à la coopération de nombreuses enzymes telles que la poly(A) polymérase (PAP) et les RNA hélicases qui facilitent l'accès aux fragments d'ARN. La RNase E possède une affinité pour les substrats possédant une extrémité mono-phosphate en 5'. Les transcrits primaires bactériens possèdent une extrémité 5' tri-phosphate qui les protège de la dégradation jusqu'à ce qu'ils soient déphosphorylés par l'activité des pyrophosphohydrolases. La RNAse E reconnaît alors l'extrémité 5' mono-phosphate des transcrits par contact de son domaine catalytique \citep{Callaghan2005,Bandyra2013}.
 
 \begin{SCfigure}[][h!]
@@ -123,6 +198,8 @@ La dégradation des ARNm chez \textit{E.coli} est réalisée par l'intervention 
 La présence de structure secondaires telles que peuvent en former les REP peut entraver le processus de dégradation initié par les exoribonucléases, la PAP intervient alors en ajoutant sur l'extrémité 3' du transcrit une séquence poly-A qui va déstabiliser la structure secondaire et permettre ainsi aux exoribonucléases de poursuivre la dégradation (\autoref{fig:mrna_degradation}).
 
 \subsection*{Terminaison de la transcription}
+\addcontentsline{toc}{subsection}{Terminaison de la transcription}
+
 Le mécanisme de terminaison de la transcription chez les procaryotes est gouverné par deux classes signaux de fin de transcription. Les terminateurs Rho-dépendant dont l'activité s'appuie sur la liaison de la protéine Rho à un site \emph{rut} (Rho utilization) présent sur le transcrit associé à une interaction avec la RNA Polymérase et les terminateurs Rho-indépendants caractérisés par une structure G-C riche formant une tige-boucle suivie d'une série de résidus U. Ces terminateurs peuvent être bi-directionnels (\autoref{fig:terminator}) \citep{Henkin2000,Lesnik2001}.  
 
 \begin{SCfigure}[][h!]
@@ -132,6 +209,8 @@ Le mécanisme de terminaison de la transcription chez les procaryotes est gouver
 \end{SCfigure}
 
 \section*{Objectifs}
+\addcontentsline{toc}{section}{Objectifs}
+
 Dans l'état actuel de la recherche beaucoup de pistes pointent vers le fait que les REP joueraient un rôle soit dans la terminaison de la transcription, soit dans le processus de dégradation des transcrits. L'objectif de ce stage est donc à partir des données d'expression chez \textit{E. coli} de découvrir si les REP et leur organisation en BIME sont impliquées dans ces processus de terminaison de transcription et/ou de stabilisation de la partie 5' du transcrit. Différentes technologies sont disponibles pour étudier l'expression des gènes, les principales sont le micro-array, le \gls{tiling-array} et le \gls{RNA-Seq}. Notre choix s'est porté sur le RNA-Seq car il présente plusieurs avantages sur les autres technologies. A la différence des arrays, cette technologie ne nécessite pas la synthèse de sondes spécifiques des espèces ou des transcrits, elle peut donc détecter de nombreux événements non attendus. Elle offre des seuils de détection beaucoup plus bas car elle ne souffre pas du bruit spécifique aux arrays ce qui améliore sa spécificité et sa sensibilité. La profondeur de séquençage permet de détecter des transcrits rares et de faible abondance. Notons que ces approches fournissent une estimation de l'expression des gènes qui est la résultante de la transcription et de la dégradation des ARNm.
 
 Concernant le RNA-Seq, nous pouvons distinguer deux approches. L'une qui consiste à analyser les données d'expression de mutants par rapport à un individu sauvage ou une population dans des conditions standards et une population dans des conditions perturbées. Et l'autre, alternative, où pour une même condition, nous nous intéressons à la \textbf{différence de niveau d'expression d'un gène par rapport à un autre}. Dans le cas d'un opéron, nous nous attendons à ce que les gènes qui le constituent possèdent un profil d'expression similaire. Cette approche est privilégiée pour notre étude puisque nous cherchons à étudier le rôle des REP dans le métabolisme de l'ARN.
@@ -139,6 +218,7 @@ A notre connaissance, il n'existe pas d'approche globale sur l'implication des R
 
 
 \chapter*{Matériel \& Méthodes}
+\addcontentsline{toc}{chapter}{Matériel \& Méthodes}
 
 Les données d'expression de RNA-Seq sont récupérées au format \texttt{fastq}, qui est un pré-traitement des données brutes des séquenceurs, fournissant pour chacun des \gls{reads} un identifiant, sa séquence et le score de qualité de chacune des bases la composant. Pour travailler sur les données d'expressions, nous devons convertir ces informations de séquences en table de comptage représentant l'expression des gènes du génome, ces étapes sont détaillées sur la \autoref{fig:data_preparation}.
 
@@ -149,26 +229,36 @@ Les données d'expression de RNA-Seq sont récupérées au format \texttt{fastq}
 \end{SCfigure}
 
 \section*{Jeux de données}
-Plusieurs jeux de données ont été utilisés, tous issus d'expériences RNA-Seq publiées, accessibles sur le base de données \href{http://www.ncbi.nlm.nih.gov/geo/}{GEO} (Gene Expression Omnibus) du NCBI au format \gls{sra}. Grâce au \href{http://www.ncbi.nlm.nih.gov/books/NBK158900/#SRA_download.how_do_i_use_the_sra_toolki}{SRA toolkit}, elles sont décompressées au format \texttt{fastq} et un contrôle de qualité est effectué afin d'inspecter les reads grâce au logiciel \texttt{fastqc} (Annexe \ref{annexeCode}).
+\addcontentsline{toc}{section}{Jeux de données}
+
+Plusieurs jeux de données ont été utilisés, tous issus d'expériences RNA-Seq publiées, accessibles sur le base de données \href{http://www.ncbi.nlm.nih.gov/geo/}{GEO} (Gene Expression Omnibus) du NCBI au format \gls{sra}. Grâce au \href{http://www.ncbi.nlm.nih.gov/books/NBK158900/#SRA_download.how_do_i_use_the_sra_toolki}{SRA toolkit}, elles sont décompressées au format \texttt{fastq} et un contrôle de qualité est effectué afin d'inspecter les reads grâce au logiciel \texttt{fastqc} (\nameref{annexeCode}).
 
 Le \href{http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE61327}{premier jeu de données} que nous avons exploité est issu des expériences d'évolution adaptatives en laboratoire visant à découvrir l'émergence de mutations clés permettant la croissance rapide d'\textit{E. coli K-12 MG1655} sur un milieu pauvre en glucose \citep{Lacroix2014}. Ces données ont été choisies car elles proviennent d'expériences de RNA-Seq comportant un nombre important de réplicats (9) pour la condition de croissance en milieu pauvre en glucose (GSE61327\_ALE). Elles ont été obtenues par séquençage sur Illumina MiSeq à partir d'ARN totaux extraits des cultures d'\textit{E. coli} et rétro-transcrit en cDNA. La librairie a été conçue en \gls{PE}. 8 réplicats ont été validés disposant d'une qualité de séquence par base supérieure à 30 pour des reads de 62 pb, seul le fichier \texttt{SRR1573441.fastq} a été rejeté car la longueur des reads allait de 35 à 502 pb avec des scores de qualités très variables.
 
 Le \href{http://bioinfolab.uncc.edu/TruHmm_package/raw_data/}{second jeu de données} provient d'une expérience visant à développer un algorithme pour la détection des opérons chez \textit{E. coli K12} \citep{Li2013}. Nous nous sommes intéressés à celles provenant des cultures ayant subi un choc thermique pendant 15 minutes (HS-15min) ainsi qu'à celles provenant de culture privées de phosphore pendant 4 heures (M-P4h). Ces 2 conditions ont été retenues car elles possèdent 3 réplicats contre 2 pour toutes les autres. Les librairies ont été conçues en \gls{SE} et brin spécifique en utilisant le kit Illumina’s TruSeq Small RNA Sample Prep, puis séquencées à la fois sur Illumina HiSeq 2000 (générant des reads de 100 bases) et Illumina GA II (générant des reads de 76 bases). Aucun réplicat n'a été rejeté suite aux contrôles qualité.
 
 \section*{Fichiers d'annotations}
+\addcontentsline{toc}{section}{Fichiers d'annotations}
+
 Dans ce travail, nous avons utilisé l'annotation du génome d'E. coli K12 MG1655, souche pour laquelle le plus grand nombre de données RNA-Seq sont disponibles et servant de référence sur certaines bases de données d'annotation telles que \href{http://regulondb.ccg.unam.mx/}{RegulonDB}.
 Le fichier \gls{gff} d'annotation du génome d'\textit{E. coli K12} a été généré par un script Perl à partir du fichier \href{http://www.ncbi.nlm.nih.gov/nuccore/NC_000913.2}{GenBank}. Les fichiers répertoriant les opérons et les promoteurs proviennent de RegulonDB. Pour les opérons, le fichier se compose de 2640 entrées dont 1792 sont constitués d'un seul gène, ces derniers ne  seront pas utilisés dans notre analyse puisqu'elle requiert au moins deux gènes. Parmi les 848 autres, 235 ont été annotés comme ayant de fortes évidences d'existence (expérimentalement vérifiés), les 613 autres présentent des évidences d'existence plus faibles (inférence automatique, bibliographie,\ldots). Le fichier des promoteurs contient 8580 entrées dont 6461 ont été annotées comme présentant des preuves fortes d'existence. Le fichier répertoriant les terminateurs de transcription provient de \href{http://csbl.bmb.uga.edu/DOOR/}{Door\up{2}DB} et contient 1835 entrées, nous n'avons pas d'information sur la manière dont ils ont été annotés. Quant aux REP et BIME, les fichiers d'annotations proviennent de l'équipe. Les REP ont été annotées à l'aide d'une combinaison de méthodes basées sur des profils avec ou non prise en compte de la conservation de la structure secondaire. Elles sont regroupées en BIME si elles sont distantes de moins de 100 pb \citep{Weyder2013}. L'annotation a été réalisée sur 71 génomes complets d'\textit{Escherichia} et de \textit{Shigella}. Pour le génome d'\textit{E. coli K-12}, 605 REP ont été annotées par l'équipe, elles se regroupent en 287 BIME dont 93 sont constituées de REP solitaires.
 
 \section*{Alignement des reads}
-Les reads ont été alignés puis mappés sur le génome d'\textit{E. coli} \href{http://www.ncbi.nlm.nih.gov/nuccore/NC_000913.2}{NC\_000913.2}, qui est le génome utilisé pour annoter les REP par l'équipe, grâce au logiciel \href{http://bio-bwa.sourceforge.net/}{BWA}.  Ce logiciel propose 3 algorithmes distincts, \texttt{BWA-backtrack}, \texttt{BWA-SW} et \texttt{BWA-MEM}. Pour chacun de ces alignements, il est nécessaire de disposer de la séquence du génome de référence indexée (Annexe \ref{annexeCode}). 
-L'algorithme que nous avons sélectionné est le \texttt{MEM} (Maximal Exact Matches) pour sa rapidité et sa précision. Il reprend les mêmes principes que \texttt{BWA-SW} (utilisation de la programmation dynamique pour trouver les points d'ancrage (seeds) en autorisant les mésappariements (mismatchs) et les brèches (gaps). Il n'étend les alignements des seeds que lorsque ceux-ci ont peu d'occurrences sur le génome de référence, cela permet de diminuer le temps d'alignement en éliminant les extensions des séquences très répétées mais en utilisant l'ancrage avec des \texttt{MEM}, puis il réalise l'extension en prenant en compte les pénalités dues aux gaps et aux mismatchs. Les valeurs par défaut du logiciel ont été utilisées (Annexe \ref{annexeCode}).
-Le fichier d'alignement généré est au format \gls{sam}, afin de poursuivre l'analyse il doit être converti au format \gls{bam}, puis des critères de qualité sont appliqués. Seules les séquences possédant une qualité de mapping supérieur à 30, valeur d'usage commun, et n'étant pas étiquetées (taggées) comme \gls{chimerique} sont conservées. Cette opération a aussi le mérite de compresser l'information et ainsi de gagner en espace de stockage. Les séquences sont ensuite triées par position génomique. Finalement, le fichier \texttt{BAM} trié est indexé pour être visualisable sur un Genome Browser. Les outils utilisés sont compris dans la suite des \href{http://samtools.sourceforge.net/samtools.shtml}{samtools}. Pour les besoins ultérieurs de l'analyse, les réplicats d'une même condition sont fusionnés en un seul fichier (Annexe \ref{annexeCode}).
+\addcontentsline{toc}{section}{Alignement des reads}
+
+Les reads ont été alignés puis mappés sur le génome d'\textit{E. coli} \href{http://www.ncbi.nlm.nih.gov/nuccore/NC_000913.2}{NC\_000913.2}, qui est le génome utilisé pour annoter les REP par l'équipe, grâce au logiciel \href{http://bio-bwa.sourceforge.net/}{BWA}.  Ce logiciel propose 3 algorithmes distincts, \texttt{BWA-backtrack}, \texttt{BWA-SW} et \texttt{BWA-MEM}. Pour chacun de ces alignements, il est nécessaire de disposer de la séquence du génome de référence indexée (\nameref{annexeCode}). 
+L'algorithme que nous avons sélectionné est le \texttt{MEM} (Maximal Exact Matches) pour sa rapidité et sa précision. Il reprend les mêmes principes que \texttt{BWA-SW} (utilisation de la programmation dynamique pour trouver les points d'ancrage (seeds) en autorisant les mésappariements (mismatchs) et les brèches (gaps). Il n'étend les alignements des seeds que lorsque ceux-ci ont peu d'occurrences sur le génome de référence, cela permet de diminuer le temps d'alignement en éliminant les extensions des séquences très répétées mais en utilisant l'ancrage avec des \texttt{MEM}, puis il réalise l'extension en prenant en compte les pénalités dues aux gaps et aux mismatchs. Les valeurs par défaut du logiciel ont été utilisées (\nameref{annexeCode}).
+Le fichier d'alignement généré est au format \gls{sam}, afin de poursuivre l'analyse il doit être converti au format \gls{bam}, puis des critères de qualité sont appliqués. Seules les séquences possédant une qualité de mapping supérieur à 30, valeur d'usage commun, et n'étant pas étiquetées (taggées) comme \gls{chimerique} sont conservées. Cette opération a aussi le mérite de compresser l'information et ainsi de gagner en espace de stockage. Les séquences sont ensuite triées par position génomique. Finalement, le fichier \texttt{BAM} trié est indexé pour être visualisable sur un Genome Browser. Les outils utilisés sont compris dans la suite des \href{http://samtools.sourceforge.net/samtools.shtml}{samtools}. Pour les besoins ultérieurs de l'analyse, les réplicats d'une même condition sont fusionnés en un seul fichier (\nameref{annexeCode}).
 
 \subsection*{Intégration des données}
+\addcontentsline{toc}{section}{Intégration des données}
+
 Les fichiers d'annotation ont été transformés au format \gls{bed} grâce à des scripts Python.
 Ces changements de format permettent de travailler aisément avec la suite de logiciels \href{http://bedtools.readthedocs.org/en/latest/}{BEDtools} permettant de croiser les informations provenant de plusieurs sources de données et ainsi de rechercher des intersections, des positions proches ou déterminer une \gls{couverture} de reads. Ces outils ont généré les fichiers \texttt{BED} qui serviront de référence pour la suite de l'analyse statistique.
 
 \subsection*{Visualisation du mapping}
+\addcontentsline{toc}{section}{Visualisation du mapping}
+
 L'alignement des reads et le mapping sur le génome de référence de \textit{E. coli} sont visualisés grâce au genome browser \href{https://www.broadinstitute.org/igv/}{IGV} \citep{Robinson2011,Thorvaldsdottir2013} (\autoref{fig:igv}).
 
 \begin{SCfigure}[][h!]
@@ -178,6 +268,8 @@ L'alignement des reads et le mapping sur le génome de référence de \textit{E.
 \end{SCfigure}
 
 \section*{Création de la table de comptages et normalisation}
+\addcontentsline{toc}{section}{Création de la table de comptages et normalisation}
+
 Afin d'obtenir des résultats de comptage par région d'intérêt et ainsi estimer l'expression, nous avons utilisé le package Bioconductor easyRNASeq \citep{Delhomme2012} puisqu'il permet de réaliser les opérations de comptage de façon documentée et qu'il offre la possibilité d'effectuer une normalisation. Les annotations du génome d'\textit{E. coli} relatives aux gènes sont extraites à partir du fichier \texttt{GFF} et stockées sous forme d'une base de données.
 La liste des transcrits par gène est ensuite extraite pour un total de 4605 éléments que nous nommerons régions. La couverture par région est ensuite calculée pour chaque fichier \texttt{BAM}, le résultat est obtenu en réalisant l'union des positions extraites de la liste des régions et des positions des reads extraites des fichiers BAM qui auront été préalablement transformées au format \gls{GRanges} (\texttt{GRanges})  \citep{Lawrence2013}. Une table de comptage est alors produite, les régions figurant en ligne et les fichiers BAM en colonnes.
 
@@ -188,7 +280,9 @@ Les résultats de comptages doivent ensuite être normalisés afin de permettre 
 Il faut souligner que comme nous ne nous intéressons pas à un même gène dans 2 conditions différentes mais à 2 gènes dans une même condition, un biais dû à leur composition en GC peut intervenir. Le déroulé de l'analyse pour produire la table de comptage normalisée est présenté sur la \autoref{fig:data_preparation}.
 
 \section*{Détermination des transcrits}
+\addcontentsline{toc}{section}{Détermination des transcrits}
 \label{methode_correlation}
+
 Le principe de cette analyse repose sur la recherche de corrélation entre le profil d'expression issu de données de RNA-Seq et un profil théorique représentant un changement de niveau d'expression, cette méthode a été mise au point pour la prédiction d'opérons dans les génomes bactériens \citep{Fortino2014}. Le principe général est de délimiter les bornes des transcrits à partir de données de couverture en s'appuyant sur un test de corrélation entre ce profil et un profil arbitraire de 0 et de 1. Les 0 représentant une zone sans couverture donc en dehors d'un transcrit et les 1 la zone couverte, donc le transcrit. Le cœur de leur méthode consiste à déplacer une fenêtre glissante de 100 pb parcourant base à base le génome en réalisant des tests de corrélation entre le profil d'expression réel et le profil d'expression simulé par le vecteur de même taille contenant un nombre égal de 0 et de 1 (dans le cas d'une croissance du niveau d'expression sur le brin direct ou une décroissance du niveau d'expression sur le brin complémentaire, \textit{e.g}: 000111), ou de 1 et de 0 (dans le cas dans le cas d'une décroissance du niveau d'expression sur le brin direct ou une croissance du niveau d'expression sur le brin complémentaire, \textit{e.g}: 111000). Les moyennes du taux de couverture sont calculées sur les parties gauche et droite de la fenêtre pour dans un premier temps filtrer les données, le $Log_2$ du rapport de ces moyennes doit être supérieur à 1 ce qui représente un changement de 2 fois du niveau d'expression. Si ce 1\up{er} filtre est passé, la corrélation entre le profil réel et celui simulé est calculée et doit être supérieure à un seuil avec une p-valeur significative du test de corrélation pour être validée (\autoref{fig:profil}). Les auteurs ont fixé un seuil minimum de corrélation de 0.7 et une p-valeur de $10^{-7}$ comme seuil significatif pour le test de corrélation.
 
 \begin{SCfigure}[][h!]
@@ -198,7 +292,9 @@ Le principe de cette analyse repose sur la recherche de corrélation entre le pr
 \end{SCfigure}
 
 \section*{Segmentation}
+\addcontentsline{toc}{section}{Segmentation}
 \label{methode_segmentation}
+
 A la différence de la méthode précédente, la segmentation ne requière pas l'utilisation de profils. La méthode de segmentation que nous utilisons est issue du package R \href{http://cran.r-project.org/web/packages/Segmentor3IsBack/index.html}{Segmentor3IsBack} \citep{Cleynen2014}. Le but de cette méthode est de rechercher, sur une zone d'intérêt, des points de changements abrupts dans la couverture en utilisant l'algorithme \gls{pdp} \citep{Rigaill2010}. La segmentation se fonde sur le partitionnement d'un signal de $n$ points, la couverture de notre région d'intérêt, compris dans l'ensemble ${\{y_t\}_{t=1,\ldots,n}}$, suivant une distribution de Poisson, en $K$ segments, tel que :
 \[ Y_t \sim G(\theta_r) \quad \text{si}\ t \in r \quad \text{et}\ r \in m \]
 où $m$ est une partition de $[1,n]$ en $r$ segments, le paramètre $\theta_r$ est la moyenne associée au segment $r$. L'objectif étant d'estimer la position des segments et le paramètre $\theta_r$ résultant de la segmentation. $M_{K,n}$ est alors l'ensemble des partitions possibles avec $K$ le nombre maximal de partitions demandé et $n$ la taille de notre région. L'algorithme tente de choisir la partition $M_{K,n}$ avec la perte $\gamma$ minimale. Cette perte est calculée par la négative log-likelihood du modèle. La fonction de calcul du coût est définie comme telle :
@@ -218,18 +314,23 @@ Pour chaque itération $k$, l'algorithme travaille sur une liste de candidats po
 Au final, l'utilisation de ce package produit un découpage de la région d'intérêt en $K$ segments, $K$ étant fixé par l'utilisateur, dont les limites sont définies par les positions de leurs points de cassures.
 
 \section*{Reconstruction des séquences ancêtres et structures secondaires}
+\addcontentsline{toc}{section}{Reconstruction des séquences ancêtres et structures secondaires}
+
 En pratique, nous disposons de l’annotation des REP dans un ensemble de 86 génomes complets d’\textit{Escherichia} et \textit{Shigella}. Cette annotation est complétée par l’identification des loci contenant des REP orthologues \citep{Weyder2013}. Ainsi, pour les paires de gènes contenant une BIME dans leur RIG chez \textit{E. coli K12 MG1655}, nous pouvons connaître, pour tous les autres génomes complets  d’\textit{Escherichia} et \textit{Shigella}, l’état de la RIG vis-à-vis de la BIME des gènes orthologues correspondant : présence ou absence d’une BIME et en cas de présence composition en REP de la BIME. 
 La reconstruction des séquences ancêtres nécessite un arbre modèle pour l’évolution des espèces/souches de bactéries considérées. Cet arbre a été inféré à l’aide d’une sélection de  583 gènes orthologues conservés dans ces génomes. Les alignements multiples de ces familles de gènes sont concaténés et une méthode de maximum de vraisemblance (\texttt{PhyML}) a été utilisée pour calculer l’arbre phylogénétique \citep{Weyder2013}. A l’aide de cet arbre et de la séquence des BIME au niveau des loci orthologues (feuilles de l’arbre), il est possible d’inférer les séquences ancêtre à chaque nœud de l’arbre. Plusieurs méthodes sont disponibles \citep{Bosc2014}. Nous avons choisi une méthode de maximum de vraisemblance implémentée dans le logiciel \texttt{PHAST} \citep{Hubisz2011}. L'objectif de la méthode du maximum de vraisemblance est d’inférer les états ancêtres aux nœuds (le type de nucléotide dans notre cas) d'un arbre afin de rendre l'arbre reconstruit le plus vraisemblable étant donné les données aux feuilles de l'arbre et le modèle d'évolution \citep{Pagel1999}. Le maximum de vraisemblance repose sur un modèle d’évolution et permet de prendre en compte la longueur des branches et permet de multiples changements le long d'une seule branche. Nous avons utilisé le modèle HKY85 qui prend en compte des taux de transition et de transversion différents. 
 La prédiction des structures secondaires a été réalisée à l’aide du package R \texttt{ViennaRNA} \citep{Lorenz2011}. L’énergie libre minium des structures a été calculée avec le programme \texttt{RNAfold}  pour les séquences uniques (réelles ou inférées) et avec le programme \texttt{RNAalifold} pour les alignements de BIME orthologues. 
 
 \chapter*{Résultats}
+\addcontentsline{toc}{chapter}{Résultats}
 
 Pour réaliser les analyses, nous nous sommes inspirés de la méthodologie employée en RNA-Seq pour l'étude de DE. L'analyse statistique de recherche de changement d'expression liée à la présence de BIME a été menée sur le logiciel R. La première étape a consisté à examiner les données d'expression concernant les gènes des opérons dans les cas où ils flanquent une BIME ou non, en partant de l'hypothèse que les gènes d'un même opéron ont un profil d'expression similaire en absence d'\gls{et} tels que les promoteurs et les terminateurs de transcription. Nous avons ensuite recherché des changements de niveaux d'expression qui pourraient être liés à la présence de BIME dans la \gls{rig} de deux gènes d'un opéron par une approche locale (la corrélation de profils d'expression) et une approche de segmentation. Nous avons reconstruit les séquences ancêtres et étudiés les structures secondaires des BIME détectées par les trois méthodes à la fois. Cette chaîne de traitement permettra facilement d'étendre l'étude à d'autres jeux de données.
 
 Dans un souci de simplification de la notation, nous nommerons gène 1, le gène en amont de la BIME dans le sens de la transcription et gène 2 celui en aval.
 
 \section*{Couverture du génome}
+\addcontentsline{toc}{section}{Couverture du génome}
 \label{uniformite_couverture}
+
 Un des problèmes majeur de ce type d'approche est que la couverture des reads le long du génome n'est pas uniforme (\autoref{fig:igv}), ceci peut s'expliquer par différentes raisons techniques \citep{Li2013}. Premièrement, les \textbf{méthodes de fragmentation} des protocoles de préparation des bibliothèques amènent un biais en cassant ou dégradant certaines séquences. Le second biais possible est produit par le \textbf{Random Priming} lors de l'étape de rétro-transcription pouvant préférentiellement transcrire certaines séquences. Troisième point, les \textbf{ligases peuvent lier préférentiellement les adaptateurs} à certaines séquences. Quatrième point, l'amplification de la PCR est bien connue pour introduire des \textbf{biais dépendant de la proportion en GC} des séquences (formation de structures secondaires et température de dénaturation plus élevée). Le dernier point particulier au séquençage Illumina implique, lors du processus d'élongation du séquençage, des \textbf{interférences spécifiques aux séquences} générées par des schémas particuliers du template, tels que des répétitions de GCC ou CGG et des répétitions inversées d'une séquence de plus de 8 pb sur un même brin (\textit{e.g} : \textcolor{blue}{AAAAAACCTTGAAAAGCC}\textcolor{cyan}{A}\textcolor{blue}{GGCTTTTCAAGGTTTTTTT}), produisant des repliements du brin d'ADN et altérant l'affinité des enzymes \citep{Nakamura2011}. 
 
 Les données provenant de la technologie Illumina et les REP étant des séquences répétées inversées mais contenant des sites de mésappariement, elles sont susceptibles de subir ce biais et nous risquons d'obtenir des valeurs de couverture erronées sur ces éléments. Pour cela, nous nous sommes intéressés aux RIG contenant des BIME mais pas de promoteurs et de terminateurs, pour lesquelles aucun changement significatif de taux de transcription n'est observé entre les gènes amont et aval. Les  différences de niveaux d'expression entre les deux gènes pour les trois jeux de données ont été contrôlées à l'aide d'un test de rang de Wilcoxon pour vérifier l'égalité des médianes (p-valeur < 0.01). Pour toutes les paires de gènes dont le niveau d'expression n'est pas différentié, nous avons vérifié l'expression du gène amont par rapport à celle de la BIME (\autoref{fig:same_expression_operon_point}).
@@ -243,6 +344,8 @@ Les données provenant de la technologie Illumina et les REP étant des séquenc
 Nous observons une corrélation linéaire entre le taux d'expression du gène 1 et celui de la BIME (coefficient de corrélation : 1.037). Cependant, si la droite de régression possède un pente proche de 1, elle est décalée vers la droite par rapport à celle simulant un taux d'expression entre le gène 1 et la BIME. Ce résultat montre un biais systématique des données de RNA-Seq des échantillons testés vers une sous-estimation du taux d'expression des BIME. Nous baserons donc l'étude globale de l'effet des BIME sur le différentiel d'expression entre les gènes les flanquant.
 
 \section*{BIME et unités de transcription}
+\addcontentsline{toc}{section}{BIME et unités de transcription}
+
 Chez \textit{E. coli K12}, sur les 848 opérons formés de plus d'un gène, 36 contiennent au moins une BIME et comme un opéron peut contenir plusieurs BIME un total de 39 BIME sont présentes entre deux gènes. Nous nous sommes intéressés à ces opérons multigéniques afin d'étudier les caractéristiques de ceux contenant des BIME et comparer l'expression des gènes consécutifs des opérons en présence et absence de BIME. La distribution du nombre de gènes par opérons est répertoriée figure \autoref{fig:operonFigA}, les opérons ne contenant que deux gènes sont les plus représentés (51\%) et l'opéron le plus grand contient 16 gènes. Les opérons de 3 gènes (21\%) sont ceux qui contiennent le plus souvent une BIME.
 
 \begin{figure}[h!]
@@ -259,6 +362,8 @@ Une des conséquences directe de la présence d'une BIME dans une RIG est une au
 La localisation de la BIME par rapport au codon d’initiation ou stop des gènes peut également affecter la transcription et la traduction de ce gène.  Nous avons reporté cette distribution figure \autoref{fig:operonFigC}. Il apparaît clairement que les BIME sont plus proche du codon stop du gène 1 que du codon d’initiation du gène aval. En effet, il a été montré qu’une trop grande proximité de la BIME avec le codon stop peut conduire à un blocage au moins partiel du ribosome pouvant conduire à un arrêt prématuré de la traduction pouvant aller jusqu’à la dégradation de la protéine et même du messager par la RNase R \citep{Liang2015}. Ce mécanisme de régulation pourrait être à l’œuvre pour le gène \textit{nrdA}, mais il semble assez contre-productif pour être généralisé. D’autre part, une trop grande proximité avec le codon initiateur pourrait masquer la séquence Shine-Dalgarno ou ce codon dans la structure secondaire formée par la BIME et ainsi affecter l’initiation de la traduction du gène.
 
 \section*{Effet global dans les unités de transcription}
+\addcontentsline{toc}{section}{Effet global dans les unités de transcription}
+
 Dans un premier temps, nous avons voulu étudier globalement l'effet des BIME sur le taux de transcription des gènes la flanquant. Comme référence, nous avons utilisé les paires de gènes consécutifs qui appartiennent aux même opéron mais qui ne sont pas séparés par une BIME. Comme nous l'avons évoqué plus haut, l'analyse peut être affectée par la présence de promoteurs ou de terminateurs de transcription. D'autre part la taille des RIG peut également influencer la stabilité des messagers même en l'absence de BIME. En raison du faible effectif de RIG contenant des BIME, nous avons été contraints dans un premier temps de regrouper les promoteurs et terminateurs dans une seule classe et de faire deux classes de tailles de RIG. Un seuil de 150 pb, proche de la médiane des RIG avec BIME a été fixé pour équilibrer les effectifs.
 
 Les taux d'expression des gènes consécutifs d'un opéron, en absence de BIME et d'ET, présentent une forte corrélation linéaire mais sur un intervalle de valeurs étendu. Afin de comparer les écarts entre taux d'expression des gènes, nous avons utilisé un indice, $I_{expr}$, qui pondère la différence observée par la somme des taux d'expression des deux gènes :
@@ -273,7 +378,7 @@ Nous mesurons ainsi un biais sur l'intervalle [-1,1] et qui est égal à 0 si au
 \label{fig:expression_operon}
 \end{figure}
 
-L'analyse menée sur ce jeux de données est représentative des deux autres jeux de données malgré quelques différences (Voir annexe \ref{annexeOperon}). En raison des faibles effectifs de certains jeux de données et de l’écart à la distribution normale de plusieurs distributions, nous avons utilisé le test de rang de Wilcoxon (p-valeur < 0.05) pour tester l’égalité des médianes entre paires de gènes contenant une BIME dans la RIG et paires de gènes sans BIME dans la RIG (\autoref{fig:expression_operon}).
+L'analyse menée sur ce jeux de données est représentative des deux autres jeux de données malgré quelques différences (\nameref{annexeOperon}). En raison des faibles effectifs de certains jeux de données et de l’écart à la distribution normale de plusieurs distributions, nous avons utilisé le test de rang de Wilcoxon (p-valeur < 0.05) pour tester l’égalité des médianes entre paires de gènes contenant une BIME dans la RIG et paires de gènes sans BIME dans la RIG (\autoref{fig:expression_operon}).
 En absence de BIME nous observons une répartition symétrique du niveau d'expression des deux gènes centrée sur une valeur d'$I_{expr}$ à zéro (\autoref{fig:expression_operon} - (b,e,h)).
 En prenant en compte la présence/absence de BIME et en s'intéressant dans un premier temps aux RIG de moins de 150 pb, en présence de promoteur/terminateur, le test statistique ne montre pas de différence entre l'écart des médianes des deux distributions (\autoref{fig:expression_operon} - (a,b,c)), mais nous distinguons clairement une distribution bi-modale avec les BIME qui n'est pas présente en leur absence et nettement plus marquée en présence d'ET (\autoref{fig:expression_operon} - (b)). Ceci est dû à la conjonction de l'effet des promoteurs d'un côté et des terminateurs amplifié par la présence des BIME de l'autre.
 Pour les RIG de plus de 150 pb, nous observons un étalement des distributions avec un tendance légère allant vers un niveau d'expression plus important du gène 1 (\autoref{fig:expression_operon} - (d,e,f)).
@@ -316,6 +421,7 @@ En s'intéressant à la position des terminateurs de transcription par rapport �
 Afin d'approfondir ces hypothèses, nous avons étudié plus en détail le niveau d'expression des gènes dans les 36 opérons contenant des BIME.
 
 \section*{Impact des BIME au niveau des paires de gènes}
+\addcontentsline{toc}{section}{Impact des BIME au niveau des paires de gènes}
 \label{expression_operon}
 
 Dans l’expérience précédente nous avons observé des tendances globales sur les biais du taux d’expression en présence de BIME. Nous allons maintenant identifier les paires de gènes qui présentent des différences de taux d’expression significatives. Pour cela, nous avons calculé, pour chaque gène, les moyennes des RPKM obtenus avec les différents réplicats et nous avons comparé les moyennes des gènes localisés de part et d’autre d’une RIG contenant une BIME. Encore une fois le faible effectif des échantillons nous a conduits à utiliser le test de Wilcoxon pour tester l’égalité des médianes. Nous avons retenu comme paires de gènes différentiellement exprimés celles dont le test donne une p-valeur < 0,01. Dans ce cadre, les opérons contenant des BIME sont sélectionnés et l'expression des deux gènes de l'opéron flanquant la BIME prise en compte si au moins un des deux gènes a une couverture > 10, cette valeur est choisie car elle représente le premier quartile de nos données, supprimant les gènes les moins exprimés.
@@ -360,12 +466,15 @@ Sur les résultats obtenus, nous constatons tout d'abord une hétérogénéité 
 Nous avons également comparé les paires de gènes flanquant un BIME qui sont exprimés dans les trois jeux de données. 37 paires de gènes sont exprimées dans les trois jeux de données et 4 dans deux jeux de données (un opéron pouvant contenir plusieurs BIME), ce qui nous indique une expression de tous ces opérons indépendamment du jeux de données (\autoref{fig:jVenn_expr}-a). En revanche, si nous nous intéressons aux paires de gènes DE nous observons beaucoup plus de variations (\autoref{fig:jVenn_expr}-b), ce phénomène est une surprise car nous nous attendions à voir des recouvrements similaires. Il sera discuté par la suite.
 
 \section*{Localisation des variations de taux d'expression}
+\addcontentsline{toc}{section}{Localisation des variations de taux d'expression}
 
 Des résultats précédents, il découle que les variations du taux d’expression entre paires de gènes peuvent être dues à la présence de différents type de structure au niveau de l’ARNm comme les BIME mais aussi les signaux de transcription. Afin de mieux appréhender la contribution des BIME, nous avons mis en œuvre deux méthodes exploitant les profils d’expression : une approche locale basée sur une fenêtre glissante (cf. page~\pageref{methode_correlation}) et une approche plus globale reposant sur la segmentation (cf. page~\pageref{methode_segmentation}). 
 
 \subsection*{Approche locale}
+\addcontentsline{toc}{subsection}{Approche locale}
 \label{approche_locale}
-Nous avons développé une méthode réalisant un test de corrélation entre les profils d'expression des régions contenant des BIME et un profil modèle de changement d'expression en modifiant la technique décrite page~\pageref{methode_correlation}. Elle a été adaptée pour nous permettre de localiser le point de cassure dans la RIG contenant une BIME. Nous avons privilégié une approche locale en effectuant la recherche de points de cassure dans une fenêtre dont nous avons fixé la taille et qui parcourt des régions d'intérêt pour 2 gènes consécutifs au sein d'un opéron dont le niveau d'expression se différencie. Ces régions d'intérêt commencent à la 1\up{ère} position du gène 1 et finissent à la dernière position du gène 2. Une fois ces régions extraites, le calcul de la couverture base par base a été réalisé à l'aide des BEDtools (Annexe \ref{annexeCode}).
+
+Nous avons développé une méthode réalisant un test de corrélation entre les profils d'expression des régions contenant des BIME et un profil modèle de changement d'expression en modifiant la technique décrite page~\pageref{methode_correlation}. Elle a été adaptée pour nous permettre de localiser le point de cassure dans la RIG contenant une BIME. Nous avons privilégié une approche locale en effectuant la recherche de points de cassure dans une fenêtre dont nous avons fixé la taille et qui parcourt des régions d'intérêt pour 2 gènes consécutifs au sein d'un opéron dont le niveau d'expression se différencie. Ces régions d'intérêt commencent à la 1\up{ère} position du gène 1 et finissent à la dernière position du gène 2. Une fois ces régions extraites, le calcul de la couverture base par base a été réalisé à l'aide des BEDtools (\nameref{annexeCode}).
 
 Nous avons adapté certains paramètres de la méthode originelle. Le choix de la taille de la fenêtre glissante a été motivé par plusieurs raisons, suite à des essais nous sommes arrivés aux conclusions qu'une fenêtre trop petite (100 pb) présente une sensibilité trop importante aux variations locales dues au manque d'uniformité de la couverture (cf. page~\pageref{uniformite_couverture}), alors qu'une fenêtre de taille trop grande (500 pb) produit une perte de sensibilité en lissant les couvertures de chaque moitié de la fenêtre. La taille des BIME a été augmentée de 40 pb de chaque côté (taille moyenne d'une REP) afin d'identifier les points de cassure se situant aux limites de la BIME. Après avoir réalisé une série d'essais, la valeur du seuil de corrélation a été ajustée de 0.7 à 0.5 afin de détecter un nombre de points de cassure suffisamment important, avec une corrélation encore considérée comme forte dans la littérature, sans pour autant obtenir trop de faux positifs du fait du faible seuil de la p-valeur du test de corrélation. Finalement nous avons introduit un filtre supplémentaire quant à la couverture minimale d'un des deux gènes devant être au moins supérieure à 10. Les critères de la méthode sont :
 
@@ -416,6 +525,8 @@ Ces résultats vont également dans le sens de ce que nous avions découvert en 
 Une des faiblesses de cette approche est sa sensibilité aux variations locales des couvertures de reads, en particulier pour les jeux de données avec un faible nombre de réplicats mais également à la sous-représentation systématique des reads au niveau des BIME. Cela conduit à une plus faible sensibilité de la méthode et à une forte propension à prédire des variations multiples d’expression dans la même RIG.
 
 \subsection*{Approche par segmentation}
+\addcontentsline{toc}{subsection}{Approche par segmentation}
+
 Nous avons voulu tester si les faiblesses observées avec la méthode locale peuvent être compensées par une méthode de segmentation n'utilisant pas de comparaison de profils et prenant en compte la globalité de la région étudiée telle que décrite dans la section précédente.
 En reprenant la méthode décrite page~\pageref{methode_segmentation}, nous avons fixé le paramètre $K$ à 4 segments maximum donc 3 points de cassure de façon à vérifier la présence éventuelle de plusieurs de ces points sur la RIG. Ce critère de 4 segment nous permettra de détecter des points cassures pouvant être dus à la fois à la présence de promoteurs, de terminateurs de transcription et de BIME. 
 Dans notre étude, nous nous intéressons aux positions de ces points de cassures lorsqu'au moins un des deux gènes possède une couverture supérieure à 10. Les résultats sont croisés avec la présence de promoteurs ou de terminateurs de transcription dans la RIG et si les deux gènes appartiennent à un opéron, un test  statistique sur la différence d'expression est réalisé avec la même méthodologie que pour la partie~\nameref{expression_operon}. Seuls les paires de gènes dont le test est significatif sont étudiés.
@@ -448,7 +559,9 @@ Nous avons écrit un script R pour présenter les résultats sous forme graphiqu
 Ces résultats sont proches de ceux obtenus sur le \autoref{table:expression} sauf pour le jeux de données M-P4h pour lequel très peu de changements de niveau d'expression sont détectés dans les opérons. La majorité des points de cassure sont détectés sur les BIME, ce qui va dans le sens d'une implication de ces dernières dans la régulation transcriptionnelle. Pour le jeu de données GSE61327\_ALE, la présence de promoteurs et de régulateurs est plus importante et seuls 3 cas sur 15 ont un point de cassure situé en dehors de la BIME (Données non montrées). Le nombre important de points de cassure situés sur la BIME pour les trois jeux de données, 12/15, 5/5 et 2/2, semblent indiquer un rôle des BIME dans la régulation de l'expression des gènes. Plus spécifiquement, si nous ne prenons que les cas sans promoteurs ou terminateurs, 8/15, 4/5 et 2/2, nous nous focalisons uniquement sur le rôle des BIME dans la régulation de l'expression des gènes de l'opéron et pouvons constater qu'elles semblent impliquées. Nous remarquons également que la BIME se trouve localisée à proximité du gène le plus exprimé dans un majorité de cas.
 
 \section*{Évolution des structures des BIME}
-Les analyses précédentes ont produits des résultats en détectant des différences de niveaux d'expressions ainsi que la localisation des points de cassures sur les BIME des gènes des opérons. Nous avons croisé ces résultats afin d'identifier les couples de gènes communs aux 3 méthodes. Nous observons 11 couples pour le jeux de données GSE61327\_ALE, 3 pour HS-15min et un seul pour M-P4h (Annexe \ref{annexeVenn}).
+\addcontentsline{toc}{section}{Évolution des structures des BIME}
+
+Les analyses précédentes ont produits des résultats en détectant des différences de niveaux d'expressions ainsi que la localisation des points de cassures sur les BIME des gènes des opérons. Nous avons croisé ces résultats afin d'identifier les couples de gènes communs aux 3 méthodes. Nous observons 11 couples pour le jeux de données GSE61327\_ALE, 3 pour HS-15min et un seul pour M-P4h (\nameref{annexeVenn}).
 Les résultats obtenus suggèrent qu’au moins certaines BIME pourraient être impliquées dans la régulation de la transcription et/ou de la dégradation des ARNm. Si nous supposons que ce rôle dépend de leur capacité à se replier en une structure secondaire stable, alors ces BIME devraient subirent une pression de sélection positive afin de maintenir cette structure secondaire. Pour tester cette hypothèse, nous avons comparé la stabilité de la structure secondaire de la séquence ancêtre la plus ancienne avec celle présente chez E. coli contemporaines.
 
 \begin{SCfigure}[][h!]
@@ -457,7 +570,7 @@ Les résultats obtenus suggèrent qu’au moins certaines BIME pourraient être 
 \label{fig:ancetre} }
 \end{SCfigure}
 
-Nous nous donc sommes intéressés aux 11 résultats produits par GSE61327\_ALE que nous avons traités par la méthode de reconstruction des séquences ancêtres. Cette méthode produit un arbre phylogénique contenant les séquences ancêtres reconstruites à partir d'un arbre guide ainsi qu'une représentation de l'évolution de l'énergie minimale de la structure secondaire de l'ARN (\autoref{fig:ancetre}). Les résultats de l'analyse sont présentés en Annexe \ref{annexeAncetre}. Seul 10 résultats sont produits car le 11\up{ème} provient d'une BoxC+ unique annotée dans la base de données des REP de l'équipe. Les BoxC ne sont pas des REP et appartiennent à une autre famille d’éléments répétés, mais elles se trouvent souvent associées aux REP. Nous avons jugé préférable de l'exclure. \textcolor{red}{Sur les 10 résultats présentés, celui du couple hydN/hypF n'est pas utilisé pour la suite de l'analyse, car dans ce cas le second gène hypF est plus fortement exprimé sans la présence de promoteur.} L'énergie minimale de la structure secondaire est dépendante de la taille de la séquence de l'alignement (Données non montrées), cependant nous n'observons pas de tendance générale se dégageant sur la variation de cette valeur par rapport à l'énergie minimale de l'état ancêtre le plus éloigné. Nous observons à la fois des cas de stabilisation de la structure secondaire avec une diminution ou une conservation de l'énergie minimale dans 5 BIME sur 10 et des cas de déstabilisation semblant moins prononcés avec une augmentation de l'énergie minimale. Quand aux familles de BIME impliquées, il est intéressant de noter que les BIME-2 sont surreprésentées avec 60\% de présence (30\% sur l'ensemble du génome d'\textit{E. coli K12 MG1655}) au détriment des BIME solitaires et BIME-1.
+Nous nous donc sommes intéressés aux 11 résultats produits par GSE61327\_ALE que nous avons traités par la méthode de reconstruction des séquences ancêtres. Cette méthode produit un arbre phylogénique contenant les séquences ancêtres reconstruites à partir d'un arbre guide ainsi qu'une représentation de l'évolution de l'énergie minimale de la structure secondaire de l'ARN (\autoref{fig:ancetre}). Les résultats de l'analyse sont présentés en \nameref{annexeAncetre}. Seul 10 résultats sont produits car le 11\up{ème} provient d'une BoxC+ unique annotée dans la base de données des REP de l'équipe. Les BoxC ne sont pas des REP et appartiennent à une autre famille d’éléments répétés, mais elles se trouvent souvent associées aux REP. Nous avons jugé préférable de l'exclure. \textcolor{red}{Sur les 10 résultats présentés, celui du couple hydN/hypF n'est pas utilisé pour la suite de l'analyse, car dans ce cas le second gène hypF est plus fortement exprimé sans la présence de promoteur.} L'énergie minimale de la structure secondaire est dépendante de la taille de la séquence de l'alignement (Données non montrées), cependant nous n'observons pas de tendance générale se dégageant sur la variation de cette valeur par rapport à l'énergie minimale de l'état ancêtre le plus éloigné. Nous observons à la fois des cas de stabilisation de la structure secondaire avec une diminution ou une conservation de l'énergie minimale dans 5 BIME sur 10 et des cas de déstabilisation semblant moins prononcés avec une augmentation de l'énergie minimale. Quand aux familles de BIME impliquées, il est intéressant de noter que les BIME-2 sont surreprésentées avec 60\% de présence (30\% sur l'ensemble du génome d'\textit{E. coli K12 MG1655}) au détriment des BIME solitaires et BIME-1.
 
 \begin{SCfigure}[][h!]
 \fbox{\includegraphics[scale=0.5]{figures/boxplot_ancestor_GSE61327_ALE.png}
@@ -465,17 +578,22 @@ Nous nous donc sommes intéressés aux 11 résultats produits par GSE61327\_ALE 
 \label{fig:ancetreBoxplot} }
 \end{SCfigure}
 
-Nous avons ensuite appliqué le même traitement sur les 17 cas où dans un opéron en présence de BIME dans la RIG, nous n'observions pas de DE, ils sont présentés en Annexe \ref{annexeAncetre}. Sur ces 17 couples de gènes, un seul présente une BIME dont la structure secondaire s'est stabilisée, pour 6 cas nous n'avons pas de modification de l'énergie minimale de la structure secondaire et pour les 10 derniers cas nous observons une déstabilisation de la structure secondaire. Les proportions observées de chaque famille de BIME sont comparables aux proportions de chaque familles de BIME du génome d'\textit{E. coli K12} (Données non montrées).
+Nous avons ensuite appliqué le même traitement sur les 17 cas où dans un opéron en présence de BIME dans la RIG, nous n'observions pas de DE, ils sont présentés en \nameref{annexeAncetre}. Sur ces 17 couples de gènes, un seul présente une BIME dont la structure secondaire s'est stabilisée, pour 6 cas nous n'avons pas de modification de l'énergie minimale de la structure secondaire et pour les 10 derniers cas nous observons une déstabilisation de la structure secondaire. Les proportions observées de chaque famille de BIME sont comparables aux proportions de chaque familles de BIME du génome d'\textit{E. coli K12} (Données non montrées).
 
 La comparaison des distributions des différences d'énergie minimale avec la séquence ancêtre en fonction des familles de BIME et une DE des gènes flanquant la BIME (\autoref{fig:ancetreBoxplot}) nous permet d'observer la tendance pour toutes les familles de BIME vers une déstabilisation des structures secondaires dans le cas où il n'y a pas de DE. Cet effet apparaît nettement lorsque l'on s'intéresse aux BIME-2 avec un écart important entre les distributions avec et sans DE. Le cas des BIME atypiques semble similaire, mais est soumis à caution du fait du faible effectif dans le contexte d'une DE. Les BIME-1 sont soumises au même problème mais sans différence de distribution notable. La déstabilisation des BIME solitaires semble plus importante dans les cas de DE.
 Un test de Chi2 d'indépendance sur les effectifs des différentes familles de BIME et en cas de DE ou non a conclu sur une indépendance des distributions (p-valeur : 0.7504).
 
 \chapter*{Discussion}
+\addcontentsline{toc}{chapter}{Discussion}
 
 \section*{Biais de séquençage des REP}
+\addcontentsline{toc}{section}{Biais de séquençage des REP}
+
 La première question que nous nous sommes posés est de savoir si nous pouvions nous fier aux données d'expression des REP. Les résultats de la \autoref{fig:same_expression_operon_point} nous ont permis de constater un déficit du niveau d'expression des REP par rapport à ceux des gènes les flanquant alors que dans le cas des opérons que nous avons étudié nous nous attendions à ce que leur niveau d'expression soit au moins similaire à l'un des deux gènes. Les résultats des méthodes de localisation des points de cassures ont montré un déficit du taux d'expression des BIME du même ordre de grandeur. Plusieurs hypothèses peuvent expliquer ce biais, la première étant liée aux REP en elles-mêmes qui forment des structures secondaires pouvant avoir un effet sur la production de reads lors du séquençage. La seconde hypothèse est liée au caractère répété des REP qui lors de l'alignement avec un logiciel tel que BWA peut produire des alignements à plusieurs endroits avec une valeur de qualité de mapping de zéro, comme nous avons décidé de les filtrer nous perdons certainement de l'information sur la couverture des BIME.
 
 \section*{Expression des gènes dans les opérons et présence de BIME}
+\addcontentsline{toc}{section}{Expression des gènes dans les opérons et présence de BIME}
+
 Grâce à l'indice $I_{expr}$, nous avons pu exploiter simplement les données d'expression de deux gènes consécutifs d'un opéron. En absence de BIME dans la RIG, les résultats sont conformes à ce que nous attendions, une distribution centrée sur zéro indiquant un niveau similaire d'expression des gènes et une distribution aplatie en présence des ET due à la contribution des promoteurs (gène 2 plus exprimé) et des terminateurs de transcription (gène 1 plus exprimé). La présence de BIME dans la RIG a pour effet notable d'augmenter le taux d'expression du gène 1 en présence ou non d'ET (\autoref{fig:expression_operon} (g-h-i)). La taille de la RIG ne semble pas être un facteur expliquant un niveau d'expression supérieur du premier gène, en revanche la localisation de la BIME à proximité du gène 1 paraît être un facteur important puisque dans 14 cas sur 18 observés de différence de niveau d'expression, la BIME se localise plus près du gène possédant le niveau d'expression le plus élevé.
 
 L'étude de l'impact de la présence de promoteurs et de terminateurs de transcription dans la RIG sans BIME nous a démontré que dans tous les cas nous observions une différence avec l'$I_{expr}$ des gènes sans ET dans la RIG, alors qu'en présence de BIME, cette différence disparaît quasi complètement avec toujours un taux d'expression plus élevé du gène 1 (\autoref{table:p-val_reg}). La BIME joue donc un rôle dans le métabolisme de l'ARNm des opérons qui pourrait être celui d'atténuateur de transcription, notamment lorsque celle-ci chevauche un terminateur de transcription (14/39 BIME) ou un rôle de stabilisateur de la partie 5' du transcrit en le protégeant de l'action des exoribonucléases. Ces deux mécanismes mènent à la même constatation sur les données de RNA-Seq, un taux d'expression plus important du gène en amont de la BIME.
@@ -493,15 +611,21 @@ Sur le jeux de données GSE61327\_ALE, 2 cas (\textit{hydN}\_\textit{hypF} et \t
 Quant à l'observation d'une hétérogénéité des gènes DE par rapport à ceux non DE sur les 3 jeux de données (\autoref{fig:jVenn_expr}), nous pouvons émettre deux hypothèses. Soit nous observons un phénomène de régulation différentielle due au rôle des BIME en fonction des différentes conditions expérimentales de chacun des jeux de données, soit que les performances de la méthode statistique utilisée dépendent du jeux de données (nombre de réplicats, taux de couverture moyen). 
 
 \section*{Localisation des points de cassure}
-Les deux méthodes (locale et segmentation) utilisées pour détecter les points de cassures dans la couverture dénotant un changement de niveau d'expression sur les trois jeux de données ont produit un nombre de détection proche, 18 pour la méthode locale et 17 pour la segmentation mais avec quelques nuances (\autoref{fig:bilan}). L'approche locale détecte 4 opérons différents de celle par segmentation qui elle en détecte 3 différents de l'approche locale. Comme nous l'avons vu précédemment, la couverture produite par le RNA-Seq n'est pas uniforme et nous observons également un déficit de couverture sur les BIME. Cela peut produire une détection accrue de faux positifs par la méthode locale, du fait qu'elle travaille sur un fenêtre de taille réduite par rapport à l'ensemble de la région étudiée, malgré le fait que le seuil du test statistique de la corrélation soit bas. Ce phénomène a moins d'impact sur la méthode de segmentation car celle-ci prend en compte la totalité de la région pour définir ses segments. Un autre facteur peut jouer sur les résultats des deux méthodes. Nous l'avons mis en évidence sur l'approche par segmentation, il s'agit du nombre de réplicats par expérience. Nous avons comparé la segmentation de 2 mêmes paires de gènes flanquant une BIME et différentiellement exprimés pour 2 jeux de données, GSE61327\_ALE contenant 8 réplicats et M-P4h constitué de 3 (Annexe \ref{annexeReplicats}). La moyenne de la couverture du gène \textit{dppA} est diminuée d'un facteur 2 pour M-P4h mais une DE a quand même été détectée statistiquement, en revanche aucun point de cassure n'est trouvé. En se focalisant sur l'allure de la courbe de couverture, nous constatons que celle-ci est très différente avec les deux jeux de données. Les 2 courbes présentent de fortes variations, mais les pics dus aux variations sont beaucoup plus rapprochés sur les données à 8 réplicats que sur les données à 3 réplicats. D'autre part, dans le jeux de données à 3 réplicats, les minimums du gène \textit{dppA} sont proches des valeurs du gène \textit{dppB}. Ceci peut certainement perturber les résultats de nos méthodes. Le nombre de réplicats est un facteur important pour augmenter le pouvoir de détection et la précision  d'une expérience de RNA-Seq \citep{Liu2014}. Ce fait pourrait expliquer que moins de points de cassures sont retrouvés sur les jeux de données à 3 réplicats HS-15min et M-P4h, respectivement 5 et 5 par l'approche locale et 5 et 2 par la segmentation, alors que pour GSE61327\_ALE avec ses 8 réplicats nous en trouvons 12 par l'approche locale et 15 par la segmentation.
+\addcontentsline{toc}{section}{Localisation des points de cassure}
+
+Les deux méthodes (locale et segmentation) utilisées pour détecter les points de cassures dans la couverture dénotant un changement de niveau d'expression sur les trois jeux de données ont produit un nombre de détection proche, 18 pour la méthode locale et 17 pour la segmentation mais avec quelques nuances (\autoref{fig:bilan}). L'approche locale détecte 4 opérons différents de celle par segmentation qui elle en détecte 3 différents de l'approche locale. Comme nous l'avons vu précédemment, la couverture produite par le RNA-Seq n'est pas uniforme et nous observons également un déficit de couverture sur les BIME. Cela peut produire une détection accrue de faux positifs par la méthode locale, du fait qu'elle travaille sur un fenêtre de taille réduite par rapport à l'ensemble de la région étudiée, malgré le fait que le seuil du test statistique de la corrélation soit bas. Ce phénomène a moins d'impact sur la méthode de segmentation car celle-ci prend en compte la totalité de la région pour définir ses segments. Un autre facteur peut jouer sur les résultats des deux méthodes. Nous l'avons mis en évidence sur l'approche par segmentation, il s'agit du nombre de réplicats par expérience. Nous avons comparé la segmentation de 2 mêmes paires de gènes flanquant une BIME et différentiellement exprimés pour 2 jeux de données, GSE61327\_ALE contenant 8 réplicats et M-P4h constitué de 3 (\nameref{annexeReplicats}). La moyenne de la couverture du gène \textit{dppA} est diminuée d'un facteur 2 pour M-P4h mais une DE a quand même été détectée statistiquement, en revanche aucun point de cassure n'est trouvé. En se focalisant sur l'allure de la courbe de couverture, nous constatons que celle-ci est très différente avec les deux jeux de données. Les 2 courbes présentent de fortes variations, mais les pics dus aux variations sont beaucoup plus rapprochés sur les données à 8 réplicats que sur les données à 3 réplicats. D'autre part, dans le jeux de données à 3 réplicats, les minimums du gène \textit{dppA} sont proches des valeurs du gène \textit{dppB}. Ceci peut certainement perturber les résultats de nos méthodes. Le nombre de réplicats est un facteur important pour augmenter le pouvoir de détection et la précision  d'une expérience de RNA-Seq \citep{Liu2014}. Ce fait pourrait expliquer que moins de points de cassures sont retrouvés sur les jeux de données à 3 réplicats HS-15min et M-P4h, respectivement 5 et 5 par l'approche locale et 5 et 2 par la segmentation, alors que pour GSE61327\_ALE avec ses 8 réplicats nous en trouvons 12 par l'approche locale et 15 par la segmentation.
 
 Sur les jeux de données GSE61327\_ALE et HS-15min, pour lesquels l'opéron \textit{malEFG} est exprimé, nous observons des résultats similaires à l'expérience menée par Khemici et Carpousis \citep{Khemici2004}, avec une détection d'un point de cassure par les deux méthodes sur la BIME située entre \textit{malE} et \textit{malF} et un taux d'expression plus important de \textit{malE} sans la présence d'éléments autre que la BIME dans la région inter-génique. La structure secondaire formée par les REP Z\up{2} et Y de la BIME atypique jouant un rôle de stabilisation de \textit{malE}.
 
 
 \section*{Évolution des structures secondaires}
+\addcontentsline{toc}{section}{Évolution des structures secondaires}
+
 Grâce à la reconstruction des séquences ancêtres, nous avons pu étudier l'évolution des structures secondaires des BIME en suivant la variation de leur énergie minimale. Sur les données que nous avons étudiées \autoref{fig:ancetreBoxplot}, nous avons observé une déstabilisation plus prononcée des structures secondaires pour les BIME entourées de gènes non DE et plus particulièrement des BIME-2 et atypiques. Quant aux cas des BIME entourées de gènes DE, ces mêmes familles de BIME se stabilisent ou restent inchangées alors que les BIME solitaires se déstabilisent. Nous pouvons avancer l'hypothèse que du fait de la structure répétée en paires de REP Z\up{2} et Y des BIME-2 ou multiples combinaisons Z\up{1}, Z\up{2} et Y des BIME atypiques engendrant une augmentation de la taille des structures secondaires qu'elles forment, si elles sont intégrées dans un opérons et produisent un effet positif sur le métabolisme du transcrit, elles auront tendance à se stabiliser. Le cas des BIME solitaires et leur déstabilisation peut être la résultante du phénomène inverse et être des vestiges d'autres familles de BIME en cours de dégradation. Ces résultats sont très préliminaires. En effet, il serait utile de comptabiliser les substitutions et insertions/délétions observées entre la séquence ancêtre et la séquence d'\textit{E. coli} K12. De même, le décompte des mutations compensatrices pourrait nous aider à estimer s'il y a une présence de sélection positive pour le maintien des structures secondaires.
 
 \chapter*{Conclusions et perspectives}
+\addcontentsline{toc}{chapter}{Conclusions et perspectives}
+
 \textcolor{red}{De nombreuses REP sont présentes dans le génome qui composent un nombre de BIME moins important et nous n'avons étudié qu'une faible proportion de celles-ci, uniquement présentes dans les opérons. Le modèle évolutif qui pourrait s'appliquer dépendrait de leur effet au moment de leur insertion. En cas d'effet délétère, la non conservation de leur structure, pour un effet neutre leur conservation et de rare cas de recrutement avec un effet positif. }
 Au niveau biologique, les résultats semblent indiquer que dans certains cas les BIME jouent un rôle sur l'expression des gènes les flanquant dans un opéron, avec dans une grande majorité de cas un taux d'expression plus élevé du gène en amont par rapport à celui en aval. Leur contribution dans le métabolisme des transcrits ne peut pas clairement être défini avec les jeux de données dont nous disposons mais il semble s'orienter vers une fonction lors de la transcription en tant que \textbf{terminateur/atténuateur}, surtout dans les cas de chevauchement avec des terminateurs de transcription annotés, mais aussi intervenir dans la dégradation des transcrits avec une fonction de \textbf{stabilisation} en protégeant sa partie 5' de l'action du dégradosome grâce à la formation d'une structure secondaire stable (notamment pour les BIME-2  et atypiques), bloquant l'action des exoribonucléases jusqu'à l'intervention des Poly(A) polymérase déstabilisant cette structure secondaire. 
 Afin d'aller plus loin dans l'analyse, il serait intéressant de réaliser 2 types d'expérience de RNA-Seq. La 1\up{ère} élaborée avec une souche sauvage et une souche pour laquelle le gène \textit{Rne} codant pour la Rnase E première actrice du dégradosome, serait muté empêchant sa \textcolor{red}{fonctionnalité}. Cela nous permettrait de vérifier si les gènes en aval de la BIME dans les opérons dont le taux d'expression est plus faible que celui de ceux en aval dans la condition sauvage ne seraient plus différentiellement exprimés dans la condition \textit{Rne-}. La 2\up{nde} serait une expérience bloquant la transcription avec un échantillonnage dans le temps pour suivre la dégradation des transcrits.
@@ -513,16 +637,19 @@ Le nombre de réplicats est un point très sensible en RNA-Seq et dans le cadre 
 
 % fin de la numérotation des pages
 \renewcommand{\thepage}{}
+
 % affichage du glossaire
 \printglossary[type=\acronymtype ,title=Glossaire]
 
+
+
 % bibliographie
 \bibliography{biblio_rapport}
-
+\thispagestyle{empty}
 % annexes
 \appendix
 
-\chapter{}
+\chapter*{Annexe A}
 \label{annexeCode}
 
 Décompression du fichier au format \texttt{SRA} au format \texttt{fastq}, puis contrôle qualité des reads.
@@ -574,7 +701,7 @@ awk 'BEGIN{OFS = "\t"} {gsub(/\./,"*",$6); print }' \
 cov_perBase_strandToFix.bed > cov_perBase.bed
 \end{lstlisting}
 
-\chapter{}
+\chapter*{Annexe B}
 \label{annexeOperon}
 \begin{figure}[h!]
 \centerline{\includegraphics[scale=0.7]{figures/supData/genesOperon_histoDens_HS15.png}}
@@ -586,7 +713,7 @@ cov_perBase_strandToFix.bed > cov_perBase.bed
 \caption{\textbf{Niveau d'expression des gènes consécutifs dans les opérons pour le jeux de données M-P4h.}}
 \end{figure}
 
-\chapter{}
+\chapter*{Annexe C}
 \label{annexeVenn}
 \begin{figure}[h!]
 \centering
@@ -596,7 +723,7 @@ cov_perBase_strandToFix.bed > cov_perBase.bed
 \caption{\textbf{Nombre de résultats trouvés pour chacune des 3 méthodes, Expression, corrélation de profils d'expression et segmentation. (a)} Données GSE61327\_ALE, 32 couples de gènes flanquant un BIME sont exprimés, pour 17 d'entre eux nous observons une DE et 11 sont retrouvés par les 3 méthodes. \textbf{(b)} Données HS-15min, 20 couples de gènes flanquant un BIME sont exprimés, pour 8 d'entre eux nous observons une DE et 3 sont retrouvés par les 3 méthodes. \textbf{(c)} Données M-P4h, 30 couples de gènes flanquant un BIME sont exprimés, pour 12 d'entre eux nous observons une DE et 1 seul est retrouvé par les 3 méthodes.} 
 \end{figure}
 
-\chapter{}
+\chapter*{Annexe D}
 \label{annexeAncetre}
 \begin{table}[h!]
 \centerline{
@@ -674,7 +801,7 @@ cov_perBase_strandToFix.bed > cov_perBase.bed
 \caption{\textbf{Résultats de la reconstruction des états ancêtres et de l'étude des structures secondaires pour les BIME des couples de gènes consécutifs sans différence d'expression dans les opérons.} }
 \end{table}
 
-\chapter{}
+\chapter*{Annexe E}
 \label{annexeReplicats}
 \begin{figure}[h!]
 \centering
