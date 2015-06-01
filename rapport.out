@@ -1,33 +1,33 @@
 \BOOKMARK [0][-]{chapter*.5}{Introduction}{}% 1
 \BOOKMARK [1][-]{section*.6}{Caract\351ristiques des REP et organisations en BIME}{chapter*.5}% 2
 \BOOKMARK [1][-]{section*.7}{Propri\351t\351s associ\351es aux REP}{chapter*.5}% 3
-\BOOKMARK [1][-]{section*.8}{ARN messagers chez E. coli}{chapter*.5}% 4
-\BOOKMARK [2][-]{section*.9}{Unit\351s de transcription}{section*.8}% 5
-\BOOKMARK [2][-]{section*.10}{Stabilit\351 des ARNm}{section*.8}% 6
-\BOOKMARK [2][-]{section*.12}{Terminaison de la transcription}{section*.8}% 7
-\BOOKMARK [1][-]{section*.14}{Objectifs}{chapter*.5}% 8
-\BOOKMARK [0][-]{chapter*.15}{Mat\351riel \046 M\351thodes}{}% 9
-\BOOKMARK [1][-]{section*.17}{Jeux de donn\351es}{chapter*.15}% 10
-\BOOKMARK [1][-]{section*.18}{Fichiers d'annotations}{chapter*.15}% 11
-\BOOKMARK [1][-]{section*.19}{Alignement des reads}{chapter*.15}% 12
-\BOOKMARK [1][-]{section*.20}{Int\351gration des donn\351es}{chapter*.15}% 13
-\BOOKMARK [1][-]{section*.21}{Visualisation du mapping}{chapter*.15}% 14
-\BOOKMARK [1][-]{section*.23}{Cr\351ation de la table de comptages et normalisation}{chapter*.15}% 15
-\BOOKMARK [1][-]{section*.24}{D\351termination des transcrits}{chapter*.15}% 16
-\BOOKMARK [1][-]{section*.26}{Segmentation}{chapter*.15}% 17
-\BOOKMARK [1][-]{section*.27}{Reconstruction des s\351quences anc\352tres et structures secondaires}{chapter*.15}% 18
-\BOOKMARK [0][-]{chapter*.28}{R\351sultats}{}% 19
-\BOOKMARK [1][-]{section*.29}{Couverture du g\351nome}{chapter*.28}% 20
-\BOOKMARK [1][-]{section*.31}{BIME et unit\351s de transcription}{chapter*.28}% 21
-\BOOKMARK [1][-]{section*.32}{Effet global dans les unit\351s de transcription}{chapter*.28}% 22
-\BOOKMARK [1][-]{section*.35}{Impact des BIME au niveau des paires de g\350nes}{chapter*.28}% 23
-\BOOKMARK [1][-]{section*.38}{Localisation des variations de taux d'expression}{chapter*.28}% 24
-\BOOKMARK [2][-]{section*.39}{Approche locale}{section*.38}% 25
-\BOOKMARK [2][-]{section*.42}{Approche par segmentation}{section*.38}% 26
-\BOOKMARK [1][-]{section*.45}{\311volution des structures des BIME}{chapter*.28}% 27
-\BOOKMARK [0][-]{chapter*.48}{Discussion}{}% 28
-\BOOKMARK [1][-]{section*.49}{Biais de s\351quen\347age des REP}{chapter*.48}% 29
-\BOOKMARK [1][-]{section*.50}{Expression des g\350nes dans les op\351rons et pr\351sence de BIME}{chapter*.48}% 30
-\BOOKMARK [1][-]{section*.52}{Localisation des points de cassure}{chapter*.48}% 31
-\BOOKMARK [1][-]{section*.53}{\311volution des structures secondaires}{chapter*.48}% 32
-\BOOKMARK [0][-]{chapter*.54}{Conclusions et perspectives}{}% 33
+\BOOKMARK [1][-]{section*.9}{ARN messagers chez E. coli}{chapter*.5}% 4
+\BOOKMARK [2][-]{section*.10}{Unit\351s de transcription}{section*.9}% 5
+\BOOKMARK [2][-]{section*.11}{Stabilit\351 des ARNm}{section*.9}% 6
+\BOOKMARK [2][-]{section*.13}{Terminaison de la transcription}{section*.9}% 7
+\BOOKMARK [1][-]{section*.15}{Objectifs}{chapter*.5}% 8
+\BOOKMARK [0][-]{chapter*.16}{Mat\351riel \046 M\351thodes}{}% 9
+\BOOKMARK [1][-]{section*.18}{Jeux de donn\351es}{chapter*.16}% 10
+\BOOKMARK [1][-]{section*.19}{Fichiers d'annotations}{chapter*.16}% 11
+\BOOKMARK [1][-]{section*.20}{Alignement des reads}{chapter*.16}% 12
+\BOOKMARK [1][-]{section*.21}{Int\351gration des donn\351es}{chapter*.16}% 13
+\BOOKMARK [1][-]{section*.22}{Visualisation du mapping}{chapter*.16}% 14
+\BOOKMARK [1][-]{section*.24}{Cr\351ation de la table de comptages et normalisation}{chapter*.16}% 15
+\BOOKMARK [1][-]{section*.25}{D\351termination des transcrits}{chapter*.16}% 16
+\BOOKMARK [1][-]{section*.27}{Segmentation}{chapter*.16}% 17
+\BOOKMARK [1][-]{section*.28}{Reconstruction des s\351quences anc\352tres et structures secondaires}{chapter*.16}% 18
+\BOOKMARK [0][-]{chapter*.29}{R\351sultats}{}% 19
+\BOOKMARK [1][-]{section*.30}{Couverture du g\351nome}{chapter*.29}% 20
+\BOOKMARK [1][-]{section*.32}{BIME et unit\351s de transcription}{chapter*.29}% 21
+\BOOKMARK [1][-]{section*.33}{Effet global dans les unit\351s de transcription}{chapter*.29}% 22
+\BOOKMARK [1][-]{section*.36}{Impact des BIME au niveau des paires de g\350nes}{chapter*.29}% 23
+\BOOKMARK [1][-]{section*.39}{Localisation des variations de taux d'expression}{chapter*.29}% 24
+\BOOKMARK [2][-]{section*.40}{Approche locale}{section*.39}% 25
+\BOOKMARK [2][-]{section*.43}{Approche par segmentation}{section*.39}% 26
+\BOOKMARK [1][-]{section*.46}{\311volution des structures des BIME}{chapter*.29}% 27
+\BOOKMARK [0][-]{chapter*.49}{Discussion}{}% 28
+\BOOKMARK [1][-]{section*.50}{Biais de s\351quen\347age des REP}{chapter*.49}% 29
+\BOOKMARK [1][-]{section*.51}{Expression des g\350nes dans les op\351rons et pr\351sence de BIME}{chapter*.49}% 30
+\BOOKMARK [1][-]{section*.53}{Localisation des points de cassure}{chapter*.49}% 31
+\BOOKMARK [1][-]{section*.54}{\311volution des structures secondaires}{chapter*.49}% 32
+\BOOKMARK [0][-]{chapter*.55}{Conclusions et perspectives}{}% 33

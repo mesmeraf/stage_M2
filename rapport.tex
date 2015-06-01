@@ -23,6 +23,7 @@
 \usepackage{multirow}
 \usepackage{colortbl}
 \usepackage{rotating}
+\usepackage{fancyhdr}
 
 \newcommand{\hsp}{\hspace{20pt}}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
@@ -137,19 +138,37 @@ Langendijk-Genevaux, Mathias Weyder et Arnaud Frèche pour leur soutien et les m
 
 Je remercie aussi Christine Gaspin qui a généreusement accepté d'être rapportrice de mon travail et a consacré un temps précieux à la lecture de ce rapport.
 
+\end{onehalfspace}
+
+
 \chapter*{Résumé}
 \thispagestyle{empty}
+
+Les REP (Repetitive Extragenic Palindromic sequences) ont été découvertes pour la première fois chez les entérobactéries. Des travaux récents ont révélé que les REP étaient largement répandues dans le règne bactérien. Chez \textit{Escherichia coli} elles représentent plus de 1 \% du génome et sont classées en trois familles. Elles peuvent être organisées en cluster nommés BIME (Bacterial Interspersed Mosaic Element) dont le nombre de copies dans les génomes est variable. Le rôle exact des REP n’est pas clairement défini, des hypothèses sont avancées sur leur implication dans la régulation de l’expression des gènes en tant que terminateur de transcription ou dans la dégradation de l'ARN messager comme stabilisateur de la partie 5’ du transcrit.
+
+L'objectif
 
 \chapter*{Abstract}
 \thispagestyle{empty}
 
-\thispagestyle{empty}
+
+\begin{onehalfspace}
+
+% efface la numérotation de page pour le sommaire
+\cleardoublepage
+\pagenumbering{gobble}
+	
 \tableofcontents
-\thispagestyle{empty}
+
+% recommence la numérotation
+\cleardoublepage
+\pagenumbering{arabic}
+
 
 \chapter*{Introduction}
 \setcounter{page}{1}
 \addcontentsline{toc}{chapter}{Introduction}
+
 En 1982, la découverte par Higgins de nouveaux éléments génétiques communs dans les régions intercistroniques des opérons de \textit{Escherichia coli} et \textit{Salmonella typhimurium} a constitué le premier pas de la recherche sur les \gls{rep} \citep{Higgins1982}. En 1991, Gilson \textit{et al.} ont mis en évidence l'organisation en clusters de ces REP \citep{Gilson1991}. Ces clusters ont été appelés \gls{bime}. Chez \textit{E. coli} en 1994, Bachelier et son équipe ont réussi à catégoriser les REP constituant les BIME en 2 types Y et Z, constituants 3 motifs Y, Z\textsuperscript{1}, Z\textsuperscript{2}  \citep{Bachellier1994}.
  
 Les REP constituent une part non négligeable du génome bactérien, chez \textit{E. coli} K12 ou \textit{S. typhimurium} elles représentent environ 1\% de celui-ci \citep{Gilson1991}. Nous les retrouvons chez de nombreux règnes bactériens, notamment chez les pathogènes humains tels que \textit{E. coli, Salmonella enterica, Neisseria meningitidis, Mycobacterium tuberculosis et Pseudomonas aeruginosa} mais également chez des pathogènes des plantes comme \textit{Agrobacterium tumefaciens} ou chez des bactéries ubiquitaires, \textit{Deinococcus radiodurans} ou \textit{Pseudomonas putida} par exemple. Les travaux précédents de l'équipe ont permis l'annotation des REP au sein des génomes d'\textit{E. coli} et \textit{Shigella} et de mettre en évidence le lien existant entre la prolifération des REP et le gène $tnpA_{REP}$ \citep{Weyder2013,Bosc2014}, ainsi que la reconstruction des états ancêtres des REP \citep{Bosc2014}.  \textcolor{red}{Le rôle exact des REP n'est pas clairement défini, des hypothèses sont avancées sur leur implication dans la régulation de l'expression des gènes, que ce soit en tant que terminateur de transcription ou comme stabilisateur de la partie 5' du transcrit.}
@@ -163,18 +182,18 @@ Les REP constituent une part non négligeable du génome bactérien, chez \texti
 \label{fig:rep_bime} 
 \end{figure}
 
-Chez \textit{E. coli}, la taille des REP est d'environ 40 nucléotides, la classification Y, Z\textsuperscript{1}, Z\textsuperscript{2} est basée sur leur séquence primaire. Par convention, une REP en orientation inversée est nommée iREP (inversed REP) \citep{Ton-Hoang2012}. Un tétra-nucléotide caractéristique de séquence GTAC est présent à l'extrémité 5' des REP, sa séquence complémentaire est CTAC en 3' pour les iREP. Les séquences consensus des différentes classes de REP partagent des nucléotides conservés (\autoref{fig:rep_bime}A). La structure secondaire des REP est caractérisée par sa forme en tige-boucle, le caractère palindromique permet la formation de la tige malgré un mésappariement situé dans la partie centrale de celle-ci (\autoref{fig:rep_bime}B) permettant la reconnaissance par $tnpA_{REP}$. Une classification a été adoptée comportant 3 classes \citep{Bachellier1997}, les BIME-1 composées de REP Z\textsuperscript{1} et Y apparaissant en paires uniques. Les BIME-2 constituées de Z\textsuperscript{2} et de Y, apparaissant en copies multiples de cette paire. La troisième catégorie est constituée des BIME dites atypiques qui sont des chimères de BIME-1 et BIME-2, comportant différentes combinaisons de Y, Z\textsuperscript{1}, Z\textsuperscript{2}. Tout comme les BIME-2, nous les retrouvons sous forme de copies multiples (\autoref{fig:rep_bime}C). Les REP peuvent former des structures secondaires avec elles-même, mais également entre elles lorsqu'elles sont organisées sous forme de BIME \textcolor{red}{à quel endroit cette figure? (\autoref{fig:malEF_rep})}.
-
-\begin{figure}[ht]
-\centerline{\includegraphics[scale=0.5]{figures/malEF_rep.png}}
-\caption{\textbf{Structure ARN des REP au sein de l’opéron \textit{malEFG}.} Y, Z\textsuperscript{2} et Y indiquent la séquence des REP dans l'espace inter-génique de malE-malF. Bien que Y et Z\textsuperscript{2} puissent former des structures tige-boucles par elles mêmes, elles s'apparient ensemble pour former une région étendue en grande partie à double brin (70\% des nucléotides sont appariés). La séquence affichée provient du génome d'\textit{E. coli K12}. La région REP-stabilized RNA (RSR) indique l'extrémité 3′ du messager malE mature, qui s'étend de 3 à 9 nucléotides depuis la base de la tige-boucle formée par Y et Z\textsuperscript{2}. Les codons STOP de  malE et START de malF sont encadrés. SD représente la séquence Shine–Dalgarno nécessaire à l'initiation de la traduction de malF. \citep{Khemici2004}.}
-\label{fig:malEF_rep} 
-\end{figure}
+Chez \textit{E. coli}, la taille des REP est d'environ 40 nucléotides, la classification Y, Z\textsuperscript{1}, Z\textsuperscript{2} est basée sur leur séquence primaire. Par convention, une REP en orientation inversée est nommée iREP (inversed REP) \citep{Ton-Hoang2012}. Un tétra-nucléotide caractéristique de séquence GTAC est présent à l'extrémité 5' des REP, sa séquence complémentaire est CTAC en 3' pour les iREP. Les séquences consensus des différentes classes de REP partagent des nucléotides conservés (\autoref{fig:rep_bime}A). La structure secondaire des REP est caractérisée par sa forme en tige-boucle, le caractère palindromique permet la formation de la tige malgré un mésappariement situé dans la partie centrale de celle-ci (\autoref{fig:rep_bime}B) permettant la reconnaissance par $tnpA_{REP}$. Une classification a été adoptée comportant 3 classes \citep{Bachellier1997}, les BIME-1 composées de REP Z\textsuperscript{1} et Y apparaissant en paires uniques. Les BIME-2 constituées de Z\textsuperscript{2} et de Y, apparaissant en copies multiples de cette paire. La troisième catégorie est constituée des BIME dites atypiques qui sont des chimères de BIME-1 et BIME-2, comportant différentes combinaisons de Y, Z\textsuperscript{1}, Z\textsuperscript{2}. Tout comme les BIME-2, nous les retrouvons sous forme de copies multiples (\autoref{fig:rep_bime}C). Les REP peuvent former des structures secondaires avec elles-même, mais également entre elles lorsqu'elles sont organisées sous forme de BIME.
 
 \section*{Propriétés associées aux REP}
 \addcontentsline{toc}{section}{Propriétés associées aux REP}
 
-La littérature décrit de nombreuses fonctions hypothétiques associées aux REP au niveau structurel du génome, au niveau de l'ADN et au niveau de l'ARN. Sur un plan structurel, les REP ont été décrites comme jouant un rôle dans les événements de \textbf{recombinaisons homologues} \citep{Kofoid2003} et les BIME ont été décrites comme des sites privilégiés pour \textbf{l'insertion de séquences d'ADN mobiles} comme certaines familles d'IS (Insertion Sequence) \citep{Bachellier1997,Clement1999,Choi2003,Tobes2005}. Au niveau de l'ADN, les REP sont capables de \textbf{lier plusieurs facteurs protéiques} tels que l'ADN Gyrase \citep{Espeli1997} et l'ADN polymérase \citep{Gilson1990}. Plus spécifiquement, la BIME-1 peut \textbf{lier l'\textit{IHF} (Integrated Host Facteur) sur son linker} \citep{Boccard1993} qui peut être notamment responsable de l'\textbf{initiation de la transcription et d’événements de recombinaisons sites spécifiques} \citep{Goosen1995}. Au plan de l'ARN, lorsqu'elles sont transcrites, les REP joueraient un rôle dans la \textbf{stabilisation de l'ARNm} grâce à leur structure en tige-boucle \citep{Newbury1987,Espeli2001,Khemici2004,Aguena2009}, la \textbf{terminaison de la transcription} \citep{Gilson1986} et \textbf{le contrôle de la traduction} \citep{Stern1988}. 
+La littérature décrit de nombreuses fonctions hypothétiques associées aux REP au niveau structurel du génome, au niveau de l'ADN et au niveau de l'ARN. Sur un plan structurel, les REP ont été décrites comme jouant un rôle dans les événements de \textbf{recombinaisons homologues} \citep{Kofoid2003} et les BIME ont été décrites comme des sites privilégiés pour \textbf{l'insertion de séquences d'ADN mobiles} comme certaines familles d'IS (Insertion Sequence) \citep{Bachellier1997,Clement1999,Choi2003,Tobes2005}. Au niveau de l'ADN, les REP sont capables de \textbf{lier plusieurs facteurs protéiques} tels que l'ADN Gyrase \citep{Espeli1997} et l'ADN polymérase \citep{Gilson1990}. Plus spécifiquement, la BIME-1 peut \textbf{lier l'\textit{IHF} (Integrated Host Facteur) sur son linker} \citep{Boccard1993} qui peut être notamment responsable de l'\textbf{initiation de la transcription et d’événements de recombinaisons sites spécifiques} \citep{Goosen1995}. Au plan de l'ARN, lorsqu'elles sont transcrites, les REP joueraient un rôle dans la \textbf{stabilisation de l'ARNm} grâce à leur structure en tige-boucle (\autoref{fig:malEF_rep}) \citep{Newbury1987,Espeli2001,Khemici2004,Aguena2009}, la \textbf{terminaison de la transcription} \citep{Gilson1986} et \textbf{le contrôle de la traduction} \citep{Stern1988}. 
+
+\begin{SCfigure}[][h!]
+\fbox{\includegraphics[scale=0.63]{figures/malEF_rep.png}
+\caption{\textbf{Structure ARN des REP au sein de l’opéron \textit{malEFG}.} Y, Z\textsuperscript{2} et Y indiquent la séquence des REP dans l'espace inter-génique de \textit{malE-malF}. Bien que Y et Z\textsuperscript{2} puissent former des structures tige-boucles par elles mêmes, elles s'apparient ensemble pour former une région étendue en grande partie à double brin (70\% des nucléotides sont appariés). La séquence affichée provient du génome d'\textit{E. coli K12}. Les codons STOP de  \textit{malE} et START de \textit{malF} sont encadrés. SD représente la séquence Shine–Dalgarno nécessaire à l'initiation de la traduction de \textit{malF}. La région REP-stabilized RNA (RSR) indique l'extrémité 3′ du messager \textit{malE} mature, qui s'étend de 3 à 9 nucléotides depuis la base de la tige-boucle formée par Y et Z\textsuperscript{2} qui stabilise cette partie de l'opéron codant pour la protéine affine du transporteur ABC. \citep{Khemici2004}.}
+\label{fig:malEF_rep}}
+\end{SCfigure}
 
 \section*{ARN messagers chez \textit{E. coli}}
 \addcontentsline{toc}{section}{ARN messagers chez \textit{E. coli}}
@@ -463,7 +482,7 @@ Sur les résultats obtenus, nous constatons tout d'abord une hétérogénéité 
 \label{fig:jVenn_expr}}}
 \end{SCfigure}
 
-Nous avons également comparé les paires de gènes flanquant un BIME qui sont exprimés dans les trois jeux de données. 37 paires de gènes sont exprimées dans les trois jeux de données et 4 dans deux jeux de données (un opéron pouvant contenir plusieurs BIME), ce qui nous indique une expression de tous ces opérons indépendamment du jeux de données (\autoref{fig:jVenn_expr}-a). En revanche, si nous nous intéressons aux paires de gènes DE nous observons beaucoup plus de variations (\autoref{fig:jVenn_expr}-b), ce phénomène est une surprise car nous nous attendions à voir des recouvrements similaires. Il sera discuté par la suite.
+Nous avons également comparé les paires de gènes flanquant un BIME qui sont exprimés dans les trois jeux de données. 35 paires de gènes sont exprimées dans les trois jeux de données et 4 dans deux jeux de données (un opéron pouvant contenir plusieurs BIME), ce qui nous indique une expression de tous ces opérons indépendamment du jeux de données (\autoref{fig:jVenn_expr}-a). En revanche, si nous nous intéressons aux paires de gènes DE nous observons beaucoup plus de variations (\autoref{fig:jVenn_expr}-b), ce phénomène est une surprise car nous nous attendions à voir des recouvrements similaires. Il sera discuté par la suite.
 
 \section*{Localisation des variations de taux d'expression}
 \addcontentsline{toc}{section}{Localisation des variations de taux d'expression}
@@ -615,7 +634,7 @@ Quant à l'observation d'une hétérogénéité des gènes DE par rapport à ceu
 
 Les deux méthodes (locale et segmentation) utilisées pour détecter les points de cassures dans la couverture dénotant un changement de niveau d'expression sur les trois jeux de données ont produit un nombre de détection proche, 18 pour la méthode locale et 17 pour la segmentation mais avec quelques nuances (\autoref{fig:bilan}). L'approche locale détecte 4 opérons différents de celle par segmentation qui elle en détecte 3 différents de l'approche locale. Comme nous l'avons vu précédemment, la couverture produite par le RNA-Seq n'est pas uniforme et nous observons également un déficit de couverture sur les BIME. Cela peut produire une détection accrue de faux positifs par la méthode locale, du fait qu'elle travaille sur un fenêtre de taille réduite par rapport à l'ensemble de la région étudiée, malgré le fait que le seuil du test statistique de la corrélation soit bas. Ce phénomène a moins d'impact sur la méthode de segmentation car celle-ci prend en compte la totalité de la région pour définir ses segments. Un autre facteur peut jouer sur les résultats des deux méthodes. Nous l'avons mis en évidence sur l'approche par segmentation, il s'agit du nombre de réplicats par expérience. Nous avons comparé la segmentation de 2 mêmes paires de gènes flanquant une BIME et différentiellement exprimés pour 2 jeux de données, GSE61327\_ALE contenant 8 réplicats et M-P4h constitué de 3 (\nameref{annexeReplicats}). La moyenne de la couverture du gène \textit{dppA} est diminuée d'un facteur 2 pour M-P4h mais une DE a quand même été détectée statistiquement, en revanche aucun point de cassure n'est trouvé. En se focalisant sur l'allure de la courbe de couverture, nous constatons que celle-ci est très différente avec les deux jeux de données. Les 2 courbes présentent de fortes variations, mais les pics dus aux variations sont beaucoup plus rapprochés sur les données à 8 réplicats que sur les données à 3 réplicats. D'autre part, dans le jeux de données à 3 réplicats, les minimums du gène \textit{dppA} sont proches des valeurs du gène \textit{dppB}. Ceci peut certainement perturber les résultats de nos méthodes. Le nombre de réplicats est un facteur important pour augmenter le pouvoir de détection et la précision  d'une expérience de RNA-Seq \citep{Liu2014}. Ce fait pourrait expliquer que moins de points de cassures sont retrouvés sur les jeux de données à 3 réplicats HS-15min et M-P4h, respectivement 5 et 5 par l'approche locale et 5 et 2 par la segmentation, alors que pour GSE61327\_ALE avec ses 8 réplicats nous en trouvons 12 par l'approche locale et 15 par la segmentation.
 
-Sur les jeux de données GSE61327\_ALE et HS-15min, pour lesquels l'opéron \textit{malEFG} est exprimé, nous observons des résultats similaires à l'expérience menée par Khemici et Carpousis \citep{Khemici2004}, avec une détection d'un point de cassure par les deux méthodes sur la BIME située entre \textit{malE} et \textit{malF} et un taux d'expression plus important de \textit{malE} sans la présence d'éléments autre que la BIME dans la région inter-génique. La structure secondaire formée par les REP Z\up{2} et Y de la BIME atypique jouant un rôle de stabilisation de \textit{malE}.
+Sur les jeux de données GSE61327\_ALE et HS-15min, pour lesquels l'opéron \textit{malEFG} est exprimé, nous observons des résultats similaires à l'expérience menée par Khemici et Carpousis \citep{Khemici2004}, avec une détection d'un point de cassure par les deux méthodes sur la BIME située entre \textit{malE} et \textit{malF} et un taux d'expression plus important de \textit{malE} sans la présence d'éléments autres que la BIME dans la région inter-génique. La structure secondaire formée par les REP Z\up{2} et Y de la BIME atypique jouant un rôle de stabilisation de \textit{malE}.
 
 
 \section*{Évolution des structures secondaires}
@@ -626,22 +645,24 @@ Grâce à la reconstruction des séquences ancêtres, nous avons pu étudier l'�
 \chapter*{Conclusions et perspectives}
 \addcontentsline{toc}{chapter}{Conclusions et perspectives}
 
-\textcolor{red}{De nombreuses REP sont présentes dans le génome qui composent un nombre de BIME moins important et nous n'avons étudié qu'une faible proportion de celles-ci, uniquement présentes dans les opérons. Le modèle évolutif qui pourrait s'appliquer dépendrait de leur effet au moment de leur insertion. En cas d'effet délétère, la non conservation de leur structure, pour un effet neutre leur conservation et de rare cas de recrutement avec un effet positif. }
-Au niveau biologique, les résultats semblent indiquer que dans certains cas les BIME jouent un rôle sur l'expression des gènes les flanquant dans un opéron, avec dans une grande majorité de cas un taux d'expression plus élevé du gène en amont par rapport à celui en aval. Leur contribution dans le métabolisme des transcrits ne peut pas clairement être défini avec les jeux de données dont nous disposons mais il semble s'orienter vers une fonction lors de la transcription en tant que \textbf{terminateur/atténuateur}, surtout dans les cas de chevauchement avec des terminateurs de transcription annotés, mais aussi intervenir dans la dégradation des transcrits avec une fonction de \textbf{stabilisation} en protégeant sa partie 5' de l'action du dégradosome grâce à la formation d'une structure secondaire stable (notamment pour les BIME-2  et atypiques), bloquant l'action des exoribonucléases jusqu'à l'intervention des Poly(A) polymérase déstabilisant cette structure secondaire. 
-Afin d'aller plus loin dans l'analyse, il serait intéressant de réaliser 2 types d'expérience de RNA-Seq. La 1\up{ère} élaborée avec une souche sauvage et une souche pour laquelle le gène \textit{Rne} codant pour la Rnase E première actrice du dégradosome, serait muté empêchant sa \textcolor{red}{fonctionnalité}. Cela nous permettrait de vérifier si les gènes en aval de la BIME dans les opérons dont le taux d'expression est plus faible que celui de ceux en aval dans la condition sauvage ne seraient plus différentiellement exprimés dans la condition \textit{Rne-}. La 2\up{nde} serait une expérience bloquant la transcription avec un échantillonnage dans le temps pour suivre la dégradation des transcrits.
+De nombreuses REP regroupées en BIME sont présentes dans le génome d'\textit{E. coli} K12 MG1655, nous avons étudié les 39 BIME présentes dans les opérons.
 
-Du point de vue méthodologique, l'approche par segmentation pour la localisation de changement d'expression paraît plus appropriée car elle prend en compte la globalité de la région étudiée et est moins sensible aux variations locales inhérentes aux données de RNA-Seq. Nous avons bâti cette méthode sur un modèle de Poisson, mais il serait sûrement intéressant de la tester sur un modèle de Binomiale Négative pour prendre en compte le facteur de sur-dispersion présent dans les expériences d'expression différentielle. Une autre approche pour évaluer les performances des deux méthodes pourrait également être de simuler des données d'expression de RNA-Seq pour lesquelles il n'y aurait pas de variation locales et ainsi vérifier si elles produisent les mêmes résultats.
+Au niveau biologique, les résultats semblent indiquer que dans certains cas les BIME jouent un rôle sur l'expression des gènes les flanquant dans un opéron, avec dans une grande majorité de cas un taux d'expression plus élevé du gène en amont par rapport à celui en aval. Leur contribution dans le métabolisme des transcrits avec les jeux de données dont nous disposons semble s'orienter vers deux possibilités, lors de la transcription en tant que \textbf{terminateur/atténuateur}, surtout dans les cas de chevauchement avec des terminateurs de transcription annotés, mais aussi intervenir dans la dégradation des transcrits avec une fonction de \textbf{stabilisation} en protégeant sa partie 5' de l'action du dégradosome grâce à la formation d'une structure secondaire stable (notamment pour les BIME-2  et atypiques), bloquant l'action des exoribonucléases jusqu'à l'intervention des Poly(A) polymérase déstabilisant cette structure secondaire. 
+Afin d'aller plus loin dans l'analyse, il serait intéressant de réaliser 2 types d'expérience de RNA-Seq. La 1\up{ère} élaborée avec une souche sauvage et une souche pour laquelle serait inactivés les gènes codant pour des protéines impliquées dans la dégradation des ARNm. Elle nous permettrait de vérifier si les gènes en aval de la BIME dans les opérons dont le taux d'expression est plus faible que celui de ceux en aval dans la condition sauvage ne seraient plus différentiellement exprimés dans la condition perturbée. La 2\up{nde} serait une expérience bloquant la transcription avec un échantillonnage dans le temps pour suivre la dégradation des transcrits.
+
+Du point de vue méthodologique, l'approche par segmentation pour la localisation de changement d'expression semble produire de meilleurs résultats que la méthode locale par corrélation de profils car elle prend en compte la globalité de la région étudiée et est moins sensible aux variations locales inhérentes aux données de RNA-Seq. Nous avons bâti cette méthode sur un modèle de Poisson, mais il serait sûrement intéressant de la tester sur un modèle de Binomiale Négative pour prendre en compte le facteur de sur-dispersion présent dans les expériences d'expression différentielle. Une autre approche pour évaluer les performances des deux méthodes pourrait également être de simuler des données d'expression de RNA-Seq pour lesquelles il n'y aurait pas de variation locales et ainsi vérifier si elles produisent les mêmes résultats.
 Le nombre de réplicats est un point très sensible en RNA-Seq et dans le cadre de futures expériences il sera important d'en produire un nombre élevé aussi bien du point de vue technique que biologique.
+
 \end{onehalfspace}
 
 
 % fin de la numérotation des pages
-\renewcommand{\thepage}{}
+\cleardoublepage
+\pagenumbering{gobble}
+
 
 % affichage du glossaire
 \printglossary[type=\acronymtype ,title=Glossaire]
-
-
 
 % bibliographie
 \bibliography{biblio_rapport}
