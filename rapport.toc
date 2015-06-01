@@ -1,4 +1,7 @@
-\select@language {french}
+\select@language {english}
+\select@language {francais}
+\select@language {english}
+\select@language {francais}
 \contentsline {chapter}{Introduction}{1}{chapter*.5}
 \contentsline {section}{Caract\IeC {\'e}ristiques des REP et organisations en BIME}{1}{section*.6}
 \contentsline {section}{Propri\IeC {\'e}t\IeC {\'e}s associ\IeC {\'e}es aux REP}{2}{section*.7}
