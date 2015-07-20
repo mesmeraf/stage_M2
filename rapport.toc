@@ -19,7 +19,7 @@
 \contentsline {section}{Cr\IeC {\'e}ation de la table de comptages et normalisation}{8}{section*.24}
 \contentsline {section}{D\IeC {\'e}termination des transcrits}{10}{section*.25}
 \contentsline {section}{Segmentation}{10}{section*.27}
-\contentsline {section}{Reconstruction des s\IeC {\'e}quences anc\IeC {\^e}tres et structures secondaires}{11}{section*.28}
+\contentsline {section}{Reconstruction des s\IeC {\'e}quences anc\IeC {\^e}tres et structures secondaires}{12}{section*.28}
 \contentsline {chapter}{R\IeC {\'e}sultats}{13}{chapter*.29}
 \contentsline {section}{Couverture du g\IeC {\'e}nome}{13}{section*.30}
 \contentsline {section}{BIME et unit\IeC {\'e}s de transcription}{14}{section*.32}
